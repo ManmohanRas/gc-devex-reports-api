@@ -1,0 +1,34 @@
+﻿using DevExpress.XtraReports.UI;
+using Reports.API.PredefinedReports;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace PresTrust.DevExReports.API.PredefinedReports
+{
+    public static class ReportsFactory
+    {
+        public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>()
+        {
+            ["TestReport"] = () => new TestReport(),
+            //["OSTFFundsAllocationReport"] = () => new OSTFFundsAllocationReport(),
+            //["OSTFSummaryReport"] = () => new OSTFSummaryReportNew(),
+            //["OSTFSummarySubReport0"] = () => new OSTFSummarySubReport0(),
+            //["OSTFSummarySubReport1"] = () => new OSTFSummarySubReport1(),
+            //["OSTFSummarySubReport2"] = () => new OSTFSummarySubReport2(),
+            //["OSTFAdhocReportTemplate"] = () => new OSTFAdhocReportTemplate(),
+            //["OSTFApplicationSummary"] = () => new OSTFApplicationSummaryReport(),
+            //["MunicipalTrustFundInfo"] = () => new MunicipalTrustFundInformation(),
+            //["OSTFFeedbackReport"] = () => new OSTFFeedbackReport(),
+            //["OSTFParcelReport"] = () => new OSTFParcel(),
+            //["OSTFOPRAReport"] = () => new OSTF_OPRA_Report(),
+            //["SubreportLocation"] = () => new Subreport_Location(),
+            //["SubreportFinance"] = () => new Subreport_Finance(),
+            //["SubreportSite"] = () => new Subreport_Site(),
+            //["SubreportDocumnts"] = () => new Subreport_Documnts(),
+            //["OSTFSiteVisitReport"] = () => new OSTFSiteVisitReport(),
+            //["OSTFCommissionerBookReport"] = () => new OSTFCommissionerBookReport(),
+        };
+    }
+}
