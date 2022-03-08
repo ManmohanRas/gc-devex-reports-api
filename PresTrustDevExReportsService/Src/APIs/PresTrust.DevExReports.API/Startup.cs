@@ -49,7 +49,7 @@ namespace PresTrust.DevExReports.API
             app.UseStaticFiles();
             app.UseDevExpressControls();
             app.UseRouting();
-            app.UseAuthentication(); // ???????????
+           // app.UseAuthentication(); // ???????????
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
