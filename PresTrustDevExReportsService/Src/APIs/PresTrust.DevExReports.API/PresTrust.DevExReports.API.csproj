@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="PredefinedReports\Historic\Flex_Payment.repx" />
+    <None Remove="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
+    <None Remove="PredefinedReports\Historic\Static_PropertyTotal.repx" />
+    <None Remove="PredefinedReports\Historic\Static_SummaryByYear.repx" />
     <None Remove="PredefinedReports\Openspace\MunicipalTrustFundInformation.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFAdhocReportTemplate.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFApplicationSummaryReport.repx" />
@@ -26,6 +30,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="PredefinedReports\Historic\Flex_Payment.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\Static_PropertyTotal.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\Static_SummaryByYear.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\MunicipalTrustFundInformation.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFAdhocReportTemplate.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFApplicationSummaryReport.repx" />
@@ -56,10 +64,33 @@
   <ItemGroup>
     <Folder Include="ActionResults\" />
     <Folder Include="Infrastructure\" />
-    <Folder Include="PredefinedReports\Historic\" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="PredefinedReports\Historic\Flex_Payment.cs">
+      <DependentUpon>Flex_Payment.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Flex_Payment.Designer.cs">
+      <DependentUpon>Flex_Payment.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Flex_ScopeofWork.cs">
+      <DependentUpon>Flex_ScopeofWork.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Flex_ScopeofWork.Designer.cs">
+      <DependentUpon>Flex_ScopeofWork.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Static_PropertyTotal.cs">
+      <DependentUpon>Static_PropertyTotal.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Static_PropertyTotal.Designer.cs">
+      <DependentUpon>Static_PropertyTotal.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Static_SummaryByYear.cs">
+      <DependentUpon>Static_SummaryByYear.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Static_SummaryByYear.Designer.cs">
+      <DependentUpon>Static_SummaryByYear.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Openspace\MunicipalTrustFundInformation.cs">
       <DependentUpon>MunicipalTrustFundInformation.repx</DependentUpon>
     </Compile>

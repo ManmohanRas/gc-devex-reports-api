@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraReports.UI;
+using PresTrust.DevExReports.API.PredefinedReports.Historic;
 using PresTrust.DevExReports.API.PredefinedReports.Openspace;
 using Reports.API.PredefinedReports;
 using System;
@@ -28,6 +29,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["SubreportDocumnts"] = () => new Subreport_Documnts(),
             ["OSTFSiteVisitReport"] = () => new OSTFSiteVisitReport(),
             ["OSTFCommissionerBookReport"] = () => new OSTFCommissionerBookReport(),
+            ["HistFlexPayment"] = () => new Flex_Payment(),
+            ["HistFlexScopeofWork"] = () => new Flex_ScopeofWork(),
+            ["HistPropertyTotal"] = () => new Static_PropertyTotal(),
+            ["HistSummarybyYear"] = () => new Static_SummaryByYear(),
         };
     }
 }
