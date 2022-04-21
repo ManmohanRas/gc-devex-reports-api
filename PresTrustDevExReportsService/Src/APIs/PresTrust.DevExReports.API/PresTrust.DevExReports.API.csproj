@@ -7,8 +7,10 @@
   <ItemGroup>
     <None Remove="PredefinedReports\Historic\Flex_Payment.repx" />
     <None Remove="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
+    <None Remove="PredefinedReports\Historic\GrantStatus.repx" />
     <None Remove="PredefinedReports\Historic\Static_PropertyTotal.repx" />
     <None Remove="PredefinedReports\Historic\Static_SummaryByYear.repx" />
+    <None Remove="PredefinedReports\Historic\WebsiteSiteSummary.repx" />
     <None Remove="PredefinedReports\Openspace\MunicipalTrustFundInformation.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFAdhocReportTemplate.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFApplicationSummaryReport.repx" />
@@ -32,8 +34,10 @@
   <ItemGroup>
     <EmbeddedResource Include="PredefinedReports\Historic\Flex_Payment.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\GrantStatus.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Static_PropertyTotal.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Static_SummaryByYear.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\WebsiteSiteSummary.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\MunicipalTrustFundInformation.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFAdhocReportTemplate.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFApplicationSummaryReport.repx" />
@@ -79,6 +83,12 @@
     <Compile Update="PredefinedReports\Historic\Flex_ScopeofWork.Designer.cs">
       <DependentUpon>Flex_ScopeofWork.repx</DependentUpon>
     </Compile>
+    <Compile Update="PredefinedReports\Historic\GrantStatus.cs">
+      <DependentUpon>GrantStatus.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\GrantStatus.Designer.cs">
+      <DependentUpon>GrantStatus.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Historic\Static_PropertyTotal.cs">
       <DependentUpon>Static_PropertyTotal.repx</DependentUpon>
     </Compile>
@@ -90,6 +100,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Historic\Static_SummaryByYear.Designer.cs">
       <DependentUpon>Static_SummaryByYear.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\WebsiteSiteSummary.cs">
+      <DependentUpon>WebsiteSiteSummary.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\WebsiteSiteSummary.Designer.cs">
+      <DependentUpon>WebsiteSiteSummary.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Openspace\MunicipalTrustFundInformation.cs">
       <DependentUpon>MunicipalTrustFundInformation.repx</DependentUpon>

@@ -33,6 +33,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["HistFlexScopeofWork"] = () => new Flex_ScopeofWork(),
             ["HistPropertyTotal"] = () => new Static_PropertyTotal(),
             ["HistSummarybyYear"] = () => new Static_SummaryByYear(),
+            ["HistGrantStatus"] = () => new GrantStatus(),
+            ["HistWebsiteSiteSummary"] = () => new WebsiteSiteSummary()
         };
     }
 }
