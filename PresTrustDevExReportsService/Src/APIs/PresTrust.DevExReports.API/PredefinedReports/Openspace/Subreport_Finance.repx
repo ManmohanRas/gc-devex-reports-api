@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="21.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Subreport_Finance" Margins="24, 24, 24, 24" PageWidth="850" PageHeight="1100" Version="21.1" FilterString="[Id] = ?id" DataMember="Ostf_OstfApplication" DataSource="#Ref-0" Font="Arial, 9.75pt">
+  <Extensions>
+    <Item1 Ref="2" Key="VSReportExtInfo" Value=".repx" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="4" Visible="false" Description="id" ValueInfo="0" Name="id" Type="#Ref-3" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="5" ControlType="TopMarginBand" Name="TopMargin" HeightF="24" />
+    <Item2 Ref="6" ControlType="DetailBand" Name="Detail" HeightF="0" />
+    <Item3 Ref="7" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="24" />
+    <Item4 Ref="8" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="Ostf_OstfApplication.Ostf_OstfApplicationOstf_OstfFinanceFund" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="9" ControlType="DetailBand" Name="Detail1" HeightF="25">
+          <SortFields>
+            <Item1 Ref="10" FieldName="SortOrder" />
+          </SortFields>
+          <Controls>
+            <Item1 Ref="11" ControlType="XRTable" Name="table1" SizeF="747.291748,25" LocationFloat="26.66658,0" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="12" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+                  <Cells>
+                    <Item1 Ref="13" ControlType="XRTableCell" Name="tableCell1" Weight="2.5687509905755332" Multiline="true" ProcessNullValues="SuppressAndShrink" Text="tableCell4" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="14" EventName="BeforePrint" PropertyName="Text" Expression="Iif([Title]not like'%Demolition Funds%',[Title],'')&#xA;" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="15" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="16" ControlType="XRTableCell" Name="tableCell2" Weight="1.4916661306987731" Multiline="true" ProcessNullValues="SuppressAndShrink" Text="tableCell5" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="17" EventName="BeforePrint" PropertyName="Text" Expression="Iif([Title]not like'%Demolition Funds%',[AgencyName],'')" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="18" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="19" ControlType="XRTableCell" Name="tableCell3" Weight="1.4833344500023382" Multiline="true" ProcessNullValues="SuppressAndShrink" Text="tableCell6" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="20" EventName="BeforePrint" PropertyName="Text" Expression="Iif([Title]not like'%Demolition Funds%',[FundingSource],'')" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="21" UseFont="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="22" ControlType="XRTableCell" Name="tableCell9" Weight="0.93333411851484227" TextFormatString="{0:$0.00}" Multiline="true" ProcessNullValues="SuppressAndShrink" Text="tableCell7" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="23" EventName="BeforePrint" PropertyName="Text" Expression="Iif([Title]not like'%Demolition Funds%',[EstGrantAmount],'')" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="24" UseFont="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="25" ControlType="XRTableCell" Name="tableCell10" Weight="0.995831843001769" TextFormatString="{0:$#,#0.00}" Multiline="true" ProcessNullValues="SuppressAndShrink" Text="tableCell8" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="26" EventName="BeforePrint" PropertyName="Text" Expression="Iif([Title]not like'%Demolition Funds%',[ApprovedGrantAmount],'')" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="27" UseFont="false" UseTextAlignment="false" />
+                    </Item5>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="28" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="25">
+          <Controls>
+            <Item1 Ref="29" ControlType="XRTable" Name="table2" SizeF="747.2917,25" LocationFloat="26.666626,0" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="30" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+                  <Cells>
+                    <Item1 Ref="31" ControlType="XRTableCell" Name="tableCell4" Weight="2.56875068527738" Multiline="true" Text="Project Funds" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252">
+                      <StylePriority Ref="32" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="33" ControlType="XRTableCell" Name="tableCell5" Weight="1.4916661306604251" Multiline="true" Text="Partner" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252">
+                      <StylePriority Ref="34" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="35" ControlType="XRTableCell" Name="tableCell6" Weight="1.4833343731731734" Multiline="true" Text="Funding Source" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252">
+                      <StylePriority Ref="36" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="37" ControlType="XRTableCell" Name="tableCell7" Weight="0.93333411901756014" Multiline="true" Text="Estimated Grant Amt" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252">
+                      <StylePriority Ref="38" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="39" ControlType="XRTableCell" Name="tableCell8" Weight="0.99583191890605993" Multiline="true" Text="Approved Grant Amt" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252">
+                      <StylePriority Ref="40" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item5>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item4>
+    <Item5 Ref="41" ControlType="DetailReportBand" Name="DetailReport1" Level="1" DataMember="Ostf_OstfApplication.Ostf_OstfApplicationOstf_OstfFinanceFund" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="42" ControlType="DetailBand" Name="Detail2" HeightF="25">
+          <Controls>
+            <Item1 Ref="43" ControlType="XRTable" Name="table4" SizeF="747.291748,25" LocationFloat="26.66661,0" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="44" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+                  <Cells>
+                    <Item1 Ref="45" ControlType="XRTableCell" Name="tableCell16" Weight="2.5687509905755332" Multiline="true" ProcessNullValues="SuppressAndShrink" Text="tableCell4" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="46" EventName="BeforePrint" PropertyName="Text" Expression="Iif([Title]like'%Demolition Funds%',[Title],'')&#xA;" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="47" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="48" ControlType="XRTableCell" Name="tableCell17" Weight="1.4916661306987731" Multiline="true" ProcessNullValues="SuppressAndShrink" Text="tableCell5" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="49" EventName="BeforePrint" PropertyName="Text" Expression="Iif([Title]like'%Demolition Funds%',[AgencyName],'')" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="50" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="51" ControlType="XRTableCell" Name="tableCell18" Weight="1.4833344500023382" Multiline="true" ProcessNullValues="SuppressAndShrink" Text="tableCell6" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="52" EventName="BeforePrint" PropertyName="Text" Expression="Iif([Title]like'%Demolition Funds%',[FundingSource],'')" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="53" UseFont="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="54" ControlType="XRTableCell" Name="tableCell19" Weight="0.93333411851484227" TextFormatString="{0:$0.00}" Multiline="true" ProcessNullValues="SuppressAndShrink" Text="tableCell7" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="55" EventName="BeforePrint" PropertyName="Text" Expression="Iif([Title]like'%Demolition Funds%',[EstGrantAmount],'')" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="56" UseFont="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="57" ControlType="XRTableCell" Name="tableCell20" Weight="0.995831843001769" TextFormatString="{0:$#,#0.00}" Multiline="true" ProcessNullValues="SuppressAndShrink" Text="tableCell8" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="58" EventName="BeforePrint" PropertyName="Text" Expression="Iif([Title]like'%Demolition Funds%',[ApprovedGrantAmount],'')" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="59" UseFont="false" UseTextAlignment="false" />
+                    </Item5>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="60" ControlType="GroupHeaderBand" Name="GroupHeader2" HeightF="25">
+          <Controls>
+            <Item1 Ref="61" ControlType="XRTable" Name="table3" SizeF="747.291748,25" LocationFloat="26.66661,0" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="62" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+                  <Cells>
+                    <Item1 Ref="63" ControlType="XRTableCell" Name="tableCell11" Weight="2.5687509904531756" Multiline="true" Text="Project Funds" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252">
+                      <StylePriority Ref="64" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="65" ControlType="XRTableCell" Name="tableCell12" Weight="1.4916661306604251" Multiline="true" Text="Partner" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252">
+                      <StylePriority Ref="66" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="67" ControlType="XRTableCell" Name="tableCell13" Weight="1.4833343731731734" Multiline="true" Text="Funding Source" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252">
+                      <StylePriority Ref="68" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="69" ControlType="XRTableCell" Name="tableCell14" Weight="0.93333411901756014" Multiline="true" Text="Estimated Grant Amt" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252">
+                      <StylePriority Ref="70" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="71" ControlType="XRTableCell" Name="tableCell15" Weight="0.99583191890605993" Multiline="true" Text="Approved Grant Amt" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252">
+                      <StylePriority Ref="72" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item5>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item5>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v21.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJPc3RmX09zdGZBcHBsaWNhdGlvbiI+PFRhYmxlcz48VGFibGUgTmFtZT0iT3N0Zi5Pc3RmQXBwbGljYXRpb24iIFg9IjMwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIyODUiIC8+PC9UYWJsZXM+PENvbHVtbnM+PENvbHVtbiBUYWJsZT0iT3N0Zi5Pc3RmQXBwbGljYXRpb24iIE5hbWU9IklkIiAvPjxDb2x1bW4gVGFibGU9Ik9zdGYuT3N0ZkFwcGxpY2F0aW9uIiBOYW1lPSJUaXRsZSIgLz48Q29sdW1uIFRhYmxlPSJPc3RmLk9zdGZBcHBsaWNhdGlvbiIgTmFtZT0iQWdlbmN5SWQiIC8+PENvbHVtbiBUYWJsZT0iT3N0Zi5Pc3RmQXBwbGljYXRpb24iIE5hbWU9IlN0YXR1c0lkIiAvPjxDb2x1bW4gVGFibGU9Ik9zdGYuT3N0ZkFwcGxpY2F0aW9uIiBOYW1lPSJJc0FjdGl2ZSIgLz48Q29sdW1uIFRhYmxlPSJPc3RmLk9zdGZBcHBsaWNhdGlvbiIgTmFtZT0iRnVuZGluZ1llYXIiIC8+PC9Db2x1bW5zPjxNZXRhIFg9IjIwIiBZPSIyMCIgV2lkdGg9IjE3OSIgSGVpZ2h0PSIxODkiIC8+PC9RdWVyeT48UXVlcnkgVHlwZT0iU2VsZWN0UXVlcnkiIE5hbWU9Ik9zdGZfT3N0ZkZpbmFuY2VGdW5kIj48VGFibGVzPjxUYWJsZSBOYW1lPSJPc3RmLk9zdGZGaW5hbmNlRnVuZCIgLz48L1RhYmxlcz48Q29sdW1ucz48Q29sdW1uIFRhYmxlPSJPc3RmLk9zdGZGaW5hbmNlRnVuZCIgTmFtZT0iSWQiIC8+PENvbHVtbiBUYWJsZT0iT3N0Zi5Pc3RmRmluYW5jZUZ1bmQiIE5hbWU9IkFwcGxpY2F0aW9uSWQiIC8+PENvbHVtbiBUYWJsZT0iT3N0Zi5Pc3RmRmluYW5jZUZ1bmQiIE5hbWU9IlRpdGxlIiAvPjxDb2x1bW4gVGFibGU9Ik9zdGYuT3N0ZkZpbmFuY2VGdW5kIiBOYW1lPSJBZ2VuY3lJZCIgLz48Q29sdW1uIFRhYmxlPSJPc3RmLk9zdGZGaW5hbmNlRnVuZCIgTmFtZT0iQWdlbmN5TmFtZSIgLz48Q29sdW1uIFRhYmxlPSJPc3RmLk9zdGZGaW5hbmNlRnVuZCIgTmFtZT0iRnVuZGluZ1NvdXJjZSIgLz48Q29sdW1uIFRhYmxlPSJPc3RmLk9zdGZGaW5hbmNlRnVuZCIgTmFtZT0iRXN0R3JhbnRBbW91bnQiIC8+PENvbHVtbiBUYWJsZT0iT3N0Zi5Pc3RmRmluYW5jZUZ1bmQiIE5hbWU9IkFwcHJvdmVkR3JhbnRBbW91bnQiIC8+PENvbHVtbiBUYWJsZT0iT3N0Zi5Pc3RmRmluYW5jZUZ1bmQiIE5hbWU9IkZ1bmRUeXBlIiAvPjxDb2x1bW4gVGFibGU9Ik9zdGYuT3N0ZkZpbmFuY2VGdW5kIiBOYW1lPSJJc0FnZW5jeUZpeGVkIiAvPjxDb2x1bW4gVGFibGU9Ik9zdGYuT3N0ZkZpbmFuY2VGdW5kIiBOYW1lPSJBZ2VuY3lUeXBlRmlsdGVyIiAvPjxDb2x1bW4gVGFibGU9Ik9zdGYuT3N0ZkZpbmFuY2VGdW5kIiBOYW1lPSJJc0Z1bmRpbmdTb3VyY2VGaXhlZCIgLz48Q29sdW1uIFRhYmxlPSJPc3RmLk9zdGZGaW5hbmNlRnVuZCIgTmFtZT0iU29ydE9yZGVyIiAvPjwvQ29sdW1ucz48TWV0YSBYPSIyMTkiIFk9IjIwIiBXaWR0aD0iMTk1IiBIZWlnaHQ9IjMwOSIgLz48L1F1ZXJ5PjxSZWxhdGlvbiBNYXN0ZXI9Ik9zdGZfT3N0ZkFwcGxpY2F0aW9uIiBEZXRhaWw9Ik9zdGZfT3N0ZkZpbmFuY2VGdW5kIj48S2V5Q29sdW1uIE1hc3Rlcj0iSWQiIERldGFpbD0iQXBwbGljYXRpb25JZCIgLz48L1JlbGF0aW9uPjxSZXN1bHRTY2hlbWE+PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9Ik9zdGZfT3N0ZkFwcGxpY2F0aW9uIj48RmllbGQgTmFtZT0iSWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJUaXRsZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBZ2VuY3lJZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlN0YXR1c0lkIiBUeXBlPSJJbnQxNiIgLz48RmllbGQgTmFtZT0iSXNBY3RpdmUiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IkZ1bmRpbmdZZWFyIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjxWaWV3IE5hbWU9Ik9zdGZfT3N0ZkZpbmFuY2VGdW5kIj48RmllbGQgTmFtZT0iSWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJBcHBsaWNhdGlvbklkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVGl0bGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWdlbmN5SWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJBZ2VuY3lOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZ1bmRpbmdTb3VyY2UiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRXN0R3JhbnRBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkFwcHJvdmVkR3JhbnRBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkZ1bmRUeXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IklzQWdlbmN5Rml4ZWQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IkFnZW5jeVR5cGVGaWx0ZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSXNGdW5kaW5nU291cmNlRml4ZWQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IlNvcnRPcmRlciIgVHlwZT0iSW50MzIiIC8+PC9WaWV3PjxSZWxhdGlvbiBNYXN0ZXI9Ik9zdGZfT3N0ZkFwcGxpY2F0aW9uIiBEZXRhaWw9Ik9zdGZfT3N0ZkZpbmFuY2VGdW5kIj48S2V5Q29sdW1uIE1hc3Rlcj0iSWQiIERldGFpbD0iQXBwbGljYXRpb25JZCIgLz48L1JlbGF0aW9uPjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v21.1" Ref="3" Content="System.Int32" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>
