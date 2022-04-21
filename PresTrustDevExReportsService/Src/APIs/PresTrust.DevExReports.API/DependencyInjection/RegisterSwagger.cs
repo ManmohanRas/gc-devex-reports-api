@@ -9,15 +9,15 @@ namespace PresTrust.DevExReports.API.DependencyInjection
     {
         public void Register(IServiceCollection services, IConfiguration config)
         {
-             services.AddSwaggerGen(options =>
-            {
-                options.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Title = "DevExpress Reports API",
-                    Version = "v1",
-                    Description = "DevExpress Reports API"
-                });
-            });
+            // services.AddSwaggerGen(options =>
+            //{
+            //    options.SwaggerDoc("v1", new OpenApiInfo
+            //    {
+            //        Title = "DevExpress Reports API",
+            //        Version = "v1",
+            //        Description = "DevExpress Reports API"
+            //    });
+            //});
         }
     }
 }
