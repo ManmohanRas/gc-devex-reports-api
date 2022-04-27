@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="PredefinedReports\Historic\CommisionerHandout.repx" />
     <None Remove="PredefinedReports\Historic\Flex_Payment.repx" />
     <None Remove="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
     <None Remove="PredefinedReports\Historic\GrantStatus.repx" />
@@ -32,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="PredefinedReports\Historic\CommisionerHandout.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Flex_Payment.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\GrantStatus.repx" />
@@ -71,6 +73,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="PredefinedReports\Historic\CommisionerHandout.cs">
+      <DependentUpon>CommisionerHandout.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\CommisionerHandout.Designer.cs">
+      <DependentUpon>CommisionerHandout.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Historic\Flex_Payment.cs">
       <DependentUpon>Flex_Payment.repx</DependentUpon>
     </Compile>

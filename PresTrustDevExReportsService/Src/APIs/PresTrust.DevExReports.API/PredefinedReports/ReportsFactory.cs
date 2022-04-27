@@ -34,7 +34,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["HistPropertyTotal"] = () => new Static_PropertyTotal(),
             ["HistSummarybyYear"] = () => new Static_SummaryByYear(),
             ["HistGrantStatus"] = () => new GrantStatus(),
-            ["HistWebsiteSiteSummary"] = () => new WebsiteSiteSummary()
+            ["HistWebsiteSiteSummary"] = () => new WebsiteSiteSummary(),
+            ["HistCommisionerHandout"] = () => new CommisionerHandout()
         };
     }
 }
