@@ -35,7 +35,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["HistSummarybyYear"] = () => new Static_SummaryByYear(),
             ["HistGrantStatus"] = () => new GrantStatus(),
             ["HistWebsiteSiteSummary"] = () => new WebsiteSiteSummary(),
-            ["HistCommisionerHandout"] = () => new CommisionerHandout()
+            ["HistCommisionerHandout"] = () => new CommisionerHandout(),
+            ["HistEasementReport"] = () => new EasementTemplate(),
+            ["HistEasementAmendmentReport"] = () => new EasementAmendment(),
+            ["HistGrantAgreementReport"] = () => new GrantAgreement()
         };
     }
 }
