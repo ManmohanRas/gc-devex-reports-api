@@ -6,9 +6,11 @@
 
   <ItemGroup>
     <None Remove="PredefinedReports\Historic\CommisionerHandout.repx" />
+    <None Remove="PredefinedReports\Historic\EasementAmendment.repx" />
     <None Remove="PredefinedReports\Historic\EasementTemplate.repx" />
     <None Remove="PredefinedReports\Historic\Flex_Payment.repx" />
     <None Remove="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
+    <None Remove="PredefinedReports\Historic\GrantAgreement.repx" />
     <None Remove="PredefinedReports\Historic\GrantStatus.repx" />
     <None Remove="PredefinedReports\Historic\ReleaseOfFunds.repx" />
     <None Remove="PredefinedReports\Historic\Static_PropertyTotal.repx" />
@@ -36,9 +38,11 @@
 
   <ItemGroup>
     <EmbeddedResource Include="PredefinedReports\Historic\CommisionerHandout.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\EasementAmendment.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\EasementTemplate.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Flex_Payment.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\GrantAgreement.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\GrantStatus.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\ReleaseOfFunds.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Static_PropertyTotal.repx" />
@@ -83,6 +87,12 @@
     <Compile Update="PredefinedReports\Historic\CommisionerHandout.Designer.cs">
       <DependentUpon>CommisionerHandout.repx</DependentUpon>
     </Compile>
+    <Compile Update="PredefinedReports\Historic\EasementAmendment.cs">
+      <DependentUpon>EasementAmendment.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\EasementAmendment.Designer.cs">
+      <DependentUpon>EasementAmendment.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Historic\EasementTemplate.cs">
       <DependentUpon>EasementTemplate.repx</DependentUpon>
     </Compile>
@@ -100,6 +110,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Historic\Flex_ScopeofWork.Designer.cs">
       <DependentUpon>Flex_ScopeofWork.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\GrantAgreement.cs">
+      <DependentUpon>GrantAgreement.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\GrantAgreement.Designer.cs">
+      <DependentUpon>GrantAgreement.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Historic\GrantStatus.cs">
       <DependentUpon>GrantStatus.repx</DependentUpon>
