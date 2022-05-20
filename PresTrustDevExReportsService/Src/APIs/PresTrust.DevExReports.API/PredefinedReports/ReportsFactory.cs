@@ -13,7 +13,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports
         {
             ["TestReport"] = () => new TestReport(),
             ["OSTFFundsAllocationReport"] = () => new OSTFFundsAllocationReport(),
-            ["OSTFSummaryReport"] = () => new OSTFSummaryReportNew(),
+            ["OSTFSummaryReport"] = () => new OSTFSummaryReport(),
             ["OSTFSummarySubReport0"] = () => new OSTFSummarySubReport0(),
             ["OSTFSummarySubReport1"] = () => new OSTFSummarySubReport1(),
             ["OSTFSummarySubReport2"] = () => new OSTFSummarySubReport2(),
@@ -21,7 +21,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["OSTFApplicationSummary"] = () => new OSTFApplicationSummaryReport(),
             ["MunicipalTrustFundInfo"] = () => new MunicipalTrustFundInformation(),
             ["OSTFFeedbackReport"] = () => new OSTFFeedbackReport(),
-            ["OSTFParcelReport"] = () => new OSTFParcel(),
+            ["OSTFParcelReport"] = () => new OSTFParcelReport(),
             ["OSTFOPRAReport"] = () => new OSTF_OPRA_Report(),
             ["SubreportLocation"] = () => new Subreport_Location(),
             ["SubreportFinance"] = () => new Subreport_Finance(),

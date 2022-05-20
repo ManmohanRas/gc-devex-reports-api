@@ -10,7 +10,7 @@
 
 namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
     
-    public partial class OSTFParcel : DevExpress.XtraReports.UI.XtraReport {
+    public partial class OSTFParcelReport : DevExpress.XtraReports.UI.XtraReport {
         private void InitializeComponent() {
             DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Openspace.OSTFParcel.repx");
 

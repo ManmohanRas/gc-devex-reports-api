@@ -10,9 +10,9 @@
 
 namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
     
-    public partial class OSTFSummaryReportNew : DevExpress.XtraReports.UI.XtraReport {
+    public partial class OSTFSummaryReport : DevExpress.XtraReports.UI.XtraReport {
         private void InitializeComponent() {
-            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Openspace.OSTFSummaryReportNew.repx");
+            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Openspace.OSTFSummaryReport.repx");
 
             // Controls
             this.TopMargin = reportInitializer.GetControl<DevExpress.XtraReports.UI.TopMarginBand>("TopMargin");
@@ -147,6 +147,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
             this.label10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label10");
             this.label8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label8");
             this.label67 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label67");
+            this.label6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label6");
             this.label29 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label29");
             this.label28 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label28");
             this.label27 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label27");
@@ -397,6 +398,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
         private DevExpress.XtraReports.UI.XRLabel label10;
         private DevExpress.XtraReports.UI.XRLabel label8;
         private DevExpress.XtraReports.UI.XRLabel label67;
+        private DevExpress.XtraReports.UI.XRLabel label6;
         private DevExpress.XtraReports.UI.XRLabel label29;
         private DevExpress.XtraReports.UI.XRLabel label28;
         private DevExpress.XtraReports.UI.XRLabel label27;

@@ -23,7 +23,9 @@
     <None Remove="PredefinedReports\Openspace\OSTFFeedbackReport.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFFundsAllocationReport.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFParcel.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFParcelReport.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFSiteVisitReport.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFSummaryReport.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFSummaryReportNew.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFSummarySubReport0.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFSummarySubReport1.repx" />
@@ -54,9 +56,9 @@
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFCommissionerBookReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFFeedbackReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFFundsAllocationReport.repx" />
-    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFParcel.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFParcelReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFSiteVisitReport.repx" />
-    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFSummaryReportNew.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFSummaryReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFSummarySubReport0.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFSummarySubReport1.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFSummarySubReport2.repx" />
@@ -189,11 +191,23 @@
     <Compile Update="PredefinedReports\Openspace\OSTFParcel.Designer.cs">
       <DependentUpon>OSTFParcel.repx</DependentUpon>
     </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFParcelReport.cs">
+      <DependentUpon>OSTFParcelReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFParcelReport.Designer.cs">
+      <DependentUpon>OSTFParcelReport.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Openspace\OSTFSiteVisitReport.cs">
       <DependentUpon>OSTFSiteVisitReport.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Openspace\OSTFSiteVisitReport.Designer.cs">
       <DependentUpon>OSTFSiteVisitReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSummaryReport.cs">
+      <DependentUpon>OSTFSummaryReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSummaryReport.Designer.cs">
+      <DependentUpon>OSTFSummaryReport.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Openspace\OSTFSummaryReportNew.cs">
       <DependentUpon>OSTFSummaryReportNew.repx</DependentUpon>
