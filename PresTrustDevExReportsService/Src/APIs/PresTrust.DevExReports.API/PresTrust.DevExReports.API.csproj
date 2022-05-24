@@ -26,7 +26,6 @@
     <None Remove="PredefinedReports\Openspace\OSTFParcelReport.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFSiteVisitReport.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFSummaryReport.repx" />
-    <None Remove="PredefinedReports\Openspace\OSTFSummaryReportNew.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFSummarySubReport0.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFSummarySubReport1.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFSummarySubReport2.repx" />
@@ -202,18 +201,6 @@
     </Compile>
     <Compile Update="PredefinedReports\Openspace\OSTFSiteVisitReport.Designer.cs">
       <DependentUpon>OSTFSiteVisitReport.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Openspace\OSTFSummaryReport.cs">
-      <DependentUpon>OSTFSummaryReport.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Openspace\OSTFSummaryReport.Designer.cs">
-      <DependentUpon>OSTFSummaryReport.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Openspace\OSTFSummaryReportNew.cs">
-      <DependentUpon>OSTFSummaryReportNew.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Openspace\OSTFSummaryReportNew.Designer.cs">
-      <DependentUpon>OSTFSummaryReportNew.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Openspace\OSTFSummarySubReport0.cs">
       <DependentUpon>OSTFSummarySubReport0.repx</DependentUpon>
