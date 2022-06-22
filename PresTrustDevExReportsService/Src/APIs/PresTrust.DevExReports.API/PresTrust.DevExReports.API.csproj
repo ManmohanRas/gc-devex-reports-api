@@ -16,6 +16,7 @@
     <None Remove="PredefinedReports\Historic\Static_PropertyTotal.repx" />
     <None Remove="PredefinedReports\Historic\Static_SummaryByYear.repx" />
     <None Remove="PredefinedReports\Historic\WebsiteSiteSummary.repx" />
+    <None Remove="PredefinedReports\Historic\YearlyHandBookreport.repx" />
     <None Remove="PredefinedReports\Openspace\MunicipalTrustFundInformation.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFAdhocReportTemplate.repx" />
     <None Remove="PredefinedReports\Openspace\OSTFApplicationSummaryReport.repx" />
@@ -49,6 +50,7 @@
     <EmbeddedResource Include="PredefinedReports\Historic\Static_PropertyTotal.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Static_SummaryByYear.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\WebsiteSiteSummary.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\YearlyHandBookReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\MunicipalTrustFundInformation.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFAdhocReportTemplate.repx" />
     <EmbeddedResource Include="PredefinedReports\Openspace\OSTFApplicationSummaryReport.repx" />
@@ -201,6 +203,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Openspace\OSTFSiteVisitReport.Designer.cs">
       <DependentUpon>OSTFSiteVisitReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSummaryReport.cs">
+      <DependentUpon>OSTFSummaryReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSummaryReport.Designer.cs">
+      <DependentUpon>OSTFSummaryReport.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Openspace\OSTFSummarySubReport0.cs">
       <DependentUpon>OSTFSummarySubReport0.repx</DependentUpon>
