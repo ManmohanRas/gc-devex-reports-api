@@ -72,7 +72,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevExpress.AspNetCore.Reporting" Version="21.1.6" />
+    <PackageReference Include="DevExpress.AspNetCore.Reporting" Version="21.2.3" />
     <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
@@ -149,6 +149,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Historic\WebsiteSiteSummary.Designer.cs">
       <DependentUpon>WebsiteSiteSummary.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\YearlyHandBookReport.cs">
+      <DependentUpon>YearlyHandBookReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\YearlyHandBookReport.Designer.cs">
+      <DependentUpon>YearlyHandBookReport.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Openspace\MunicipalTrustFundInformation.cs">
       <DependentUpon>MunicipalTrustFundInformation.repx</DependentUpon>

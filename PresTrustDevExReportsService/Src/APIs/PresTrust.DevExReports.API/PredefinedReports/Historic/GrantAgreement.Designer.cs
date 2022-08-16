@@ -38,7 +38,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.label97 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label97");
 
             // Parameters
-            this.applicationid = reportInitializer.GetParameter("applicationid");
+            this.parambloburl = reportInitializer.GetParameter("parambloburl");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
@@ -65,6 +65,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo2;
         private DevExpress.XtraReports.UI.XRLabel label97;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.XtraReports.Parameters.Parameter applicationid;
+        private DevExpress.XtraReports.Parameters.Parameter parambloburl;
     }
 }

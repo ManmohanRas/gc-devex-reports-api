@@ -12,7 +12,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
     
     public partial class OSTFSummaryReport : DevExpress.XtraReports.UI.XtraReport {
         private void InitializeComponent() {
-            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Openspace.OSTFSummaryReportNew.repx");
+            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Openspace.OSTFSummaryReport.repx");
 
             // Controls
             this.TopMargin = reportInitializer.GetControl<DevExpress.XtraReports.UI.TopMarginBand>("TopMargin");
@@ -124,6 +124,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
             this.label86 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label86");
             this.label85 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label85");
             this.subreport2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRSubreport>("subreport2");
+            this.subreport2.ReportSource = new PresTrust.DevExReports.API.PredefinedReports.Openspace.OSTFSummarySubReport0();
             this.label20 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label20");
             this.checkBox35 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRCheckBox>("checkBox35");
             this.label148 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label148");
@@ -142,6 +143,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
             this.label141 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label141");
             this.label145 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label145");
             this.subreport1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRSubreport>("subreport1");
+            this.subreport1.ReportSource = new PresTrust.DevExReports.API.PredefinedReports.Openspace.OSTFSummarySubReport1();
             this.label10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label10");
             this.label8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label8");
             this.label67 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label67");
@@ -158,6 +160,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
             this.richText1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText1");
             this.label32 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label32");
             this.subreport3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRSubreport>("subreport3");
+            this.subreport3.ReportSource = new PresTrust.DevExReports.API.PredefinedReports.Openspace.OSTFSummarySubReport2();
             this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
             this.line1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line1");
             this.Detail3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail3");

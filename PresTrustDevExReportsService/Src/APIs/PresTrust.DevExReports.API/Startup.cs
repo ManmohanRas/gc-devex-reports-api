@@ -1,4 +1,5 @@
 using DevExpress.AspNetCore;
+using DevExpress.AspNetCore.Reporting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +26,17 @@ namespace PresTrust.DevExReports.API
         {
             //Register services 
             services.AddDevExpressControls();
+            //services.ConfigureReportingServices(configurator =>
+            //{
+            //    configurator.DisableCheckForCustomControllers();
+            //});
+            //services.ConfigureReportingServices(configurator =>
+            //{
+            //    configurator.ConfigureWebDocumentViewer(viewerConfigurator =>
+            //    {
+            //        viewerConfigurator.RegisterWebDocumentViewerDrillThroughProcessor<Disable>();
+            //    });
+            //});
             services.RegisterDependencies(Configuration);
 
             services.AddControllers();
@@ -49,7 +61,7 @@ namespace PresTrust.DevExReports.API
             app.UseStaticFiles();
             app.UseDevExpressControls();
             app.UseRouting();
-           // app.UseAuthentication(); // ???????????
+            // app.UseAuthentication(); // ???????????
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -113,6 +113,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
             this.tableCell33 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell33");
             this.tableCell34 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell34");
             this.subreport1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRSubreport>("subreport1");
+            this.subreport1.ReportSource = new PresTrust.DevExReports.API.PredefinedReports.Openspace.Subreport_Location();
             this.checkBox8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRCheckBox>("checkBox8");
             this.checkBox9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRCheckBox>("checkBox9");
             this.checkBox10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRCheckBox>("checkBox10");
@@ -136,6 +137,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
             this.label27 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label27");
             this.label28 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label28");
             this.subreport2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRSubreport>("subreport2");
+            this.subreport2.ReportSource = new PresTrust.DevExReports.API.PredefinedReports.Openspace.Subreport_Site();
             this.table9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table9");
             this.checkBox15 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRCheckBox>("checkBox15");
             this.checkBox16 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRCheckBox>("checkBox16");
@@ -198,6 +200,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
             this.label48 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label48");
             this.label49 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label49");
             this.subreport3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRSubreport>("subreport3");
+            this.subreport3.ReportSource = new PresTrust.DevExReports.API.PredefinedReports.Openspace.Subreport_Finance();
             this.label59 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label59");
             this.label61 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label61");
             this.label62 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label62");
@@ -240,6 +243,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
             this.label87 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label87");
             this.label86 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label86");
             this.subreport5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRSubreport>("subreport5");
+            this.subreport5.ReportSource = new PresTrust.DevExReports.API.PredefinedReports.Openspace.Subreport_Documnts();
             this.label97 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label97");
             this.line2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line2");
             this.label60 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label60");

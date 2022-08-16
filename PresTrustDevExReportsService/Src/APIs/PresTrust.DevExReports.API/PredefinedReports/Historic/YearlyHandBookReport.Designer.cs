@@ -301,6 +301,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             // Parameters
             this.Year = reportInitializer.GetParameter("Year");
             this.Application = reportInitializer.GetParameter("Application");
+            this.parambloburl = reportInitializer.GetParameter("parambloburl");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
@@ -596,5 +597,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRControlStyle EvenRow;
         private DevExpress.XtraReports.Parameters.Parameter Year;
         private DevExpress.XtraReports.Parameters.Parameter Application;
+        private DevExpress.XtraReports.Parameters.Parameter parambloburl;
     }
 }
