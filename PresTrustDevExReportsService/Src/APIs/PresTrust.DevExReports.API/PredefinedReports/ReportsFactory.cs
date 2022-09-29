@@ -39,7 +39,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["HistEasementReport"] = () => new EasementTemplate(),
             ["HistEasementAmendmentReport"] = () => new EasementAmendment(),
             ["HistGrantAgreementReport"] = () => new GrantAgreement(),
-            ["HistCommisionerHandout"] = () => new CommisionerHandout(),
             ["HistReleaseOfFunds"] = () => new ReleaseOfFunds(),
             ["HistYearlyHandBook"] = () => new YearlyHandBookReport()
         };

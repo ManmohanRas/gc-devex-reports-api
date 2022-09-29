@@ -38,10 +38,13 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.label97 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label97");
 
             // Parameters
-            this.parambloburl = reportInitializer.GetParameter("parambloburl");
+            this.applicationid = reportInitializer.GetParameter("applicationid");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
+
+            // Calculated Fields
+            this.AppId = reportInitializer.GetCalculatedField("AppId");
         }
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
@@ -65,6 +68,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo2;
         private DevExpress.XtraReports.UI.XRLabel label97;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.XtraReports.Parameters.Parameter parambloburl;
+        private DevExpress.XtraReports.UI.CalculatedField AppId;
+        private DevExpress.XtraReports.Parameters.Parameter applicationid;
     }
 }
