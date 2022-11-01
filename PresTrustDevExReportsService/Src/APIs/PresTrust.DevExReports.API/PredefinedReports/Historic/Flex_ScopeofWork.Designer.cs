@@ -60,6 +60,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.line2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line2");
 
             // Parameters
+            this.GrantYear = reportInitializer.GetParameter("GrantYear");
             this.HistoricalName = reportInitializer.GetParameter("HistoricalName");
 
             // Data Sources
@@ -109,6 +110,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRLabel label60;
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo2;
         private DevExpress.XtraReports.UI.XRLine line2;
+        private DevExpress.XtraReports.Parameters.Parameter GrantYear;
         private DevExpress.XtraReports.Parameters.Parameter HistoricalName;
     }
 }

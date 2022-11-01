@@ -52,9 +52,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.label60 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label60");
             this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
             this.pictureBox3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox3");
-            this.richText1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText1");
+            this.label6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label6");
 
             // Parameters
+            this.FundingYear = reportInitializer.GetParameter("FundingYear");
             this.SiteName = reportInitializer.GetParameter("SiteName");
             this.parambloburl = reportInitializer.GetParameter("parambloburl");
 
@@ -98,9 +99,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRLabel label60;
         private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
         private DevExpress.XtraReports.UI.XRPictureBox pictureBox3;
-        private DevExpress.XtraReports.UI.XRRichText richText1;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
+        private DevExpress.XtraReports.Parameters.Parameter FundingYear;
         private DevExpress.XtraReports.Parameters.Parameter SiteName;
         private DevExpress.XtraReports.Parameters.Parameter parambloburl;
+        private DevExpress.XtraReports.UI.XRLabel label6;
     }
 }
