@@ -62,11 +62,15 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.tableCell12 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell12");
 
             // Parameters
-            this.HistoricName = reportInitializer.GetParameter("HistoricName");
+            this.Year = reportInitializer.GetParameter("Year");
+            this.HistoricalName = reportInitializer.GetParameter("HistoricalName");
 
             // Data Sources
             this.federationDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.DataFederation.FederationDataSource>("federationDataSource1");
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
+
+            // Calculated Fields
+            this.GRANDCONDITION = reportInitializer.GetCalculatedField("GRANDCONDITION");
         }
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
@@ -114,7 +118,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRTableCell tableCell11;
         private DevExpress.XtraReports.UI.XRTableCell tableCell12;
         private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
-        private DevExpress.XtraReports.Parameters.Parameter HistoricName;
+        private DevExpress.XtraReports.UI.CalculatedField GRANDCONDITION;
+        private DevExpress.XtraReports.Parameters.Parameter Year;
+        private DevExpress.XtraReports.Parameters.Parameter HistoricalName;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
     }
 }

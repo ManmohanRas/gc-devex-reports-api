@@ -165,7 +165,14 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.parambloburl = reportInitializer.GetParameter("parambloburl");
 
             // Data Sources
+            this.federationDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.DataFederation.FederationDataSource>("federationDataSource1");
             this.sqlDataSource2 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource2");
+
+            // Calculated Fields
+            this.GrantCondition = reportInitializer.GetCalculatedField("GrantCondition");
+            this.ImageCondition = reportInitializer.GetCalculatedField("ImageCondition");
+            this.ImageCondition1 = reportInitializer.GetCalculatedField("ImageCondition1");
+            this.ImageCondition2 = reportInitializer.GetCalculatedField("ImageCondition2");
         }
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
@@ -206,7 +213,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRTableCell tableCell4;
         private DevExpress.XtraReports.UI.XRLabel label1;
         private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
+        private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
         private DevExpress.XtraReports.UI.DetailBand Detail2;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader2;
         private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter1;
@@ -311,8 +318,13 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRTableCell tableCell59;
         private DevExpress.XtraReports.UI.XRTableCell tableCell60;
         private DevExpress.XtraReports.UI.XRTableCell tableCell61;
+        private DevExpress.XtraReports.UI.CalculatedField GrantCondition;
+        private DevExpress.XtraReports.UI.CalculatedField ImageCondition;
+        private DevExpress.XtraReports.UI.CalculatedField ImageCondition1;
+        private DevExpress.XtraReports.UI.CalculatedField ImageCondition2;
         private DevExpress.XtraReports.Parameters.Parameter FundingYear;
         private DevExpress.XtraReports.Parameters.Parameter HistoricalName;
         private DevExpress.XtraReports.Parameters.Parameter parambloburl;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
     }
 }
