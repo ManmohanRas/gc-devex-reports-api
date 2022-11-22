@@ -12,6 +12,7 @@
     <None Remove="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
     <None Remove="PredefinedReports\Historic\GrantAgreement.repx" />
     <None Remove="PredefinedReports\Historic\GrantStatus.repx" />
+    <None Remove="PredefinedReports\Historic\RegisterListingExpirations.repx" />
     <None Remove="PredefinedReports\Historic\ReleaseOfFunds.repx" />
     <None Remove="PredefinedReports\Historic\Static_PropertyTotal.repx" />
     <None Remove="PredefinedReports\Historic\Static_SummaryByYear.repx" />
@@ -46,6 +47,7 @@
     <EmbeddedResource Include="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\GrantAgreement.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\GrantStatus.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\RegisterListingExpirations.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\ReleaseOfFunds.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Static_PropertyTotal.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Static_SummaryByYear.repx" />
@@ -125,6 +127,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Historic\GrantStatus.Designer.cs">
       <DependentUpon>GrantStatus.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\RegisterListingExpirations.cs">
+      <DependentUpon>RegisterListingExpirations.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\RegisterListingExpirations.Designer.cs">
+      <DependentUpon>RegisterListingExpirations.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Historic\ReleaseOfFunds.cs">
       <DependentUpon>ReleaseOfFunds.repx</DependentUpon>
