@@ -11,6 +11,7 @@
     <None Remove="PredefinedReports\Historic\Flex_Payment.repx" />
     <None Remove="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
     <None Remove="PredefinedReports\Historic\GrantAgreement.repx" />
+    <None Remove="PredefinedReports\Historic\GrantAwardResolution.repx" />
     <None Remove="PredefinedReports\Historic\GrantStatus.repx" />
     <None Remove="PredefinedReports\Historic\RegisterListingExpirations.repx" />
     <None Remove="PredefinedReports\Historic\ReleaseOfFunds.repx" />
@@ -46,6 +47,7 @@
     <EmbeddedResource Include="PredefinedReports\Historic\Flex_Payment.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\GrantAgreement.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\GrantAwardResolution.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\GrantStatus.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\RegisterListingExpirations.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\ReleaseOfFunds.repx" />
@@ -121,6 +123,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Historic\GrantAgreement.Designer.cs">
       <DependentUpon>GrantAgreement.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\GrantAwardResolution.cs">
+      <DependentUpon>GrantAwardResolution.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\GrantAwardResolution.Designer.cs">
+      <DependentUpon>GrantAwardResolution.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Historic\GrantStatus.cs">
       <DependentUpon>GrantStatus.repx</DependentUpon>
