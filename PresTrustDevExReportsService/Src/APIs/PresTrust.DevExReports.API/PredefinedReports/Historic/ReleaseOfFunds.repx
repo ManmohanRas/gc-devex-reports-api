@@ -28,8 +28,8 @@
                 </Item2>
                 <Item3 Ref="16" ControlType="XRTableCell" Name="tableCell44" Weight="1.3348839383988986" CanShrink="true" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
                   <ExpressionBindings>
-                    <Item1 Ref="17" EventName="BeforePrint" PropertyName="Text" Expression="[GrantAmount]" />
-                    <Item2 Ref="18" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([DataSource.RowCount]-1=max([DataSource.CurrentRowIndex]),False ,True )&#xA;" />
+                    <Item1 Ref="17" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([DataSource.RowCount]-1=max([DataSource.CurrentRowIndex]),False ,True )&#xA;" />
+                    <Item2 Ref="18" EventName="BeforePrint" PropertyName="Text" Expression="[ProfessionalAmount]+[ConstructionAmount]" />
                   </ExpressionBindings>
                   <StylePriority Ref="19" UseTextAlignment="false" />
                 </Item3>
@@ -66,7 +66,7 @@
                 <Item2 Ref="34" ControlType="XRTableCell" Name="tableCell15" Weight="1.5944448852539064" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
                   <Summary Ref="35" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="36" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([ProfessionalAmount]+[ConstructionAmount])" />
+                    <Item1 Ref="36" EventName="BeforePrint" PropertyName="Text" Expression="[FinalGrantAmount]" />
                   </ExpressionBindings>
                   <StylePriority Ref="37" UseTextAlignment="false" />
                 </Item2>
@@ -173,7 +173,7 @@
                 <Item2 Ref="83" ControlType="XRTableCell" Name="tableCell47" Weight="1.5944451904296877" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
                   <Summary Ref="84" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="85" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([GrantAmount])-([ProfessionalAmount]+[ConstructionAmount])" />
+                    <Item1 Ref="85" EventName="BeforePrint" PropertyName="Text" Expression="([FinalGrantAmount])-([ProfessionalAmount]+[ConstructionAmount])" />
                   </ExpressionBindings>
                   <StylePriority Ref="86" UseTextAlignment="false" />
                 </Item2>
