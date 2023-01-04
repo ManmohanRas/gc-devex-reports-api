@@ -81,8 +81,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
 
             // Calculated Fields
             this.calculatedField2 = reportInitializer.GetCalculatedField("calculatedField2");
-            this.calculatedField4 = reportInitializer.GetCalculatedField("calculatedField4");
-            this.calculatedField1 = reportInitializer.GetCalculatedField("calculatedField1");
             this.calculatedField3 = reportInitializer.GetCalculatedField("calculatedField3");
 
             // Styles
@@ -149,8 +147,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Openspace {
         private DevExpress.XtraReports.UI.XRControlStyle Style4;
         private DevExpress.XtraReports.UI.XRControlStyle Style5;
         private DevExpress.XtraReports.UI.CalculatedField calculatedField2;
-        private DevExpress.XtraReports.UI.CalculatedField calculatedField4;
-        private DevExpress.XtraReports.UI.CalculatedField calculatedField1;
         private DevExpress.XtraReports.UI.CalculatedField calculatedField3;
         private DevExpress.XtraReports.Parameters.Parameter FundingYear;
         private DevExpress.XtraReports.Parameters.Parameter Status;
