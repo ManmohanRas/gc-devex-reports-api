@@ -1,4 +1,5 @@
 using DevExpress.AspNetCore;
+using DevExpress.AspNetCore.Reporting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +26,17 @@ namespace PresTrust.DevExReports.API
         {
             //Register services 
             services.AddDevExpressControls();
+            //services.ConfigureReportingServices(configurator =>
+            //{
+            //    configurator.DisableCheckForCustomControllers();
+            //});
+            //services.ConfigureReportingServices(configurator =>
+            //{
+            //    configurator.ConfigureWebDocumentViewer(viewerConfigurator =>
+            //    {
+            //        viewerConfigurator.RegisterWebDocumentViewerDrillThroughProcessor<Disable>();
+            //    });
+            //});
             services.RegisterDependencies(Configuration);
 
             services.AddControllers();
@@ -38,8 +50,8 @@ namespace PresTrust.DevExReports.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("../swagger/v1/swagger.json", "PresTrust.DevExReports.API v1"));
+                //app.UseSwagger();
+                //app.UseSwaggerUI(c => c.SwaggerEndpoint("../swagger/v1/swagger.json", "PresTrust.DevExReports.API v1"));
             }
 
             DevExpress.XtraReports.Configuration.Settings.Default.UserDesignerOptions.DataBindingMode = DevExpress.XtraReports.UI.DataBindingMode.Expressions;
@@ -49,7 +61,7 @@ namespace PresTrust.DevExReports.API
             app.UseStaticFiles();
             app.UseDevExpressControls();
             app.UseRouting();
-            app.UseAuthentication(); // ???????????
+            // app.UseAuthentication(); // ???????????
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

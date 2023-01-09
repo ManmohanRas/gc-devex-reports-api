@@ -5,7 +5,78 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevExpress.AspNetCore.Reporting" Version="21.1.6" />
+    <None Remove="PredefinedReports\Historic\CommisionerHandout.repx" />
+    <None Remove="PredefinedReports\Historic\EasementAmendment.repx" />
+    <None Remove="PredefinedReports\Historic\EasementTemplate.repx" />
+    <None Remove="PredefinedReports\Historic\Flex_Payment.repx" />
+    <None Remove="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
+    <None Remove="PredefinedReports\Historic\GrantAgreement.repx" />
+    <None Remove="PredefinedReports\Historic\GrantAwardResolution.repx" />
+    <None Remove="PredefinedReports\Historic\GrantStatus.repx" />
+    <None Remove="PredefinedReports\Historic\RegisterListingExpirations.repx" />
+    <None Remove="PredefinedReports\Historic\ReleaseOfFunds.repx" />
+    <None Remove="PredefinedReports\Historic\Static_PropertyTotal.repx" />
+    <None Remove="PredefinedReports\Historic\Static_SummaryByYear.repx" />
+    <None Remove="PredefinedReports\Historic\WebsiteSiteSummary.repx" />
+    <None Remove="PredefinedReports\Historic\YearlyHandBookreport.repx" />
+    <None Remove="PredefinedReports\Openspace\MunicipalTrustFundInformation.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFAdhocReportTemplate.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFApplicationSummaryReport.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFCommissionerBookReport.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFFeedbackReport.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFFundsAllocationReport.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFParcel.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFParcelReport.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFSiteVisitReport.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFSummaryReport.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFSummarySubReport0.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFSummarySubReport1.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTFSummarySubReport2.repx" />
+    <None Remove="PredefinedReports\Openspace\OSTF_OPRA_Report.repx" />
+    <None Remove="PredefinedReports\Openspace\Subreport_Documnts.repx" />
+    <None Remove="PredefinedReports\Openspace\Subreport_Finance.repx" />
+    <None Remove="PredefinedReports\Openspace\Subreport_Location.repx" />
+    <None Remove="PredefinedReports\Openspace\Subreport_Site.repx" />
+    <None Remove="PredefinedReports\TestReport.repx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="PredefinedReports\Historic\CommisionerHandout.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\EasementAmendment.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\EasementTemplate.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\Flex_Payment.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\Flex_ScopeofWork.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\GrantAgreement.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\GrantAwardResolution.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\GrantStatus.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\RegisterListingExpirations.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\ReleaseOfFunds.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\Static_PropertyTotal.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\Static_SummaryByYear.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\WebsiteSiteSummary.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\YearlyHandBookReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\MunicipalTrustFundInformation.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFAdhocReportTemplate.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFApplicationSummaryReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFCommissionerBookReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFFeedbackReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFFundsAllocationReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFParcelReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFSiteVisitReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFSummaryReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFSummarySubReport0.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFSummarySubReport1.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTFSummarySubReport2.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\OSTF_OPRA_Report.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\Subreport_Documnts.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\Subreport_Finance.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\Subreport_Location.repx" />
+    <EmbeddedResource Include="PredefinedReports\Openspace\Subreport_Site.repx" />
+    <EmbeddedResource Include="PredefinedReports\TestReport.repx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.AspNetCore.Reporting" Version="22.1.6" />
     <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
@@ -14,6 +85,207 @@
   <ItemGroup>
     <Folder Include="ActionResults\" />
     <Folder Include="Infrastructure\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="PredefinedReports\Historic\CommisionerHandout.cs">
+      <DependentUpon>CommisionerHandout.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\CommisionerHandout.Designer.cs">
+      <DependentUpon>CommisionerHandout.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\EasementAmendment.cs">
+      <DependentUpon>EasementAmendment.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\EasementAmendment.Designer.cs">
+      <DependentUpon>EasementAmendment.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\EasementTemplate.cs">
+      <DependentUpon>EasementTemplate.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\EasementTemplate.Designer.cs">
+      <DependentUpon>EasementTemplate.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Flex_Payment.cs">
+      <DependentUpon>Flex_Payment.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Flex_Payment.Designer.cs">
+      <DependentUpon>Flex_Payment.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Flex_ScopeofWork.cs">
+      <DependentUpon>Flex_ScopeofWork.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Flex_ScopeofWork.Designer.cs">
+      <DependentUpon>Flex_ScopeofWork.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\GrantAgreement.cs">
+      <DependentUpon>GrantAgreement.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\GrantAgreement.Designer.cs">
+      <DependentUpon>GrantAgreement.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\GrantAwardResolution.cs">
+      <DependentUpon>GrantAwardResolution.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\GrantAwardResolution.Designer.cs">
+      <DependentUpon>GrantAwardResolution.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\GrantStatus.cs">
+      <DependentUpon>GrantStatus.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\GrantStatus.Designer.cs">
+      <DependentUpon>GrantStatus.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\RegisterListingExpirations.cs">
+      <DependentUpon>RegisterListingExpirations.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\RegisterListingExpirations.Designer.cs">
+      <DependentUpon>RegisterListingExpirations.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\ReleaseOfFunds.cs">
+      <DependentUpon>ReleaseOfFunds.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\ReleaseOfFunds.Designer.cs">
+      <DependentUpon>ReleaseOfFunds.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Static_PropertyTotal.cs">
+      <DependentUpon>Static_PropertyTotal.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Static_PropertyTotal.Designer.cs">
+      <DependentUpon>Static_PropertyTotal.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Static_SummaryByYear.cs">
+      <DependentUpon>Static_SummaryByYear.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Static_SummaryByYear.Designer.cs">
+      <DependentUpon>Static_SummaryByYear.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\WebsiteSiteSummary.cs">
+      <DependentUpon>WebsiteSiteSummary.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\WebsiteSiteSummary.Designer.cs">
+      <DependentUpon>WebsiteSiteSummary.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\YearlyHandBookReport.cs">
+      <DependentUpon>YearlyHandBookReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\YearlyHandBookReport.Designer.cs">
+      <DependentUpon>YearlyHandBookReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\MunicipalTrustFundInformation.cs">
+      <DependentUpon>MunicipalTrustFundInformation.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\MunicipalTrustFundInformation.Designer.cs">
+      <DependentUpon>MunicipalTrustFundInformation.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFAdhocReportTemplate.cs">
+      <DependentUpon>OSTFAdhocReportTemplate.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFAdhocReportTemplate.Designer.cs">
+      <DependentUpon>OSTFAdhocReportTemplate.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFApplicationSummaryReport.cs">
+      <DependentUpon>OSTFApplicationSummaryReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFApplicationSummaryReport.Designer.cs">
+      <DependentUpon>OSTFApplicationSummaryReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFCommissionerBookReport.cs">
+      <DependentUpon>OSTFCommissionerBookReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFCommissionerBookReport.Designer.cs">
+      <DependentUpon>OSTFCommissionerBookReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFFeedbackReport.cs">
+      <DependentUpon>OSTFFeedbackReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFFeedbackReport.Designer.cs">
+      <DependentUpon>OSTFFeedbackReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFFundsAllocationReport.cs">
+      <DependentUpon>OSTFFundsAllocationReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFFundsAllocationReport.Designer.cs">
+      <DependentUpon>OSTFFundsAllocationReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFParcel.cs">
+      <DependentUpon>OSTFParcel.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFParcel.Designer.cs">
+      <DependentUpon>OSTFParcel.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFParcelReport.cs">
+      <DependentUpon>OSTFParcelReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFParcelReport.Designer.cs">
+      <DependentUpon>OSTFParcelReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSiteVisitReport.cs">
+      <DependentUpon>OSTFSiteVisitReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSiteVisitReport.Designer.cs">
+      <DependentUpon>OSTFSiteVisitReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSummaryReport.cs">
+      <DependentUpon>OSTFSummaryReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSummaryReport.Designer.cs">
+      <DependentUpon>OSTFSummaryReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSummarySubReport0.cs">
+      <DependentUpon>OSTFSummarySubReport0.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSummarySubReport0.Designer.cs">
+      <DependentUpon>OSTFSummarySubReport0.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSummarySubReport1.cs">
+      <DependentUpon>OSTFSummarySubReport1.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSummarySubReport1.Designer.cs">
+      <DependentUpon>OSTFSummarySubReport1.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSummarySubReport2.cs">
+      <DependentUpon>OSTFSummarySubReport2.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTFSummarySubReport2.Designer.cs">
+      <DependentUpon>OSTFSummarySubReport2.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTF_OPRA_Report.cs">
+      <DependentUpon>OSTF_OPRA_Report.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\OSTF_OPRA_Report.Designer.cs">
+      <DependentUpon>OSTF_OPRA_Report.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\Subreport_Documnts.cs">
+      <DependentUpon>Subreport_Documnts.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\Subreport_Documnts.Designer.cs">
+      <DependentUpon>Subreport_Documnts.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\Subreport_Finance.cs">
+      <DependentUpon>Subreport_Finance.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\Subreport_Finance.Designer.cs">
+      <DependentUpon>Subreport_Finance.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\Subreport_Location.cs">
+      <DependentUpon>Subreport_Location.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\Subreport_Location.Designer.cs">
+      <DependentUpon>Subreport_Location.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\Subreport_Site.cs">
+      <DependentUpon>Subreport_Site.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Openspace\Subreport_Site.Designer.cs">
+      <DependentUpon>Subreport_Site.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\TestReport.cs">
+      <DependentUpon>TestReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\TestReport.Designer.cs">
+      <DependentUpon>TestReport.repx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

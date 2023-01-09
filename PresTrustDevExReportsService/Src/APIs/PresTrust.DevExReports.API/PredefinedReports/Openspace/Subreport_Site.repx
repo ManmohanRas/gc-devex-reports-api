@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="21.2.3.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Subreport_Site" Margins="24, 24, 24, 24" PageWidth="850" PageHeight="1100" Version="21.2" FilterString="[Id] = ?id" DataMember="Ostf_OstfApplication" DataSource="#Ref-0" Font="Arial, 9.75pt">
+  <Extensions>
+    <Item1 Ref="2" Key="VSReportExtInfo" Value=".repx" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="4" Visible="false" Description="id" ValueInfo="0" Name="id" Type="#Ref-3" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="5" ControlType="TopMarginBand" Name="TopMargin" HeightF="24" />
+    <Item2 Ref="6" ControlType="DetailBand" Name="Detail" Expanded="false" HeightF="0" />
+    <Item3 Ref="7" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="24" />
+    <Item4 Ref="8" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="Ostf_OstfApplication.Ostf_OstfApplicationOstf_OstfStructure" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="9" ControlType="DetailBand" Name="Detail1" HeightF="34.7917671" KeepTogether="true">
+          <Controls>
+            <Item1 Ref="10" ControlType="XRTable" Name="table1" SizeF="693.833435,34.7917671" LocationFloat="52.5,0" Padding="2,2,0,0,96" Borders="None">
+              <Rows>
+                <Item1 Ref="11" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+                  <Cells>
+                    <Item1 Ref="12" ControlType="XRTableCell" Name="tableCell1" Weight="1.44558017495991" Multiline="true" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt" Borders="Left, Right, Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="13" EventName="BeforePrint" PropertyName="Text" Expression="[Name]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="14" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="15" ControlType="XRTableCell" Name="tableCell2" Weight="0.64400413613544594" TextFormatString="{0:#,#}" Multiline="true" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt" Borders="Left, Right, Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="16" EventName="BeforePrint" PropertyName="Text" Expression="[SquareFeet]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="17" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="18" ControlType="XRTableCell" Name="tableCell3" Weight="0.96249918656452071" Multiline="true" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt" Borders="Left, Right, Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="19" EventName="BeforePrint" PropertyName="Text" Expression="[ProposedUse]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="20" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="21" ControlType="XRTableCell" Name="tableCell4" Weight="0.89986367915840471" Multiline="true" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt" Borders="Left, Right, Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="22" EventName="BeforePrint" PropertyName="Text" Expression="[ToBeDemolished]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="23" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="24" ControlType="XRTableCell" Name="tableCell5" Weight="1.0334711414846187" TextFormatString="{0:$####,###}" Multiline="true" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt" Borders="Left, Right, Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="25" EventName="BeforePrint" PropertyName="Text" Expression="[EstimatedCostOfDemolition]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="26" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="27" ControlType="XRTableCell" Name="tableCell6" Weight="0.85833413982066309" TextFormatString="{0:$####,###}" Multiline="true" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt" Borders="Left, Right, Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="28" EventName="BeforePrint" PropertyName="Text" Expression="[DemolitionCompleted]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="29" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="30" ControlType="XRTableCell" Name="tableCell7" Weight="1.0945825405314751" TextFormatString="{0:$####,###}" Multiline="true" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt" Borders="Left, Right, Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="[ReimbursementCost]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="32" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item7>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="33" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="25" KeepTogether="true">
+          <Controls>
+            <Item1 Ref="34" ControlType="XRTable" Name="table8" SizeF="693.833435,25" LocationFloat="52.50001,0" Padding="2,2,0,0,96" Borders="None">
+              <Rows>
+                <Item1 Ref="35" ControlType="XRTableRow" Name="tableRow19" Weight="1">
+                  <Cells>
+                    <Item1 Ref="36" ControlType="XRTableCell" Name="tableCell63" Weight="1.4455797171961953" Multiline="true" Text="Structure Description&#xD;&#xA;" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252" Borders="All">
+                      <StylePriority Ref="37" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="38" ControlType="XRTableCell" Name="tableCell64" Weight="0.64400459389916065" Multiline="true" Text="Sq Foot&#xD;&#xA;" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252" Borders="All">
+                      <StylePriority Ref="39" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="40" ControlType="XRTableCell" Name="tableCell65" Weight="0.96249918656452083" Multiline="true" Text="Proposed Use&#xD;&#xA;" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252" Borders="All">
+                      <StylePriority Ref="41" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="42" ControlType="XRTableCell" Name="tableCell66" Weight="0.899863679158405" Multiline="true" Text="To be Demolished&#xD;&#xA;" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252" Borders="All">
+                      <StylePriority Ref="43" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="44" ControlType="XRTableCell" Name="tableCell67" Weight="1.0334711414846192" Multiline="true" Text="Estimated Cost of Demolition&#xD;&#xA;" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252" Borders="All">
+                      <StylePriority Ref="45" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="46" ControlType="XRTableCell" Name="tableCell68" Weight="0.85833413982066353" Multiline="true" Text="Demolition Complete&#xD;&#xA;" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252" Borders="All">
+                      <StylePriority Ref="47" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="48" ControlType="XRTableCell" Name="tableCell69" Weight="1.0945825405314753" Multiline="true" Text="Reimbursement Cost&#xD;&#xA;" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold" BackColor="255,245,246,252" Borders="All">
+                      <StylePriority Ref="49" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item7>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item4>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v21.2" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJPc3RmX09zdGZBcHBsaWNhdGlvbiI+PFRhYmxlcz48VGFibGUgTmFtZT0iT3N0Zi5Pc3RmQXBwbGljYXRpb24iIFg9IjMwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIyODUiIC8+PC9UYWJsZXM+PENvbHVtbnM+PENvbHVtbiBUYWJsZT0iT3N0Zi5Pc3RmQXBwbGljYXRpb24iIE5hbWU9IklkIiAvPjxDb2x1bW4gVGFibGU9Ik9zdGYuT3N0ZkFwcGxpY2F0aW9uIiBOYW1lPSJUaXRsZSIgLz48Q29sdW1uIFRhYmxlPSJPc3RmLk9zdGZBcHBsaWNhdGlvbiIgTmFtZT0iQWdlbmN5SWQiIC8+PENvbHVtbiBUYWJsZT0iT3N0Zi5Pc3RmQXBwbGljYXRpb24iIE5hbWU9IlN0YXR1c0lkIiAvPjxDb2x1bW4gVGFibGU9Ik9zdGYuT3N0ZkFwcGxpY2F0aW9uIiBOYW1lPSJJc0FjdGl2ZSIgLz48Q29sdW1uIFRhYmxlPSJPc3RmLk9zdGZBcHBsaWNhdGlvbiIgTmFtZT0iRnVuZGluZ1llYXIiIC8+PC9Db2x1bW5zPjxNZXRhIFg9IjIwIiBZPSIyMCIgV2lkdGg9IjE3OSIgSGVpZ2h0PSIxODkiIC8+PC9RdWVyeT48UXVlcnkgVHlwZT0iU2VsZWN0UXVlcnkiIE5hbWU9Ik9zdGZfT3N0ZlN0cnVjdHVyZSI+PFRhYmxlcz48VGFibGUgTmFtZT0iT3N0Zi5Pc3RmU3RydWN0dXJlIiAvPjwvVGFibGVzPjxDb2x1bW5zPjxDb2x1bW4gVGFibGU9Ik9zdGYuT3N0ZlN0cnVjdHVyZSIgTmFtZT0iSWQiIC8+PENvbHVtbiBUYWJsZT0iT3N0Zi5Pc3RmU3RydWN0dXJlIiBOYW1lPSJBcHBsaWNhdGlvbklkIiAvPjxDb2x1bW4gVGFibGU9Ik9zdGYuT3N0ZlN0cnVjdHVyZSIgTmFtZT0iTmFtZSIgLz48Q29sdW1uIFRhYmxlPSJPc3RmLk9zdGZTdHJ1Y3R1cmUiIE5hbWU9IlNxdWFyZUZlZXQiIC8+PENvbHVtbiBUYWJsZT0iT3N0Zi5Pc3RmU3RydWN0dXJlIiBOYW1lPSJQcm9wb3NlZFVzZSIgLz48Q29sdW1uIFRhYmxlPSJPc3RmLk9zdGZTdHJ1Y3R1cmUiIE5hbWU9IlRvQmVEZW1vbGlzaGVkIiAvPjxDb2x1bW4gVGFibGU9Ik9zdGYuT3N0ZlN0cnVjdHVyZSIgTmFtZT0iRXN0aW1hdGVkQ29zdE9mRGVtb2xpdGlvbiIgLz48Q29sdW1uIFRhYmxlPSJPc3RmLk9zdGZTdHJ1Y3R1cmUiIE5hbWU9IkRlbW9saXRpb25Db21wbGV0ZWQiIC8+PENvbHVtbiBUYWJsZT0iT3N0Zi5Pc3RmU3RydWN0dXJlIiBOYW1lPSJSZWltYnVyc2VtZW50Q29zdCIgLz48L0NvbHVtbnM+PE1ldGEgWD0iMjE5IiBZPSIyMCIgV2lkdGg9IjIzMSIgSGVpZ2h0PSIyMjkiIC8+PC9RdWVyeT48UmVsYXRpb24gTWFzdGVyPSJPc3RmX09zdGZBcHBsaWNhdGlvbiIgRGV0YWlsPSJPc3RmX09zdGZTdHJ1Y3R1cmUiPjxLZXlDb2x1bW4gTWFzdGVyPSJJZCIgRGV0YWlsPSJBcHBsaWNhdGlvbklkIiAvPjwvUmVsYXRpb24+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMSI+PFZpZXcgTmFtZT0iT3N0Zl9Pc3RmQXBwbGljYXRpb24iPjxGaWVsZCBOYW1lPSJJZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlRpdGxlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFnZW5jeUlkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iU3RhdHVzSWQiIFR5cGU9IkludDE2IiAvPjxGaWVsZCBOYW1lPSJJc0FjdGl2ZSIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iRnVuZGluZ1llYXIiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iT3N0Zl9Pc3RmU3RydWN0dXJlIj48RmllbGQgTmFtZT0iSWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJBcHBsaWNhdGlvbklkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTcXVhcmVGZWV0IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iUHJvcG9zZWRVc2UiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVG9CZURlbW9saXNoZWQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IkVzdGltYXRlZENvc3RPZkRlbW9saXRpb24iIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkRlbW9saXRpb25Db21wbGV0ZWQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IlJlaW1idXJzZW1lbnRDb3N0IiBUeXBlPSJEZWNpbWFsIiAvPjwvVmlldz48UmVsYXRpb24gTWFzdGVyPSJPc3RmX09zdGZBcHBsaWNhdGlvbiIgRGV0YWlsPSJPc3RmX09zdGZTdHJ1Y3R1cmUiPjxLZXlDb2x1bW4gTWFzdGVyPSJJZCIgRGV0YWlsPSJBcHBsaWNhdGlvbklkIiAvPjwvUmVsYXRpb24+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjxDb25uZWN0aW9uT3B0aW9ucyBDbG9zZUNvbm5lY3Rpb249InRydWUiIC8+PC9TcWxEYXRhU291cmNlPg==" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v21.2" Ref="3" Content="System.Int32" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>
