@@ -1,7 +1,6 @@
 ﻿using DevExpress.XtraReports.UI;
 using PresTrust.DevExReports.API.PredefinedReports.Historic;
 using PresTrust.DevExReports.API.PredefinedReports.Openspace;
-using Reports.API.PredefinedReports;
 using System;
 using System.Collections.Generic;
 
@@ -11,7 +10,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports
     {
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>()
         {
-            ["TestReport"] = () => new TestReport(),
             ["OSTFFundsAllocationReport"] = () => new OSTFFundsAllocationReport(),
             ["OSTFSummaryReport"] = () => new OSTFSummaryReport(),
             ["OSTFSummarySubReport0"] = () => new OSTFSummarySubReport0(),
