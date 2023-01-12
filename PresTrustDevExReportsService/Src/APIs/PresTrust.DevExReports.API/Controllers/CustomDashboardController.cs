@@ -11,11 +11,17 @@ using Microsoft.AspNetCore.Http;
 using DevExpress.DashboardAspNetCore;
 using DevExpress.DashboardWeb;
 using Microsoft.AspNetCore.DataProtection;
+using PresTrust.DevExReports.API.Configurators;
 
 namespace PresTrust.DevExReports.API.Controllers
 {
-    public class CustomDashboardController : DashboardController
+    public class CustomCountyDashboardController : DashboardController
     {
-        public CustomDashboardController(DashboardConfigurator configurator, IDataProtectionProvider? dataProtectionProvider = null) : base(configurator, dataProtectionProvider) {}
+        public CustomCountyDashboardController(CustomCountyDashboardConfigurator configurator, IDataProtectionProvider dataProtectionProvider = null) : base(configurator, dataProtectionProvider) {}
+    }
+
+    public class CustomAgencyDashboardController : DashboardController
+    {
+        public CustomAgencyDashboardController(CustomAgencyDashboardConfigurator configurator, IDataProtectionProvider dataProtectionProvider = null) : base(configurator, dataProtectionProvider) { }
     }
 }

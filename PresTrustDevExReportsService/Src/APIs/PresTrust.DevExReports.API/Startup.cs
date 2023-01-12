@@ -14,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using PresTrust.DevExReports.API.Domain;
 using PresTrust.DevExReports.API.Extensions;
 using PresTrust.DevExReports.API.Services;
+using PresTrust.DevExReports.API.Configurators;
 using static PresTrust.DevExReports.API.Domain.DevExReportsDomainConstants;
 
 namespace PresTrust.DevExReports.API
@@ -38,13 +39,8 @@ namespace PresTrust.DevExReports.API
             services.AddControllers();
             var connectionString = new ConnectionStringConfiguration(Configuration.GetConnectionString(AppSettingKeys.PRESTRUST_SQL_DB_CONNECTION_STRING_SECTION));
             services.AddSingleton(connectionString);
-            services.AddScoped<DashboardConfigurator>((System.IServiceProvider serviceProvider) => {
-                DashboardConfigurator configurator = new DashboardConfigurator();
-                //configurator.SetDashboardStorage(new DashboardFileStorage(FileProvider.GetFileInfo("PredefinedDashboards/Dashboard1.xml").PhysicalPath));
-                configurator.SetDashboardStorage(new DashboardFileStorage(FileProvider.GetFileInfo("PredefinedDashboards").PhysicalPath));
-                configurator.SetConnectionStringsProvider(new DashboardConnectionStringsProvider(Configuration));
-                return configurator;
-            });
+            services.AddScoped<CustomCountyDashboardConfigurator>();
+            services.AddScoped<CustomAgencyDashboardConfigurator>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -65,7 +61,8 @@ namespace PresTrust.DevExReports.API
 
             app.UseEndpoints(endpoints =>
             {
-                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "dashboard", "CustomDashboard");
+                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "dashboard/county", "CustomCountyDashboard");
+                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "dashboard/agency", "CustomAgencyDashboard");
                 endpoints.MapControllers();
             });
 
