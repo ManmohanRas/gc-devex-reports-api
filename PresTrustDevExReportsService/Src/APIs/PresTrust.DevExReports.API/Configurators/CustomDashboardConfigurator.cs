@@ -15,6 +15,7 @@ namespace PresTrust.DevExReports.API.Configurators
         public CustomCountyDashboardConfigurator(IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
         {
             SetConnectionStringsProvider(new DashboardConnectionStringsProvider(configuration));
+            AllowExecutingCustomSql = true;
             SetDashboardStorage(new DashboardFileStorage(hostingEnvironment.ContentRootFileProvider.GetFileInfo("PredefinedDashboards/County").PhysicalPath));
             CustomParameters += CustomCountyDashboardConfigurator_CustomParameters;
         }
@@ -30,6 +31,7 @@ namespace PresTrust.DevExReports.API.Configurators
         public CustomAgencyDashboardConfigurator(IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
         {
             SetConnectionStringsProvider(new DashboardConnectionStringsProvider(configuration));
+            AllowExecutingCustomSql = true;
             SetDashboardStorage(new DashboardFileStorage(hostingEnvironment.ContentRootFileProvider.GetFileInfo("PredefinedDashboards/Agency").PhysicalPath));
             CustomParameters += CustomAgencyDashboardConfigurator_CustomParameters;
         }
