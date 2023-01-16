@@ -2,68 +2,19 @@
 <Dashboard CurrencyCulture="en-IN">
   <Title Text="County Dashboard" />
   <DataSources>
-    <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
+    <SqlDataSource Name="ProgramSummaryReport" ComponentName="sqlDataSource1">
       <Connection Name="PresTrustDbConnectionStrings" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="Ostf_OstfApplication">
-        <Tables>
-          <Table Name="Ostf.OstfApplication" X="30" Y="30" Width="125" Height="275" />
-        </Tables>
-        <Columns>
-          <Column Table="Ostf.OstfApplication" Name="Id" />
-          <Column Table="Ostf.OstfApplication" Name="Title" />
-          <Column Table="Ostf.OstfApplication" Name="AgencyId" />
-          <Column Table="Ostf.OstfApplication" Name="StatusId" />
-          <Column Table="Ostf.OstfApplication" Name="FundingYear" />
-          <Column Table="Ostf.OstfApplication" Name="CreatedBy" />
-          <Column Table="Ostf.OstfApplication" Name="CreatedOn" />
-          <Column Table="Ostf.OstfApplication" Name="LastUpdatedBy" />
-          <Column Table="Ostf.OstfApplication" Name="LastUpdatedOn" />
-          <Column Table="Ostf.OstfApplication" Name="IsActive" />
-        </Columns>
+      <Query Type="CustomSqlQuery" Name="ProgramSummaryReport">
+        <Sql>SELECT ProgramType, Summary FROM rept.ProgramSummaryReport</Sql>
       </Query>
-      <ResultSchema>
-        <DataSet Name="SQL Data Source 1">
-          <View Name="Ostf_OstfApplication">
-            <Field Name="Id" Type="Int32" />
-            <Field Name="Title" Type="String" />
-            <Field Name="AgencyId" Type="Int32" />
-            <Field Name="StatusId" Type="Int16" />
-            <Field Name="FundingYear" Type="String" />
-            <Field Name="CreatedBy" Type="String" />
-            <Field Name="CreatedOn" Type="DateTime" />
-            <Field Name="LastUpdatedBy" Type="String" />
-            <Field Name="LastUpdatedOn" Type="DateTime" />
-            <Field Name="IsActive" Type="Boolean" />
-          </View>
-        </DataSet>
-      </ResultSchema>
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem1" Name="Funding Year wise Application Count" DataSource="dashboardSqlDataSource1" DataMember="Ostf_OstfApplication">
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" DataSource="sqlDataSource1" DataMember="ProgramSummaryReport" FilterString="[DataItem0] = ?User_ProgramType">
       <DataItems>
-        <Dimension DataMember="FundingYear" DefaultId="DataItem0" />
-        <Measure DataMember="Id" SummaryType="Count" DefaultId="DataItem1" />
-      </DataItems>
-      <Arguments>
-        <Argument DefaultId="DataItem0" />
-      </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" />
-          <Series>
-            <Simple>
-              <Value DefaultId="DataItem1" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-    </Chart>
-    <Grid ComponentName="gridDashboardItem1" Name="Detail" DataSource="dashboardSqlDataSource1" DataMember="Ostf_OstfApplication">
-      <DataItems>
-        <Dimension DataMember="Title" DefaultId="DataItem0" />
-        <Dimension DataMember="FundingYear" DefaultId="DataItem1" />
+        <Dimension DataMember="ProgramType" DefaultId="DataItem0" />
+        <Dimension DataMember="Summary" DefaultId="DataItem1" />
       </DataItems>
       <GridColumns>
         <GridDimensionColumn>
@@ -76,15 +27,10 @@
       <GridOptions />
       <ColumnFilterOptions />
     </Grid>
-    <Treemap ComponentName="treemapDashboardItem1" Name="Treemap 1" DataSource="dashboardSqlDataSource1" DataMember="Ostf_OstfApplication" />
   </Items>
   <LayoutTree>
-    <LayoutGroup Orientation="Vertical" Weight="100">
-      <LayoutGroup Weight="50">
-        <LayoutItem DashboardItem="treemapDashboardItem1" Weight="50" />
-        <LayoutItem DashboardItem="chartDashboardItem1" Weight="50" />
-      </LayoutGroup>
-      <LayoutItem DashboardItem="gridDashboardItem1" Weight="50" />
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" />
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>

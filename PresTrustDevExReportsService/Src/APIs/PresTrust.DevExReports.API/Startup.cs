@@ -37,6 +37,7 @@ namespace PresTrust.DevExReports.API
             services.AddDevExpressControls();
             services.RegisterDependencies(Configuration);
             services.AddControllers();
+            services.AddHttpContextAccessor();
             var connectionString = new ConnectionStringConfiguration(Configuration.GetConnectionString(AppSettingKeys.PRESTRUST_SQL_DB_CONNECTION_STRING_SECTION));
             services.AddSingleton(connectionString);
             services.AddScoped<CustomCountyDashboardConfigurator>();
@@ -61,8 +62,8 @@ namespace PresTrust.DevExReports.API
 
             app.UseEndpoints(endpoints =>
             {
-                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "dashboard/county", "CustomCountyDashboard");
-                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "dashboard/agency", "CustomAgencyDashboard");
+                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "CountyDashboard", "CustomCountyDashboard");
+                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "AgencyDashboard", "CustomAgencyDashboard");
                 endpoints.MapControllers();
             });
 

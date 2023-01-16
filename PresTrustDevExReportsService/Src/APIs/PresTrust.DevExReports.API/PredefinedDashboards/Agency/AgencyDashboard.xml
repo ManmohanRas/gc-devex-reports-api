@@ -2,68 +2,50 @@
 <Dashboard CurrencyCulture="en-IN">
   <Title Text="Agency Dashboard" />
   <DataSources>
-    <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
+    <SqlDataSource Name="rept_ProgramSummaryReport" ComponentName="sqlDataSource1">
       <Connection Name="PresTrustDbConnectionStrings" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="Ostf_OstfApplication">
+      <Query Type="SelectQuery" Name="rept_ProgramSummaryReport">
         <Tables>
-          <Table Name="Ostf.OstfApplication" X="30" Y="30" Width="125" Height="275" />
+          <Table Name="rept.ProgramSummaryReport" />
         </Tables>
         <Columns>
-          <Column Table="Ostf.OstfApplication" Name="Id" />
-          <Column Table="Ostf.OstfApplication" Name="Title" />
-          <Column Table="Ostf.OstfApplication" Name="AgencyId" />
-          <Column Table="Ostf.OstfApplication" Name="StatusId" />
-          <Column Table="Ostf.OstfApplication" Name="FundingYear" />
-          <Column Table="Ostf.OstfApplication" Name="CreatedBy" />
-          <Column Table="Ostf.OstfApplication" Name="CreatedOn" />
-          <Column Table="Ostf.OstfApplication" Name="LastUpdatedBy" />
-          <Column Table="Ostf.OstfApplication" Name="LastUpdatedOn" />
-          <Column Table="Ostf.OstfApplication" Name="IsActive" />
+          <Column Table="rept.ProgramSummaryReport" Name="ProgramType" />
+          <Column Table="rept.ProgramSummaryReport" Name="Summary" />
         </Columns>
       </Query>
-      <ResultSchema>
-        <DataSet Name="SQL Data Source 1">
-          <View Name="Ostf_OstfApplication">
-            <Field Name="Id" Type="Int32" />
-            <Field Name="Title" Type="String" />
-            <Field Name="AgencyId" Type="Int32" />
-            <Field Name="StatusId" Type="Int16" />
-            <Field Name="FundingYear" Type="String" />
-            <Field Name="CreatedBy" Type="String" />
-            <Field Name="CreatedOn" Type="DateTime" />
-            <Field Name="LastUpdatedBy" Type="String" />
-            <Field Name="LastUpdatedOn" Type="DateTime" />
-            <Field Name="IsActive" Type="Boolean" />
-          </View>
-        </DataSet>
-      </ResultSchema>
+      <Query Type="SelectQuery" Name="Core_View_AgencyEntities_HIST">
+        <Tables>
+          <Table Name="Core.View_AgencyEntities_HIST" />
+        </Tables>
+        <Columns>
+          <Column Table="Core.View_AgencyEntities_HIST" Name="AgencyId" />
+          <Column Table="Core.View_AgencyEntities_HIST" Name="AgencyName" />
+        </Columns>
+      </Query>
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem1" Name="Funding Year wise Application Count" DataSource="dashboardSqlDataSource1" DataMember="Ostf_OstfApplication">
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" DataSource="sqlDataSource1" DataMember="rept_ProgramSummaryReport" FilterString="[DataItem1] = ?User_ProgramType">
       <DataItems>
-        <Dimension DataMember="FundingYear" DefaultId="DataItem0" />
-        <Measure DataMember="Id" SummaryType="Count" DefaultId="DataItem1" />
+        <Dimension DataMember="ProgramType" DefaultId="DataItem1" />
+        <Dimension DataMember="Summary" DefaultId="DataItem0" />
       </DataItems>
-      <Arguments>
-        <Argument DefaultId="DataItem0" />
-      </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" />
-          <Series>
-            <Simple>
-              <Value DefaultId="DataItem1" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-    </Chart>
-    <Grid ComponentName="gridDashboardItem1" Name="Detail" DataSource="dashboardSqlDataSource1" DataMember="Ostf_OstfApplication">
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions />
+      <ColumnFilterOptions />
+    </Grid>
+    <Grid ComponentName="gridDashboardItem3" Name="Grid 3" DataSource="sqlDataSource1" DataMember="Core_View_AgencyEntities_HIST" FilterString="[DataItem0] In(?User_AgencyIds)">
       <DataItems>
-        <Dimension DataMember="Title" DefaultId="DataItem0" />
-        <Dimension DataMember="FundingYear" DefaultId="DataItem1" />
+        <Dimension DataMember="AgencyName" DefaultId="DataItem1" />
+        <Dimension DataMember="AgencyId" DefaultId="DataItem0" />
       </DataItems>
       <GridColumns>
         <GridDimensionColumn>
@@ -76,15 +58,13 @@
       <GridOptions />
       <ColumnFilterOptions />
     </Grid>
-    <Treemap ComponentName="treemapDashboardItem1" Name="Treemap 1" DataSource="dashboardSqlDataSource1" DataMember="Ostf_OstfApplication" />
   </Items>
   <LayoutTree>
-    <LayoutGroup Orientation="Vertical" Weight="100">
-      <LayoutGroup Weight="50">
-        <LayoutItem DashboardItem="treemapDashboardItem1" Weight="50" />
-        <LayoutItem DashboardItem="chartDashboardItem1" Weight="50" />
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical">
+        <LayoutItem DashboardItem="gridDashboardItem1" />
+        <LayoutItem DashboardItem="gridDashboardItem3" />
       </LayoutGroup>
-      <LayoutItem DashboardItem="gridDashboardItem1" Weight="50" />
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>
