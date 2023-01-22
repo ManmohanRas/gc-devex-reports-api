@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="chr-Cher-US">
+  <Title Text="" Alignment="Left" />
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="Grants Per Year Analysis">
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Dimension DataMember="year" IsDiscreteScale="true" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Measure DataMember="Applications/Projects" DefaultId="DataItem1" />
+        <Measure DataMember="Approved Projects" DefaultId="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple Name="Applications">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+            <Simple Name="Grants Approved">
+              <Value DefaultId="DataItem2" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Pie ComponentName="pieDashboardItem1" Name="Year Vs Funds Distribution" PieType="Donut" LabelContentType="ArgumentValueAndPercent" ShowPieCaptions="false">
+      <ColoringOptions MeasuresColoringMode="Hue" />
+      <DataItems>
+        <Dimension DataMember="year" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Measure DataMember="Total Funds Expended" Name="Total Funds Expended" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartDashboardItem3" Name="Year Vs Acres Preserved">
+      <ColoringOptions MeasuresColoringMode="Hue" />
+      <DataItems>
+        <Dimension DataMember="year" IsDiscreteScale="true" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Measure DataMember="Acres Preserved" Name="Acres Preserved" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple SeriesType="Area">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Grid ComponentName="gridDashboardItem1" Name="Detail">
+      <InteractivityOptions MasterFilterMode="Single" />
+      <DataItems>
+        <Dimension DataMember="year" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Dimension DataMember="Funds Expended - Acquisition " DefaultId="DataItem1" />
+        <Dimension DataMember="Funds Expended - Demolition " DefaultId="DataItem2" />
+        <Dimension DataMember="$/Acre" DefaultId="DataItem3" />
+        <Dimension DataMember="Applications" DefaultId="DataItem4" />
+        <Dimension DataMember="Approved" DefaultId="DataItem5" />
+        <Dimension DataMember="Preserved" DefaultId="DataItem6" />
+        <Dimension DataMember="Rejected" DefaultId="DataItem7" />
+        <Dimension DataMember="Withdrawn" DefaultId="DataItem8" />
+        <Dimension DataMember="Expired" DefaultId="DataItem9" />
+        <Dimension DataMember="Highet Acreage  Preserved" DefaultId="DataItem10" />
+        <Dimension DataMember="Least Acreage Preserved" DefaultId="DataItem11" />
+        <Dimension DataMember="Highest Funded Project" DefaultId="DataItem12" />
+        <Dimension DataMember="Least Funded Project" DefaultId="DataItem13" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem3" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem4" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem5" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem6" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem7" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem8" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem9" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem10" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem11" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem12" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem13" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" />
+      <ColumnFilterOptions />
+    </Grid>
+  </Items>
+  <ColorScheme>
+    <Entry DataSource="dashboardExcelDataSource1" Color="-2890245">
+      <MeasureKey>
+        <Definition DataMember="$ Distributed /Awarded" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="dashboardExcelDataSource1" Color="-16287">
+      <MeasureKey>
+        <Definition DataMember="Funds Allocated" />
+      </MeasureKey>
+    </Entry>
+  </ColorScheme>
+  <LayoutOptions>
+    <Height Mode="Fixed" Value="1000" />
+  </LayoutOptions>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical" Weight="100">
+      <LayoutGroup Weight="31.565656565656564">
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="35.519888346127004" />
+        <LayoutItem DashboardItem="pieDashboardItem1" Weight="33.07745987438939" />
+        <LayoutItem DashboardItem="chartDashboardItem3" Weight="31.4026517794836" />
+      </LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="68.434343434343432" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

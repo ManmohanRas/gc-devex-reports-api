@@ -1,0 +1,192 @@
+<Dashboard CurrencyCulture="chr-Cher-US">
+  <Title Text="" Alignment="Left" />
+  <Items>
+    <Chart ComponentName="chartDashboardItem2" Name="Year Vs Applications Approved">
+      <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Dimension DataMember="year" IsDiscreteScale="true" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Measure DataMember="Applications/Projects" DefaultId="DataItem1" />
+        <Measure DataMember="Approved " Name="Approved" DefaultId="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <ColorScheme>
+        <Entry DataSource="dashboardExcelDataSource5" Color="-7886158">
+          <MeasureKey>
+            <Definition DataMember="Applications/Projects" />
+          </MeasureKey>
+        </Entry>
+        <Entry DataSource="dashboardExcelDataSource5" Color="-1784463">
+          <MeasureKey>
+            <Definition DataMember="Approved " />
+          </MeasureKey>
+        </Entry>
+      </ColorScheme>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple Name="Applications">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+            <Simple Name="Approved">
+              <Value DefaultId="DataItem2" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+    </Chart>
+    <Chart ComponentName="chartDashboardItem4" Name="Year Vs Construction / Non-Construction">
+      <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Dimension DataMember="year" IsDiscreteScale="true" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Measure DataMember="Construction" DefaultId="DataItem1" />
+        <Measure DataMember="Non-Construction" DefaultId="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <ColorScheme>
+        <Entry DataSource="dashboardExcelDataSource5" Color="-2780010">
+          <MeasureKey>
+            <Definition DataMember="Non-Construction" />
+          </MeasureKey>
+        </Entry>
+      </ColorScheme>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple Name="Construction" SeriesType="Line">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+            <Simple Name="Non-Construction">
+              <Value DefaultId="DataItem2" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+    </Chart>
+    <Chart ComponentName="chartDashboardItem5" Name="Year Vs Total Funds Awarded">
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Dimension DataMember="year" IsDiscreteScale="true" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Measure DataMember="Total Funds awarded" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple Name="Total Funds awarded" SeriesType="Area">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+    </Chart>
+    <Grid ComponentName="gridDashboardItem2" Name="Detail">
+      <DataItems>
+        <Dimension DataMember="year" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Dimension DataMember="Applications/Projects" DefaultId="DataItem1" />
+        <Dimension DataMember="Approved " DefaultId="DataItem2" />
+        <Dimension DataMember="Completed" DefaultId="DataItem3" />
+        <Dimension DataMember="Rejected" DefaultId="DataItem4" />
+        <Dimension DataMember="Withdrawn" DefaultId="DataItem5" />
+        <Dimension DataMember="No-Awards" DefaultId="DataItem6" />
+        <Dimension DataMember="Grant-Expired" DefaultId="DataItem7" />
+        <Dimension DataMember="Declined" DefaultId="DataItem8" />
+        <Dimension DataMember="Construction Funds" DefaultId="DataItem9" />
+        <Dimension DataMember="Non-Construction Funds" DefaultId="DataItem10" />
+        <Dimension DataMember="Sites funded" DefaultId="DataItem11" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Weight="45.57774607703281">
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="102.71041369472182">
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="65.47788873038516">
+          <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="67.4037089871612">
+          <Dimension DefaultId="DataItem3" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="60.984308131241086">
+          <Dimension DefaultId="DataItem4" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="68.0456490727532">
+          <Dimension DefaultId="DataItem5" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="68.68758915834522">
+          <Dimension DefaultId="DataItem6" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="77.67475035663338">
+          <Dimension DefaultId="DataItem7" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="59.70042796005706">
+          <Dimension DefaultId="DataItem8" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="96.2910128388017">
+          <Dimension DefaultId="DataItem9" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="112.98145506419401">
+          <Dimension DefaultId="DataItem10" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="74.46504992867332">
+          <Dimension DefaultId="DataItem11" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" />
+      <ColumnFilterOptions />
+    </Grid>
+    <TextBox ComponentName="textBoxDashboardItem1" Name="Text Box 1" />
+  </Items>
+  <ColorScheme>
+    <Entry DataSource="dashboardExcelDataSource1" Color="-2890245">
+      <MeasureKey>
+        <Definition DataMember="$ Distributed /Awarded" />
+      </MeasureKey>
+    </Entry>
+    <Entry DataSource="dashboardExcelDataSource1" Color="-16287">
+      <MeasureKey>
+        <Definition DataMember="Funds Allocated" />
+      </MeasureKey>
+    </Entry>
+  </ColorScheme>
+  <LayoutOptions>
+    <Height Mode="Fixed" Value="1000" />
+  </LayoutOptions>
+  <LayoutTree>
+    <LayoutGroup Weight="100">
+      <LayoutItem DashboardItem="textBoxDashboardItem1" Weight="100" />
+      <LayoutGroup Orientation="Vertical" Weight="100">
+        <LayoutGroup Weight="35.60606060606061">
+          <LayoutItem DashboardItem="chartDashboardItem2" Weight="30.425680390788557" />
+          <LayoutItem DashboardItem="chartDashboardItem4" Weight="38.10188415910677" />
+          <LayoutItem DashboardItem="chartDashboardItem5" Weight="31.472435450104676" />
+        </LayoutGroup>
+        <LayoutItem DashboardItem="gridDashboardItem2" Weight="64.39393939393939" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

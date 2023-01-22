@@ -12,15 +12,15 @@ using Microsoft.Extensions.Configuration;
 
 namespace PresTrust.DevExReports.API.Configurators
 {
-    public class CustomCountyDashboardConfigurator : DashboardConfigurator
+    public class CountyDashboardConfigurator : DashboardConfigurator
     {
         private readonly string programType;
-        public CustomCountyDashboardConfigurator(IConfiguration configuration, IWebHostEnvironment hostingEnvironment, IHttpContextAccessor httpContextAccessor)
+        public CountyDashboardConfigurator(IConfiguration configuration, IWebHostEnvironment hostingEnvironment, IHttpContextAccessor httpContextAccessor)
         {
-            this.programType = httpContextAccessor.HttpContext.Request.Headers["User_ProgramType"];
+            programType = httpContextAccessor.HttpContext.Request.Headers["User_ProgramType"];
             SetConnectionStringsProvider(new DashboardConnectionStringsProvider(configuration));
             AllowExecutingCustomSql = true;
-            SetDashboardStorage(new DashboardFileStorage(hostingEnvironment.ContentRootFileProvider.GetFileInfo("PredefinedDashboards/County").PhysicalPath));
+            SetDashboardStorage(new CountyDashboardStorage(hostingEnvironment, programType));
             CustomParameters += CustomCountyDashboardConfigurator_CustomParameters;
         }
 
@@ -30,17 +30,17 @@ namespace PresTrust.DevExReports.API.Configurators
         }
     }
 
-    public class CustomAgencyDashboardConfigurator : DashboardConfigurator
+    public class AgencyDashboardConfigurator : DashboardConfigurator
     {
         private readonly string programType;
         private readonly string agencyIds;
-        public CustomAgencyDashboardConfigurator(IConfiguration configuration, IWebHostEnvironment hostingEnvironment, IHttpContextAccessor httpContextAccessor)
+        public AgencyDashboardConfigurator(IConfiguration configuration, IWebHostEnvironment hostingEnvironment, IHttpContextAccessor httpContextAccessor)
         {
-            this.programType = httpContextAccessor.HttpContext.Request.Headers["User_ProgramType"];
-            this.agencyIds = httpContextAccessor.HttpContext.Request.Headers["User_AgencyIds"];
+            programType = httpContextAccessor.HttpContext.Request.Headers["User_ProgramType"];
+            agencyIds = httpContextAccessor.HttpContext.Request.Headers["User_AgencyIds"];
             SetConnectionStringsProvider(new DashboardConnectionStringsProvider(configuration));
             AllowExecutingCustomSql = true;
-            SetDashboardStorage(new DashboardFileStorage(hostingEnvironment.ContentRootFileProvider.GetFileInfo("PredefinedDashboards/Agency").PhysicalPath));
+            SetDashboardStorage(new AgencyDashboardStorage(hostingEnvironment, programType));
             CustomParameters += CustomAgencyDashboardConfigurator_CustomParameters;
         }
 
