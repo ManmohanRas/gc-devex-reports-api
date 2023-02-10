@@ -111,6 +111,12 @@
     <Compile Update="PredefinedReports\Historic\Flex_Payment.Designer.cs">
       <DependentUpon>Flex_Payment.repx</DependentUpon>
     </Compile>
+    <Compile Update="PredefinedReports\Historic\Flex_Payment.cs">
+      <DependentUpon>Flex_Payment.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\Flex_Payment.Designer.cs">
+      <DependentUpon>Flex_Payment.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Historic\Flex_ScopeofWork.cs">
       <DependentUpon>Flex_ScopeofWork.repx</DependentUpon>
     </Compile>
