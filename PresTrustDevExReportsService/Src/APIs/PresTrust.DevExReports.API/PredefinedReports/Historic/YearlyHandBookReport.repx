@@ -397,7 +397,7 @@
                 </Item5>
               </Controls>
             </Item2>
-            <Item3 Ref="194" ControlType="DetailReportBand" Name="DetailReport6" Level="3" FilterString="[FundingYear] = ?Year And [Title] In (?Application)" DataMember="Hist_HistApplication_1.Hist_HistApplication_1Query_2" DataSource="#Ref-8">
+            <Item3 Ref="194" ControlType="DetailReportBand" Name="DetailReport6" Level="4" FilterString="[FundingYear] = ?Year And [Title] In (?Application)" DataMember="Hist_HistApplication_1.Hist_HistApplication_1Query_2" DataSource="#Ref-8">
               <Bands>
                 <Item1 Ref="195" ControlType="DetailBand" Name="Detail7" HeightF="25">
                   <Controls>
@@ -583,7 +583,7 @@
                 </Item1>
               </Bands>
             </Item4>
-            <Item5 Ref="277" ControlType="DetailReportBand" Name="DetailReport5" Level="1" FilterString="[FundingYear] = ?Year And [Hist.HistApplication_Title] In (?Application)" DataMember="Hist_HistApplication_1" DataSource="#Ref-8">
+            <Item5 Ref="277" ControlType="DetailReportBand" Name="DetailReport5" Level="2" FilterString="[FundingYear] = ?Year And [Hist.HistApplication_Title] In (?Application)" DataMember="Hist_HistApplication_1" DataSource="#Ref-8">
               <Bands>
                 <Item1 Ref="278" ControlType="DetailBand" Name="Detail6" Expanded="false" HeightF="25" />
                 <Item2 Ref="279" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="443.3809">
@@ -799,177 +799,177 @@
                     </Item8>
                   </Controls>
                 </Item2>
-                <Item3 Ref="376" ControlType="DetailReportBand" Name="DetailReport9" Level="0" FilterString="[FundingYear] = ?Year And [Title] In (?Application)" DataMember="Query_6" DataSource="#Ref-8">
-                  <Bands>
-                    <Item1 Ref="377" ControlType="DetailBand" Name="Detail10" HeightF="25">
-                      <Controls>
-                        <Item1 Ref="378" ControlType="XRTable" Name="table15" TextAlignment="MiddleCenter" SizeF="667,25" LocationFloat="10.833374,0" Font="Segoe UI, 10pt" Padding="2,2,0,0,96">
-                          <Rows>
-                            <Item1 Ref="379" ControlType="XRTableRow" Name="tableRow36" Weight="1">
-                              <Cells>
-                                <Item1 Ref="380" ControlType="XRTableCell" Name="tableCell83" Weight="1" Multiline="true" TextAlignment="MiddleLeft">
-                                  <ExpressionBindings>
-                                    <Item1 Ref="381" EventName="BeforePrint" PropertyName="Text" Expression="Iif([FundingSource]='OTHER_SOURCE',[OtherSource] ,[FundingSource] )" />
-                                  </ExpressionBindings>
-                                  <StylePriority Ref="382" UseTextAlignment="false" />
-                                </Item1>
-                                <Item2 Ref="383" ControlType="XRTableCell" Name="tableCell84" Weight="1.2091454272863569" Multiline="true">
-                                  <ExpressionBindings>
-                                    <Item1 Ref="384" EventName="BeforePrint" PropertyName="Text" Expression="[FundingStatus]" />
-                                  </ExpressionBindings>
-                                </Item2>
-                                <Item3 Ref="385" ControlType="XRTableCell" Name="tableCell99" Weight="0.79085457271364312" TextFormatString="{0:$#,#}" Multiline="true">
-                                  <ExpressionBindings>
-                                    <Item1 Ref="386" EventName="BeforePrint" PropertyName="Text" Expression="[Amount]" />
-                                  </ExpressionBindings>
-                                </Item3>
-                              </Cells>
-                            </Item1>
-                          </Rows>
-                          <StylePriority Ref="387" UseFont="false" UseTextAlignment="false" />
-                        </Item1>
-                      </Controls>
-                    </Item1>
-                    <Item2 Ref="388" ControlType="ReportHeaderBand" Name="ReportHeader8" HeightF="57">
-                      <Controls>
-                        <Item1 Ref="389" ControlType="XRLabel" Name="label23" Multiline="true" Text="Match Source" TextAlignment="MiddleLeft" SizeF="185.208344,23" LocationFloat="9.999947,0" Font="Segoe UI Semilight, 11pt, style=Bold" ForeColor="255,128,3,136" Padding="2,2,0,0,100">
-                          <StylePriority Ref="390" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
-                        </Item1>
-                        <Item2 Ref="391" ControlType="XRTable" Name="table14" TextAlignment="MiddleCenter" SizeF="667,25" LocationFloat="10.833374,32" Font="Segoe UI Semilight, 11pt, style=Bold" Padding="2,2,0,0,96" Borders="Bottom">
-                          <Rows>
-                            <Item1 Ref="392" ControlType="XRTableRow" Name="tableRow20" Weight="1">
-                              <Cells>
-                                <Item1 Ref="393" ControlType="XRTableCell" Name="tableCell80" Weight="1" Multiline="true" Text="Funding Source" TextAlignment="MiddleLeft">
-                                  <StylePriority Ref="394" UseTextAlignment="false" />
-                                </Item1>
-                                <Item2 Ref="395" ControlType="XRTableCell" Name="tableCell81" Weight="1.2091454272863569" Multiline="true" Text="Funding Status" />
-                                <Item3 Ref="396" ControlType="XRTableCell" Name="tableCell82" Weight="0.79085457271364312" Multiline="true" Text="Amount" />
-                              </Cells>
-                            </Item1>
-                          </Rows>
-                          <StylePriority Ref="397" UseFont="false" UseBorders="false" UseTextAlignment="false" />
-                        </Item2>
-                      </Controls>
-                    </Item2>
-                    <Item3 Ref="398" ControlType="ReportFooterBand" Name="ReportFooter1" HeightF="24.9999752">
-                      <Controls>
-                        <Item1 Ref="399" ControlType="XRLine" Name="line7" SizeF="667.000061,2" LocationFloat="10.833374,0" />
-                        <Item2 Ref="400" ControlType="XRLabel" Name="label16" TextFormatString="{0:$#,#}" Multiline="true" Text="label16" TextAlignment="MiddleCenter" SizeF="174.437653,23" LocationFloat="503.395721,1.9999752" Font="Arial, 11pt, style=Bold" Padding="2,2,0,0,100">
-                          <Summary Ref="401" Running="Report" />
-                          <ExpressionBindings>
-                            <Item1 Ref="402" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Amount])" />
-                          </ExpressionBindings>
-                          <StylePriority Ref="403" UseFont="false" UseTextAlignment="false" />
-                        </Item2>
-                      </Controls>
-                    </Item3>
-                  </Bands>
-                </Item3>
               </Bands>
             </Item5>
-            <Item6 Ref="404" ControlType="DetailReportBand" Name="DetailReport8" Level="4" FilterString="[FundingYear] = ?Year And [Title] In (?Application)" DataMember="Hist_HistApplication_1.Hist_HistApplication_1Query_1" DataSource="#Ref-8">
+            <Item6 Ref="376" ControlType="DetailReportBand" Name="DetailReport8" Level="5" FilterString="[FundingYear] = ?Year And [Title] In (?Application)" DataMember="Hist_HistApplication_1.Hist_HistApplication_1Query_1" DataSource="#Ref-8">
               <Bands>
-                <Item1 Ref="405" ControlType="DetailBand" Name="Detail9" HeightF="23">
+                <Item1 Ref="377" ControlType="DetailBand" Name="Detail9" HeightF="23">
                   <Controls>
-                    <Item1 Ref="406" ControlType="XRLabel" Name="label22" Multiline="true" TextAlignment="MiddleLeft" SizeF="755.1667,23" LocationFloat="50.833313,0" Font="Segoe UI Semilight, 10pt" Padding="2,2,0,0,100">
+                    <Item1 Ref="378" ControlType="XRLabel" Name="label22" Multiline="true" TextAlignment="MiddleLeft" SizeF="755.1667,23" LocationFloat="50.833313,0" Font="Segoe UI Semilight, 10pt" Padding="2,2,0,0,100">
                       <ExpressionBindings>
-                        <Item1 Ref="407" EventName="BeforePrint" PropertyName="Text" Expression="[Comment]" />
+                        <Item1 Ref="379" EventName="BeforePrint" PropertyName="Text" Expression="[Comment]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="408" UseFont="false" UseTextAlignment="false" />
+                      <StylePriority Ref="380" UseFont="false" UseTextAlignment="false" />
                     </Item1>
                   </Controls>
                 </Item1>
-                <Item2 Ref="409" ControlType="ReportHeaderBand" Name="ReportHeader5" HeightF="64.00001">
+                <Item2 Ref="381" ControlType="ReportHeaderBand" Name="ReportHeader5" HeightF="64.00001">
                   <Controls>
-                    <Item1 Ref="410" ControlType="XRPageBreak" Name="pageBreak6" LocationFloat="0,2" />
-                    <Item2 Ref="411" ControlType="XRLabel" Name="label17" Multiline="true" Text="Consultant Review" TextAlignment="MiddleCenter" SizeF="168.906311,23.0000057" LocationFloat="318.546844,18.000082" Font="Segoe UI Semibold, 14pt, style=Bold" Padding="2,2,0,0,100">
-                      <StylePriority Ref="412" UseFont="false" UseTextAlignment="false" />
+                    <Item1 Ref="382" ControlType="XRPageBreak" Name="pageBreak6" LocationFloat="0,2" />
+                    <Item2 Ref="383" ControlType="XRLabel" Name="label17" Multiline="true" Text="Consultant Review" TextAlignment="MiddleCenter" SizeF="168.906311,23.0000057" LocationFloat="318.546844,18.000082" Font="Segoe UI Semibold, 14pt, style=Bold" Padding="2,2,0,0,100">
+                      <StylePriority Ref="384" UseFont="false" UseTextAlignment="false" />
                     </Item2>
-                    <Item3 Ref="413" ControlType="XRLine" Name="line3" SizeF="806,23" LocationFloat="0,41.0000076" />
+                    <Item3 Ref="385" ControlType="XRLine" Name="line3" SizeF="806,23" LocationFloat="0,41.0000076" />
                   </Controls>
                 </Item2>
-                <Item3 Ref="414" ControlType="GroupHeaderBand" Name="GroupHeader2" HeightF="23">
+                <Item3 Ref="386" ControlType="GroupHeaderBand" Name="GroupHeader2" HeightF="23">
                   <GroupFields>
-                    <Item1 Ref="415" FieldName="Hist.HistCommentType_Title" />
+                    <Item1 Ref="387" FieldName="Hist.HistCommentType_Title" />
                   </GroupFields>
                   <Controls>
-                    <Item1 Ref="416" ControlType="XRLabel" Name="label18" Multiline="true" Text="label18" TextAlignment="MiddleLeft" SizeF="350.7223,23" LocationFloat="40.5000038,0" Font="Segoe UI Semilight, 11pt, style=Bold" Padding="2,2,0,0,100">
+                    <Item1 Ref="388" ControlType="XRLabel" Name="label18" Multiline="true" Text="label18" TextAlignment="MiddleLeft" SizeF="350.7223,23" LocationFloat="40.5000038,0" Font="Segoe UI Semilight, 11pt, style=Bold" Padding="2,2,0,0,100">
                       <ExpressionBindings>
-                        <Item1 Ref="417" EventName="BeforePrint" PropertyName="Text" Expression="[Hist.HistCommentType_Title]" />
+                        <Item1 Ref="389" EventName="BeforePrint" PropertyName="Text" Expression="[Hist.HistCommentType_Title]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="418" UseFont="false" UseTextAlignment="false" />
+                      <StylePriority Ref="390" UseFont="false" UseTextAlignment="false" />
                     </Item1>
                   </Controls>
                 </Item3>
-                <Item4 Ref="419" ControlType="ReportFooterBand" Name="ReportFooter3" HeightF="16.0008469">
+                <Item4 Ref="391" ControlType="ReportFooterBand" Name="ReportFooter3" HeightF="16.0008469">
                   <Controls>
-                    <Item1 Ref="420" ControlType="XRLine" Name="line4" SizeF="802.999939,13.0000076" LocationFloat="0,0" />
+                    <Item1 Ref="392" ControlType="XRLine" Name="line4" SizeF="802.999939,13.0000076" LocationFloat="0,0" />
                   </Controls>
                 </Item4>
               </Bands>
             </Item6>
-            <Item7 Ref="421" ControlType="DetailReportBand" Name="DetailReport3" Level="2" FilterString="[FundingYear] = ?Year And [Title] In (?Application)" DataMember="Hist_HistApplication_1.Hist_HistApplication_1Query_5" DataSource="#Ref-8">
+            <Item7 Ref="393" ControlType="DetailReportBand" Name="DetailReport3" Level="3" FilterString="[FundingYear] = ?Year And [Title] In (?Application)" DataMember="Hist_HistApplication_1.Hist_HistApplication_1Query_5" DataSource="#Ref-8">
               <Bands>
-                <Item1 Ref="422" ControlType="DetailBand" Name="Detail4" HeightF="25">
+                <Item1 Ref="394" ControlType="DetailBand" Name="Detail4" HeightF="25">
                   <Controls>
-                    <Item1 Ref="423" ControlType="XRTable" Name="table17" KeepTogether="true" TextAlignment="MiddleLeft" SizeF="780.3336,25" LocationFloat="10.8332825,0" Font="Segoe UI Semilight, 10pt" Padding="2,2,0,0,96">
+                    <Item1 Ref="395" ControlType="XRTable" Name="table17" KeepTogether="true" TextAlignment="MiddleLeft" SizeF="780.3336,25" LocationFloat="10.8332825,0" Font="Segoe UI Semilight, 10pt" Padding="2,2,0,0,96">
                       <Rows>
-                        <Item1 Ref="424" ControlType="XRTableRow" Name="tableRow19" Weight="1">
+                        <Item1 Ref="396" ControlType="XRTableRow" Name="tableRow19" Weight="1">
                           <Cells>
-                            <Item1 Ref="425" ControlType="XRTableCell" Name="tableCell76" Weight="1" Multiline="true">
+                            <Item1 Ref="397" ControlType="XRTableCell" Name="tableCell76" Weight="1" Multiline="true">
                               <ExpressionBindings>
-                                <Item1 Ref="426" EventName="BeforePrint" PropertyName="Text" Expression="[HistoricalName]" />
+                                <Item1 Ref="398" EventName="BeforePrint" PropertyName="Text" Expression="[HistoricalName]" />
                               </ExpressionBindings>
                             </Item1>
-                            <Item2 Ref="427" ControlType="XRTableCell" Name="tableCell77" Weight="0.52056496731755542" Multiline="true">
+                            <Item2 Ref="399" ControlType="XRTableCell" Name="tableCell77" Weight="0.52056496731755542" Multiline="true">
                               <ExpressionBindings>
-                                <Item1 Ref="428" EventName="BeforePrint" PropertyName="Text" Expression="[DateBuilt]" />
+                                <Item1 Ref="400" EventName="BeforePrint" PropertyName="Text" Expression="[DateBuilt]" />
                               </ExpressionBindings>
                             </Item2>
-                            <Item3 Ref="429" ControlType="XRTableCell" Name="tableCell78" Weight="0.73971751634122229" Multiline="true">
+                            <Item3 Ref="401" ControlType="XRTableCell" Name="tableCell78" Weight="0.73971751634122229" Multiline="true">
                               <ExpressionBindings>
-                                <Item1 Ref="430" EventName="BeforePrint" PropertyName="Text" Expression="[ExistingUse]" />
+                                <Item1 Ref="402" EventName="BeforePrint" PropertyName="Text" Expression="[ExistingUse]" />
                               </ExpressionBindings>
                             </Item3>
-                            <Item4 Ref="431" ControlType="XRTableCell" Name="tableCell79" Weight="0.73971751634122229" Multiline="true">
+                            <Item4 Ref="403" ControlType="XRTableCell" Name="tableCell79" Weight="0.73971751634122229" Multiline="true">
                               <ExpressionBindings>
-                                <Item1 Ref="432" EventName="BeforePrint" PropertyName="Text" Expression="[ProposedUse]" />
+                                <Item1 Ref="404" EventName="BeforePrint" PropertyName="Text" Expression="[ProposedUse]" />
                               </ExpressionBindings>
                             </Item4>
                           </Cells>
                         </Item1>
                       </Rows>
-                      <StylePriority Ref="433" UseFont="false" UseTextAlignment="false" />
+                      <StylePriority Ref="405" UseFont="false" UseTextAlignment="false" />
                     </Item1>
                   </Controls>
                 </Item1>
-                <Item2 Ref="434" ControlType="ReportHeaderBand" Name="ReportHeader3" HeightF="57.000042" KeepTogether="true">
+                <Item2 Ref="406" ControlType="ReportHeaderBand" Name="ReportHeader3" HeightF="57.000042" KeepTogether="true">
                   <Controls>
-                    <Item1 Ref="435" ControlType="XRTable" Name="table16" KeepTogether="true" TextAlignment="MiddleLeft" SizeF="780.3336,25" LocationFloat="10.8332825,32.000042" Font="Segoe UI Semibold, 10pt, style=Bold" Padding="2,2,0,0,96" Borders="Bottom">
+                    <Item1 Ref="407" ControlType="XRTable" Name="table16" KeepTogether="true" TextAlignment="MiddleLeft" SizeF="780.3336,25" LocationFloat="10.8332825,32.000042" Font="Segoe UI Semibold, 10pt, style=Bold" Padding="2,2,0,0,96" Borders="Bottom">
                       <Rows>
-                        <Item1 Ref="436" ControlType="XRTableRow" Name="tableRow18" Weight="1">
+                        <Item1 Ref="408" ControlType="XRTableRow" Name="tableRow18" Weight="1">
                           <Cells>
-                            <Item1 Ref="437" ControlType="XRTableCell" Name="tableCell45" Weight="1" Multiline="true" Text="Structure" />
-                            <Item2 Ref="438" ControlType="XRTableCell" Name="tableCell73" Weight="0.52056496731755542" Multiline="true" Text="Date Built" />
-                            <Item3 Ref="439" ControlType="XRTableCell" Name="tableCell74" Weight="0.73971751634122229" Multiline="true" Text="Existing Use" />
-                            <Item4 Ref="440" ControlType="XRTableCell" Name="tableCell75" Weight="0.73971751634122229" Multiline="true" Text="Proposed Use" />
+                            <Item1 Ref="409" ControlType="XRTableCell" Name="tableCell45" Weight="1" Multiline="true" Text="Structure" />
+                            <Item2 Ref="410" ControlType="XRTableCell" Name="tableCell73" Weight="0.52056496731755542" Multiline="true" Text="Date Built" />
+                            <Item3 Ref="411" ControlType="XRTableCell" Name="tableCell74" Weight="0.73971751634122229" Multiline="true" Text="Existing Use" />
+                            <Item4 Ref="412" ControlType="XRTableCell" Name="tableCell75" Weight="0.73971751634122229" Multiline="true" Text="Proposed Use" />
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                      <StylePriority Ref="413" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Controls>
+                </Item2>
+                <Item3 Ref="414" ControlType="ReportFooterBand" Name="ReportFooter2" HeightF="5.1906333">
+                  <Controls>
+                    <Item1 Ref="415" ControlType="XRLine" Name="line5" SizeF="780.3336,4.66667175" LocationFloat="10.8332825,0" />
+                  </Controls>
+                </Item3>
+              </Bands>
+            </Item7>
+            <Item8 Ref="416" ControlType="DetailReportBand" Name="DetailReport7" Level="1" FilterString="[FundingYear] = ?Year And [Title] In (?Application)" DataMember="Hist_HistApplication_1.Hist_HistApplication_1Query_6" DataSource="#Ref-8">
+              <Bands>
+                <Item1 Ref="417" ControlType="DetailBand" Name="Detail8" HeightF="25">
+                  <Controls>
+                    <Item1 Ref="418" ControlType="XRTable" Name="table15" TextAlignment="MiddleCenter" SizeF="667,25" LocationFloat="9.999939,0" Font="Segoe UI, 10pt" Padding="2,2,0,0,96">
+                      <Rows>
+                        <Item1 Ref="419" ControlType="XRTableRow" Name="tableRow36" Weight="1">
+                          <Cells>
+                            <Item1 Ref="420" ControlType="XRTableCell" Name="tableCell83" Weight="1" Multiline="true" TextAlignment="MiddleLeft">
+                              <ExpressionBindings>
+                                <Item1 Ref="421" EventName="BeforePrint" PropertyName="Text" Expression="Iif([FundingSource]='OTHER_SOURCE',[OtherSource] ,[FundingSource] )" />
+                              </ExpressionBindings>
+                              <StylePriority Ref="422" UseTextAlignment="false" />
+                            </Item1>
+                            <Item2 Ref="423" ControlType="XRTableCell" Name="tableCell84" Weight="1.2091454272863569" Multiline="true">
+                              <ExpressionBindings>
+                                <Item1 Ref="424" EventName="BeforePrint" PropertyName="Text" Expression="[FundingStatus]" />
+                              </ExpressionBindings>
+                            </Item2>
+                            <Item3 Ref="425" ControlType="XRTableCell" Name="tableCell99" Weight="0.79085457271364312" TextFormatString="{0:$#,#}" Multiline="true">
+                              <ExpressionBindings>
+                                <Item1 Ref="426" EventName="BeforePrint" PropertyName="Text" Expression="[Amount]" />
+                              </ExpressionBindings>
+                            </Item3>
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                      <StylePriority Ref="427" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Controls>
+                </Item1>
+                <Item2 Ref="428" ControlType="ReportFooterBand" Name="ReportFooter1" HeightF="24.9999771">
+                  <Controls>
+                    <Item1 Ref="429" ControlType="XRLine" Name="line7" SizeF="667.000061,2" LocationFloat="10.8333588,0" />
+                    <Item2 Ref="430" ControlType="XRLabel" Name="label16" TextFormatString="{0:$#,#}" Multiline="true" Text="label16" TextAlignment="MiddleCenter" SizeF="174.437653,23" LocationFloat="503.3957,1.99997711" Font="Arial, 11pt, style=Bold" Padding="2,2,0,0,100">
+                      <Summary Ref="431" Running="Report" />
+                      <ExpressionBindings>
+                        <Item1 Ref="432" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Amount])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="433" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                  </Controls>
+                </Item2>
+                <Item3 Ref="434" ControlType="ReportHeaderBand" Name="ReportHeader6" HeightF="68">
+                  <Controls>
+                    <Item1 Ref="435" ControlType="XRTable" Name="table14" TextAlignment="MiddleCenter" SizeF="667,25" LocationFloat="10.833374,43" Font="Segoe UI Semilight, 11pt, style=Bold" Padding="2,2,0,0,96" Borders="Bottom">
+                      <Rows>
+                        <Item1 Ref="436" ControlType="XRTableRow" Name="tableRow20" Weight="1">
+                          <Cells>
+                            <Item1 Ref="437" ControlType="XRTableCell" Name="tableCell80" Weight="1" Multiline="true" Text="Funding Source" TextAlignment="MiddleLeft">
+                              <StylePriority Ref="438" UseTextAlignment="false" />
+                            </Item1>
+                            <Item2 Ref="439" ControlType="XRTableCell" Name="tableCell81" Weight="1.2091454272863569" Multiline="true" Text="Funding Status" />
+                            <Item3 Ref="440" ControlType="XRTableCell" Name="tableCell82" Weight="0.79085457271364312" Multiline="true" Text="Amount" />
                           </Cells>
                         </Item1>
                       </Rows>
                       <StylePriority Ref="441" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item1>
-                  </Controls>
-                </Item2>
-                <Item3 Ref="442" ControlType="ReportFooterBand" Name="ReportFooter2" HeightF="5.1906333">
-                  <Controls>
-                    <Item1 Ref="443" ControlType="XRLine" Name="line5" SizeF="780.3336,4.66667175" LocationFloat="10.8332825,0" />
+                    <Item2 Ref="442" ControlType="XRLabel" Name="label23" Multiline="true" Text="Match Source" TextAlignment="MiddleLeft" SizeF="185.208344,23" LocationFloat="9.999947,11" Font="Segoe UI Semilight, 11pt, style=Bold" ForeColor="255,128,3,136" Padding="2,2,0,0,100">
+                      <StylePriority Ref="443" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item2>
                   </Controls>
                 </Item3>
               </Bands>
-            </Item7>
-            <Item8 Ref="444" ControlType="DetailReportBand" Name="DetailReport10" Level="5" FilterString="[FundingYear] = ?Year And [Title] In (?Application)" DataMember="Query_7" DataSource="#Ref-8">
+            </Item8>
+            <Item9 Ref="444" ControlType="DetailReportBand" Name="DetailReport9" Level="6" FilterString="[FundingYear] = ?Year And [Title] In (?Application)" DataMember="Hist_HistApplication_1.Hist_HistApplication_1Query_7" DataSource="#Ref-8">
               <Bands>
-                <Item1 Ref="445" ControlType="DetailBand" Name="Detail11" HeightF="26.09366">
+                <Item1 Ref="445" ControlType="DetailBand" Name="Detail10" HeightF="25.6087246">
                   <Controls>
                     <Item1 Ref="446" ControlType="XRTable" Name="table20" TextAlignment="TopCenter" SizeF="725,25.0000019" LocationFloat="40.5,0" Font="Segoe UI Semilight, 11pt, style=Bold" Padding="2,2,0,0,96">
                       <Rows>
@@ -994,7 +994,7 @@
                     </Item1>
                   </Controls>
                 </Item1>
-                <Item2 Ref="455" ControlType="ReportHeaderBand" Name="ReportHeader7" HeightF="49.01937">
+                <Item2 Ref="455" ControlType="ReportHeaderBand" Name="ReportHeader8" HeightF="49.01937">
                   <Controls>
                     <Item1 Ref="456" ControlType="XRTable" Name="table21" TextAlignment="TopCenter" SizeF="725,25.0000019" LocationFloat="40.5,24.01937" Font="Segoe UI Semilight, 11pt, style=Bold" Padding="2,2,0,0,96" Borders="Bottom">
                       <Rows>
@@ -1010,7 +1010,7 @@
                   </Controls>
                 </Item2>
               </Bands>
-            </Item8>
+            </Item9>
           </Bands>
         </Item3>
       </Bands>
