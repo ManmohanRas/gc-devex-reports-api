@@ -161,7 +161,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
 
             // Parameters
             this.FundingYear = reportInitializer.GetParameter("FundingYear");
-            this.HistoricalName = reportInitializer.GetParameter("HistoricalName");
+            this.PresentName = reportInitializer.GetParameter("PresentName");
             this.parambloburl = reportInitializer.GetParameter("parambloburl");
 
             // Data Sources
@@ -323,7 +323,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.CalculatedField ImageCondition1;
         private DevExpress.XtraReports.UI.CalculatedField ImageCondition2;
         private DevExpress.XtraReports.Parameters.Parameter FundingYear;
-        private DevExpress.XtraReports.Parameters.Parameter HistoricalName;
+        private DevExpress.XtraReports.Parameters.Parameter PresentName;
         private DevExpress.XtraReports.Parameters.Parameter parambloburl;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
     }

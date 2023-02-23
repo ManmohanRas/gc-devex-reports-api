@@ -61,7 +61,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.parambloburl = reportInitializer.GetParameter("parambloburl");
 
             // Data Sources
-            this.federationDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.DataFederation.FederationDataSource>("federationDataSource1");
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
 
             // Calculated Fields
@@ -108,13 +107,12 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRLabel label60;
         private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
         private DevExpress.XtraReports.UI.XRPictureBox pictureBox3;
-        private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.CalculatedField imagecondition;
         private DevExpress.XtraReports.UI.CalculatedField Imagecondition1;
         private DevExpress.XtraReports.UI.CalculatedField Imagecondtion2;
         private DevExpress.XtraReports.Parameters.Parameter FundingYear;
         private DevExpress.XtraReports.Parameters.Parameter SiteName;
         private DevExpress.XtraReports.Parameters.Parameter parambloburl;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
     }
 }
