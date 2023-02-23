@@ -202,7 +202,7 @@
           <Measure DefaultId="DataItem14" />
         </GridMeasureColumn>
       </GridColumns>
-      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" WordWrap="true" />
+      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" WordWrap="true" />
       <ColumnFilterOptions />
     </Grid>
     <ComboBox ComponentName="comboBoxDashboardItem1" Name="Agency " DataSource="sqlDataSource1" DataMember="Core_View_AgencyEntities_OSTF" IsMasterFilterCrossDataSource="true" EnableSearch="true">
