@@ -6,7 +6,7 @@
   <Parameters>
     <Item1 Ref="4" Description="Funding Year" ValueSourceSettings="#Ref-2" MultiValue="true" Name="FundingYear" Type="#Ref-3" />
     <Item2 Ref="7" Description="PresentName" ValueSourceSettings="#Ref-5" MultiValue="true" Name="PresentName" />
-    <Item3 Ref="8" Visible="false" Description="parambloburl" ValueInfo="https://mcprima.blob.core.windows.net/pres-trust-client-dev/hist/" Name="parambloburl" />
+    <Item3 Ref="8" Visible="false" Description="parambloburl" Name="parambloburl" />
   </Parameters>
   <CalculatedFields>
     <Item1 Ref="10" Name="GrantCondition" FieldType="Int32" Expression="Iif([BudgetStatus]='FINAL',[FinalGrantAmount] ,[GrantAmount] )" DataSource="#Ref-9" DataMember="sqlDataSource2_Hist_HistApplication_1" />
