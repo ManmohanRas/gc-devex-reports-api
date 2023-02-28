@@ -4,7 +4,7 @@
     <Item1 Ref="2" Key="VSReportExtInfo" Value=".repx" />
   </Extensions>
   <Bands>
-    <Item1 Ref="3" ControlType="TopMarginBand" Name="TopMargin" HeightF="24" />
+    <Item1 Ref="3" ControlType="TopMarginBand" Name="TopMargin" HeightF="23.99999" />
     <Item2 Ref="4" ControlType="DetailBand" Name="Detail" HeightF="25">
       <Controls>
         <Item1 Ref="5" ControlType="XRTable" Name="table2" SizeF="774.9999,25" LocationFloat="0,0" Font="Segoe UI Semilight, 10pt" Padding="2,2,0,0,96" BorderColor="LightGray" Borders="Bottom">
@@ -21,10 +21,10 @@
                     <Item1 Ref="10" EventName="BeforePrint" PropertyName="Text" Expression="[PresentName]" />
                   </ExpressionBindings>
                 </Item2>
-                <Item3 Ref="11" ControlType="XRTableCell" Name="tableCell6" Weight="0.60655853922635283" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item3 Ref="11" ControlType="XRTableCell" Name="tableCell6" Weight="0.60655853922635283" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleRight">
                   <Summary Ref="12" Running="Group" />
                   <ExpressionBindings>
-                    <Item1 Ref="13" EventName="BeforePrint" PropertyName="Text" Expression="[Sum_FinalGrantAmount]" />
+                    <Item1 Ref="13" EventName="BeforePrint" PropertyName="Text" Expression="IsNull([Sum_FinalGrantAmount],0)" />
                   </ExpressionBindings>
                   <StylePriority Ref="14" UseTextAlignment="false" />
                 </Item3>
