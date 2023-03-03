@@ -67,7 +67,7 @@
                         <Item1 Ref="41" EventName="BeforePrint" PropertyName="Text" Expression="[City]" />
                       </ExpressionBindings>
                     </Item3>
-                    <Item4 Ref="42" ControlType="XRTableCell" Name="tableCell8" Weight="0.35161271065698496" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                    <Item4 Ref="42" ControlType="XRTableCell" Name="tableCell8" Weight="0.35161271065698496" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleRight">
                       <ExpressionBindings>
                         <Item1 Ref="43" EventName="BeforePrint" PropertyName="Text" Expression="[FinalGrantAmount]" />
                       </ExpressionBindings>
@@ -97,7 +97,7 @@
                     <Item2 Ref="54" ControlType="XRTableCell" Name="tableCell10" Weight="1.3238134765624998" Multiline="true" Text="Projects Totaling" TextAlignment="MiddleRight" Font="Segoe UI Semibold, 10pt, style=Bold" Borders="None">
                       <StylePriority Ref="55" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item2>
-                    <Item3 Ref="56" ControlType="XRTableCell" Name="tableCell11" Weight="0.78570373535156279" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="None">
+                    <Item3 Ref="56" ControlType="XRTableCell" Name="tableCell11" Weight="0.78570373535156279" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleRight" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="None">
                       <Summary Ref="57" Running="Report" />
                       <ExpressionBindings>
                         <Item1 Ref="58" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([FinalGrantAmount])" />
@@ -205,7 +205,7 @@
                     <Item1 Ref="103" ControlType="XRTableCell" Name="tableCell32" Weight="0.76490541877429941" Multiline="true" Text="Grant Amount:" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt">
                       <StylePriority Ref="104" UseFont="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="105" ControlType="XRTableCell" Name="tableCell33" Weight="3.9880898214934226" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 11pt">
+                    <Item2 Ref="105" ControlType="XRTableCell" Name="tableCell33" Weight="3.9880898214934226" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 11pt">
                       <ExpressionBindings>
                         <Item1 Ref="106" EventName="BeforePrint" PropertyName="Text" Expression="[FinalGrantAmount]" />
                       </ExpressionBindings>
@@ -258,7 +258,7 @@
               <Rows>
                 <Item1 Ref="124" ControlType="XRTableRow" Name="tableRow16" Weight="0.89459787233853028" TextAlignment="MiddleLeft">
                   <Cells>
-                    <Item1 Ref="125" ControlType="XRTableCell" Name="tableCell23" Weight="1" TextFormatString="{0:$#,#}" Multiline="true" Angle="90" TextAlignment="MiddleRight">
+                    <Item1 Ref="125" ControlType="XRTableCell" Name="tableCell23" Weight="1" TextFormatString="{0:$#,0}" Multiline="true" Angle="90" TextAlignment="MiddleRight">
                       <ExpressionBindings>
                         <Item1 Ref="126" EventName="BeforePrint" PropertyName="Text" Expression="[FinalGrantAmount]" />
                       </ExpressionBindings>
@@ -269,7 +269,7 @@
                 </Item1>
                 <Item2 Ref="129" ControlType="XRTableRow" Name="tableRow17" Weight="0.902705391423735" TextAlignment="MiddleLeft">
                   <Cells>
-                    <Item1 Ref="130" ControlType="XRTableCell" Name="tableCell24" Weight="1" TextFormatString="{0:$#,#}" Multiline="true" Angle="90" TextAlignment="MiddleRight">
+                    <Item1 Ref="130" ControlType="XRTableCell" Name="tableCell24" Weight="1" TextFormatString="{0:$#,0}" Multiline="true" Angle="90" TextAlignment="MiddleRight">
                       <ExpressionBindings>
                         <Item1 Ref="131" EventName="BeforePrint" PropertyName="Text" Expression="[GrantRequest]" />
                       </ExpressionBindings>
@@ -389,7 +389,7 @@
               <Rows>
                 <Item1 Ref="182" ControlType="XRTableRow" Name="tableRow22" Weight="1" TextAlignment="TopRight" Font="Segoe UI Semibold, 9pt, style=Bold">
                   <Cells>
-                    <Item1 Ref="183" ControlType="XRTableCell" Name="tableCell36" Weight="1" TextFormatString="{0:$#,#}" Multiline="true" Angle="90" TextAlignment="MiddleRight" Font="Segoe UI Semibold, 10pt, style=Bold">
+                    <Item1 Ref="183" ControlType="XRTableCell" Name="tableCell36" Weight="1" TextFormatString="{0:$#,0}" Multiline="true" Angle="90" TextAlignment="MiddleRight" Font="Segoe UI Semibold, 10pt, style=Bold">
                       <Summary Ref="184" Running="Report" />
                       <ExpressionBindings>
                         <Item1 Ref="185" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([FinalGrantAmount])" />
@@ -401,7 +401,7 @@
                 </Item1>
                 <Item2 Ref="188" ControlType="XRTableRow" Name="tableRow23" Weight="1" TextAlignment="MiddleLeft" Font="Segoe UI Semibold, 10pt, style=Bold">
                   <Cells>
-                    <Item1 Ref="189" ControlType="XRTableCell" Name="tableCell37" Weight="1" TextFormatString="{0:$#,#}" Multiline="true" Angle="90" TextAlignment="MiddleRight" Font="Segoe UI Semibold, 9pt, style=Bold">
+                    <Item1 Ref="189" ControlType="XRTableCell" Name="tableCell37" Weight="1" TextFormatString="{0:$#,0}" Multiline="true" Angle="90" TextAlignment="MiddleRight" Font="Segoe UI Semibold, 9pt, style=Bold">
                       <Summary Ref="190" Running="Report" />
                       <ExpressionBindings>
                         <Item1 Ref="191" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([GrantRequest])" />

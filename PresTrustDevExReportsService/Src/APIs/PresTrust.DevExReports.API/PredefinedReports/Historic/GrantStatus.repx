@@ -35,7 +35,7 @@
                             <Item1 Ref="20" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear]==[^.FundingYear] And[GrantAmount] &gt; 0].Count()&#xA;&#xA;" />
                           </ExpressionBindings>
                         </Item2>
-                        <Item3 Ref="21" ControlType="XRTableCell" Name="tableCell23" Weight="0.76130513597615468" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                        <Item3 Ref="21" ControlType="XRTableCell" Name="tableCell23" Weight="0.76130513597615468" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleRight">
                           <Summary Ref="22" Running="Group" />
                           <ExpressionBindings>
                             <Item1 Ref="23" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([grantcondition1])" />
@@ -264,7 +264,7 @@
                       </ExpressionBindings>
                       <StylePriority Ref="125" UseTextAlignment="false" />
                     </Item4>
-                    <Item5 Ref="126" ControlType="XRTableCell" Name="tableCell44" Weight="0.55961281210146063" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                    <Item5 Ref="126" ControlType="XRTableCell" Name="tableCell44" Weight="0.55961281210146063" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleRight">
                       <ExpressionBindings>
                         <Item1 Ref="127" EventName="BeforePrint" PropertyName="Text" Expression="[grantcondition]&#xA;&#xA;&#xA;&#xA;" />
                       </ExpressionBindings>

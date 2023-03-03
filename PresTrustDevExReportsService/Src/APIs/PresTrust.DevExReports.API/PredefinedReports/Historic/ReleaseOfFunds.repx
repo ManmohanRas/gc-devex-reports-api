@@ -27,7 +27,7 @@
                     <Item1 Ref="18" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([DataSource.RowCount]-1=max([DataSource.CurrentRowIndex]),False ,True )&#xA;&#xA;" />
                   </ExpressionBindings>
                 </Item2>
-                <Item3 Ref="19" ControlType="XRTableCell" Name="tableCell44" Weight="1.3348839383988986" CanShrink="true" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item3 Ref="19" ControlType="XRTableCell" Name="tableCell44" Weight="1.3348839383988986" CanShrink="true" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleRight">
                   <ExpressionBindings>
                     <Item1 Ref="20" EventName="BeforePrint" PropertyName="Text" Expression="[ProfessionalAmount]+[ConstructionAmount]" />
                     <Item2 Ref="21" EventName="BeforePrint" PropertyName="Visible" Expression="&#xA;" />
@@ -63,7 +63,7 @@
             <Item1 Ref="34" ControlType="XRTableRow" Name="tableRow7" Weight="1">
               <Cells>
                 <Item1 Ref="35" ControlType="XRTableCell" Name="tableCell13" Weight="2.7000003051757813" Multiline="true" Text="Full Grant Amount:" />
-                <Item2 Ref="36" ControlType="XRTableCell" Name="tableCell15" Weight="1.5944448852539064" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item2 Ref="36" ControlType="XRTableCell" Name="tableCell15" Weight="1.5944448852539064" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleRight">
                   <Summary Ref="37" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="38" EventName="BeforePrint" PropertyName="Text" Expression="[FinalGrantAmount]" />
@@ -170,7 +170,7 @@
             <Item1 Ref="83" ControlType="XRTableRow" Name="tableRow23" Weight="1">
               <Cells>
                 <Item1 Ref="84" ControlType="XRTableCell" Name="tableCell28" Weight="2.7" Multiline="true" Text="Balance of Grant:" />
-                <Item2 Ref="85" ControlType="XRTableCell" Name="tableCell47" Weight="1.5944451904296877" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item2 Ref="85" ControlType="XRTableCell" Name="tableCell47" Weight="1.5944451904296877" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleRight">
                   <Summary Ref="86" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="87" EventName="BeforePrint" PropertyName="Text" Expression="([FinalGrantAmount])-sumSum([ProfessionalAmount]+[ConstructionAmount])" />

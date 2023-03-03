@@ -26,7 +26,7 @@
                     <Item1 Ref="18" EventName="BeforePrint" PropertyName="Text" Expression="[FundingYear]" />
                   </ExpressionBindings>
                 </Item1>
-                <Item2 Ref="19" ControlType="XRTableCell" Name="tableCell3" Weight="0.25700446656100945" TextFormatString="{0:$#,#}" Multiline="true">
+                <Item2 Ref="19" ControlType="XRTableCell" Name="tableCell3" Weight="0.25700446656100945" TextFormatString="{0:$#,0}" Multiline="true">
                   <ExpressionBindings>
                     <Item1 Ref="20" EventName="BeforePrint" PropertyName="Text" Expression="[Sum_FinalGrantAmount]" />
                   </ExpressionBindings>

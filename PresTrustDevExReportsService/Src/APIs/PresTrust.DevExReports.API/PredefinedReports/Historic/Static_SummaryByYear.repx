@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="SummaryByYear" Margins="63, 23, 24, 24" PageWidth="850" PageHeight="1100" Version="22.1" DataMember="Query" DataSource="#Ref-0" Font="Arial, 9.75pt">
+<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="SummaryByYear" Margins="63, 52, 24, 24" PageWidth="850" PageHeight="1100" Version="22.1" DataMember="Query" DataSource="#Ref-0" Font="Arial, 9.75pt">
   <Extensions>
     <Item1 Ref="2" Key="VSReportExtInfo" Value=".repx" />
   </Extensions>
   <CalculatedFields>
     <Item1 Ref="3" Name="Requested" FieldType="Int32" Expression="[][[GrantAmount] &gt; 0].Count()" DataMember="Query" />
-    <Item2 Ref="4" Name="RequestedAmount" FieldType="Int32" DisplayName="RequestedAmount" Expression="iif(  [StatusId] in (4,5,6,7,8,12,13,15),[GrantRequest],'')" DataMember="Query" />
-    <Item3 Ref="5" Name="AwardedAmount" FieldType="Int32" Expression="iif(  [StatusId] in (7,8,12,13,15),[FinalGrantAmount],'')&#xA;" DataMember="Query" />
-    <Item4 Ref="6" Name="ConstructionAmount" FieldType="Int32" Expression="iif( [ApplicationTypeId]=3 And [StatusId] in (7,8,12,13,15),[FinalGrantAmount],'')&#xA;" DataMember="Query" />
-    <Item5 Ref="7" Name="NConstructionAmount" FieldType="Int32" Expression="iif( [ApplicationTypeId] in (1,2) And [StatusId] in (7,8,12,13,15),[FinalGrantAmount],'')&#xA;" DataMember="Query" />
+    <Item2 Ref="4" Name="RequestedAmount" FieldType="Int32" DisplayName="RequestedAmount" Expression="iif( [Type] = 'Requested'And [StatusId] in (4,5,6,7,8,12,13,15),[GrantRequest],'')" DataMember="Query" />
+    <Item3 Ref="5" Name="AwardedAmount" FieldType="Int32" Expression="iif([Type] = 'Awarded' And  [StatusId] in (7,8,12,13,15),[FinalGrantAmount],'')&#xA;" DataMember="Query" />
+    <Item4 Ref="6" Name="ConstructionAmount" FieldType="Int32" Expression="iif( [Type] = 'Construction' And [StatusId] in (7,8,12,13,15),[FinalGrantAmount],'')&#xA;" DataMember="Query" />
+    <Item5 Ref="7" Name="NConstructionAmount" FieldType="Int32" Expression="iif( [Type] = 'Non-Construction' And [StatusId] in (7,8,12,13,15),[FinalGrantAmount],'')&#xA;" DataMember="Query" />
   </CalculatedFields>
   <Bands>
     <Item1 Ref="8" ControlType="TopMarginBand" Name="TopMargin" HeightF="24" />
@@ -16,7 +16,7 @@
       <StylePriority Ref="10" UseFont="false" UseTextAlignment="false" />
     </Item2>
     <Item3 Ref="11" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="24" />
-    <Item4 Ref="12" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="188.80957">
+    <Item4 Ref="12" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="188.976227">
       <Controls>
         <Item1 Ref="13" ControlType="XRPictureBox" Name="pictureBox1" ImageSource="img,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" Sizing="StretchImage" SizeF="101.988113,114.999954" LocationFloat="21.9999962,36.99999" />
         <Item2 Ref="14" ControlType="XRLabel" Name="label6" Multiline="true" Text="SUMMARY BY YEAR" TextAlignment="MiddleCenter" SizeF="175,23" LocationFloat="300,153.333359" Font="Segoe UI Black, 12pt, style=Underline" Padding="2,2,0,0,100">
@@ -96,28 +96,28 @@
                     <Item2 Ref="57" ControlType="XRTableCell" Name="tableCell8" Weight="0.53614212812989293" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                       <Summary Ref="58" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="59" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear] == [^.FundingYear] and [StatusId] in (4,5,6,7,8,12,13,15) ].Count()&#xA;" />
+                        <Item1 Ref="59" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type]= 'Requested'And [FundingYear] == [^.FundingYear] and [StatusId] in (4,5,6,7,8,12,13,15) ].Count()&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="60" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item2>
                     <Item3 Ref="61" ControlType="XRTableCell" Name="tableCell9" Weight="0.49030958530033897" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                       <Summary Ref="62" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="63" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear] == [^.FundingYear] And [StatusId] in (7,8,12,13,15)].Count()&#xA;&#xA;" />
+                        <Item1 Ref="63" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type] = 'Awarded' And [FundingYear] == [^.FundingYear] And [StatusId] in (7,8,12,13,15)].Count()&#xA;&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="64" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item3>
                     <Item4 Ref="65" ControlType="XRTableCell" Name="tableCell10" Weight="0.60304137026220472" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                       <Summary Ref="66" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="67" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear] == [^.FundingYear] And  [ApplicationTypeId]=3 And [StatusId] in (7,8,12,13,15) ].Count()&#xA;&#xA;&#xA;" />
+                        <Item1 Ref="67" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type] = 'Construction' And [FundingYear] == [^.FundingYear] And [StatusId] in (7,8,12,13,15) ].Count()&#xA;&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="68" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item4>
                     <Item5 Ref="69" ControlType="XRTableCell" Name="tableCell11" Weight="0.61824916663378637" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                       <Summary Ref="70" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="71" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear] == [^.FundingYear] And [ApplicationTypeId] in (1,2) And [StatusId] in (7,8,12,13,15)].Count()&#xA;" />
+                        <Item1 Ref="71" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type] = 'Non-Construction' And [FundingYear] == [^.FundingYear] And [StatusId] in (7,8,12,13,15)].Count()&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="72" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item5>
@@ -128,31 +128,31 @@
                     <Item1 Ref="74" ControlType="XRTableCell" Name="tableCell12" Weight="0.574193455786405" Multiline="true" Text="   Amount" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Left, Right">
                       <StylePriority Ref="75" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="76" ControlType="XRTableCell" Name="tableCell13" Weight="0.53614212812989293" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                    <Item2 Ref="76" ControlType="XRTableCell" Name="tableCell13" Weight="0.53614212812989293" TextFormatString="{0:$#,0}" Multiline="true" NullValueText="$0" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                       <Summary Ref="77" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="78" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear] == [^.FundingYear] And  [StatusId] in (4,5,6,7,8,12,13,15)].Sum(isnull([GrantRequest],0))&#xA;" />
+                        <Item1 Ref="78" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type] = 'Requested' and [FundingYear] == [^.FundingYear] And  [StatusId] in (4,5,6,7,8,12,13,15)].Sum(isnull([GrantRequest],0))&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="79" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item2>
-                    <Item3 Ref="80" ControlType="XRTableCell" Name="tableCell14" Weight="0.49030958530033897" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                    <Item3 Ref="80" ControlType="XRTableCell" Name="tableCell14" Weight="0.49030958530033897" TextFormatString="{0:$#,0}" Multiline="true" NullValueText="$0" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                       <Summary Ref="81" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="82" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear] == [^.FundingYear] And  [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;" />
+                        <Item1 Ref="82" EventName="BeforePrint" PropertyName="Text" Expression="[][ [Type] = 'Awarded' And [FundingYear] == [^.FundingYear] And  [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="83" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item3>
-                    <Item4 Ref="84" ControlType="XRTableCell" Name="tableCell15" Weight="0.60304137026220472" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                    <Item4 Ref="84" ControlType="XRTableCell" Name="tableCell15" Weight="0.60304137026220472" TextFormatString="{0:$#,0}" Multiline="true" NullValueText="$0" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                       <Summary Ref="85" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="86" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear] == [^.FundingYear] And  [ApplicationTypeId]=3And [StatusId] in (7,8,12,13,15) ].Sum(IsNull([FinalGrantAmount],0))&#xA;" />
+                        <Item1 Ref="86" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type] = 'Construction' And  [FundingYear] == [^.FundingYear] And [StatusId] in (7,8,12,13,15) ].Sum(IsNull([FinalGrantAmount],0))&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="87" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item4>
-                    <Item5 Ref="88" ControlType="XRTableCell" Name="tableCell16" Weight="0.61824916663378637" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                    <Item5 Ref="88" ControlType="XRTableCell" Name="tableCell16" Weight="0.61824916663378637" TextFormatString="{0:$#,0}" Multiline="true" NullValueText="$0" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                       <Summary Ref="89" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="90" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear] == [^.FundingYear] And [ApplicationTypeId] in (1,2)And [StatusId] in (7,8,12,13,15) ].Sum(isnull([FinalGrantAmount],0))&#xA;&#xA;" />
+                        <Item1 Ref="90" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type] = 'Non-Construction' And[FundingYear] == [^.FundingYear] And [StatusId] in (7,8,12,13,15) ].Sum(isnull([FinalGrantAmount],0))&#xA;&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="91" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item5>
@@ -163,31 +163,31 @@
                     <Item1 Ref="93" ControlType="XRTableCell" Name="tableCell17" Weight="0.574193455786405" Multiline="true" Text="   Average Grant" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Left, Right">
                       <StylePriority Ref="94" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="95" ControlType="XRTableCell" Name="tableCell18" Weight="0.53614212812989293" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                    <Item2 Ref="95" ControlType="XRTableCell" Name="tableCell18" Weight="0.53614212812989293" TextFormatString="{0:$#,0}" Multiline="true" NullValueText="$0" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                       <Summary Ref="96" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="97" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear] == [^.FundingYear] And  [StatusId] in (4,5,6,7,8,12,13,15)].Sum(isnull([GrantRequest],0))&#xA;/[][[FundingYear] == [^.FundingYear] and [StatusId] in (4,5,6,7,8,12,13,15) ].Count()&#xA;" />
+                        <Item1 Ref="97" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type] = 'Requested' And [FundingYear] == [^.FundingYear] And  [StatusId] in (4,5,6,7,8,12,13,15)].Sum(isnull([GrantRequest],0))&#xA;/[][[Type] = 'Requested' And [FundingYear] == [^.FundingYear] and [StatusId] in (4,5,6,7,8,12,13,15) ].Count()&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="98" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item2>
-                    <Item3 Ref="99" ControlType="XRTableCell" Name="tableCell19" Weight="0.49030958530033897" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                    <Item3 Ref="99" ControlType="XRTableCell" Name="tableCell19" Weight="0.49030958530033897" TextFormatString="{0:$#,0}" Multiline="true" NullValueText="$0" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                       <Summary Ref="100" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="101" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear] == [^.FundingYear] And  [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;/[][[FundingYear] == [^.FundingYear] And [StatusId] in (7,8,12,13,15)].Count()&#xA;" />
+                        <Item1 Ref="101" EventName="BeforePrint" PropertyName="Text" Expression="[][ [Type] = 'Awarded' And [FundingYear] == [^.FundingYear] And  [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;/[][[Type] = 'Awarded' And [FundingYear] == [^.FundingYear] And [StatusId] in (7,8,12,13,15)].Count()&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="102" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item3>
-                    <Item4 Ref="103" ControlType="XRTableCell" Name="tableCell20" Weight="0.60304137026220472" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                    <Item4 Ref="103" ControlType="XRTableCell" Name="tableCell20" Weight="0.60304137026220472" TextFormatString="{0:$#,0}" Multiline="true" NullValueText="$0" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                       <Summary Ref="104" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="105" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear] == [^.FundingYear] And  [ApplicationTypeId]=3 And [StatusId] in (7,8,12,13,15)].Sum(IsNull([FinalGrantAmount],0))/[][[FundingYear] == [^.FundingYear] And  [ApplicationTypeId]=3 And [StatusId] in (7,8,12,13,15)].Count()&#xA;&#xA;&#xA;&#xA;&#xA;" />
+                        <Item1 Ref="105" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type] = 'Construction' And  [FundingYear] == [^.FundingYear] And [StatusId] in (7,8,12,13,15)].Sum(IsNull([FinalGrantAmount],0))/[][[Type] = 'Construction' And  [FundingYear] == [^.FundingYear] And [StatusId] in (7,8,12,13,15)].Count()&#xA;&#xA;&#xA;&#xA;&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="106" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item4>
-                    <Item5 Ref="107" ControlType="XRTableCell" Name="tableCell21" Weight="0.61824916663378637" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                    <Item5 Ref="107" ControlType="XRTableCell" Name="tableCell21" Weight="0.61824916663378637" TextFormatString="{0:$#,0}" Multiline="true" NullValueText="$0" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                       <Summary Ref="108" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="109" EventName="BeforePrint" PropertyName="Text" Expression="[][[FundingYear] == [^.FundingYear] And [ApplicationTypeId] in (1,2) And [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;/ [][[FundingYear] == [^.FundingYear] And [ApplicationTypeId] in (1,2) And [StatusId] in (7,8,12,13,15)].Count()&#xA;&#xA;&#xA;&#xA;" />
+                        <Item1 Ref="109" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type] = 'Non-Construction' And [FundingYear] == [^.FundingYear] And [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;/ [][[Type] = 'Non-Construction' And [FundingYear] == [^.FundingYear] And [StatusId] in (7,8,12,13,15)].Count()&#xA;&#xA;&#xA;&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="110" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item5>
@@ -198,28 +198,28 @@
                     <Item1 Ref="112" ControlType="XRTableCell" Name="tableCell22" Weight="0.574193455786405" Multiline="true" Text="   Median Grant" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Left, Right, Bottom">
                       <StylePriority Ref="113" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="114" ControlType="XRTableCell" Name="tableCell23" Weight="0.53614212812989293" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
+                    <Item2 Ref="114" ControlType="XRTableCell" Name="tableCell23" Weight="0.53614212812989293" TextFormatString="{0:$#,0}" Multiline="true" NullValueText="$0" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
                       <Summary Ref="115" Running="Group" IgnoreNullValues="true" />
                       <ExpressionBindings>
                         <Item1 Ref="116" EventName="BeforePrint" PropertyName="Text" Expression="sumMedian([RequestedAmount])&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="117" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item2>
-                    <Item3 Ref="118" ControlType="XRTableCell" Name="tableCell24" Weight="0.49030958530033897" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
+                    <Item3 Ref="118" ControlType="XRTableCell" Name="tableCell24" Weight="0.49030958530033897" TextFormatString="{0:$#,0}" Multiline="true" NullValueText="$0" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
                       <Summary Ref="119" Running="Group" IgnoreNullValues="true" />
                       <ExpressionBindings>
                         <Item1 Ref="120" EventName="BeforePrint" PropertyName="Text" Expression="sumMedian([AwardedAmount])" />
                       </ExpressionBindings>
                       <StylePriority Ref="121" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item3>
-                    <Item4 Ref="122" ControlType="XRTableCell" Name="tableCell25" Weight="0.60304137026220472" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
+                    <Item4 Ref="122" ControlType="XRTableCell" Name="tableCell25" Weight="0.60304137026220472" TextFormatString="{0:$#,0}" Multiline="true" NullValueText="$0" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
                       <Summary Ref="123" Running="Group" IgnoreNullValues="true" />
                       <ExpressionBindings>
                         <Item1 Ref="124" EventName="BeforePrint" PropertyName="Text" Expression="sumMedian([ConstructionAmount])" />
                       </ExpressionBindings>
                       <StylePriority Ref="125" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item4>
-                    <Item5 Ref="126" ControlType="XRTableCell" Name="tableCell26" Weight="0.61824916663378637" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
+                    <Item5 Ref="126" ControlType="XRTableCell" Name="tableCell26" Weight="0.61824916663378637" TextFormatString="{0:$#,0}" Multiline="true" NullValueText="$0" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
                       <Summary Ref="127" Running="Group" IgnoreNullValues="true" />
                       <ExpressionBindings>
                         <Item1 Ref="128" EventName="BeforePrint" PropertyName="Text" Expression="sumMedian([NConstructionAmount])&#xA;&#xA;&#xA;" />
@@ -286,28 +286,28 @@
                 <Item2 Ref="154" ControlType="XRTableCell" Name="tableCell59" Weight="0.53614212812989293" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                   <Summary Ref="155" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="156" EventName="BeforePrint" PropertyName="Text" Expression="[][ [StatusId] in (4,5,6,7,8,12,13,15) ].Count()&#xA;" />
+                    <Item1 Ref="156" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type]= 'Requested'And [StatusId] in (4,5,6,7,8,12,13,15) ].Count()&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="157" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item2>
                 <Item3 Ref="158" ControlType="XRTableCell" Name="tableCell60" Weight="0.49030958530033897" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                   <Summary Ref="159" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="160" EventName="BeforePrint" PropertyName="Text" Expression="[][ [StatusId] in (7,8,12,13,15)].Count()&#xA;&#xA;" />
+                    <Item1 Ref="160" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type] = 'Awarded' And [StatusId] in (7,8,12,13,15)].Count()&#xA;&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="161" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item3>
                 <Item4 Ref="162" ControlType="XRTableCell" Name="tableCell61" Weight="0.60304137026220472" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                   <Summary Ref="163" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="164" EventName="BeforePrint" PropertyName="Text" Expression="[][ [ApplicationTypeId]=3 And [StatusId] in (7,8,12,13,15)].Count()&#xA;&#xA;&#xA;" />
+                    <Item1 Ref="164" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type] = 'Construction'  And [StatusId] in (7,8,12,13,15)].Count()&#xA;&#xA;&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="165" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item4>
                 <Item5 Ref="166" ControlType="XRTableCell" Name="tableCell62" Weight="0.61824916663378637" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                   <Summary Ref="167" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="168" EventName="BeforePrint" PropertyName="Text" Expression="[][ [ApplicationTypeId] in (1,2) And [StatusId] in (7,8,12,13,15)].Count()&#xA;" />
+                    <Item1 Ref="168" EventName="BeforePrint" PropertyName="Text" Expression="[][ [Type] = 'Non-Construction'  And [StatusId] in (7,8,12,13,15)].Count()&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="169" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item5>
@@ -318,31 +318,31 @@
                 <Item1 Ref="171" ControlType="XRTableCell" Name="tableCell63" Weight="0.574193455786405" Multiline="true" Text="   Amount" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Left, Right">
                   <StylePriority Ref="172" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="173" ControlType="XRTableCell" Name="tableCell64" Weight="0.53614212812989293" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                <Item2 Ref="173" ControlType="XRTableCell" Name="tableCell64" Weight="0.53614212812989293" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                   <Summary Ref="174" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="175" EventName="BeforePrint" PropertyName="Text" Expression="[][ [StatusId] in (4,5,6,7,8,12,13,15)].Sum(isnull([GrantRequest],0))&#xA;" />
+                    <Item1 Ref="175" EventName="BeforePrint" PropertyName="Text" Expression="[][ [Type]= 'Requested'And [StatusId] in (4,5,6,7,8,12,13,15)].Sum(isnull([GrantRequest],0))&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="176" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item2>
-                <Item3 Ref="177" ControlType="XRTableCell" Name="tableCell65" Weight="0.49030958530033897" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                <Item3 Ref="177" ControlType="XRTableCell" Name="tableCell65" Weight="0.49030958530033897" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                   <Summary Ref="178" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="179" EventName="BeforePrint" PropertyName="Text" Expression="[][ [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;" />
+                    <Item1 Ref="179" EventName="BeforePrint" PropertyName="Text" Expression="[][ [Type] = 'Awarded' And [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="180" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item3>
-                <Item4 Ref="181" ControlType="XRTableCell" Name="tableCell66" Weight="0.60304137026220472" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                <Item4 Ref="181" ControlType="XRTableCell" Name="tableCell66" Weight="0.60304137026220472" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                   <Summary Ref="182" Running="Group" />
                   <ExpressionBindings>
-                    <Item1 Ref="183" EventName="BeforePrint" PropertyName="Text" Expression="[][  [ApplicationTypeId]=3 And [StatusId] in (7,8,12,13,15)].Sum(IsNull([FinalGrantAmount],0))&#xA;" />
+                    <Item1 Ref="183" EventName="BeforePrint" PropertyName="Text" Expression="[][ [Type] = 'Construction' And [StatusId] in (7,8,12,13,15)].Sum(IsNull([FinalGrantAmount],0))&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="184" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item4>
-                <Item5 Ref="185" ControlType="XRTableCell" Name="tableCell67" Weight="0.61824916663378637" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                <Item5 Ref="185" ControlType="XRTableCell" Name="tableCell67" Weight="0.61824916663378637" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                   <Summary Ref="186" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="187" EventName="BeforePrint" PropertyName="Text" Expression="[][ [ApplicationTypeId] in (1,2) And [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;&#xA;" />
+                    <Item1 Ref="187" EventName="BeforePrint" PropertyName="Text" Expression="[][ [Type] = 'Non-Construction' And [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="188" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item5>
@@ -353,31 +353,31 @@
                 <Item1 Ref="190" ControlType="XRTableCell" Name="tableCell68" Weight="0.574193455786405" Multiline="true" Text="   Average Grant" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Left, Right">
                   <StylePriority Ref="191" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="192" ControlType="XRTableCell" Name="tableCell69" Weight="0.53614212812989293" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                <Item2 Ref="192" ControlType="XRTableCell" Name="tableCell69" Weight="0.53614212812989293" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                   <Summary Ref="193" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="194" EventName="BeforePrint" PropertyName="Text" Expression="[][[StatusId] in (4,5,6,7,8,12,13,15)].Sum(isnull([GrantRequest],0))&#xA;/[][ [StatusId] in (4,5,6,7,8,12,13,15) ].Count()&#xA;" />
+                    <Item1 Ref="194" EventName="BeforePrint" PropertyName="Text" Expression="[][[Type]= 'Requested'And [StatusId] in (4,5,6,7,8,12,13,15)].Sum(isnull([GrantRequest],0))&#xA;/[][[Type]= 'Requested'And  [StatusId] in (4,5,6,7,8,12,13,15) ].Count()&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="195" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item2>
-                <Item3 Ref="196" ControlType="XRTableCell" Name="tableCell70" Weight="0.49030958530033897" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                <Item3 Ref="196" ControlType="XRTableCell" Name="tableCell70" Weight="0.49030958530033897" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                   <Summary Ref="197" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="198" EventName="BeforePrint" PropertyName="Text" Expression="[][  [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;/[][[StatusId] in (7,8,12,13,15)].Count()&#xA;" />
+                    <Item1 Ref="198" EventName="BeforePrint" PropertyName="Text" Expression="[][ [Type] = 'Awarded' And [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;/[][[Type] = 'Awarded' And [StatusId] in (7,8,12,13,15)].Count()&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="199" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item3>
-                <Item4 Ref="200" ControlType="XRTableCell" Name="tableCell71" Weight="0.60304137026220472" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                <Item4 Ref="200" ControlType="XRTableCell" Name="tableCell71" Weight="0.60304137026220472" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                   <Summary Ref="201" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="202" EventName="BeforePrint" PropertyName="Text" Expression="[][  [ApplicationTypeId]=3 And [StatusId] in (7,8,12,13,15)].Sum(IsNull([FinalGrantAmount],0))/[][ [ApplicationTypeId]=3 And [StatusId] in (7,8,12,13,15) ].Count()&#xA;&#xA;&#xA;&#xA;&#xA;" />
+                    <Item1 Ref="202" EventName="BeforePrint" PropertyName="Text" Expression="[][ [Type] = 'Construction' And [StatusId] in (7,8,12,13,15)].Sum(IsNull([FinalGrantAmount],0))/[][ [Type] = 'Construction' And [StatusId] in (7,8,12,13,15) ].Count()&#xA;&#xA;&#xA;&#xA;&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="203" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item4>
-                <Item5 Ref="204" ControlType="XRTableCell" Name="tableCell72" Weight="0.61824916663378637" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
+                <Item5 Ref="204" ControlType="XRTableCell" Name="tableCell72" Weight="0.61824916663378637" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right">
                   <Summary Ref="205" Running="Report" />
                   <ExpressionBindings>
-                    <Item1 Ref="206" EventName="BeforePrint" PropertyName="Text" Expression="[][ [ApplicationTypeId] in (1,2) And [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;/ [][ [ApplicationTypeId] in (1,2) And [StatusId] in (7,8,12,13,15)].Count()&#xA;&#xA;&#xA;&#xA;" />
+                    <Item1 Ref="206" EventName="BeforePrint" PropertyName="Text" Expression="[][ [Type] = 'Non-Construction' And [StatusId] in (7,8,12,13,15)].Sum(isnull([FinalGrantAmount],0))&#xA;/ [][ [Type] = 'Non-Construction' And [StatusId] in (7,8,12,13,15)].Count()&#xA;&#xA;&#xA;&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="207" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item5>
@@ -388,28 +388,28 @@
                 <Item1 Ref="209" ControlType="XRTableCell" Name="tableCell73" Weight="0.574193455786405" Multiline="true" Text="   Median Grant" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Left, Right, Bottom">
                   <StylePriority Ref="210" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="211" ControlType="XRTableCell" Name="tableCell74" Weight="0.53614212812989293" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
+                <Item2 Ref="211" ControlType="XRTableCell" Name="tableCell74" Weight="0.53614212812989293" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
                   <Summary Ref="212" Running="Report" IgnoreNullValues="true" />
                   <ExpressionBindings>
                     <Item1 Ref="213" EventName="BeforePrint" PropertyName="Text" Expression="sumMedian([RequestedAmount])&#xA;" />
                   </ExpressionBindings>
                   <StylePriority Ref="214" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item2>
-                <Item3 Ref="215" ControlType="XRTableCell" Name="tableCell75" Weight="0.49030958530033897" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
+                <Item3 Ref="215" ControlType="XRTableCell" Name="tableCell75" Weight="0.49030958530033897" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
                   <Summary Ref="216" Running="Report" IgnoreNullValues="true" />
                   <ExpressionBindings>
                     <Item1 Ref="217" EventName="BeforePrint" PropertyName="Text" Expression="sumMedian([AwardedAmount])" />
                   </ExpressionBindings>
                   <StylePriority Ref="218" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item3>
-                <Item4 Ref="219" ControlType="XRTableCell" Name="tableCell76" Weight="0.60304137026220472" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
+                <Item4 Ref="219" ControlType="XRTableCell" Name="tableCell76" Weight="0.60304137026220472" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
                   <Summary Ref="220" Running="Report" IgnoreNullValues="true" />
                   <ExpressionBindings>
                     <Item1 Ref="221" EventName="BeforePrint" PropertyName="Text" Expression="sumMedian([ConstructionAmount])" />
                   </ExpressionBindings>
                   <StylePriority Ref="222" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item4>
-                <Item5 Ref="223" ControlType="XRTableCell" Name="tableCell77" Weight="0.61824916663378637" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
+                <Item5 Ref="223" ControlType="XRTableCell" Name="tableCell77" Weight="0.61824916663378637" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold" Borders="Right, Bottom">
                   <Summary Ref="224" Running="Report" IgnoreNullValues="true" />
                   <ExpressionBindings>
                     <Item1 Ref="225" EventName="BeforePrint" PropertyName="Text" Expression="sumMedian([NConstructionAmount])&#xA;&#xA;&#xA;" />
@@ -436,6 +436,6 @@
     </Item7>
   </Bands>
   <ComponentStorage>
-    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJRdWVyeSI+PFRhYmxlcz48VGFibGUgTmFtZT0iSGlzdC5IaXN0R3JhbnQiIFg9IjMwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIxMzk1IiAvPjxUYWJsZSBOYW1lPSJIaXN0Lkhpc3RBcHBsaWNhdGlvbiIgWD0iMTg1IiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSI0MzUiIC8+PFRhYmxlIE5hbWU9Ikhpc3QuSGlzdEFwcGxpY2F0aW9uU3RhdHVzIiBYPSIzNDAiIFk9IjMwIiBXaWR0aD0iMTI1IiBIZWlnaHQ9IjExNSIgLz48UmVsYXRpb24gVHlwZT0iTGVmdE91dGVyIiBQYXJlbnQ9Ikhpc3QuSGlzdEdyYW50IiBOZXN0ZWQ9Ikhpc3QuSGlzdEFwcGxpY2F0aW9uIj48S2V5Q29sdW1uIFBhcmVudD0iQXBwbGljYXRpb25JZCIgTmVzdGVkPSJJZCIgLz48L1JlbGF0aW9uPjxSZWxhdGlvbiBUeXBlPSJMZWZ0T3V0ZXIiIFBhcmVudD0iSGlzdC5IaXN0QXBwbGljYXRpb24iIE5lc3RlZD0iSGlzdC5IaXN0QXBwbGljYXRpb25TdGF0dXMiPjxLZXlDb2x1bW4gUGFyZW50PSJTdGF0dXNJZCIgTmVzdGVkPSJJZCIgLz48L1JlbGF0aW9uPjwvVGFibGVzPjxDb2x1bW5zPjxDb2x1bW4gVGFibGU9Ikhpc3QuSGlzdEFwcGxpY2F0aW9uIiBOYW1lPSJTdGF0dXNJZCIgLz48Q29sdW1uIFRhYmxlPSJIaXN0Lkhpc3RBcHBsaWNhdGlvbiIgTmFtZT0iRnVuZGluZ1llYXIiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5IaXN0R3JhbnQiIE5hbWU9IkdyYW50UmVxdWVzdCIgLz48Q29sdW1uIFRhYmxlPSJIaXN0Lkhpc3RHcmFudCIgTmFtZT0iR3JhbnRBbW91bnQiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5IaXN0R3JhbnQiIE5hbWU9IlRvdGFsUHJvamVjdENvc3QiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5IaXN0R3JhbnQiIE5hbWU9IkZpbmFsTWF0Y2giIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5IaXN0R3JhbnQiIE5hbWU9IkZpbmFsR3JhbnRBbW91bnQiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5IaXN0QXBwbGljYXRpb25TdGF0dXMiIE5hbWU9Ik5hbWUiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5IaXN0QXBwbGljYXRpb24iIE5hbWU9IkFwcGxpY2F0aW9uVHlwZUlkIiAvPjwvQ29sdW1ucz48RmlsdGVyPjwvRmlsdGVyPjxHcm91cEZpbHRlcj48L0dyb3VwRmlsdGVyPjxNZXRhIFg9IjU5MCIgWT0iMjAiIFdpZHRoPSIzMDAiIEhlaWdodD0iMTAxNSIgLz48L1F1ZXJ5PjxRdWVyeSBUeXBlPSJTZWxlY3RRdWVyeSIgTmFtZT0iUXVlcnlfMSI+PFRhYmxlcz48VGFibGUgTmFtZT0iSGlzdC5IaXN0QXBwbGljYXRpb24iIFg9IjMwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSI0MzUiIC8+PFRhYmxlIE5hbWU9Ikhpc3QuSGlzdEdyYW50IiBYPSIxODUiIFk9IjMwIiBXaWR0aD0iMTI1IiBIZWlnaHQ9IjEzOTUiIC8+PFJlbGF0aW9uIFR5cGU9IklubmVyIiBQYXJlbnQ9Ikhpc3QuSGlzdEFwcGxpY2F0aW9uIiBOZXN0ZWQ9Ikhpc3QuSGlzdEdyYW50Ij48S2V5Q29sdW1uIFBhcmVudD0iSWQiIE5lc3RlZD0iQXBwbGljYXRpb25JZCIgLz48L1JlbGF0aW9uPjwvVGFibGVzPjxDb2x1bW5zPjxDb2x1bW4gVGFibGU9Ikhpc3QuSGlzdEFwcGxpY2F0aW9uIiBOYW1lPSJGdW5kaW5nWWVhciIgLz48Q29sdW1uIFRhYmxlPSJIaXN0Lkhpc3RBcHBsaWNhdGlvbiIgTmFtZT0iU3RhdHVzSWQiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5IaXN0R3JhbnQiIE5hbWU9IlRvdGFsUHJvamVjdENvc3QiIC8+PC9Db2x1bW5zPjxGaWx0ZXI+W0hpc3QuSGlzdEFwcGxpY2F0aW9uLlN0YXR1c0lkXSBJbiAoNXMsIDZzLCA3cywgOHMsIDEycywgMTNzLCAxNXMpIEFuZCBbSGlzdC5IaXN0QXBwbGljYXRpb24uRnVuZGluZ1llYXJdID0gW0hpc3QuSGlzdEFwcGxpY2F0aW9uLkZ1bmRpbmdZZWFyXTwvRmlsdGVyPjxHcm91cEZpbHRlcj48L0dyb3VwRmlsdGVyPjwvUXVlcnk+PFJlbGF0aW9uIE1hc3Rlcj0iSGlzdF9IaXN0QXBwbGljYXRpb24iIERldGFpbD0iSGlzdF9IaXN0QXBwbGljYXRpb25UeXBlIj48S2V5Q29sdW1uIE1hc3Rlcj0iQXBwbGljYXRpb25UeXBlSWQiIERldGFpbD0iSWQiIC8+PC9SZWxhdGlvbj48UmVsYXRpb24gTWFzdGVyPSJIaXN0X0hpc3RBcHBsaWNhdGlvbiIgRGV0YWlsPSJIaXN0X0hpc3RHcmFudCI+PEtleUNvbHVtbiBNYXN0ZXI9IklkIiBEZXRhaWw9IklkIiAvPjwvUmVsYXRpb24+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMSI+PFZpZXcgTmFtZT0iUXVlcnkiPjxGaWVsZCBOYW1lPSJTdGF0dXNJZCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9IkZ1bmRpbmdZZWFyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkdyYW50UmVxdWVzdCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iR3JhbnRBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlRvdGFsUHJvamVjdENvc3QiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkZpbmFsTWF0Y2giIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkZpbmFsR3JhbnRBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQXBwbGljYXRpb25UeXBlSWQiIFR5cGU9IkludDE2IiAvPjwvVmlldz48VmlldyBOYW1lPSJRdWVyeV8xIj48RmllbGQgTmFtZT0iRnVuZGluZ1llYXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU3RhdHVzSWQiIFR5cGU9IkludDE2IiAvPjxGaWVsZCBOYW1lPSJUb3RhbFByb2plY3RDb3N0IiBUeXBlPSJEZWNpbWFsIiAvPjwvVmlldz48L0RhdGFTZXQ+PC9SZXN1bHRTY2hlbWE+PENvbm5lY3Rpb25PcHRpb25zIENsb3NlQ29ubmVjdGlvbj0idHJ1ZSIgLz48L1NxbERhdGFTb3VyY2U+" />
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IkN1c3RvbVNxbFF1ZXJ5IiBOYW1lPSJRdWVyeSI+PFNxbD5zZWxlY3QNCidSZXF1ZXN0ZWQnIGFzIFR5cGUsDQrCoMKgwqAgQS5TdGF0dXNJZCwNCsKgwqDCoCBBLkZ1bmRpbmdZZWFyLA0KwqDCoMKgIEcuR3JhbnRSZXF1ZXN0LA0KwqDCoMKgIEcuRmluYWxHcmFudEFtb3VudA0KZnJvbSBIaXN0Lkhpc3RHcmFudCBHDQpsZWZ0IGpvaW4gSGlzdC5IaXN0QXBwbGljYXRpb24gQQ0KwqDCoMKgIG9uIEEuSWQgPSBHLkFwcGxpY2F0aW9uSWQNCmxlZnQgam9pbiBIaXN0Lkhpc3RBcHBsaWNhdGlvblN0YXR1cyBTDQrCoMKgwqAgb24gUy5JZCA9IEEuU3RhdHVzSWQNCndoZXJlIEEuU3RhdHVzSWQgSU4oNCw1LDYsNyw4LDEyLDEzLDE1KcKgDQpHUk9VUCBCWcKgDQrCoMKgwqAgQS5TdGF0dXNJZCwNCsKgwqDCoCBBLkZ1bmRpbmdZZWFyLA0KwqDCoMKgIEcuRmluYWxHcmFudEFtb3VudCwNCsKgwqDCoCBHLkdyYW50UmVxdWVzdA0KwqDCoMKgIHVuaW9uIGFsbA0KwqDCoMKgIHNlbGVjdA0KJ0F3YXJkZWQnIGFzIFR5cGUsDQrCoMKgwqAgQS5TdGF0dXNJZCwNCsKgwqDCoCBBLkZ1bmRpbmdZZWFyLA0KwqDCoMKgIEcuR3JhbnRSZXF1ZXN0LA0KwqDCoMKgIEcuRmluYWxHcmFudEFtb3VudA0KZnJvbSBIaXN0Lkhpc3RHcmFudCBHDQpsZWZ0IGpvaW4gSGlzdC5IaXN0QXBwbGljYXRpb24gQQ0KwqDCoMKgIG9uIEEuSWQgPSBHLkFwcGxpY2F0aW9uSWQNCmxlZnQgam9pbiBIaXN0Lkhpc3RBcHBsaWNhdGlvblN0YXR1cyBTDQrCoMKgwqAgb24gUy5JZCA9IEEuU3RhdHVzSWQNCndoZXJlIEEuU3RhdHVzSWQgSU4oNyw4LDEyLDEzLDE1KcKgDQpHUk9VUCBCWcKgDQrCoMKgwqAgQS5TdGF0dXNJZCwNCsKgwqDCoCBBLkZ1bmRpbmdZZWFyLA0KwqDCoMKgIEcuRmluYWxHcmFudEFtb3VudCwNCsKgwqDCoCBHLkdyYW50UmVxdWVzdA0KwqDCoMKgIHVuaW9uIEFsbA0KwqDCoMKgIHNlbGVjdA0KwqDCoMKgICdDb25zdHJ1Y3Rpb24nIGFzIFR5cGUsDQrCoMKgwqAgQS5TdGF0dXNJZCwNCsKgwqDCoCBBLkZ1bmRpbmdZZWFyLA0KwqDCoMKgIEcuR3JhbnRSZXF1ZXN0LA0KwqDCoMKgIEcuRmluYWxHcmFudEFtb3VudA0KZnJvbSBIaXN0Lkhpc3RHcmFudCBHDQpsZWZ0IGpvaW4gSGlzdC5IaXN0QXBwbGljYXRpb24gQQ0KwqDCoMKgIG9uIEEuSWQgPSBHLkFwcGxpY2F0aW9uSWQNCmxlZnQgam9pbiBIaXN0Lkhpc3RBcHBsaWNhdGlvblN0YXR1cyBTDQrCoMKgwqAgb24gUy5JZCA9IEEuU3RhdHVzSWQNCndoZXJlIEEuU3RhdHVzSWQgSU4oNyw4LDEyLDEzLDE1KSBhbmQgQS5hcHBsaWNhdGlvbnR5cGVpZD0zDQpHUk9VUCBCWcKgDQrCoMKgwqAgQS5TdGF0dXNJZCwNCsKgwqDCoCBBLkZ1bmRpbmdZZWFyLA0KwqDCoMKgIEcuRmluYWxHcmFudEFtb3VudCwNCsKgwqDCoCBHLkdyYW50UmVxdWVzdA0KwqDCoMKgIHVuaW9uIGFsbA0KwqDCoMKgIHNlbGVjdA0KwqDCoMKgICdOb24tQ29uc3RydWN0aW9uJyBhcyBUeXBlLA0KwqDCoMKgIEEuU3RhdHVzSWQsDQrCoMKgwqAgQS5GdW5kaW5nWWVhciwNCsKgwqDCoCBHLkdyYW50UmVxdWVzdCwNCsKgwqDCoCBHLkZpbmFsR3JhbnRBbW91bnQNCmZyb20gSGlzdC5IaXN0R3JhbnQgRw0KbGVmdCBqb2luIEhpc3QuSGlzdEFwcGxpY2F0aW9uIEENCsKgwqDCoCBvbiBBLklkID0gRy5BcHBsaWNhdGlvbklkDQpsZWZ0IGpvaW4gSGlzdC5IaXN0QXBwbGljYXRpb25TdGF0dXMgUw0KwqDCoMKgIG9uIFMuSWQgPSBBLlN0YXR1c0lkDQp3aGVyZSBBLlN0YXR1c0lkIElOKDcsOCwxMiwxMywxNSkgYW5kIEEuYXBwbGljYXRpb250eXBlaWQgaW4gKDEsMikNCkdST1VQIEJZwqANCsKgwqDCoCBBLlN0YXR1c0lkLA0KwqDCoMKgIEEuRnVuZGluZ1llYXIsDQrCoMKgwqAgRy5GaW5hbEdyYW50QW1vdW50LA0KwqDCoMKgIEcuR3JhbnRSZXF1ZXN0PC9TcWw+PC9RdWVyeT48UXVlcnkgVHlwZT0iU2VsZWN0UXVlcnkiIE5hbWU9IlF1ZXJ5XzEiPjxUYWJsZXM+PFRhYmxlIE5hbWU9Ikhpc3QuSGlzdEFwcGxpY2F0aW9uIiBYPSIzMCIgWT0iMzAiIFdpZHRoPSIxMjUiIEhlaWdodD0iNDM1IiAvPjxUYWJsZSBOYW1lPSJIaXN0Lkhpc3RHcmFudCIgWD0iMTg1IiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIxMzk1IiAvPjxSZWxhdGlvbiBUeXBlPSJJbm5lciIgUGFyZW50PSJIaXN0Lkhpc3RBcHBsaWNhdGlvbiIgTmVzdGVkPSJIaXN0Lkhpc3RHcmFudCI+PEtleUNvbHVtbiBQYXJlbnQ9IklkIiBOZXN0ZWQ9IkFwcGxpY2F0aW9uSWQiIC8+PC9SZWxhdGlvbj48L1RhYmxlcz48Q29sdW1ucz48Q29sdW1uIFRhYmxlPSJIaXN0Lkhpc3RBcHBsaWNhdGlvbiIgTmFtZT0iRnVuZGluZ1llYXIiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5IaXN0QXBwbGljYXRpb24iIE5hbWU9IlN0YXR1c0lkIiAvPjxDb2x1bW4gVGFibGU9Ikhpc3QuSGlzdEdyYW50IiBOYW1lPSJUb3RhbFByb2plY3RDb3N0IiAvPjwvQ29sdW1ucz48RmlsdGVyPltIaXN0Lkhpc3RBcHBsaWNhdGlvbi5TdGF0dXNJZF0gSW4gKDVzLCA2cywgN3MsIDhzLCAxMnMsIDEzcywgMTVzKSBBbmQgW0hpc3QuSGlzdEFwcGxpY2F0aW9uLkZ1bmRpbmdZZWFyXSA9IFtIaXN0Lkhpc3RBcHBsaWNhdGlvbi5GdW5kaW5nWWVhcl08L0ZpbHRlcj48R3JvdXBGaWx0ZXI+PC9Hcm91cEZpbHRlcj48L1F1ZXJ5PjxSZWxhdGlvbiBNYXN0ZXI9Ikhpc3RfSGlzdEFwcGxpY2F0aW9uIiBEZXRhaWw9Ikhpc3RfSGlzdEFwcGxpY2F0aW9uVHlwZSI+PEtleUNvbHVtbiBNYXN0ZXI9IkFwcGxpY2F0aW9uVHlwZUlkIiBEZXRhaWw9IklkIiAvPjwvUmVsYXRpb24+PFJlbGF0aW9uIE1hc3Rlcj0iSGlzdF9IaXN0QXBwbGljYXRpb24iIERldGFpbD0iSGlzdF9IaXN0R3JhbnQiPjxLZXlDb2x1bW4gTWFzdGVyPSJJZCIgRGV0YWlsPSJJZCIgLz48L1JlbGF0aW9uPjxSZXN1bHRTY2hlbWE+PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iVHlwZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTdGF0dXNJZCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9IkZ1bmRpbmdZZWFyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkdyYW50UmVxdWVzdCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRmluYWxHcmFudEFtb3VudCIgVHlwZT0iRGVjaW1hbCIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iUXVlcnlfMSI+PEZpZWxkIE5hbWU9IkZ1bmRpbmdZZWFyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN0YXR1c0lkIiBUeXBlPSJJbnQxNiIgLz48RmllbGQgTmFtZT0iVG90YWxQcm9qZWN0Q29zdCIgVHlwZT0iRGVjaW1hbCIgLz48L1ZpZXc+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjxDb25uZWN0aW9uT3B0aW9ucyBDbG9zZUNvbm5lY3Rpb249InRydWUiIC8+PC9TcWxEYXRhU291cmNlPg==" />
   </ComponentStorage>
 </XtraReportsLayoutSerializer>
