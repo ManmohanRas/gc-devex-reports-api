@@ -186,7 +186,7 @@
         <GridMeasureColumn Name="Preserved">
           <Measure DefaultId="DataItem15" />
         </GridMeasureColumn>
-        <GridMeasureColumn Name="Additional">
+        <GridMeasureColumn Name="Additional Funds">
           <Measure DefaultId="DataItem11" />
         </GridMeasureColumn>
         <GridMeasureColumn Name="Highest Funded Project">

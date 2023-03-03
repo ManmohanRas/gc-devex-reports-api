@@ -106,23 +106,17 @@
         </Pane>
       </Panes>
     </Chart>
-    <Chart ComponentName="chartDashboardItem2" Name="Years VS FundsAwarded" DataSource="sqlDataSource1" DataMember="rept_usp_get_ostf_annual_summary_report_test" FilterString="[AgencyId] In(?User_AgencyIds)">
+    <Chart ComponentName="chartDashboardItem2" Name="Years VS Funds Awarded" DataSource="sqlDataSource1" DataMember="rept_usp_get_ostf_annual_summary_report_test" FilterString="[AgencyId] In(?User_AgencyIds)">
       <ColoringOptions MeasuresColoringMode="Hue" />
       <DataItems>
-        <Dimension DataMember="FundingYear" DefaultId="DataItem0">
-          <NumericFormat FormatType="General" />
-        </Dimension>
         <Measure DataMember="FundsAwarded" DefaultId="DataItem1">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
         </Measure>
       </DataItems>
-      <Arguments>
-        <Argument DefaultId="DataItem0" />
-      </Arguments>
       <Panes>
         <Pane Name="Pane 1">
           <Series>
-            <Simple Name="FundsAwarded" SeriesType="Line">
+            <Simple Name="Funds Awarded" SeriesType="Line">
               <Value DefaultId="DataItem1" />
             </Simple>
           </Series>
@@ -176,7 +170,7 @@
         <GridDimensionColumn Name="Year">
           <Dimension DefaultId="DataItem0" />
         </GridDimensionColumn>
-        <GridMeasureColumn Name="Approved Acerage">
+        <GridMeasureColumn Name="Approved Acreage">
           <Measure DefaultId="DataItem2" />
         </GridMeasureColumn>
         <GridMeasureColumn Name="Total Funds Awarded">
