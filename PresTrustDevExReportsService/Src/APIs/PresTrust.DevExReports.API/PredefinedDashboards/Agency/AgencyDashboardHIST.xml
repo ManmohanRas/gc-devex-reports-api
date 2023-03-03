@@ -118,20 +118,6 @@
         <Dimension DataMember="FundingYear" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
         </Dimension>
-        <Dimension DataMember="Applications" DefaultId="DataItem1" />
-        <Dimension DataMember="ApprovedApplications" DefaultId="DataItem2" />
-        <Dimension DataMember="CompletedApplications" DefaultId="DataItem3" />
-        <Dimension DataMember="RejectedApplications" DefaultId="DataItem4" />
-        <Dimension DataMember="WithdrawnApplications" DefaultId="DataItem5" />
-        <Dimension DataMember="NoAwardApplications" DefaultId="DataItem6" />
-        <Dimension DataMember="DeniedApplications" DefaultId="DataItem8" />
-        <Dimension DataMember="ConstructionFunds" DefaultId="DataItem9">
-          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
-        </Dimension>
-        <Dimension DataMember="SitesApproved" DefaultId="DataItem11" />
-        <Measure DataMember="TotalFundsRequested" DefaultId="DataItem7">
-          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
-        </Measure>
         <Measure DataMember="TotalFundsAwarded" DefaultId="DataItem10">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
         </Measure>
@@ -145,6 +131,20 @@
         <Measure DataMember="FundsDistributed" DefaultId="DataItem15">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
         </Measure>
+        <Measure DataMember="TotalFundsRequested" DefaultId="DataItem7">
+          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
+        </Measure>
+        <Measure DataMember="ConstructionFunds" DefaultId="DataItem9">
+          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
+        </Measure>
+        <Measure DataMember="Applications" DefaultId="DataItem1" />
+        <Measure DataMember="ApprovedApplications" DefaultId="DataItem2" />
+        <Measure DataMember="CompletedApplications" DefaultId="DataItem3" />
+        <Measure DataMember="NoAwardApplications" DefaultId="DataItem6" />
+        <Measure DataMember="RejectedApplications" DefaultId="DataItem4" />
+        <Measure DataMember="WithdrawnApplications" DefaultId="DataItem5" />
+        <Measure DataMember="DeniedApplications" DefaultId="DataItem8" />
+        <Measure DataMember="SitesApproved" DefaultId="DataItem11" />
         <Measure DataMember="HighestAwardedAPP" SummaryType="Count" DefaultId="DataItem16" />
         <Measure DataMember="LeastAwardedAPP" SummaryType="Count" DefaultId="DataItem17" />
       </DataItems>
@@ -161,42 +161,42 @@
         <GridMeasureColumn Name="Acqusition Funds" Weight="72.318825451588">
           <Measure DefaultId="DataItem12" />
         </GridMeasureColumn>
-        <GridDimensionColumn Name=" Construction Funds" Weight="96.2910128388017">
-          <Dimension DefaultId="DataItem9" />
-        </GridDimensionColumn>
+        <GridMeasureColumn Name=" Construction Funds" Weight="96.2910128388017">
+          <Measure DefaultId="DataItem9" />
+        </GridMeasureColumn>
         <GridMeasureColumn Name="Planning/DesignFunds" Weight="72.16110930168142">
           <Measure DefaultId="DataItem13" />
         </GridMeasureColumn>
-        <GridDimensionColumn Weight="102.71041369472182">
-          <Dimension DefaultId="DataItem1" />
-        </GridDimensionColumn>
-        <GridDimensionColumn Name="Approved" Weight="65.47788873038516">
-          <Dimension DefaultId="DataItem2" />
-        </GridDimensionColumn>
-        <GridDimensionColumn Name="Completed" Weight="67.4037089871612">
-          <Dimension DefaultId="DataItem3" />
-        </GridDimensionColumn>
-        <GridDimensionColumn Name="No-Award" Weight="68.68758915834522">
-          <Dimension DefaultId="DataItem6" />
-        </GridDimensionColumn>
-        <GridDimensionColumn Name="Rejected" Weight="60.984308131241086">
-          <Dimension DefaultId="DataItem4" />
-        </GridDimensionColumn>
-        <GridDimensionColumn Name="Withdrawn" Weight="68.0456490727532">
-          <Dimension DefaultId="DataItem5" />
-        </GridDimensionColumn>
-        <GridDimensionColumn Name="Declined" Weight="59.70042796005706">
-          <Dimension DefaultId="DataItem8" />
-        </GridDimensionColumn>
+        <GridMeasureColumn Name="Applications" Weight="102.71041369472182">
+          <Measure DefaultId="DataItem1" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Approved" Weight="65.47788873038516">
+          <Measure DefaultId="DataItem2" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Completed" Weight="67.4037089871612">
+          <Measure DefaultId="DataItem3" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="No-Award" Weight="68.68758915834522">
+          <Measure DefaultId="DataItem6" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Rejected" Weight="60.984308131241086">
+          <Measure DefaultId="DataItem4" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Withdrawn" Weight="68.0456490727532">
+          <Measure DefaultId="DataItem5" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Declined" Weight="59.70042796005706">
+          <Measure DefaultId="DataItem8" />
+        </GridMeasureColumn>
         <GridMeasureColumn Name="Grant-Expired" Weight="71.9941157311921">
           <Measure DefaultId="DataItem14" />
         </GridMeasureColumn>
         <GridMeasureColumn Name="Funds Distributed" Weight="71.81729900949752">
           <Measure DefaultId="DataItem15" />
         </GridMeasureColumn>
-        <GridDimensionColumn Name="Sites Approved" Weight="74.46504992867332">
-          <Dimension DefaultId="DataItem11" />
-        </GridDimensionColumn>
+        <GridMeasureColumn Name="Sites Approved" Weight="74.46504992867332">
+          <Measure DefaultId="DataItem11" />
+        </GridMeasureColumn>
         <GridMeasureColumn Name="Highest Awarded Application" Weight="71.63008130417383">
           <Measure DefaultId="DataItem16" />
         </GridMeasureColumn>

@@ -3,32 +3,6 @@
   <DataSources>
     <SqlDataSource Name="rept_ProgramSummaryReport" ComponentName="sqlDataSource1">
       <Connection Name="PresTrustDbConnectionStrings" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="rept_OSTFAnnualSummaryReport">
-        <Tables>
-          <Table Name="rept.OSTFAnnualSummaryReport" X="30" Y="30" Width="125" Height="449" />
-        </Tables>
-        <Columns>
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="AgencyId" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="FundingYear" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="Acreage" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="FundsAwarded" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="FundsAwardedAcquisition" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="FundsAwardedDemolition" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="AcquisitionGrantsPerAcre" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="Applications" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="ApprovedApplications" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="AddtlFundApplications" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="ExpiredApplications" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="WithdrawnApplications" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="RejectedApplications" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="HighestAcreageApprovedLocation" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="LeastAcreageApprovedLocation" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="HighestFundedApplication" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="LeastFundedApplication" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="LastUpdatedBy" />
-          <Column Table="rept.OSTFAnnualSummaryReport" Name="LastUpdatedOn" />
-        </Columns>
-      </Query>
       <Query Type="SelectQuery" Name="Core_View_AgencyEntities_OSTF">
         <Tables>
           <Table Name="Core.View_AgencyEntities_OSTF" X="30" Y="30" Width="125" Height="389" />
@@ -72,7 +46,6 @@
       </ResultSchema>
       <ConnectionOptions CloseConnection="true" />
       <CalculatedFields>
-        <CalculatedField Name="Calculated Field 1" Expression="[ApprovedApplications]+[ExpiredApplications]+[WithdrawnApplications]+[AddtlFundApplications]" DataType="Auto" DataMember="rept_OSTFAnnualSummaryReport" />
         <CalculatedField Name="HighestFundedApp" Expression="filter(Max([HighestFundedApplication]), [HighestFundedAmount] = aggr(Max([HighestFundedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report_test" />
         <CalculatedField Name="HightestAcerageApprovedLoc" Expression="filter(Max([HighestAcreageApprovedLocation]), [HighestAcreageApproved] = aggr(Max([HighestAcreageApproved]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report_test" />
         <CalculatedField Name="LeastApprovedAcers" Expression="filter(Min([LeastAcreageApprovedLocation]), [LeastAcreageApproved] = aggr(Min( [LeastAcreageApproved]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report_test" />
@@ -112,9 +85,14 @@
         <Measure DataMember="FundsAwarded" DefaultId="DataItem1">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
         </Measure>
+        <Dimension DataMember="FundingYear" DefaultId="DataItem0" />
       </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
       <Panes>
         <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
           <Series>
             <Simple Name="Funds Awarded" SeriesType="Line">
               <Value DefaultId="DataItem1" />
@@ -145,10 +123,14 @@
         <Measure DataMember="ApprovedApplications" DefaultId="DataItem7" />
         <Measure DataMember="Applications" DefaultId="DataItem6" />
         <Measure DataMember="AcquisitionGrantsPerAcre" DefaultId="DataItem5" />
-        <Measure DataMember="FundsAwardedDemolition" DefaultId="DataItem4" />
+        <Measure DataMember="FundsAwardedDemolition" DefaultId="DataItem4">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
+        </Measure>
         <Measure DataMember="FundsAwardedAcquisition" DefaultId="DataItem3" />
         <Measure DataMember="Acreage" DefaultId="DataItem2" />
-        <Measure DataMember="FundsAwarded" DefaultId="DataItem1" />
+        <Measure DataMember="FundsAwarded" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
+        </Measure>
         <Dimension DataMember="FundingYear" DefaultId="DataItem0">
           <NumericFormat FormatType="General" />
         </Dimension>
