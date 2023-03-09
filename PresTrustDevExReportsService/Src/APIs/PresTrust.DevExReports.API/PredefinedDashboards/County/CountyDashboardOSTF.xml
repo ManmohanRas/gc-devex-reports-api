@@ -50,6 +50,7 @@
         <CalculatedField Name="HighestACerageApprovedLoc" Expression="filter(Max([HighestAcreageApprovedLocation]), [HighestAcreageApproved] = aggr(Max([HighestAcreageApproved]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report_test" />
         <CalculatedField Name="LeastFundedApp" Expression="filter(Min([LeastFundedApplication]), [LeastFundedAmount] = aggr(Min( [LeastFundedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report_test" />
         <CalculatedField Name="LeastApprovedAcers" Expression="filter(Min([LeastAcreageApprovedLocation]), [LeastAcreageApproved] = aggr(Min( [LeastAcreageApproved]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report_test" />
+        <CalculatedField Name="ApprovedApplicationsL2" Expression="Sum([ApprovedApplications])+Sum([PreservedApplications])+Sum([AddtlFundApplications])+Sum([ExpiredApplications])" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report_test" />
       </CalculatedFields>
     </SqlDataSource>
   </DataSources>
@@ -60,7 +61,7 @@
         <Dimension DataMember="FundingYear" IsDiscreteScale="true" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
         </Dimension>
-        <Measure DataMember="ApprovedApplications" DefaultId="DataItem2" />
+        <Measure DataMember="ApprovedApplicationsL2" DefaultId="DataItem2" />
       </DataItems>
       <Arguments>
         <Argument DefaultId="DataItem0" />
@@ -72,7 +73,7 @@
             <Simple>
               <Value DefaultId="DataItem1" />
             </Simple>
-            <Simple Name="Approved">
+            <Simple>
               <Value DefaultId="DataItem2" />
             </Simple>
           </Series>
@@ -94,6 +95,7 @@
       </Arguments>
       <Panes>
         <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
           <Series>
             <Simple Name="FundsAwarded" SeriesType="Line">
               <Value DefaultId="DataItem1" />

@@ -3,9 +3,6 @@
   <DataSources>
     <SqlDataSource Name="rept_usp_get_hist_annual_summary_report" ComponentName="sqlDataSource1">
       <Connection Name="PresTrustDbConnectionStrings" FromAppConfig="true" />
-      <Query Type="StoredProcQuery" Name="rept_usp_get_hist_annual_summary_report">
-        <ProcName>rept.usp_get_hist_annual_summary_report</ProcName>
-      </Query>
       <Query Type="SelectQuery" Name="Core_View_AgencyEntities_HIST">
         <Tables>
           <Table Name="Core.View_AgencyEntities_HIST" />
@@ -15,10 +12,14 @@
           <Column Table="Core.View_AgencyEntities_HIST" Name="AgencyName" />
         </Columns>
       </Query>
+      <Query Type="StoredProcQuery" Name="rept_usp_get_hist_annual_summary_report">
+        <ProcName>rept.usp_get_hist_annual_summary_report</ProcName>
+      </Query>
       <ConnectionOptions CloseConnection="true" />
       <CalculatedFields>
-        <CalculatedField Name="HighestAwardedAPP" Expression="filter(Max([HighestAwardedApplication]), [HighestAwardedAmount] = aggr(Max([HighestAwardedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
-        <CalculatedField Name="LeastAwardedAPP" Expression="filter(Max([LeastAwardedApplication]), [LeastAwardedAmount] = aggr(Min([LeastAwardedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
+        <CalculatedField Name="HighestAwardedApp" Expression="filter(Max([HighestAwardedApplication]), [HighestAwardedAmount] = aggr(Max([HighestAwardedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
+        <CalculatedField Name="LeastAwardedApp" Expression="filter(Max([LeastAwardedApplication]), [LeastAwardedAmount] = aggr(Min([LeastAwardedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
+        <CalculatedField Name="ApprovedApplicationsL2" Expression="Sum([CompletedApplications])+Sum([ApprovedApplications])+Sum([GrantExpiredApplications])+Sum([EasementExpiredApplications])+Sum([DeniedApplications])" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
       </CalculatedFields>
     </SqlDataSource>
   </DataSources>
@@ -31,7 +32,7 @@
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
         </Dimension>
         <Measure DataMember="Applications" DefaultId="DataItem1" />
-        <Measure DataMember="ApprovedApplications" Name="Approved" DefaultId="DataItem2" />
+        <Measure DataMember="ApprovedApplicationsL2" Name="Approved" DefaultId="DataItem2" />
       </DataItems>
       <Arguments>
         <Argument DefaultId="DataItem0" />
@@ -61,7 +62,6 @@
           </Series>
         </Pane>
       </Panes>
-      <ChartLegend Visible="false" />
     </Chart>
     <Chart ComponentName="chartDashboardItem4" Name="Year Vs Construction / Non-Construction" DataSource="sqlDataSource1" DataMember="rept_usp_get_hist_annual_summary_report">
       <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
@@ -96,7 +96,6 @@
           </Series>
         </Pane>
       </Panes>
-      <ChartLegend Visible="false" />
     </Chart>
     <Pie ComponentName="pieDashboardItem1" Name="Years Vs Total Funds Awarded" DataSource="sqlDataSource1" DataMember="rept_usp_get_hist_annual_summary_report" ShowPieCaptions="false">
       <InteractivityOptions IsDrillDownEnabled="true" />
@@ -136,8 +135,8 @@
         <Measure DataMember="FundsDistributed" DefaultId="DataItem15">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
         </Measure>
-        <Measure DataMember="HighestAwardedAPP" SummaryType="Count" DefaultId="DataItem16" />
-        <Measure DataMember="LeastAwardedAPP" SummaryType="Count" DefaultId="DataItem17" />
+        <Measure DataMember="HighestAwardedApp" SummaryType="Count" DefaultId="DataItem16" />
+        <Measure DataMember="LeastAwardedApp" SummaryType="Count" DefaultId="DataItem17" />
         <Measure DataMember="ConstructionFunds" DefaultId="DataItem9">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
         </Measure>
