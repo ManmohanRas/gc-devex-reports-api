@@ -114,7 +114,7 @@
         <Value DefaultId="DataItem1" />
       </Values>
     </Pie>
-    <Grid ComponentName="gridDashboardItem2" Name="Detail" DataSource="sqlDataSource1" DataMember="rept_usp_get_hist_annual_summary_report">
+    <Grid ComponentName="gridDashboardItem2" Name="" DataSource="sqlDataSource1" DataMember="rept_usp_get_hist_annual_summary_report">
       <DataItems>
         <Dimension DataMember="FundingYear" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
@@ -239,7 +239,7 @@
     </Entry>
   </ColorScheme>
   <LayoutOptions>
-    <Height Mode="Fixed" Value="1000" />
+    <Height Mode="Fixed" Value="960" />
   </LayoutOptions>
   <LayoutTree>
     <LayoutGroup Orientation="Vertical" Weight="100">

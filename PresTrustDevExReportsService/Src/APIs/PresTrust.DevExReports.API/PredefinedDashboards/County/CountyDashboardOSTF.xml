@@ -73,7 +73,7 @@
             <Simple>
               <Value DefaultId="DataItem1" />
             </Simple>
-            <Simple>
+            <Simple Name="ApprovedApplications">
               <Value DefaultId="DataItem2" />
             </Simple>
           </Series>
@@ -204,7 +204,7 @@
           <Measure DefaultId="DataItem14" />
         </GridMeasureColumn>
       </GridColumns>
-      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" WordWrap="true" />
+      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" />
       <ColumnFilterOptions />
     </Grid>
     <ComboBox ComponentName="comboBoxDashboardItem1" Name="Agency " DataSource="sqlDataSource1" DataMember="Core_View_AgencyEntities_OSTF" IsMasterFilterCrossDataSource="true" EnableSearch="true">
@@ -239,17 +239,17 @@
     </Entry>
   </ColorScheme>
   <LayoutOptions>
-    <Height Mode="Fixed" Value="1000" />
+    <Height Mode="Fixed" Value="960" />
   </LayoutOptions>
   <LayoutTree>
     <LayoutGroup Orientation="Vertical" Weight="100">
       <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="6.1" />
-      <LayoutGroup Weight="36.8">
+      <LayoutGroup Weight="33.73181818181818">
         <LayoutItem DashboardItem="chartDashboardItem1" Weight="32.50945127588624" />
         <LayoutItem DashboardItem="chartDashboardItem2" Weight="36.37337133620851" />
         <LayoutItem DashboardItem="pieDashboardItem1" Weight="31.11717738790525" />
       </LayoutGroup>
-      <LayoutItem DashboardItem="gridDashboardItem1" Weight="57.1" />
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="60.16818181818182" />
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>
