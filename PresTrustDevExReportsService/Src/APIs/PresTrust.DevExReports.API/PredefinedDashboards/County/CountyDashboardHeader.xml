@@ -1,4 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard CurrencyCulture="chr-Cher-US">
   <Title Text=" " Alignment="Left" IncludeMasterFilterState="false" />
   <DataSources>
@@ -531,17 +530,17 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
   </LayoutOptions>
   <LayoutTree>
     <LayoutGroup Orientation="Vertical" Weight="100">
-      <LayoutGroup Weight="46.935483870967744">
-        <LayoutItem DashboardItem="textBoxDashboardItem5" Weight="24.657534246575342" />
-        <LayoutItem DashboardItem="textBoxDashboardItem9" Weight="26.343519494204426" />
-        <LayoutItem DashboardItem="textBoxDashboardItem4" Weight="23.076923076923077" />
-        <LayoutItem DashboardItem="textBoxDashboardItem8" Weight="25.922023182297156" />
+      <LayoutGroup Weight="49.86651835372637">
+        <LayoutItem DashboardItem="textBoxDashboardItem5" Weight="25.443560447448707" />
+        <LayoutItem DashboardItem="textBoxDashboardItem9" Weight="25.55749329333106" />
+        <LayoutItem DashboardItem="textBoxDashboardItem4" Weight="23.688276788713477" />
+        <LayoutItem DashboardItem="textBoxDashboardItem8" Weight="25.310669470506756" />
       </LayoutGroup>
-      <LayoutGroup Weight="53.064516129032256">
+      <LayoutGroup Weight="50.13348164627363">
         <LayoutItem DashboardItem="textBoxDashboardItem2" Weight="25.500526870389884" />
         <LayoutItem DashboardItem="textBoxDashboardItem3" Weight="25.500526870389884" />
         <LayoutItem DashboardItem="textBoxDashboardItem6" Weight="23.709167544783984" />
-        <LayoutItem DashboardItem="textBoxDashboardItem7" Weight="25.289778714436249" />
+        <LayoutItem DashboardItem="textBoxDashboardItem7" Weight="25.28977871443625" />
       </LayoutGroup>
     </LayoutGroup>
   </LayoutTree>
