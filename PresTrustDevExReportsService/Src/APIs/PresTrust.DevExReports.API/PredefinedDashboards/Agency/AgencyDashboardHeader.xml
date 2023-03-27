@@ -2,13 +2,13 @@
 <Dashboard CurrencyCulture="chr-Cher-US">
   <Title Text=" " Alignment="Left" IncludeMasterFilterState="false" />
   <DataSources>
-	  <SqlDataSource Name="rept_usp_get_program_summary_report" ComponentName="sqlDataSource1">
-		  <Connection Name="PresTrustDbConnectionStrings" FromAppConfig="true" />
-		  <Query Type="StoredProcQuery" Name="rept_usp_get_program_summary_report">
-			  <ProcName>rept.usp_get_program_summary_report</ProcName>
-		  </Query>
-		  <ConnectionOptions CloseConnection="true" />
-	  </SqlDataSource>
+    <SqlDataSource Name="rept_usp_get_program_summary_report" ComponentName="sqlDataSource1">
+      <Connection Name="PresTrustDbConnectionStrings" FromAppConfig="true" />
+      <Query Type="StoredProcQuery" Name="rept_usp_get_program_summary_report">
+        <ProcName>rept.usp_get_program_summary_report</ProcName>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
   </DataSources>
   <Items>
     <TextBox ComponentName="textBoxDashboardItem5" Name="Text Box 2" ShowCaption="false" DataSource="sqlDataSource1" DataMember="rept_usp_get_program_summary_report" FilterString="[DataItem0] = 'OSTF'">
@@ -19,7 +19,7 @@
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
         </Measure>
         <Measure DataMember="PreservedAcreage" Name="PreservedAcreage" DefaultId="DataItem2">
-          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" CustomFormatString="" />
+          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" />
         </Measure>
         <Measure DataMember="FundsAwarded" Name="FundsAwarded" DefaultId="DataItem3">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
@@ -162,7 +162,7 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
         </Measure>
         <Measure DataMember="PreservedAcreage" Name="PreservedAcreage" DefaultId="DataItem2">
-          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" CustomFormatString="" />
+          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" />
         </Measure>
         <Measure DataMember="FundsAwarded" Name="FundsAwarded" DefaultId="DataItem3">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
@@ -304,7 +304,7 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
         </Measure>
         <Measure DataMember="PreservedAcreage" Name="PreservedAcreage" DefaultId="DataItem2">
-          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" CustomFormatString="" />
+          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" />
         </Measure>
         <Measure DataMember="FundsAwarded" Name="FundsAwarded" DefaultId="DataItem3">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
@@ -376,7 +376,7 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
         </Measure>
         <Measure DataMember="LinearDistanceMi" Name="LinearDistanceMi" DefaultId="DataItem2">
-          <NumericFormat FormatType="General" CustomFormatString="" />
+          <NumericFormat FormatType="General" />
         </Measure>
         <Measure DataMember="FundsAwarded" Name="FundsAwarded" DefaultId="DataItem3">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
@@ -448,7 +448,7 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
         </Measure>
         <Measure DataMember="PreservedAcreage" Name="PreservedAcreage" DefaultId="DataItem2">
-          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" CustomFormatString="" />
+          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" />
         </Measure>
         <Measure DataMember="FundsAwarded" Name="FundsAwarded" DefaultId="DataItem3">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
@@ -531,17 +531,17 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
   </LayoutOptions>
   <LayoutTree>
     <LayoutGroup Orientation="Vertical" Weight="100">
-      <LayoutGroup Weight="50.196078431372548">
-        <LayoutItem DashboardItem="textBoxDashboardItem5" Weight="24.671052631578949" />
-        <LayoutItem DashboardItem="textBoxDashboardItem9" Weight="25.855263157894736" />
-        <LayoutItem DashboardItem="textBoxDashboardItem8" Weight="24.407894736842106" />
-        <LayoutItem DashboardItem="textBoxDashboardItem4" Weight="25.065789473684209" />
+      <LayoutGroup Weight="50.161290322580648">
+        <LayoutItem DashboardItem="textBoxDashboardItem5" Weight="24.657534246575342" />
+        <LayoutItem DashboardItem="textBoxDashboardItem9" Weight="23.8145416227608" />
+        <LayoutItem DashboardItem="textBoxDashboardItem4" Weight="26.238145416227606" />
+        <LayoutItem DashboardItem="textBoxDashboardItem8" Weight="25.289778714436249" />
       </LayoutGroup>
-      <LayoutGroup Weight="49.803921568627452">
-        <LayoutItem DashboardItem="textBoxDashboardItem3" Weight="24.671052631578949" />
-        <LayoutItem DashboardItem="textBoxDashboardItem2" Weight="25.855263157894736" />
-        <LayoutItem DashboardItem="textBoxDashboardItem6" Weight="24.407894736842106" />
-        <LayoutItem DashboardItem="textBoxDashboardItem7" Weight="25.065789473684209" />
+      <LayoutGroup Weight="49.838709677419352">
+        <LayoutItem DashboardItem="textBoxDashboardItem3" Weight="24.657534246575342" />
+        <LayoutItem DashboardItem="textBoxDashboardItem2" Weight="23.8145416227608" />
+        <LayoutItem DashboardItem="textBoxDashboardItem6" Weight="26.238145416227606" />
+        <LayoutItem DashboardItem="textBoxDashboardItem7" Weight="25.289778714436249" />
       </LayoutGroup>
     </LayoutGroup>
   </LayoutTree>
