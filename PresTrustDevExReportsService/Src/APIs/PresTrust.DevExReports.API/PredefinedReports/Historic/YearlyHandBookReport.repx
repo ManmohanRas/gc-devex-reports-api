@@ -645,7 +645,7 @@
                 </Item2>
                 <Item3 Ref="305" ControlType="GroupHeaderBand" Name="GroupHeader2" HeightF="23" KeepTogether="true">
                   <GroupFields>
-                    <Item1 Ref="306" FieldName="Hist.HistCommentType_Title" />
+                    <Item1 Ref="306" FieldName="Hist.HistCommentType_Title" SortOrder="None" />
                   </GroupFields>
                   <Controls>
                     <Item1 Ref="307" ControlType="XRLabel" Name="label18" Multiline="true" Text="label18" TextAlignment="MiddleLeft" SizeF="350.7223,23" LocationFloat="40.5000038,0" Font="Segoe UI Semilight, 11pt, style=Bold" Padding="2,2,0,0,100">
@@ -841,10 +841,10 @@
                 <Item1 Ref="383" FieldName="Hist.HistApplication_Title" />
               </GroupFields>
               <Controls>
-                <Item1 Ref="384" ControlType="XRLabel" Name="label12" Multiline="true" Text="NOTES" TextAlignment="MiddleLeft" SizeF="62.8334351,23" LocationFloat="538.8334,295.857117" Font="Segoe UI Semibold, 11pt, style=Bold" Padding="2,2,0,0,100" Borders="Bottom">
+                <Item1 Ref="384" ControlType="XRLabel" Name="label12" Multiline="true" Text="NOTES" TextAlignment="MiddleLeft" SizeF="62.8334351,23" LocationFloat="538.8334,307.857117" Font="Segoe UI Semibold, 11pt, style=Bold" Padding="2,2,0,0,100" Borders="Bottom">
                   <StylePriority Ref="385" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="386" ControlType="XRPictureBox" Name="pictureBox3" Sizing="StretchImage" SizeF="253.166443,182.559479" LocationFloat="538.8334,89.33334">
+                <Item2 Ref="386" ControlType="XRPictureBox" Name="pictureBox3" Sizing="StretchImage" SizeF="253.166443,200.833313" LocationFloat="538.8334,89.33334">
                   <ExpressionBindings>
                     <Item1 Ref="387" EventName="BeforePrint" PropertyName="ImageUrl" Expression="Iif([Hist_HistApplication_1Query_4].[FileName] is null or [Hist_HistApplication_1Query_4].[FileName]='' or [ImageCondition]='True' or [ImageCondition1]='True' or [ImageCondition2]='True', 'https://www.morriscountynj.gov/files/sharedassets/public/departments/planning-amp-preservation-historic/images/hp-logo.gif', Concat(?parambloburl,[Hist_HistApplication_1Query_4].[FileName] )&#xA;) " />
                   </ExpressionBindings>
