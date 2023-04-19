@@ -12,7 +12,7 @@
       <ConnectionOptions CloseConnection="true" />
       <CalculatedFields>
         <CalculatedField Name="ApprovedApplicationsL2" Expression="Sum([ApprovedApplications])+Sum([PreservedApplications])+Sum([AddtlFundApplications])+Sum([ExpiredApplications])" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
-        <CalculatedField Name=" HighestACerageApprovedLoc" Expression="filter(Max([HighestAcreageApprovedLocation]), [HighestAcreageApproved] = aggr(Max([HighestAcreageApproved]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
+        <CalculatedField Name=" HighestAcerageApprovedLoc" Expression="filter(Max([HighestAcreageApprovedLocation]), [HighestAcreageApproved] = aggr(Max([HighestAcreageApproved]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
         <CalculatedField Name=" HighestFundedApp" Expression="filter(Max([HighestFundedApplication]), [HighestFundedAmount] = aggr(Max([HighestFundedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
         <CalculatedField Name="LeastApprovedAcers" Expression="filter(Min([LeastAcreageApprovedLocation]), [LeastAcreageApproved] = aggr(Min( [LeastAcreageApproved]),[FundingYear]))&#xD;&#xA;" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
         <CalculatedField Name="LeastFundedApp" Expression="filter(Min([LeastFundedApplication]), [LeastFundedAmount] = aggr(Min( [LeastFundedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
@@ -108,7 +108,7 @@
         <Measure DataMember="AddtlFundApplications" DefaultId="DataItem12" />
         <Measure DataMember=" HighestFundedApp" SummaryType="Count" DefaultId="DataItem13" />
         <Measure DataMember="LeastFundedApp" SummaryType="Count" DefaultId="DataItem14" />
-        <Measure DataMember=" HighestACerageApprovedLoc" SummaryType="Count" DefaultId="DataItem15" />
+        <Measure DataMember=" HighestAcerageApprovedLoc" SummaryType="Count" DefaultId="DataItem15" />
         <Measure DataMember="LeastApprovedAcers" SummaryType="Count" DefaultId="DataItem16" />
         <Dimension DataMember="FundingYear" DefaultId="DataItem0">
           <NumericFormat FormatType="General" />
@@ -167,7 +167,7 @@
           <Measure DefaultId="DataItem16" />
         </GridMeasureColumn>
       </GridColumns>
-      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" />
+      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" WordWrap="true" />
       <ColumnFilterOptions />
     </Grid>
     <ComboBox ComponentName="comboBoxDashboardItem1" Name="Agency" DataSource="sqlDataSource1" DataMember="Core_View_AgencyEntities_OSTF" FilterString="[DataItem1] In(?User_AgencyIds)" IsMasterFilterCrossDataSource="true" EnableSearch="true">
@@ -211,8 +211,8 @@
         <LayoutGroup Orientation="Vertical" Weight="100">
           <LayoutGroup Weight="35.60606060606061">
             <LayoutItem DashboardItem="chartDashboardItem2" Weight="30.425680390788557" />
-            <LayoutItem DashboardItem="chartDashboardItem1" Weight="38.10188415910677" />
-            <LayoutItem DashboardItem="pieDashboardItem1" Weight="31.472435450104676" />
+            <LayoutItem DashboardItem="chartDashboardItem1" Weight="35.629841781237424" />
+            <LayoutItem DashboardItem="pieDashboardItem1" Weight="33.94447782797402" />
           </LayoutGroup>
           <LayoutItem DashboardItem="gridDashboardItem2" Weight="64.39393939393939" />
         </LayoutGroup>

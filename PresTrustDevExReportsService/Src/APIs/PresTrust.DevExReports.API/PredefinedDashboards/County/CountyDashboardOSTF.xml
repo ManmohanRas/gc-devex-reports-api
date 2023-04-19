@@ -14,8 +14,10 @@
         <CalculatedField Name="ApprovedApplicationsL2" Expression="Sum([ApprovedApplications])+Sum([PreservedApplications])+Sum([AddtlFundApplications])+Sum([ExpiredApplications])" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
         <CalculatedField Name=" HighestACerageApprovedLoc" Expression="filter(Max([HighestAcreageApprovedLocation]), [HighestAcreageApproved] = aggr(Max([HighestAcreageApproved]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
         <CalculatedField Name=" HighestFundedApp" Expression="filter(Max([HighestFundedApplication]), [HighestFundedAmount] = aggr(Max([HighestFundedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
-        <CalculatedField Name="LeastApprovedAcers" Expression="filter(Min([LeastAcreageApprovedLocation]), [LeastAcreageApproved] = aggr(Min( [LeastAcreageApproved]),[FundingYear]))&#xD;&#xA;" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
-        <CalculatedField Name="LeastFundedApp" Expression="filter(Min([LeastFundedApplication]), [LeastFundedAmount] = aggr(Min( [LeastFundedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
+        <CalculatedField Name="LeastApprovedAcers" Expression="filter(Min([LeastAcreageApprovedLocation]), [ExcludeMinAcre] = aggr(Min( [ExcludeMinAcre]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
+        <CalculatedField Name="LeastFundedApp" Expression="filter(Min([LeastFundedApplication]), [ExcludeMinApp] = aggr(Min([ExcludeMinApp]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
+        <CalculatedField Name="ExcludeMinApp" Expression="Iif([LeastFundedAmount]=0,aggr(filter(Min([LeastFundedAmount]) ,[LeastFundedAmount]&gt;0 ),[FundingYear]) ,[LeastFundedAmount])" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
+        <CalculatedField Name="ExcludeMinAcre" Expression="Iif([LeastAcreageApproved]=0,aggr(filter(Min([LeastAcreageApproved]) ,[LeastAcreageApproved]&gt;0 ),[FundingYear]) ,[LeastAcreageApproved])" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
       </CalculatedFields>
     </SqlDataSource>
   </DataSources>
@@ -69,7 +71,7 @@
         </Pane>
       </Panes>
     </Chart>
-    <Pie ComponentName="pieDashboardItem1" Name="Years Vs Acers Approved" DataSource="sqlDataSource1" DataMember="rept_usp_get_ostf_annual_summary_report" PieType="Donut" ShowPieCaptions="false">
+    <Pie ComponentName="pieDashboardItem1" Name="Years Vs Acres Approved" DataSource="sqlDataSource1" DataMember="rept_usp_get_ostf_annual_summary_report" PieType="Donut" ShowPieCaptions="false">
       <ColoringOptions MeasuresColoringMode="Hue" />
       <DataItems>
         <Measure DataMember="Acreage" DefaultId="DataItem0" />
@@ -118,7 +120,7 @@
         <GridDimensionColumn Name="Years">
           <Dimension DefaultId="DataItem0" />
         </GridDimensionColumn>
-        <GridMeasureColumn Name="Approved Acerage ">
+        <GridMeasureColumn Name="Approved Acreage ">
           <Measure DefaultId="DataItem1" />
         </GridMeasureColumn>
         <GridMeasureColumn Name="Total Funds Awarded">

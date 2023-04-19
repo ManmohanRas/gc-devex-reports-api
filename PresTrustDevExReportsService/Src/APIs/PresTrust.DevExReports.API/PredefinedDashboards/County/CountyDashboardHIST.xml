@@ -18,8 +18,9 @@
       <ConnectionOptions CloseConnection="true" />
       <CalculatedFields>
         <CalculatedField Name="HighestAwardedApp" Expression="filter(Max([HighestAwardedApplication]), [HighestAwardedAmount] = aggr(Max([HighestAwardedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
-        <CalculatedField Name="LeastAwardedApp" Expression="filter(Max([LeastAwardedApplication]), [LeastAwardedAmount] = aggr(Min([LeastAwardedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
+        <CalculatedField Name="LeastAwardedApp" Expression="filter(Max([LeastAwardedApplication]), [ExcludeMin] = aggr(Min([ExcludeMin]),[FundingYear]))&#xD;&#xA;" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
         <CalculatedField Name="ApprovedApplicationsL2" Expression="Sum([CompletedApplications])+Sum([ApprovedApplications])+Sum([GrantExpiredApplications])+Sum([EasementExpiredApplications])+Sum([DeniedApplications])" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
+        <CalculatedField Name="ExcludeMin" Expression="Iif([LeastAwardedAmount]=0,aggr(filter(Min([LeastAwardedAmount]) ,[LeastAwardedAmount]&gt;0 ),[FundingYear]) ,[LeastAwardedAmount] )" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
       </CalculatedFields>
     </SqlDataSource>
   </DataSources>
@@ -153,19 +154,19 @@
         <GridDimensionColumn Name="Year" Weight="45.57774607703281">
           <Dimension DefaultId="DataItem0" />
         </GridDimensionColumn>
-        <GridMeasureColumn Name="TotalFundsRequested" Weight="72.60845850465721">
+        <GridMeasureColumn Name="Total Funds Requested" Weight="72.60845850465721">
           <Measure DefaultId="DataItem7" />
         </GridMeasureColumn>
-        <GridMeasureColumn Name="TotalFundsAwarded" Weight="72.46777959316645">
+        <GridMeasureColumn Name="Total Funds Awarded" Weight="72.46777959316645">
           <Measure DefaultId="DataItem10" />
         </GridMeasureColumn>
-        <GridMeasureColumn Name="AcqusitionFunds" Weight="72.318825451588">
+        <GridMeasureColumn Name="Acqusition Funds" Weight="72.318825451588">
           <Measure DefaultId="DataItem12" />
         </GridMeasureColumn>
         <GridMeasureColumn Name="Construction Funds" Weight="96.2910128388017">
           <Measure DefaultId="DataItem9" />
         </GridMeasureColumn>
-        <GridMeasureColumn Name="Planning/DesignFunds" Weight="72.16110930168142">
+        <GridMeasureColumn Name="Planning / DesignFunds" Weight="72.16110930168142">
           <Measure DefaultId="DataItem13" />
         </GridMeasureColumn>
         <GridMeasureColumn Name="Applications" Weight="102.71041369472182">
@@ -192,16 +193,16 @@
         <GridMeasureColumn Name="Grant-Expired" Weight="71.9941157311921">
           <Measure DefaultId="DataItem14" />
         </GridMeasureColumn>
-        <GridMeasureColumn Name="FundsDistributed" Weight="71.81729900949752">
+        <GridMeasureColumn Name="Funds Distributed" Weight="71.81729900949752">
           <Measure DefaultId="DataItem15" />
         </GridMeasureColumn>
         <GridMeasureColumn Name="Sites Approved" Weight="74.46504992867332">
           <Measure DefaultId="DataItem11" />
         </GridMeasureColumn>
-        <GridMeasureColumn Weight="71.63008130417383">
+        <GridMeasureColumn Name="Highiest Awarded App" Weight="71.63008130417383">
           <Measure DefaultId="DataItem16" />
         </GridMeasureColumn>
-        <GridMeasureColumn Weight="71.43185079265466">
+        <GridMeasureColumn Name="Least Awarded App" Weight="71.43185079265466">
           <Measure DefaultId="DataItem17" />
         </GridMeasureColumn>
       </GridColumns>
