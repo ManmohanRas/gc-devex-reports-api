@@ -47,7 +47,7 @@
         </Pane>
       </Panes>
     </Chart>
-    <Chart ComponentName="chartDashboardItem1" Name="Year VS FundsAwarded" DataSource="sqlDataSource1" DataMember="rept_usp_get_ostf_annual_summary_report">
+    <Chart ComponentName="chartDashboardItem1" Name="Year Vs Funds Awarded" DataSource="sqlDataSource1" DataMember="rept_usp_get_ostf_annual_summary_report">
       <ColoringOptions MeasuresColoringMode="Hue" />
       <DataItems>
         <Measure DataMember="FundsAwarded" DefaultId="DataItem0">
@@ -165,7 +165,7 @@
         <GridMeasureColumn Name="Highest Acreage Approved">
           <Measure DefaultId="DataItem15" />
         </GridMeasureColumn>
-        <GridMeasureColumn Name="Least Acerage Approved">
+        <GridMeasureColumn Name="Least Acreage Approved">
           <Measure DefaultId="DataItem16" />
         </GridMeasureColumn>
       </GridColumns>
