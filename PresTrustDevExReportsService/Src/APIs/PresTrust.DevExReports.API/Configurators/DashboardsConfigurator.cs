@@ -20,6 +20,9 @@ namespace PresTrust.DevExReports.API.Configurators
             programType = httpContextAccessor.HttpContext.Request.Headers["User_ProgramType"];
             if (programType == null)
                 programType = httpContextAccessor.HttpContext.Request.Form["User_ProgramType"];
+            if (programType != null)
+                programType = Uri.UnescapeDataString(programType);
+
             SetConnectionStringsProvider(new DashboardConnectionStringsProvider(configuration));
             AllowExecutingCustomSql = true;
             SetDashboardStorage(new CountyDashboardStorage(hostingEnvironment, programType));
@@ -41,9 +44,15 @@ namespace PresTrust.DevExReports.API.Configurators
             programType = httpContextAccessor.HttpContext.Request.Headers["User_ProgramType"];
             if (programType == null)
                 programType = httpContextAccessor.HttpContext.Request.Form["User_ProgramType"];
+            if (programType != null)
+                programType = Uri.UnescapeDataString(programType);
+
             agencyIds = httpContextAccessor.HttpContext.Request.Headers["User_AgencyIds"];
             if (agencyIds == null)
                 agencyIds = httpContextAccessor.HttpContext.Request.Form["User_AgencyIds"];
+            if (agencyIds != null)
+                agencyIds = Uri.UnescapeDataString(agencyIds);
+
             SetConnectionStringsProvider(new DashboardConnectionStringsProvider(configuration));
             AllowExecutingCustomSql = true;
             SetDashboardStorage(new AgencyDashboardStorage(hostingEnvironment, programType));
