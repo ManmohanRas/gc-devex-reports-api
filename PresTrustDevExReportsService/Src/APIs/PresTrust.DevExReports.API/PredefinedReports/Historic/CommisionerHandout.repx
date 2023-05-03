@@ -52,14 +52,14 @@
               <Rows>
                 <Item1 Ref="35" ControlType="XRTableRow" Name="tableRow2" Weight="1">
                   <Cells>
-                    <Item1 Ref="36" ControlType="XRTableCell" Name="tableCell5" Weight="1.4870967514562008" Multiline="true">
+                    <Item1 Ref="36" ControlType="XRTableCell" Name="tableCell5" Weight="1.3057590050306369" Multiline="true">
                       <ExpressionBindings>
                         <Item1 Ref="37" EventName="BeforePrint" PropertyName="Text" Expression="[PresentName]" />
                       </ExpressionBindings>
                     </Item1>
-                    <Item2 Ref="38" ControlType="XRTableCell" Name="tableCell6" Weight="0.36774192392466071" Multiline="true">
+                    <Item2 Ref="38" ControlType="XRTableCell" Name="tableCell6" Weight="0.54907967035022454" Multiline="true">
                       <ExpressionBindings>
-                        <Item1 Ref="39" EventName="BeforePrint" PropertyName="Text" Expression="iif([Hist.HistApplicationType_Title]='CONSTRUCTION_GRANT','C','NC')&#xA;" />
+                        <Item1 Ref="39" EventName="BeforePrint" PropertyName="Text" Expression="iif([Hist.HistApplicationType_Title]='CONSTRUCTION_GRANT','Construction','Non Construction')&#xA;" />
                       </ExpressionBindings>
                     </Item2>
                     <Item3 Ref="40" ControlType="XRTableCell" Name="tableCell7" Weight="0.79354861396215359" Multiline="true">
@@ -117,8 +117,8 @@
               <Rows>
                 <Item1 Ref="63" ControlType="XRTableRow" Name="tableRow1" Weight="1">
                   <Cells>
-                    <Item1 Ref="64" ControlType="XRTableCell" Name="tableCell1" Weight="3.8416665649414066" Multiline="true" Text="Property Name" />
-                    <Item2 Ref="65" ControlType="XRTableCell" Name="tableCell2" Weight="0.94999969482421887" Multiline="true" Text="Grant Type" />
+                    <Item1 Ref="64" ControlType="XRTableCell" Name="tableCell1" Weight="3.3732095336914067" Multiline="true" Text="Property Name" />
+                    <Item2 Ref="65" ControlType="XRTableCell" Name="tableCell2" Weight="1.4184567260742189" Multiline="true" Text="Grant Type" />
                     <Item3 Ref="66" ControlType="XRTableCell" Name="tableCell3" Weight="2.050000610351562" Multiline="true" Text="Location" />
                     <Item4 Ref="67" ControlType="XRTableCell" Name="tableCell4" Weight="0.90833251953125038" Multiline="true" Text="Funding" />
                   </Cells>
@@ -289,18 +289,18 @@
                   </Cells>
                   <StylePriority Ref="138" UseTextAlignment="false" />
                 </Item3>
-                <Item4 Ref="139" ControlType="XRTableRow" Name="tableRow19" Weight="0.74054840327406535" TextAlignment="MiddleLeft">
+                <Item4 Ref="139" ControlType="XRTableRow" Name="tableRow19" Weight="1.3790428106580821" TextAlignment="MiddleLeft">
                   <Cells>
                     <Item1 Ref="140" ControlType="XRTableCell" Name="tableCell27" Weight="1" Multiline="true" Angle="90" TextAlignment="MiddleCenter">
                       <ExpressionBindings>
-                        <Item1 Ref="141" EventName="BeforePrint" PropertyName="Text" Expression="iif([Hist.HistApplicationType_Title]='CONSTRUCTION_GRANT','C','NC')&#xA;" />
+                        <Item1 Ref="141" EventName="BeforePrint" PropertyName="Text" Expression="iif([Hist.HistApplicationType_Title]='CONSTRUCTION_GRANT','Construction','Non Construction')&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="142" UseTextAlignment="false" />
                     </Item1>
                   </Cells>
                   <StylePriority Ref="143" UseTextAlignment="false" />
                 </Item4>
-                <Item5 Ref="144" ControlType="XRTableRow" Name="tableRow20" Weight="2.7776507954605849">
+                <Item5 Ref="144" ControlType="XRTableRow" Name="tableRow20" Weight="2.139156388076568">
                   <Cells>
                     <Item1 Ref="145" ControlType="XRTableCell" Name="tableCell34" Weight="1" Multiline="true" Angle="90" TextAlignment="BottomCenter">
                       <ExpressionBindings>
@@ -356,7 +356,7 @@
                   </Cells>
                   <StylePriority Ref="168" UseTextAlignment="false" />
                 </Item3>
-                <Item4 Ref="169" ControlType="XRTableRow" Name="tableRow7" Weight="0.74054840327406535" TextAlignment="MiddleLeft">
+                <Item4 Ref="169" ControlType="XRTableRow" Name="tableRow7" Weight="1.3790431075769842" TextAlignment="MiddleLeft">
                   <Cells>
                     <Item1 Ref="170" ControlType="XRTableCell" Name="tableCell17" Weight="1" Multiline="true" Angle="90" Text="Grant Type" TextAlignment="MiddleCenter">
                       <StylePriority Ref="171" UseTextAlignment="false" />
@@ -364,7 +364,7 @@
                   </Cells>
                   <StylePriority Ref="172" UseTextAlignment="false" />
                 </Item4>
-                <Item5 Ref="173" ControlType="XRTableRow" Name="tableRow6" Weight="2.7675157656514116">
+                <Item5 Ref="173" ControlType="XRTableRow" Name="tableRow6" Weight="2.1290210613484928">
                   <Cells>
                     <Item1 Ref="174" ControlType="XRTableCell" Name="tableCell14" Weight="1" Multiline="true" Angle="90" Text="Project Name" TextAlignment="BottomCenter">
                       <StylePriority Ref="175" UseTextAlignment="false" />
