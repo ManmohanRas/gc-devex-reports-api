@@ -69,6 +69,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             // Calculated Fields
             this.calculatedField1 = reportInitializer.GetCalculatedField("calculatedField1");
             this.calculatedField2 = reportInitializer.GetCalculatedField("calculatedField2");
+            this.calculatedField3 = reportInitializer.GetCalculatedField("calculatedField3");
+            this.calculatedField4 = reportInitializer.GetCalculatedField("calculatedField4");
         }
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
@@ -116,6 +118,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRLine line2;
         private DevExpress.XtraReports.UI.CalculatedField calculatedField1;
         private DevExpress.XtraReports.UI.CalculatedField calculatedField2;
+        private DevExpress.XtraReports.UI.CalculatedField calculatedField3;
+        private DevExpress.XtraReports.UI.CalculatedField calculatedField4;
         private DevExpress.XtraReports.Parameters.Parameter FundingYear;
         private DevExpress.XtraReports.Parameters.Parameter PresentName;
     }
