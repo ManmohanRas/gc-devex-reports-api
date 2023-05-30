@@ -20,19 +20,19 @@
                   </ExpressionBindings>
                   <StylePriority Ref="10" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="11" ControlType="XRTableCell" Name="tableCell35" Weight="1.3663091346651313" Multiline="true" TextAlignment="MiddleLeft">
+                <Item2 Ref="11" ControlType="XRTableCell" Name="tableCell35" Weight="1.2460553907210408" Multiline="true" TextAlignment="MiddleLeft">
                   <ExpressionBindings>
                     <Item1 Ref="12" EventName="BeforePrint" PropertyName="Text" Expression="[Title]" />
                   </ExpressionBindings>
                   <StylePriority Ref="13" UseTextAlignment="false" />
                 </Item2>
-                <Item3 Ref="14" ControlType="XRTableCell" Name="tableCell36" Weight="0.43858397218022627" Multiline="true" TextAlignment="MiddleCenter">
+                <Item3 Ref="14" ControlType="XRTableCell" Name="tableCell36" Weight="0.47866879815119412" Multiline="true" TextAlignment="MiddleCenter">
                   <ExpressionBindings>
                     <Item1 Ref="15" EventName="BeforePrint" PropertyName="Text" Expression="[AgencyId]" />
                   </ExpressionBindings>
                   <StylePriority Ref="16" UseTextAlignment="false" />
                 </Item3>
-                <Item4 Ref="17" ControlType="XRTableCell" Name="tableCell37" Weight="0.40209493670059487" Multiline="true" TextAlignment="MiddleCenter">
+                <Item4 Ref="17" ControlType="XRTableCell" Name="tableCell37" Weight="0.48226385467371741" Multiline="true" TextAlignment="MiddleCenter">
                   <ExpressionBindings>
                     <Item1 Ref="18" EventName="BeforePrint" PropertyName="Text" Expression="[FundingYear]" />
                   </ExpressionBindings>
@@ -43,15 +43,15 @@
                     <Item1 Ref="21" EventName="BeforePrint" PropertyName="Text" Expression="[SiteId]" />
                   </ExpressionBindings>
                 </Item5>
-                <Item6 Ref="22" ControlType="XRTableCell" Name="tableCell39" Weight="0.97108593797305209" Multiline="true" TextAlignment="MiddleLeft">
+                <Item6 Ref="22" ControlType="XRTableCell" Name="tableCell39" Weight="0.69049435808271664" Multiline="true" TextAlignment="MiddleLeft">
                   <ExpressionBindings>
                     <Item1 Ref="23" EventName="BeforePrint" PropertyName="Text" Expression="[SiteName]" />
                   </ExpressionBindings>
                   <StylePriority Ref="24" UseTextAlignment="false" />
                 </Item6>
-                <Item7 Ref="25" ControlType="XRTableCell" Name="tableCell5" Weight="0.70616302089770877" TextFormatString="{0:dd-MM-yyyy}" Multiline="true" Text="tableCell5">
+                <Item7 Ref="25" ControlType="XRTableCell" Name="tableCell5" Weight="0.98675460078804422" TextFormatString="{0:MM-dd-yyyy}" Multiline="true" Text="tableCell5">
                   <ExpressionBindings>
-                    <Item1 Ref="26" EventName="BeforePrint" PropertyName="Text" Expression="[GrantExpirationDate]" />
+                    <Item1 Ref="26" EventName="BeforePrint" PropertyName="Text" Expression="[GrantExpirationDateForRegListing]" />
                   </ExpressionBindings>
                 </Item7>
                 <Item8 Ref="27" ControlType="XRTableCell" Name="tableCell6" Weight="0.9359781836995793" Multiline="true" Text="tableCell6">
@@ -80,7 +80,7 @@
     <Item3 Ref="35" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="24" />
     <Item4 Ref="36" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="202.66655">
       <Controls>
-        <Item1 Ref="37" ControlType="XRLabel" Name="label6" Multiline="true" Text="Register Listing Expirations" TextAlignment="MiddleCenter" SizeF="245.290771,23" LocationFloat="457.3546,155.499908" Font="Segoe UI Black, 12pt, style=Underline" Padding="2,2,0,0,100">
+        <Item1 Ref="37" ControlType="XRLabel" Name="label6" Multiline="true" Text="Nomination Submission Date" TextAlignment="MiddleCenter" SizeF="277.5824,23" LocationFloat="444.417633,154.458252" Font="Segoe UI Black, 12pt, style=Underline" Padding="2,2,0,0,100">
           <StylePriority Ref="38" UseFont="false" UseTextAlignment="false" />
         </Item1>
         <Item2 Ref="39" ControlType="XRLabel" Name="label1" Multiline="true" Text="M O R R I S C O U N T Y" TextAlignment="MiddleLeft" SizeF="563.874146,23" LocationFloat="128.750015,13" Font="Segoe UI Black, 20pt" ForeColor="255,27,54,100" Padding="2,2,0,0,100">
@@ -131,22 +131,22 @@
             <Item1 Ref="65" ControlType="XRTableRow" Name="tableRow5" Weight="1" BackColor="255,33,185,255">
               <Cells>
                 <Item1 Ref="66" ControlType="XRTableCell" Name="tableCell15" Weight="0.13829750453682643" Multiline="true" Text="ApplicationID" />
-                <Item2 Ref="67" ControlType="XRTableCell" Name="tableCell17" Weight="0.30715435186933149" Multiline="true" Text="Title" TextAlignment="MiddleLeft">
+                <Item2 Ref="67" ControlType="XRTableCell" Name="tableCell17" Weight="0.28012060244123033" Multiline="true" Text="Title" TextAlignment="MiddleLeft">
                   <StylePriority Ref="68" UseTextAlignment="false" />
                 </Item2>
-                <Item3 Ref="69" ControlType="XRTableCell" Name="tableCell16" Weight="0.098596254072443684" Multiline="true" Text="AgencyID" TextAlignment="MiddleCenter">
+                <Item3 Ref="69" ControlType="XRTableCell" Name="tableCell16" Weight="0.10760756988201443" Multiline="true" Text="AgencyID" TextAlignment="MiddleCenter">
                   <StylePriority Ref="70" UseTextAlignment="false" />
                 </Item3>
-                <Item4 Ref="71" ControlType="XRTableCell" Name="tableCell18" Weight="0.090393348496277948" Multiline="true" Text="Funding Year" TextAlignment="MiddleCenter">
+                <Item4 Ref="71" ControlType="XRTableCell" Name="tableCell18" Weight="0.10841578211480839" Multiline="true" Text="Funding Year" TextAlignment="MiddleCenter">
                   <StylePriority Ref="72" UseTextAlignment="false" />
                 </Item4>
                 <Item5 Ref="73" ControlType="XRTableCell" Name="tableCell19" Weight="0.072759723862025519" Multiline="true" Text="SiteID" TextAlignment="MiddleCenter">
                   <StylePriority Ref="74" UseTextAlignment="false" />
                 </Item5>
-                <Item6 Ref="75" ControlType="XRTableCell" Name="tableCell20" Weight="0.21830584727008853" Multiline="true" Text="SIte Name" TextAlignment="MiddleLeft">
+                <Item6 Ref="75" ControlType="XRTableCell" Name="tableCell20" Weight="0.15522719760482462" Multiline="true" Text="SIte Name" TextAlignment="MiddleLeft">
                   <StylePriority Ref="76" UseTextAlignment="false" />
                 </Item6>
-                <Item7 Ref="77" ControlType="XRTableCell" Name="tableCell1" Weight="0.15874958920425375" Multiline="true" Text="GrantExpriattionDate" TextAlignment="MiddleCenter">
+                <Item7 Ref="77" ControlType="XRTableCell" Name="tableCell1" Weight="0.22182823886951766" Multiline="true" Text="GrantExpirationDateForRegListing" TextAlignment="MiddleCenter">
                   <StylePriority Ref="78" UseTextAlignment="false" />
                 </Item7>
                 <Item8 Ref="79" ControlType="XRTableCell" Name="tableCell2" Weight="0.21041340770869879" Multiline="true" Text="PrimaryContactName" TextAlignment="MiddleCenter">
@@ -168,6 +168,6 @@
     </Item6>
   </Bands>
   <ComponentStorage>
-    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJIaXN0X1ZXX0hJU1RfUmVnaXN0ZXJMaXN0aW5nRXhwaXJhdGlvbnMiPjxUYWJsZXM+PFRhYmxlIE5hbWU9Ikhpc3QuVldfSElTVF9SZWdpc3Rlckxpc3RpbmdFeHBpcmF0aW9ucyIgLz48L1RhYmxlcz48Q29sdW1ucz48Q29sdW1uIFRhYmxlPSJIaXN0LlZXX0hJU1RfUmVnaXN0ZXJMaXN0aW5nRXhwaXJhdGlvbnMiIE5hbWU9IkFwcGxpY2F0aW9uSWQiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5WV19ISVNUX1JlZ2lzdGVyTGlzdGluZ0V4cGlyYXRpb25zIiBOYW1lPSJUaXRsZSIgLz48Q29sdW1uIFRhYmxlPSJIaXN0LlZXX0hJU1RfUmVnaXN0ZXJMaXN0aW5nRXhwaXJhdGlvbnMiIE5hbWU9IkFnZW5jeUlkIiAvPjxDb2x1bW4gVGFibGU9Ikhpc3QuVldfSElTVF9SZWdpc3Rlckxpc3RpbmdFeHBpcmF0aW9ucyIgTmFtZT0iRnVuZGluZ1llYXIiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5WV19ISVNUX1JlZ2lzdGVyTGlzdGluZ0V4cGlyYXRpb25zIiBOYW1lPSJTaXRlSWQiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5WV19ISVNUX1JlZ2lzdGVyTGlzdGluZ0V4cGlyYXRpb25zIiBOYW1lPSJTaXRlTmFtZSIgLz48Q29sdW1uIFRhYmxlPSJIaXN0LlZXX0hJU1RfUmVnaXN0ZXJMaXN0aW5nRXhwaXJhdGlvbnMiIE5hbWU9IkdyYW50RXhwaXJhdGlvbkRhdGUiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5WV19ISVNUX1JlZ2lzdGVyTGlzdGluZ0V4cGlyYXRpb25zIiBOYW1lPSJQcmltYXJ5Q29udGFjdE5hbWUiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5WV19ISVNUX1JlZ2lzdGVyTGlzdGluZ0V4cGlyYXRpb25zIiBOYW1lPSJQcmltYXJ5Q29udGFjdEVtYWlsIiAvPjxDb2x1bW4gVGFibGU9Ikhpc3QuVldfSElTVF9SZWdpc3Rlckxpc3RpbmdFeHBpcmF0aW9ucyIgTmFtZT0iUHJpbWFyeUNvbnRhY3RQaG9uZSIgLz48L0NvbHVtbnM+PC9RdWVyeT48UmVzdWx0U2NoZW1hPjxEYXRhU2V0IE5hbWU9InNxbERhdGFTb3VyY2UxIj48VmlldyBOYW1lPSJIaXN0X1ZXX0hJU1RfUmVnaXN0ZXJMaXN0aW5nRXhwaXJhdGlvbnMiPjxGaWVsZCBOYW1lPSJBcHBsaWNhdGlvbklkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVGl0bGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWdlbmN5SWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJGdW5kaW5nWWVhciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTaXRlSWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJTaXRlTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJHcmFudEV4cGlyYXRpb25EYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iUHJpbWFyeUNvbnRhY3ROYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlByaW1hcnlDb250YWN0RW1haWwiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUHJpbWFyeUNvbnRhY3RQaG9uZSIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+PC9SZXN1bHRTY2hlbWE+PENvbm5lY3Rpb25PcHRpb25zIENsb3NlQ29ubmVjdGlvbj0idHJ1ZSIgLz48L1NxbERhdGFTb3VyY2U+" />
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJIaXN0X1ZXX0hJU1RfUmVnaXN0ZXJMaXN0aW5nRXhwaXJhdGlvbnMiPjxUYWJsZXM+PFRhYmxlIE5hbWU9Ikhpc3QuVldfSElTVF9Ob21pbmF0aW9uU3VibWlzc2lvbkRhdGUiIFg9IjMwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIyNjMiIC8+PC9UYWJsZXM+PENvbHVtbnM+PENvbHVtbiBUYWJsZT0iSGlzdC5WV19ISVNUX05vbWluYXRpb25TdWJtaXNzaW9uRGF0ZSIgTmFtZT0iQXBwbGljYXRpb25JZCIgLz48Q29sdW1uIFRhYmxlPSJIaXN0LlZXX0hJU1RfTm9taW5hdGlvblN1Ym1pc3Npb25EYXRlIiBOYW1lPSJUaXRsZSIgLz48Q29sdW1uIFRhYmxlPSJIaXN0LlZXX0hJU1RfTm9taW5hdGlvblN1Ym1pc3Npb25EYXRlIiBOYW1lPSJBZ2VuY3lJZCIgLz48Q29sdW1uIFRhYmxlPSJIaXN0LlZXX0hJU1RfTm9taW5hdGlvblN1Ym1pc3Npb25EYXRlIiBOYW1lPSJGdW5kaW5nWWVhciIgLz48Q29sdW1uIFRhYmxlPSJIaXN0LlZXX0hJU1RfTm9taW5hdGlvblN1Ym1pc3Npb25EYXRlIiBOYW1lPSJTaXRlSWQiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5WV19ISVNUX05vbWluYXRpb25TdWJtaXNzaW9uRGF0ZSIgTmFtZT0iU2l0ZU5hbWUiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5WV19ISVNUX05vbWluYXRpb25TdWJtaXNzaW9uRGF0ZSIgTmFtZT0iR3JhbnRFeHBpcmF0aW9uRGF0ZUZvclJlZ0xpc3RpbmciIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5WV19ISVNUX05vbWluYXRpb25TdWJtaXNzaW9uRGF0ZSIgTmFtZT0iUHJpbWFyeUNvbnRhY3ROYW1lIiAvPjxDb2x1bW4gVGFibGU9Ikhpc3QuVldfSElTVF9Ob21pbmF0aW9uU3VibWlzc2lvbkRhdGUiIE5hbWU9IlByaW1hcnlDb250YWN0RW1haWwiIC8+PENvbHVtbiBUYWJsZT0iSGlzdC5WV19ISVNUX05vbWluYXRpb25TdWJtaXNzaW9uRGF0ZSIgTmFtZT0iUHJpbWFyeUNvbnRhY3RQaG9uZSIgLz48L0NvbHVtbnM+PC9RdWVyeT48UmVzdWx0U2NoZW1hPjxEYXRhU2V0IE5hbWU9InNxbERhdGFTb3VyY2UxIj48VmlldyBOYW1lPSJIaXN0X1ZXX0hJU1RfUmVnaXN0ZXJMaXN0aW5nRXhwaXJhdGlvbnMiPjxGaWVsZCBOYW1lPSJBcHBsaWNhdGlvbklkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVGl0bGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWdlbmN5SWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJGdW5kaW5nWWVhciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTaXRlSWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJTaXRlTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJHcmFudEV4cGlyYXRpb25EYXRlRm9yUmVnTGlzdGluZyIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IlByaW1hcnlDb250YWN0TmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQcmltYXJ5Q29udGFjdEVtYWlsIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlByaW1hcnlDb250YWN0UGhvbmUiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjxDb25uZWN0aW9uT3B0aW9ucyBDbG9zZUNvbm5lY3Rpb249InRydWUiIC8+PC9TcWxEYXRhU291cmNlPg==" />
   </ComponentStorage>
 </XtraReportsLayoutSerializer>

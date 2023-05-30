@@ -13,6 +13,7 @@
     <None Remove="PredefinedReports\Historic\GrantAgreement.repx" />
     <None Remove="PredefinedReports\Historic\GrantAwardResolution.repx" />
     <None Remove="PredefinedReports\Historic\GrantStatus.repx" />
+    <None Remove="PredefinedReports\Historic\NominationSubmissionDate.repx" />
     <None Remove="PredefinedReports\Historic\RegisterListingExpirations.repx" />
     <None Remove="PredefinedReports\Historic\ReleaseOfFunds.repx" />
     <None Remove="PredefinedReports\Historic\Static_PropertyTotal.repx" />
@@ -48,7 +49,7 @@
     <EmbeddedResource Include="PredefinedReports\Historic\GrantAgreement.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\GrantAwardResolution.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\GrantStatus.repx" />
-    <EmbeddedResource Include="PredefinedReports\Historic\RegisterListingExpirations.repx" />
+    <EmbeddedResource Include="PredefinedReports\Historic\NominationSubmissionDate.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\ReleaseOfFunds.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Static_PropertyTotal.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\Static_SummaryByYear.repx" />
@@ -140,6 +141,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Historic\GrantStatus.Designer.cs">
       <DependentUpon>GrantStatus.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\NominationSubmissionDate.cs">
+      <DependentUpon>NominationSubmissionDate.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Historic\NominationSubmissionDate.Designer.cs">
+      <DependentUpon>NominationSubmissionDate.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Historic\RegisterListingExpirations.cs">
       <DependentUpon>RegisterListingExpirations.repx</DependentUpon>

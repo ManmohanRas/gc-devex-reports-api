@@ -10,10 +10,10 @@
 
 namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
     
-    public partial class RegisterListingExpirations : DevExpress.XtraReports.UI.XtraReport {
+    public partial class NominationSubmissionDate : DevExpress.XtraReports.UI.XtraReport {
         private void InitializeComponent() {
-            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Historic.RegisterListingExpirations." +
-                    "repx");
+            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Historic.NominationSubmissionDate.re" +
+                    "px");
 
             // Controls
             this.TopMargin = reportInitializer.GetControl<DevExpress.XtraReports.UI.TopMarginBand>("TopMargin");

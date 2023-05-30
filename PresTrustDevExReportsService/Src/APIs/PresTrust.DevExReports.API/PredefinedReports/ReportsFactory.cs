@@ -39,7 +39,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["HistGrantAgreementReport"] = () => new GrantAgreement(),
             ["HistReleaseOfFunds"] = () => new ReleaseOfFunds(),
             ["HistYearlyHandBook"] = () => new YearlyHandBookReport(),
-            ["HistRegisterListingExpirations"] = () => new RegisterListingExpirations(),
+            ["HistNominationSubmissionDate"] = () => new NominationSubmissionDate(),
             ["HistGrantAwardResolution"] = () => new GrantAwardResolution()
         };
     }
