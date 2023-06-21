@@ -18,9 +18,7 @@
       <ConnectionOptions CloseConnection="true" />
       <CalculatedFields>
         <CalculatedField Name="HighestAwardedApp" Expression="filter(Max([HighestAwardedApplication]), [HighestAwardedAmount] = aggr(Max([HighestAwardedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
-        <CalculatedField Name="LeastAwardedApp" Expression="filter(Max([LeastAwardedApplication]), [ExcludeMin] = aggr(Min([ExcludeMin]),[FundingYear]))&#xD;&#xA;" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
         <CalculatedField Name="ApprovedApplicationsL2" Expression="Sum([CompletedApplications])+Sum([ApprovedApplications])+Sum([GrantExpiredApplications])+Sum([EasementExpiredApplications])+Sum([DeniedApplications])" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
-        <CalculatedField Name="ExcludeMin" Expression="Iif([LeastAwardedAmount]=0,aggr(filter(Min([LeastAwardedAmount]) ,[LeastAwardedAmount]&gt;0 ),[FundingYear]) ,[LeastAwardedAmount] )" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
       </CalculatedFields>
     </SqlDataSource>
   </DataSources>
@@ -115,7 +113,7 @@
         <Value DefaultId="DataItem1" />
       </Values>
     </Pie>
-    <Grid ComponentName="gridDashboardItem2" Name="" DataSource="sqlDataSource1" DataMember="rept_usp_get_hist_annual_summary_report">
+    <Grid ComponentName="gridDashboardItem2" Name="" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_hist_annual_summary_report">
       <DataItems>
         <Dimension DataMember="FundingYear" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
@@ -137,7 +135,6 @@
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
         </Measure>
         <Measure DataMember="HighestAwardedApp" SummaryType="Count" DefaultId="DataItem16" />
-        <Measure DataMember="LeastAwardedApp" SummaryType="Count" DefaultId="DataItem17" />
         <Measure DataMember="ConstructionFunds" DefaultId="DataItem9">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
         </Measure>
@@ -156,6 +153,9 @@
         </GridDimensionColumn>
         <GridMeasureColumn Name="Total Funds Requested" Weight="72.60845850465721">
           <Measure DefaultId="DataItem7" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Total Funds Awarded" Weight="72.46777959316645">
           <Measure DefaultId="DataItem10" />
@@ -168,12 +168,21 @@
         </GridMeasureColumn>
         <GridMeasureColumn Name="Planning / DesignFunds" Weight="72.16110930168142">
           <Measure DefaultId="DataItem13" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Applications" Weight="102.71041369472182">
           <Measure DefaultId="DataItem1" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Approved" Weight="65.47788873038516">
           <Measure DefaultId="DataItem2" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Completed" Weight="67.4037089871612">
           <Measure DefaultId="DataItem3" />
@@ -202,11 +211,8 @@
         <GridMeasureColumn Name="Highiest Awarded App" Weight="71.63008130417383">
           <Measure DefaultId="DataItem16" />
         </GridMeasureColumn>
-        <GridMeasureColumn Name="Least Awarded App" Weight="71.43185079265466">
-          <Measure DefaultId="DataItem17" />
-        </GridMeasureColumn>
       </GridColumns>
-      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" WordWrap="true" />
+      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" />
       <ColumnFilterOptions />
     </Grid>
     <ComboBox ComponentName="comboBoxDashboardItem1" Name="AGENCY" DataSource="sqlDataSource1" DataMember="Core_View_AgencyEntities_HIST" IsMasterFilterCrossDataSource="true">
@@ -226,7 +232,20 @@
         <Dimension DefaultId="DataItem2" />
       </FilterDimensions>
     </ComboBox>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="Funding Year" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_hist_annual_summary_report">
+      <DataItems>
+        <Dimension DataMember="FundingYear" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
   </Items>
+  <Groups>
+    <Group ComponentName="groupDashboardItem1" Name="Group 1" ShowCaption="false" />
+  </Groups>
   <ColorScheme>
     <Entry DataSource="dashboardExcelDataSource1" Color="-2890245">
       <MeasureKey>
@@ -252,7 +271,10 @@
             <LayoutItem DashboardItem="chartDashboardItem4" Weight="38.10188415910677" />
             <LayoutItem DashboardItem="pieDashboardItem1" Weight="31.472435450104676" />
           </LayoutGroup>
-          <LayoutItem DashboardItem="gridDashboardItem2" Weight="64.39393939393939" />
+          <LayoutGroup DashboardItem="groupDashboardItem1" Weight="64.39393939393939">
+            <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="10.65020421995113" />
+            <LayoutItem DashboardItem="gridDashboardItem2" Weight="118.13767456792766" />
+          </LayoutGroup>
         </LayoutGroup>
       </LayoutGroup>
     </LayoutGroup>

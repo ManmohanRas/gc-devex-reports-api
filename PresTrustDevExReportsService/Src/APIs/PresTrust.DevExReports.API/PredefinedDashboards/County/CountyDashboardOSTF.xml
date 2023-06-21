@@ -22,7 +22,7 @@
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem2" Name="Grants Per Year Analysis" DataSource="sqlDataSource1" DataMember="rept_usp_get_ostf_annual_summary_report">
+    <Chart ComponentName="chartDashboardItem2" Name="Year Vs Applications Approved" DataSource="sqlDataSource1" DataMember="rept_usp_get_ostf_annual_summary_report">
       <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
       <InteractivityOptions IsDrillDownEnabled="true" />
       <DataItems>
@@ -99,7 +99,7 @@
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
         </Measure>
         <Measure DataMember="AcquisitionGrantsPerAcre" DefaultId="DataItem5">
-          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
         </Measure>
         <Measure DataMember="Applications" DefaultId="DataItem6" />
         <Measure DataMember="ApprovedApplications" DefaultId="DataItem7" />
@@ -109,9 +109,7 @@
         <Measure DataMember="PreservedApplications" DefaultId="DataItem11" />
         <Measure DataMember="AddtlFundApplications" DefaultId="DataItem12" />
         <Measure DataMember=" HighestFundedApp" SummaryType="Count" DefaultId="DataItem13" />
-        <Measure DataMember="LeastFundedApp" SummaryType="Count" DefaultId="DataItem14" />
         <Measure DataMember=" HighestACerageApprovedLoc" SummaryType="Count" DefaultId="DataItem15" />
-        <Measure DataMember="LeastApprovedAcers" SummaryType="Count" DefaultId="DataItem16" />
         <Dimension DataMember="FundingYear" DefaultId="DataItem0">
           <NumericFormat FormatType="General" />
         </Dimension>
@@ -159,14 +157,8 @@
         <GridMeasureColumn Name="Highest Funded Project ">
           <Measure DefaultId="DataItem13" />
         </GridMeasureColumn>
-        <GridMeasureColumn Name="Least Funded Project">
-          <Measure DefaultId="DataItem14" />
-        </GridMeasureColumn>
         <GridMeasureColumn Name="Highest Acreage Approved">
           <Measure DefaultId="DataItem15" />
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Least Acreage Approved">
-          <Measure DefaultId="DataItem16" />
         </GridMeasureColumn>
       </GridColumns>
       <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" />
@@ -213,8 +205,8 @@
         <LayoutGroup Orientation="Vertical" Weight="100">
           <LayoutGroup Weight="35.60606060606061">
             <LayoutItem DashboardItem="chartDashboardItem2" Weight="30.425680390788557" />
-            <LayoutItem DashboardItem="chartDashboardItem1" Weight="38.10188415910677" />
-            <LayoutItem DashboardItem="pieDashboardItem1" Weight="31.472435450104676" />
+            <LayoutItem DashboardItem="chartDashboardItem1" Weight="35.15897656640517" />
+            <LayoutItem DashboardItem="pieDashboardItem1" Weight="34.41534304280627" />
           </LayoutGroup>
           <LayoutItem DashboardItem="gridDashboardItem2" Weight="64.39393939393939" />
         </LayoutGroup>
