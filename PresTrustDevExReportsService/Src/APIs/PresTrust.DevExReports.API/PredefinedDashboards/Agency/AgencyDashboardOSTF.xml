@@ -6,26 +6,30 @@
       <Query Type="CustomSqlQuery" Name="Core_View_AgencyEntities_OSTF">
         <Sql>select "Core.View_AgencyEntities_OSTF"."AgencyId","Core.View_AgencyEntities_OSTF"."AgencyName" from "Core"."View_AgencyEntities_OSTF" "Core.View_AgencyEntities_OSTF"</Sql>
       </Query>
-      <Query Type="StoredProcQuery" Name="rept_usp_get_ostf_annual_summary_report">
-        <ProcName>rept.usp_get_ostf_annual_summary_report</ProcName>
+      <Query Type="StoredProcQuery" Name="rept_usp_get_level3_ostf_annual_summary_report">
+        <ProcName>rept.usp_get_level3_ostf_annual_summary_report</ProcName>
+      </Query>
+      <Query Type="StoredProcQuery" Name="rept_usp_get_level2_ostf_annual_summary_report">
+        <ProcName>rept.usp_get_level2_ostf_annual_summary_report</ProcName>
       </Query>
       <ConnectionOptions CloseConnection="true" />
       <CalculatedFields>
-        <CalculatedField Name="ApprovedApplicationsL2" Expression="Sum([ApprovedApplications])+Sum([PreservedApplications])+Sum([AddtlFundApplications])+Sum([ExpiredApplications])" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
-        <CalculatedField Name=" HighestAcerageApprovedLoc" Expression="filter(Max([HighestAcreageApprovedLocation]), [HighestAcreageApproved] = aggr(Max([HighestAcreageApproved]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
-        <CalculatedField Name=" HighestFundedApp" Expression="filter(Max([HighestFundedApplication]), [HighestFundedAmount] = aggr(Max([HighestFundedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
-        <CalculatedField Name="LeastApprovedAcers" Expression="filter(Min([LeastAcreageApprovedLocation]), [LeastAcreageApproved] = aggr(Min( [LeastAcreageApproved]),[FundingYear]))&#xD;&#xA;" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
-        <CalculatedField Name="LeastFundedApp" Expression="filter(Min([LeastFundedApplication]), [LeastFundedAmount] = aggr(Min( [LeastFundedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_ostf_annual_summary_report" />
+        <CalculatedField Name=" HighestAcerageApprovedLoc" Expression="filter(Max([HighestAcreageApprovedLocation]), [HighestAcreageApproved] = aggr(Max([HighestAcreageApproved]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_level2_ostf_annual_summary_report" />
+        <CalculatedField Name="HighestFundedApp" Expression="filter(Max([HighestFundedApplication]), [HighestFundedAmount] = aggr(Max([HighestFundedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_level2_ostf_annual_summary_report" />
+        <CalculatedField Name="ApprovedAppL2" Expression="Sum([ApprovedApplications])+Sum([PreservedApplications])+Sum([AddtlFundApplications])+Sum([ExpiredApplications])" DataType="Auto" DataMember="rept_usp_get_level2_ostf_annual_summary_report" />
+        <CalculatedField Name=" HighestACerageApprovedLoc" Expression="filter(Max([HighestAcreageApprovedLocation]), [HighestAcreageApproved] = aggr(Max([HighestAcreageApproved]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_level3_ostf_annual_summary_report" />
+        <CalculatedField Name="HighestfundedApp" Expression="filter(Max([HighestFundedApplication]), [HighestFundedAmount] = aggr(Max([HighestFundedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_level3_ostf_annual_summary_report" />
+        <CalculatedField Name="ApprovedApplicationsL2" Expression="Sum([ApprovedApplications])+Sum([PreservedApplications])+Sum([AddtlFundApplications])+Sum([ExpiredApplications])" DataType="Auto" DataMember="rept_usp_get_level3_ostf_annual_summary_report" />
       </CalculatedFields>
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem2" Name="Years Vs Applications Approved" DataSource="sqlDataSource1" DataMember="rept_usp_get_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
+    <Chart ComponentName="chartDashboardItem2" Name="Year Vs Applications Approved" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
       <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
       <InteractivityOptions IsDrillDownEnabled="true" />
       <DataItems>
         <Measure DataMember="Applications" DefaultId="DataItem0" />
-        <Measure DataMember="ApprovedApplicationsL2" DefaultId="DataItem1" />
+        <Measure DataMember="ApprovedAppL2" DefaultId="DataItem1" />
         <Dimension DataMember="FundingYear" DefaultId="DataItem2" />
       </DataItems>
       <Arguments>
@@ -38,14 +42,14 @@
             <Simple Name="Applications">
               <Value DefaultId="DataItem0" />
             </Simple>
-            <Simple Name="ApprovedApplications">
+            <Simple Name="Approved">
               <Value DefaultId="DataItem1" />
             </Simple>
           </Series>
         </Pane>
       </Panes>
     </Chart>
-    <Chart ComponentName="chartDashboardItem1" Name="Year Vs Funds Awarded" DataSource="sqlDataSource1" DataMember="rept_usp_get_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
+    <Chart ComponentName="chartDashboardItem1" Name="Year Vs Funds Awarded" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
       <ColoringOptions MeasuresColoringMode="Hue" />
       <DataItems>
         <Measure DataMember="FundsAwarded" DefaultId="DataItem0">
@@ -60,7 +64,9 @@
       </Arguments>
       <Panes>
         <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" />
+          <AxisY TitleVisible="false">
+            <NumericFormat Precision="0" />
+          </AxisY>
           <Series>
             <Simple Name="FundsAwarded" SeriesType="Line">
               <Value DefaultId="DataItem0" />
@@ -69,22 +75,41 @@
         </Pane>
       </Panes>
     </Chart>
-    <Pie ComponentName="pieDashboardItem1" Name="Years Vs Acers Approved" DataSource="sqlDataSource1" DataMember="rept_usp_get_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)" PieType="Donut" ShowPieCaptions="false">
+    <Chart ComponentName="chartDashboardItem3" Name="Funds Available Vs Funds Requested" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
       <ColoringOptions MeasuresColoringMode="Hue" />
       <DataItems>
-        <Measure DataMember="Acreage" DefaultId="DataItem0" />
-        <Dimension DataMember="FundingYear" DefaultId="DataItem1">
+        <Dimension DataMember="FundingYear" DefaultId="DataItem0">
           <NumericFormat FormatType="General" />
         </Dimension>
+        <Measure DataMember="Acreage" DefaultId="DataItem1" />
+        <Measure DataMember="FundsAvailable" SummaryType="Min" DefaultId="DataItem2">
+          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" />
+        </Measure>
+        <Measure DataMember="FundsRequested" DefaultId="DataItem3" />
       </DataItems>
+      <HiddenMeasures>
+        <Measure DefaultId="DataItem1" />
+      </HiddenMeasures>
       <Arguments>
-        <Argument DefaultId="DataItem1" />
+        <Argument DefaultId="DataItem0" />
       </Arguments>
-      <Values>
-        <Value DefaultId="DataItem0" />
-      </Values>
-    </Pie>
-    <Grid ComponentName="gridDashboardItem2" Name="Detail" DataSource="sqlDataSource1" DataMember="rept_usp_get_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" AlwaysShowZeroLevel="false">
+            <NumericFormat FormatType="Currency" />
+          </AxisY>
+          <Series>
+            <Simple Name="FundsAvailable" ShowPointMarkers="true" SeriesType="Line">
+              <Value DefaultId="DataItem2" />
+            </Simple>
+            <Simple Name="FundsRequested" ShowPointMarkers="true" SeriesType="Line">
+              <Value DefaultId="DataItem3" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Grid ComponentName="gridDashboardItem2" Name="Detail" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_level3_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
       <DataItems>
         <Measure DataMember="Acreage" DefaultId="DataItem1" />
         <Measure DataMember="FundsAwarded" DefaultId="DataItem2">
@@ -97,7 +122,7 @@
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
         </Measure>
         <Measure DataMember="AcquisitionGrantsPerAcre" DefaultId="DataItem5">
-          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" />
+          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
         </Measure>
         <Measure DataMember="Applications" DefaultId="DataItem6" />
         <Measure DataMember="ApprovedApplications" DefaultId="DataItem7" />
@@ -106,8 +131,8 @@
         <Measure DataMember="WithdrawnApplications" DefaultId="DataItem10" />
         <Measure DataMember="PreservedApplications" DefaultId="DataItem11" />
         <Measure DataMember="AddtlFundApplications" DefaultId="DataItem12" />
-        <Measure DataMember=" HighestFundedApp" SummaryType="Count" DefaultId="DataItem13" />
-        <Measure DataMember=" HighestAcerageApprovedLoc" SummaryType="Count" DefaultId="DataItem15" />
+        <Measure DataMember="HighestfundedApp" SummaryType="Count" DefaultId="DataItem13" />
+        <Measure DataMember="HighestAcreageApprovedLocation" SummaryType="Count" DefaultId="DataItem15" />
         <Dimension DataMember="FundingYear" DefaultId="DataItem0">
           <NumericFormat FormatType="General" />
         </Dimension>
@@ -116,50 +141,89 @@
         <GridDimensionColumn Name="Years">
           <Dimension DefaultId="DataItem0" />
         </GridDimensionColumn>
-        <GridMeasureColumn Name="Approved Acerage ">
+        <GridMeasureColumn Name="Approved Acreage ">
           <Measure DefaultId="DataItem1" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Total Funds Awarded">
           <Measure DefaultId="DataItem2" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Funds Awarded Acquisition">
           <Measure DefaultId="DataItem3" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Funds Awarded Demolition">
           <Measure DefaultId="DataItem4" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="$/Acre">
           <Measure DefaultId="DataItem5" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Applications">
           <Measure DefaultId="DataItem6" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Approved">
           <Measure DefaultId="DataItem7" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Expired">
           <Measure DefaultId="DataItem8" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Rejected">
           <Measure DefaultId="DataItem9" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Withdrawn">
           <Measure DefaultId="DataItem10" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Preserved">
           <Measure DefaultId="DataItem11" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Addtional Funds">
           <Measure DefaultId="DataItem12" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Highest Funded Project ">
           <Measure DefaultId="DataItem13" />
         </GridMeasureColumn>
         <GridMeasureColumn Name="Highest Acreage Approved">
           <Measure DefaultId="DataItem15" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
       </GridColumns>
-      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" WordWrap="true" />
+      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" />
       <ColumnFilterOptions />
     </Grid>
     <ComboBox ComponentName="comboBoxDashboardItem1" Name="Agency" DataSource="sqlDataSource1" DataMember="Core_View_AgencyEntities_OSTF" FilterString="[DataItem1] In(?User_AgencyIds)" IsMasterFilterCrossDataSource="true" EnableSearch="true">
@@ -180,7 +244,23 @@
         <Dimension DefaultId="DataItem1" />
       </FilterDimensions>
     </ComboBox>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_level3_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="FundingYear" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
   </Items>
+  <Groups>
+    <Group ComponentName="groupDashboardItem1" Name="Group 1" ShowCaption="false">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+    </Group>
+  </Groups>
   <ColorScheme>
     <Entry DataSource="dashboardExcelDataSource1" Color="-2890245">
       <MeasureKey>
@@ -202,11 +282,14 @@
       <LayoutGroup Weight="188.91304347826087">
         <LayoutGroup Orientation="Vertical" Weight="100">
           <LayoutGroup Weight="35.60606060606061">
-            <LayoutItem DashboardItem="chartDashboardItem2" Weight="30.77882930191274" />
-            <LayoutItem DashboardItem="chartDashboardItem1" Weight="35.27669287011324" />
-            <LayoutItem DashboardItem="pieDashboardItem1" Weight="33.94447782797402" />
+            <LayoutItem DashboardItem="chartDashboardItem2" Weight="30.425680390788557" />
+            <LayoutItem DashboardItem="chartDashboardItem1" Weight="35.15897656640517" />
+            <LayoutItem DashboardItem="chartDashboardItem3" Weight="34.41534304280627" />
           </LayoutGroup>
-          <LayoutItem DashboardItem="gridDashboardItem2" Weight="64.39393939393939" />
+          <LayoutGroup DashboardItem="groupDashboardItem1" Weight="64.39393939393939">
+            <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="14.262777023971053" />
+            <LayoutItem DashboardItem="gridDashboardItem2" Weight="114.52510176390773" />
+          </LayoutGroup>
         </LayoutGroup>
       </LayoutGroup>
     </LayoutGroup>

@@ -15,15 +15,22 @@
       <Query Type="StoredProcQuery" Name="rept_usp_get_hist_annual_summary_report">
         <ProcName>rept.usp_get_hist_annual_summary_report</ProcName>
       </Query>
+      <Query Type="StoredProcQuery" Name="rept_usp_get_level2_hist_annual_summary_report">
+        <ProcName>rept.usp_get_level2_hist_annual_summary_report</ProcName>
+      </Query>
+      <Query Type="StoredProcQuery" Name="rept_usp_get_Level3_hist_annual_summary_report">
+        <ProcName>rept.usp_get_Level3_hist_annual_summary_report</ProcName>
+      </Query>
       <ConnectionOptions CloseConnection="true" />
       <CalculatedFields>
-        <CalculatedField Name="HighestAwardedApp" Expression="filter(Max([HighestAwardedApplication]), [HighestAwardedAmount] = aggr(Max([HighestAwardedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
-        <CalculatedField Name="ApprovedApplicationsL2" Expression="Sum([CompletedApplications])+Sum([ApprovedApplications])+Sum([GrantExpiredApplications])+Sum([EasementExpiredApplications])+Sum([DeniedApplications])" DataType="Auto" DataMember="rept_usp_get_hist_annual_summary_report" />
+        <CalculatedField Name="ApprovedApplicationsL2" Expression="Sum([CompletedApplications])+Sum([ApprovedApplications])+Sum([GrantExpiredApplications])+Sum([EasementExpiredApplications])+Sum([DeniedApplications])" DataType="Auto" DataMember="rept_usp_get_level2_hist_annual_summary_report" />
+        <CalculatedField Name="HighestAwardedApp" Expression="filter(Max([HighestAwardedApplication]), [HighestAwardedAmount] = aggr(Max([HighestAwardedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_Level3_hist_annual_summary_report" />
+        <CalculatedField Name="ApprovedApplicationL2" Expression="Sum([CompletedApplications])+Sum([ApprovedApplications])+Sum([GrantExpiredApplications])+Sum([EasementExpiredApplications])+Sum([DeniedApplications])" DataType="Auto" DataMember="rept_usp_get_Level3_hist_annual_summary_report" />
       </CalculatedFields>
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem2" Name="Year Vs Applications Approved" DataSource="sqlDataSource1" DataMember="rept_usp_get_hist_annual_summary_report">
+    <Chart ComponentName="chartDashboardItem2" Name="Year Vs Applications Approved" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_hist_annual_summary_report">
       <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
       <InteractivityOptions IsDrillDownEnabled="true" />
       <DataItems>
@@ -62,7 +69,7 @@
         </Pane>
       </Panes>
     </Chart>
-    <Chart ComponentName="chartDashboardItem4" Name="Year Vs Construction / Non-Construction" DataSource="sqlDataSource1" DataMember="rept_usp_get_hist_annual_summary_report">
+    <Chart ComponentName="chartDashboardItem4" Name="Year Vs Construction / Non-Construction" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_hist_annual_summary_report">
       <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
       <InteractivityOptions IsDrillDownEnabled="true" />
       <DataItems>
@@ -96,24 +103,33 @@
         </Pane>
       </Panes>
     </Chart>
-    <Pie ComponentName="pieDashboardItem1" Name="Years Vs Total Funds Awarded" DataSource="sqlDataSource1" DataMember="rept_usp_get_hist_annual_summary_report" ShowPieCaptions="false">
+    <Chart ComponentName="chartDashboardItem1" Name="Funds Available Vs Funds Requested" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_hist_annual_summary_report">
       <InteractivityOptions IsDrillDownEnabled="true" />
       <DataItems>
         <Dimension DataMember="FundingYear" IsDiscreteScale="true" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
         </Dimension>
-        <Measure DataMember="TotalFundsAwarded" DefaultId="DataItem1">
-          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
-        </Measure>
+        <Measure DataMember="FundsAvailable" SummaryType="Min" DefaultId="DataItem2" />
+        <Measure DataMember="TotalFundsRequested" DefaultId="DataItem3" />
       </DataItems>
       <Arguments>
         <Argument DefaultId="DataItem0" />
       </Arguments>
-      <Values>
-        <Value DefaultId="DataItem1" />
-      </Values>
-    </Pie>
-    <Grid ComponentName="gridDashboardItem2" Name="" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_hist_annual_summary_report">
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" AlwaysShowZeroLevel="false" />
+          <Series>
+            <Simple Name="FundsAvailable" SeriesType="Line">
+              <Value DefaultId="DataItem2" />
+            </Simple>
+            <Simple Name="TotalFundsRequested" SeriesType="Line">
+              <Value DefaultId="DataItem3" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Grid ComponentName="gridDashboardItem2" Name="" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_Level3_hist_annual_summary_report">
       <DataItems>
         <Dimension DataMember="FundingYear" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
@@ -159,12 +175,21 @@
         </GridMeasureColumn>
         <GridMeasureColumn Name="Total Funds Awarded" Weight="72.46777959316645">
           <Measure DefaultId="DataItem10" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Acqusition Funds" Weight="72.318825451588">
           <Measure DefaultId="DataItem12" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Construction Funds" Weight="96.2910128388017">
           <Measure DefaultId="DataItem9" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Planning / DesignFunds" Weight="72.16110930168142">
           <Measure DefaultId="DataItem13" />
@@ -186,27 +211,51 @@
         </GridMeasureColumn>
         <GridMeasureColumn Name="Completed" Weight="67.4037089871612">
           <Measure DefaultId="DataItem3" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="No-Award" Weight="68.68758915834522">
           <Measure DefaultId="DataItem6" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Rejected" Weight="60.984308131241086">
           <Measure DefaultId="DataItem4" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Withdrawn" Weight="68.0456490727532">
           <Measure DefaultId="DataItem5" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Declined" Weight="59.70042796005706">
           <Measure DefaultId="DataItem8" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Grant-Expired" Weight="71.9941157311921">
           <Measure DefaultId="DataItem14" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Funds Distributed" Weight="71.81729900949752">
           <Measure DefaultId="DataItem15" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Sites Approved" Weight="74.46504992867332">
           <Measure DefaultId="DataItem11" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Highiest Awarded App" Weight="71.63008130417383">
           <Measure DefaultId="DataItem16" />
@@ -232,7 +281,8 @@
         <Dimension DefaultId="DataItem2" />
       </FilterDimensions>
     </ComboBox>
-    <ListBox ComponentName="listBoxDashboardItem1" Name="Funding Year" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_hist_annual_summary_report">
+    <ListBox ComponentName="listBoxDashboardItem1" Name="Funding Year" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_Level3_hist_annual_summary_report">
+      <InteractivityOptions IgnoreMasterFilters="false" />
       <DataItems>
         <Dimension DataMember="FundingYear" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
@@ -244,7 +294,9 @@
     </ListBox>
   </Items>
   <Groups>
-    <Group ComponentName="groupDashboardItem1" Name="Group 1" ShowCaption="false" />
+    <Group ComponentName="groupDashboardItem1" Name="Group 1" ShowCaption="false">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+    </Group>
   </Groups>
   <ColorScheme>
     <Entry DataSource="dashboardExcelDataSource1" Color="-2890245">
@@ -268,12 +320,12 @@
         <LayoutGroup Orientation="Vertical" Weight="100">
           <LayoutGroup Weight="35.60606060606061">
             <LayoutItem DashboardItem="chartDashboardItem2" Weight="30.425680390788557" />
-            <LayoutItem DashboardItem="chartDashboardItem4" Weight="38.10188415910677" />
-            <LayoutItem DashboardItem="pieDashboardItem1" Weight="31.472435450104676" />
+            <LayoutItem DashboardItem="chartDashboardItem4" Weight="35.98299069236162" />
+            <LayoutItem DashboardItem="chartDashboardItem1" Weight="33.591328916849825" />
           </LayoutGroup>
           <LayoutGroup DashboardItem="groupDashboardItem1" Weight="64.39393939393939">
-            <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="10.65020421995113" />
-            <LayoutItem DashboardItem="gridDashboardItem2" Weight="118.13767456792766" />
+            <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="11.957305079290796" />
+            <LayoutItem DashboardItem="gridDashboardItem2" Weight="116.830573708588" />
           </LayoutGroup>
         </LayoutGroup>
       </LayoutGroup>
