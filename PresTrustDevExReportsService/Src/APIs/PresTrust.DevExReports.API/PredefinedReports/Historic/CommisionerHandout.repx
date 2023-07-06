@@ -230,7 +230,7 @@
         </Item2>
         <Item3 Ref="114" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="212.082352">
           <Controls>
-            <Item1 Ref="115" ControlType="XRPictureBox" Name="pictureBox2" Sizing="StretchImage" SizeF="210.999786,207.7306" LocationFloat="0.000190734863,0">
+            <Item1 Ref="115" ControlType="XRPictureBox" Name="pictureBox2" Sizing="ZoomImage" SizeF="210.999786,207.7306" LocationFloat="0.000190734863,0">
               <ExpressionBindings>
                 <Item1 Ref="116" EventName="BeforePrint" PropertyName="ImageUrl" Expression="Iif([sqlDataSource2_Hist_HistApplication_1sqlDataSource2_Query].[FileName] is null or [sqlDataSource2_Hist_HistApplication_1sqlDataSource2_Query].[FileName]='' or [ImageCondition]='True' or [ImageCondition1]='True' or [ImageCondition2]='True', 'https://www.morriscountynj.gov/files/sharedassets/public/departments/planning-amp-preservation-historic/images/hp-logo.gif', Concat(?parambloburl,[sqlDataSource2_Hist_HistApplication_1sqlDataSource2_Query].[FileName] )&#xA;) " />
               </ExpressionBindings>

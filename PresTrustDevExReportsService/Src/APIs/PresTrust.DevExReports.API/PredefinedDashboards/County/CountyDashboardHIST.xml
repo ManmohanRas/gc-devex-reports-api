@@ -170,7 +170,7 @@
         <GridMeasureColumn Name="Total Funds Requested" Weight="72.60845850465721">
           <Measure DefaultId="DataItem7" />
           <Totals>
-            <Total Type="Sum" />
+            <Total Type="Auto" />
           </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Total Funds Awarded" Weight="72.46777959316645">
