@@ -37,7 +37,7 @@
       </Arguments>
       <Panes>
         <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" />
+          <AxisY TitleVisible="false" Logarithmic="true" LogarithmicBase="Base2" />
           <Series>
             <Simple Name="Applications">
               <Value DefaultId="DataItem0" />
