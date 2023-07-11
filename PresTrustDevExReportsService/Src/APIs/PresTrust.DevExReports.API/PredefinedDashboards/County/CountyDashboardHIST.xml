@@ -30,7 +30,7 @@
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem2" Name="Year Vs Applications Approved" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_hist_annual_summary_report">
+    <Chart ComponentName="chartDashboardItem2" Name="Applications vs Approved Applications" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_hist_annual_summary_report">
       <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
       <InteractivityOptions IsDrillDownEnabled="true" />
       <DataItems>
@@ -57,7 +57,7 @@
       </ColorScheme>
       <Panes>
         <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" />
+          <AxisY TitleVisible="false" Logarithmic="true" LogarithmicBase="Base2" />
           <Series>
             <Simple Name="Applications">
               <Value DefaultId="DataItem1" />
@@ -91,7 +91,7 @@
       </ColorScheme>
       <Panes>
         <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" />
+          <AxisY TitleVisible="false" Logarithmic="true" LogarithmicBase="Base2" />
           <Series>
             <Simple Name="Construction" SeriesType="Line">
               <Value DefaultId="DataItem1" />

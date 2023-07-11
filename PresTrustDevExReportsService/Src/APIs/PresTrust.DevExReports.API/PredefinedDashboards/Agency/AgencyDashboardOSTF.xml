@@ -24,7 +24,7 @@
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem2" Name="Year Vs Applications Approved" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
+    <Chart ComponentName="chartDashboardItem2" Name="Applications vs Approved Applications" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
       <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
       <InteractivityOptions IsDrillDownEnabled="true" />
       <DataItems>
@@ -55,7 +55,7 @@
         <Measure DataMember="FundsAwarded" DefaultId="DataItem0">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
         </Measure>
-        <Dimension DataMember="FundingYear" DefaultId="DataItem1">
+        <Dimension DataMember="FundingYear" IsDiscreteScale="true" DefaultId="DataItem1">
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
         </Dimension>
       </DataItems>
@@ -78,7 +78,7 @@
     <Chart ComponentName="chartDashboardItem3" Name="Funds Available Vs Funds Requested" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
       <ColoringOptions MeasuresColoringMode="Hue" />
       <DataItems>
-        <Dimension DataMember="FundingYear" DefaultId="DataItem0">
+        <Dimension DataMember="FundingYear" IsDiscreteScale="true" DefaultId="DataItem0">
           <NumericFormat FormatType="General" />
         </Dimension>
         <Measure DataMember="Acreage" DefaultId="DataItem1" />
@@ -283,8 +283,8 @@
         <LayoutGroup Orientation="Vertical" Weight="100">
           <LayoutGroup Weight="35.60606060606061">
             <LayoutItem DashboardItem="chartDashboardItem2" Weight="30.425680390788557" />
-            <LayoutItem DashboardItem="chartDashboardItem1" Weight="35.15897656640517" />
-            <LayoutItem DashboardItem="chartDashboardItem3" Weight="34.41534304280627" />
+            <LayoutItem DashboardItem="chartDashboardItem1" Weight="34.86468580713502" />
+            <LayoutItem DashboardItem="chartDashboardItem3" Weight="34.709633802076425" />
           </LayoutGroup>
           <LayoutGroup DashboardItem="groupDashboardItem1" Weight="64.39393939393939">
             <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="14.262777023971053" />

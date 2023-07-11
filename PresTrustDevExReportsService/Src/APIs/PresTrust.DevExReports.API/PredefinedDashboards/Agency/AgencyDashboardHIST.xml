@@ -57,7 +57,9 @@
       </ColorScheme>
       <Panes>
         <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" />
+          <AxisY TitleVisible="false" Logarithmic="true" LogarithmicBase="Base2">
+            <NumericFormat Precision="0" />
+          </AxisY>
           <Series>
             <Simple Name="Applications">
               <Value DefaultId="DataItem1" />
@@ -91,7 +93,7 @@
       </ColorScheme>
       <Panes>
         <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" />
+          <AxisY TitleVisible="false" Logarithmic="true" LogarithmicBase="Base2" />
           <Series>
             <Simple Name="Construction" SeriesType="Line">
               <Value DefaultId="DataItem1" />
