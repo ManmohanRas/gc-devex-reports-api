@@ -57,7 +57,7 @@
       </ColorScheme>
       <Panes>
         <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" Logarithmic="true" LogarithmicBase="Base2" />
+          <AxisY TitleVisible="false" LogarithmicBase="Base2" />
           <Series>
             <Simple Name="Applications">
               <Value DefaultId="DataItem1" />
@@ -129,7 +129,7 @@
         </Pane>
       </Panes>
     </Chart>
-    <Grid ComponentName="gridDashboardItem2" Name="" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_Level3_hist_annual_summary_report">
+    <Grid ComponentName="gridDashboardItem2" Name="" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_Level3_hist_annual_summary_report">
       <DataItems>
         <Dimension DataMember="FundingYear" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
