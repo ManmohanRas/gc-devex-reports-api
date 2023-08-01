@@ -91,9 +91,7 @@
       </Arguments>
       <Panes>
         <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" AlwaysShowZeroLevel="false">
-            <NumericFormat FormatType="Currency" />
-          </AxisY>
+          <AxisY TitleVisible="false" AlwaysShowZeroLevel="false" />
           <Series>
             <Simple Name="FundsAvailable" ShowPointMarkers="true" SeriesType="Line">
               <Value DefaultId="DataItem2" />
@@ -107,7 +105,9 @@
     </Chart>
     <Grid ComponentName="gridDashboardItem2" Name="Detail" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_level3_ostf_annual_summary_report">
       <DataItems>
-        <Measure DataMember="Acreage" DefaultId="DataItem1" />
+        <Measure DataMember="Acreage" DefaultId="DataItem1">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
         <Measure DataMember="FundsAwarded" DefaultId="DataItem2">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
         </Measure>

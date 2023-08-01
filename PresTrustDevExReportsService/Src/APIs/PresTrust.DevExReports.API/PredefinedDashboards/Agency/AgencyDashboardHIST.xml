@@ -93,7 +93,7 @@
       </ColorScheme>
       <Panes>
         <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" Logarithmic="true" LogarithmicBase="Base2" />
+          <AxisY TitleVisible="false" AlwaysShowZeroLevel="false" LogarithmicBase="Base2" />
           <Series>
             <Simple Name="Construction" SeriesType="Line">
               <Value DefaultId="DataItem1" />
@@ -193,7 +193,7 @@
             <Total Type="Auto" />
           </Totals>
         </GridMeasureColumn>
-        <GridMeasureColumn Name="Planning / DesignFunds" Weight="72.16110930168142">
+        <GridMeasureColumn Name="Planning / Design Funds" Weight="72.16110930168142">
           <Measure DefaultId="DataItem13" />
           <Totals>
             <Total Type="Auto" />
