@@ -20,6 +20,8 @@
         <CalculatedField Name=" HighestACerageApprovedLoc" Expression="filter(Max([HighestAcreageApprovedLocation]), [HighestAcreageApproved] = aggr(Max([HighestAcreageApproved]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_level3_ostf_annual_summary_report" />
         <CalculatedField Name="HighestfundedApp" Expression="filter(Max([HighestFundedApplication]), [HighestFundedAmount] = aggr(Max([HighestFundedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_level3_ostf_annual_summary_report" />
         <CalculatedField Name="ApprovedApplicationsL2" Expression="Sum([ApprovedApplications])+Sum([PreservedApplications])+Sum([AddtlFundApplications])+Sum([ExpiredApplications])" DataType="Auto" DataMember="rept_usp_get_level3_ostf_annual_summary_report" />
+        <CalculatedField Name="Acres" Expression="Sum([FundsAwardedAcquisition])/Sum([Acreage])" DataType="Auto" DataMember="rept_usp_get_level3_ostf_annual_summary_report" />
+        <CalculatedField Name="$/Acres" Expression="Iif(Sum([Acreage]) = 0 , 0 , (Sum([FundsAwardedAcquisition])/Sum([Acreage])))" DataType="Auto" DataMember="rept_usp_get_level3_ostf_annual_summary_report" />
       </CalculatedFields>
     </SqlDataSource>
   </DataSources>
@@ -110,7 +112,7 @@
     <Grid ComponentName="gridDashboardItem2" Name="Detail" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_level3_ostf_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
       <DataItems>
         <Measure DataMember="Acreage" DefaultId="DataItem1">
-          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" />
         </Measure>
         <Measure DataMember="FundsAwarded" DefaultId="DataItem2">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
@@ -120,9 +122,6 @@
         </Measure>
         <Measure DataMember="FundsAwardedDemolition" DefaultId="DataItem4">
           <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
-        </Measure>
-        <Measure DataMember="AcquisitionGrantsPerAcre" DefaultId="DataItem5">
-          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
         </Measure>
         <Measure DataMember="Applications" DefaultId="DataItem6" />
         <Measure DataMember="ApprovedApplications" DefaultId="DataItem7" />
@@ -136,6 +135,9 @@
         <Dimension DataMember="FundingYear" DefaultId="DataItem0">
           <NumericFormat FormatType="General" />
         </Dimension>
+        <Measure DataMember="$/Acres" DefaultId="DataItem5">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
       </DataItems>
       <GridColumns>
         <GridDimensionColumn Name="Years">
@@ -165,7 +167,7 @@
             <Total Type="Auto" />
           </Totals>
         </GridMeasureColumn>
-        <GridMeasureColumn Name="$/Acre">
+        <GridMeasureColumn>
           <Measure DefaultId="DataItem5" />
           <Totals>
             <Total Type="Auto" />

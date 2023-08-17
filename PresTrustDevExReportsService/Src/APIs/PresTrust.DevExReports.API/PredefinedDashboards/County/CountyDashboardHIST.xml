@@ -162,6 +162,7 @@
         <Measure DataMember="WithdrawnApplications" DefaultId="DataItem5" />
         <Measure DataMember="DeniedApplications" DefaultId="DataItem8" />
         <Measure DataMember="SitesApproved" DefaultId="DataItem11" />
+        <Measure DataMember="EasementExpiredApplications" DefaultId="DataItem17" />
       </DataItems>
       <GridColumns>
         <GridDimensionColumn Name="Year" Weight="45.57774607703281">
@@ -217,6 +218,12 @@
         </GridMeasureColumn>
         <GridMeasureColumn Name="No-Award" Weight="68.68758915834522">
           <Measure DefaultId="DataItem6" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Easement Expired" Weight="71.43185079265466">
+          <Measure DefaultId="DataItem17" />
           <Totals>
             <Total Type="Auto" />
           </Totals>
