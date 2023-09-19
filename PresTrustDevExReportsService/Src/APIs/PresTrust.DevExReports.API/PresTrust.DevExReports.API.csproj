@@ -87,6 +87,7 @@
   <ItemGroup>
     <Folder Include="ActionResults\" />
     <Folder Include="Infrastructure\" />
+    <Folder Include="PredefinedReports\Flood\" />
   </ItemGroup>
 
   <ItemGroup>
