@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="PredefinedReports\Flood\CoreFloodApplicationReport.repx" />
+    <None Remove="PredefinedReports\Flood\CoreFloodApplicationReview.repx" />
     <None Remove="PredefinedReports\Historic\CommisionerHandout.repx" />
     <None Remove="PredefinedReports\Historic\EasementAmendment.repx" />
     <None Remove="PredefinedReports\Historic\EasementTemplate.repx" />
@@ -42,6 +44,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="PredefinedReports\Flood\CoreFloodApplicationReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\CoreFloodApplicationReview.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\CommisionerHandout.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\EasementAmendment.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\EasementTemplate.repx" />
@@ -87,10 +91,21 @@
   <ItemGroup>
     <Folder Include="ActionResults\" />
     <Folder Include="Infrastructure\" />
-    <Folder Include="PredefinedReports\Flood\" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="PredefinedReports\Flood\CoreFloodApplicationReport.cs">
+      <DependentUpon>CoreFloodApplicationReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\CoreFloodApplicationReport.Designer.cs">
+      <DependentUpon>CoreFloodApplicationReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\CoreFloodApplicationReview.cs">
+      <DependentUpon>CoreFloodApplicationReview.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\CoreFloodApplicationReview.Designer.cs">
+      <DependentUpon>CoreFloodApplicationReview.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Historic\CommisionerHandout.cs">
       <DependentUpon>CommisionerHandout.repx</DependentUpon>
     </Compile>
