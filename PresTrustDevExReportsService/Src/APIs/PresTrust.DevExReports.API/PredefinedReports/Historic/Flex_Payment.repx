@@ -4,7 +4,7 @@
     <Item1 Ref="2" Key="VSReportExtInfo" Value=".repx" />
   </Extensions>
   <Parameters>
-    <Item1 Ref="5" Description="Yaer" ValueSourceSettings="#Ref-3" MultiValue="true" Name="Year" />
+    <Item1 Ref="5" Description="Year" ValueSourceSettings="#Ref-3" MultiValue="true" Name="Year" />
     <Item2 Ref="7" Description="SiteName" ValueSourceSettings="#Ref-6" MultiValue="true" Name="SiteName" />
   </Parameters>
   <Bands>
