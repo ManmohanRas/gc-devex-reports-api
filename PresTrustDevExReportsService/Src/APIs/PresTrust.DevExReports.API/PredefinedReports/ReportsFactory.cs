@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraReports.UI;
+using PresTrust.DevExReports.API.PredefinedReports.Flood;
 using PresTrust.DevExReports.API.PredefinedReports.Historic;
 using PresTrust.DevExReports.API.PredefinedReports.Openspace;
 using System;
@@ -41,7 +42,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["HistYearlyHandBook"] = () => new YearlyHandBookReport(),
             ["HistNominationSubmissionDate"] = () => new NominationSubmissionDate(),
             ["HistGrantAwardResolution"] = () => new GrantAwardResolution(),
-            ["HistOPRAReport"] = () => new OPRA_Report()
+            ["HistOPRAReport"] = () => new OPRA_Report(),
+            ["FloodCoreApplicationParcel"] = () => new CoreFloodApplicationReport(),
+            ["FloodCoreFloodApplicationReview"] = () => new CoreFloodApplicationReview()
+
         };
     }
 }
