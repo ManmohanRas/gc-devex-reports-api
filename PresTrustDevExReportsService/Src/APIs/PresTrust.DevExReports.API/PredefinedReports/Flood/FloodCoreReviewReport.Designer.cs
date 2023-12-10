@@ -10,7 +10,7 @@
 
 namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
     
-    public partial class CoreFloodApplicationReview : DevExpress.XtraReports.UI.XtraReport {
+    public partial class FloodCoreReviewReport : DevExpress.XtraReports.UI.XtraReport {
         private void InitializeComponent() {
             DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Flood.CoreFloodApplicationReview.rep" +
                     "x");

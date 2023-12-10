@@ -3,9 +3,9 @@ using DevExpress.XtraReports.UI;
 
 namespace PresTrust.DevExReports.API.PredefinedReports.Flood
 {
-    public partial class CoreFloodApplicationReview
+    public partial class FloodCoreReviewReport
     {
-        public CoreFloodApplicationReview()
+        public FloodCoreReviewReport()
         {
             InitializeComponent();
         }

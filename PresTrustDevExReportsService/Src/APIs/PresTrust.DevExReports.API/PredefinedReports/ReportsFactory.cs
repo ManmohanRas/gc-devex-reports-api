@@ -43,8 +43,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["HistNominationSubmissionDate"] = () => new NominationSubmissionDate(),
             ["HistGrantAwardResolution"] = () => new GrantAwardResolution(),
             ["HistOPRAReport"] = () => new OPRA_Report(),
-            ["FloodCoreApplicationParcel"] = () => new CoreFloodApplicationReport(),
-            ["FloodCoreFloodApplicationReview"] = () => new CoreFloodApplicationReview()
+            ["FloodCoreApplicationReport"] = () => new FloodCoreApplicationReport(),
+            ["FloodCoreReviewReport"] = () => new FloodCoreReviewReport()
 
         };
     }
