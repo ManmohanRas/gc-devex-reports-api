@@ -5,8 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="PredefinedReports\Flood\FASTTRACKFinalApprovalNOCAF.repx" />
+    <None Remove="PredefinedReports\Flood\FloodCongratulationsLettertoHomeOwner.repx" />
     <None Remove="PredefinedReports\Flood\FloodCoreApplicationReport.repx" />
     <None Remove="PredefinedReports\Flood\FloodCoreReviewReport.repx" />
+    <None Remove="PredefinedReports\Flood\FloodGrantAgreement.repx" />
+    <None Remove="PredefinedReports\Flood\GrantAgreement.repx" />
+    <None Remove="PredefinedReports\Flood\MuniCongratulationPrelimFunding.repx" />
+    <None Remove="PredefinedReports\Flood\ProjectAreaFundsExtensionRequest.repx" />
+    <None Remove="PredefinedReports\Flood\StatusReport.repx" />
     <None Remove="PredefinedReports\Historic\CommisionerHandout.repx" />
     <None Remove="PredefinedReports\Historic\EasementAmendment.repx" />
     <None Remove="PredefinedReports\Historic\EasementTemplate.repx" />
@@ -44,8 +51,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodCongratulationsLettertoHomeOwner.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodCoreApplicationReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodCoreReviewReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodGrantAgreement.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\MuniCongratulationPrelimFunding.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\ProjectAreaFundsExtensionRequest.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\StatusReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\CommisionerHandout.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\EasementAmendment.repx" />
     <EmbeddedResource Include="PredefinedReports\Historic\EasementTemplate.repx" />
@@ -94,6 +106,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="PredefinedReports\Flood\FASTTRACKFinalApprovalNOCAF.cs">
+      <DependentUpon>FASTTRACKFinalApprovalNOCAF.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FASTTRACKFinalApprovalNOCAF.Designer.cs">
+      <DependentUpon>FASTTRACKFinalApprovalNOCAF.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodCongratulationsLettertoHomeOwner.cs">
+      <DependentUpon>FloodCongratulationsLettertoHomeOwner.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodCongratulationsLettertoHomeOwner.Designer.cs">
+      <DependentUpon>FloodCongratulationsLettertoHomeOwner.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Flood\FloodCoreApplicationReport.cs">
       <DependentUpon>FloodCoreApplicationReport.repx</DependentUpon>
     </Compile>
@@ -105,6 +129,36 @@
     </Compile>
     <Compile Update="PredefinedReports\Flood\FloodCoreReviewReport.Designer.cs">
       <DependentUpon>FloodCoreReviewReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodGrantAgreement.cs">
+      <DependentUpon>FloodGrantAgreement.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodGrantAgreement.Designer.cs">
+      <DependentUpon>FloodGrantAgreement.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\GrantAgreement.cs">
+      <DependentUpon>GrantAgreement.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\GrantAgreement.Designer.cs">
+      <DependentUpon>GrantAgreement.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\MuniCongratulationPrelimFunding.cs">
+      <DependentUpon>MuniCongratulationPrelimFunding.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\MuniCongratulationPrelimFunding.Designer.cs">
+      <DependentUpon>MuniCongratulationPrelimFunding.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\ProjectAreaFundsExtensionRequest.cs">
+      <DependentUpon>ProjectAreaFundsExtensionRequest.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\ProjectAreaFundsExtensionRequest.Designer.cs">
+      <DependentUpon>ProjectAreaFundsExtensionRequest.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\StatusReport.cs">
+      <DependentUpon>StatusReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\StatusReport.Designer.cs">
+      <DependentUpon>StatusReport.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Historic\CommisionerHandout.cs">
       <DependentUpon>CommisionerHandout.repx</DependentUpon>

@@ -44,8 +44,19 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["HistGrantAwardResolution"] = () => new GrantAwardResolution(),
             ["HistOPRAReport"] = () => new OPRA_Report(),
             ["FloodCoreApplicationReport"] = () => new FloodCoreApplicationReport(),
-            ["FloodCoreReviewReport"] = () => new FloodCoreReviewReport()
+            ["FloodCoreReviewReport"] = () => new FloodCoreReviewReport(),
+            ["FloodCongratulationsLettertoHomeOwner"] = () => new FloodCongratulationsLettertoHomeOwner(),
+            ["FloodGrantAgreement"] = () => new FloodGrantAgreement(),
+            ["FloodMuniCongratulationPrelimFunding"] = () => new MuniCongratulationPrelimFunding(),
+            ["FloodProjectAreaFundsExtensionRequest"] = () => new ProjectAreaFundsExtensionRequest(),
 
+
+            //["FloodProgramSummaryReport"] = () => new FloodProgramSummaryReport(),
+            //["FloodCommiteeReviewReport"] = () => new FloodCommiteeReviewReport(),
+            //["FloodFMCPreliminaryApprovalResolutionReport"] = () => new FloodFMCPreliminaryApprovalResolution(),
+            //["FloodFMCFinalApprovalResolutionReport"] = () => new FloodFMCFinalApprovalResolutionReport(),
+            //["FundsExtensionReport"] = () => new FloodFundsExtensionReport(),
+            //["MunicipalCongratulationPreliminaryFundingReport"] = () => new FloodMunicipalCongratulationPreliminaryFundingReport()
         };
     }
 }
