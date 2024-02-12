@@ -83,6 +83,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.DetailReport7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport7");
             this.DetailReport9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport9");
             this.GroupHeader3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupHeaderBand>("GroupHeader3");
+            this.DetailReport10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport10");
             this.Detail7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail7");
             this.ReportHeader4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.ReportHeaderBand>("ReportHeader4");
             this.GroupHeader4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupHeaderBand>("GroupHeader4");
@@ -120,13 +121,12 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.tableRow51 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow51");
             this.tableCell114 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell114");
             this.Detail6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail6");
-            this.GroupFooter1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupFooterBand>("GroupFooter1");
-            this.label21 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label21");
+            this.GroupHeader5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupHeaderBand>("GroupHeader5");
             this.label20 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label20");
             this.line1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line1");
-            this.label15 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label15");
-            this.table13 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table13");
             this.label14 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label14");
+            this.table13 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table13");
+            this.label26 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label26");
             this.table11 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table11");
             this.table10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table10");
             this.tableRow21 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow21");
@@ -267,6 +267,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.tableCell23 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell23");
             this.tableCell24 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell24");
             this.tableCell25 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell25");
+            this.Detail11 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail11");
+            this.label21 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label21");
             this.label24 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label24");
             this.label25 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label25");
             this.label60 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label60");
@@ -363,6 +365,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport7;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport9;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader3;
+        private DevExpress.XtraReports.UI.DetailReportBand DetailReport10;
         private DevExpress.XtraReports.UI.DetailBand Detail7;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader4;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader4;
@@ -400,13 +403,12 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRTableRow tableRow51;
         private DevExpress.XtraReports.UI.XRTableCell tableCell114;
         private DevExpress.XtraReports.UI.DetailBand Detail6;
-        private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter1;
-        private DevExpress.XtraReports.UI.XRLabel label21;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader5;
         private DevExpress.XtraReports.UI.XRLabel label20;
         private DevExpress.XtraReports.UI.XRLine line1;
-        private DevExpress.XtraReports.UI.XRLabel label15;
-        private DevExpress.XtraReports.UI.XRTable table13;
         private DevExpress.XtraReports.UI.XRLabel label14;
+        private DevExpress.XtraReports.UI.XRTable table13;
+        private DevExpress.XtraReports.UI.XRLabel label26;
         private DevExpress.XtraReports.UI.XRTable table11;
         private DevExpress.XtraReports.UI.XRTable table10;
         private DevExpress.XtraReports.UI.XRTableRow tableRow21;
@@ -547,6 +549,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRTableCell tableCell23;
         private DevExpress.XtraReports.UI.XRTableCell tableCell24;
         private DevExpress.XtraReports.UI.XRTableCell tableCell25;
+        private DevExpress.XtraReports.UI.DetailBand Detail11;
+        private DevExpress.XtraReports.UI.XRLabel label21;
         private DevExpress.XtraReports.UI.XRLabel label24;
         private DevExpress.XtraReports.UI.XRLabel label25;
         private DevExpress.XtraReports.UI.XRLabel label60;

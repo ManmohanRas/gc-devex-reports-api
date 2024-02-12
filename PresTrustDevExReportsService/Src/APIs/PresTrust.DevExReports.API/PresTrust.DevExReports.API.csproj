@@ -11,6 +11,7 @@
     <None Remove="PredefinedReports\Flood\FloodCoreReviewReport.repx" />
     <None Remove="PredefinedReports\Flood\FloodGrantAgreement.repx" />
     <None Remove="PredefinedReports\Flood\GrantAgreement.repx" />
+    <None Remove="PredefinedReports\Flood\MunicipalProgramSummary.repx" />
     <None Remove="PredefinedReports\Flood\MuniCongratulationPrelimFunding.repx" />
     <None Remove="PredefinedReports\Flood\ProjectAreaFundsExtensionRequest.repx" />
     <None Remove="PredefinedReports\Flood\StatusReport.repx" />
@@ -55,6 +56,7 @@
     <EmbeddedResource Include="PredefinedReports\Flood\FloodCoreApplicationReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodCoreReviewReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodGrantAgreement.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\MunicipalProgramSummary.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\MuniCongratulationPrelimFunding.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\ProjectAreaFundsExtensionRequest.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\StatusReport.repx" />
@@ -96,6 +98,7 @@
     <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="22.1.6" />
     <PackageReference Include="DevExpress.AspNetCore.Reporting" Version="22.1.6" />
     <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis" Version="4.8.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
   </ItemGroup>
@@ -141,6 +144,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Flood\GrantAgreement.Designer.cs">
       <DependentUpon>GrantAgreement.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\MunicipalProgramSummary.cs">
+      <DependentUpon>MunicipalProgramSummary.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\MunicipalProgramSummary.Designer.cs">
+      <DependentUpon>MunicipalProgramSummary.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Flood\MuniCongratulationPrelimFunding.cs">
       <DependentUpon>MuniCongratulationPrelimFunding.repx</DependentUpon>

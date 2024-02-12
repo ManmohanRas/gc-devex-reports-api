@@ -49,6 +49,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodGrantAgreement"] = () => new FloodGrantAgreement(),
             ["FloodMuniCongratulationPrelimFunding"] = () => new MuniCongratulationPrelimFunding(),
             ["FloodProjectAreaFundsExtensionRequest"] = () => new ProjectAreaFundsExtensionRequest(),
+            ["FloodMunicipalProgramSummaryReport"] = () => new MunicipalProgramSummary()
 
 
             //["FloodProgramSummaryReport"] = () => new FloodProgramSummaryReport(),
