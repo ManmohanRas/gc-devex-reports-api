@@ -43,21 +43,23 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["HistNominationSubmissionDate"] = () => new NominationSubmissionDate(),
             ["HistGrantAwardResolution"] = () => new GrantAwardResolution(),
             ["HistOPRAReport"] = () => new OPRA_Report(),
+           
+            //Flood Mitigation Preview Reports
             ["FloodCoreApplicationReport"] = () => new FloodCoreApplicationReport(),
             ["FloodCoreReviewReport"] = () => new FloodCoreReviewReport(),
             ["FloodCongratulationsLettertoHomeOwner"] = () => new FloodCongratulationsLettertoHomeOwner(),
             ["FloodGrantAgreement"] = () => new FloodGrantAgreement(),
             ["FloodMuniCongratulationPrelimFunding"] = () => new MuniCongratulationPrelimFunding(),
             ["FloodProjectAreaFundsExtensionRequest"] = () => new ProjectAreaFundsExtensionRequest(),
-            ["FloodMunicipalProgramSummaryReport"] = () => new MunicipalProgramSummary()
 
-
-            //["FloodProgramSummaryReport"] = () => new FloodProgramSummaryReport(),
-            //["FloodCommiteeReviewReport"] = () => new FloodCommiteeReviewReport(),
-            //["FloodFMCPreliminaryApprovalResolutionReport"] = () => new FloodFMCPreliminaryApprovalResolution(),
-            //["FloodFMCFinalApprovalResolutionReport"] = () => new FloodFMCFinalApprovalResolutionReport(),
-            //["FundsExtensionReport"] = () => new FloodFundsExtensionReport(),
-            //["MunicipalCongratulationPreliminaryFundingReport"] = () => new FloodMunicipalCongratulationPreliminaryFundingReport()
+            //Flood Mitigation General reports 
+            ["FloodProgramSummaryReport"] = () => new FloodProgramSummaryReport(),
+            ["FloodStatusReport"] = () => new FloodStatusReport(),
+            ["FloodMonthlyFundingSummaryReport"] = () => new FloodMonthlyFundingSummary(),
+            ["FloodMunicipalProgramSummaryReport"] = () => new MunicipalProgramSummary(),
+            ["FloodCountyCostReport"] = () => new FloodCountyCostReport(),
+            ["FloodExpirationReport"] = () => new FloodExpirationReport(),
+            ["FloodFlapSummary"] = () => new FloodFlapSummary(),
         };
     }
 }

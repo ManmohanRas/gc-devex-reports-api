@@ -10,9 +10,9 @@
 
 namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
     
-    public partial class StatusReport : DevExpress.XtraReports.UI.XtraReport {
+    public partial class FloodStatusReport : DevExpress.XtraReports.UI.XtraReport {
         private void InitializeComponent() {
-            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Flood.StatusReport.repx");
+            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Flood.FloodStatusReport.repx");
 
             // Controls
             this.TopMargin = reportInitializer.GetControl<DevExpress.XtraReports.UI.TopMarginBand>("TopMargin");

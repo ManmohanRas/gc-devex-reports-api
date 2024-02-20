@@ -3,9 +3,9 @@ using DevExpress.XtraReports.UI;
 
 namespace PresTrust.DevExReports.API.PredefinedReports.Flood
 {
-    public partial class StatusReport
+    public partial class FloodMonthlyFundingSummary
     {
-        public StatusReport()
+        public FloodMonthlyFundingSummary()
         {
             InitializeComponent();
         }
