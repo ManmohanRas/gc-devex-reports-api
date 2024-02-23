@@ -99,7 +99,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
 
             // Parameters
             this.applicationid = reportInitializer.GetParameter("applicationid");
-            this.pampsPin = reportInitializer.GetParameter("pampsPin");
+            this.pamsPin = reportInitializer.GetParameter("pamsPin");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
@@ -193,6 +193,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.CalculatedField AgencyAddress;
         private DevExpress.XtraReports.UI.CalculatedField TotalCost;
         private DevExpress.XtraReports.Parameters.Parameter applicationid;
-        private DevExpress.XtraReports.Parameters.Parameter pampsPin;
+        private DevExpress.XtraReports.Parameters.Parameter pamsPin;
     }
 }

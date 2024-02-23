@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Grant_Agreemet" Margins="17, 19, 23, 24" PageWidth="850" PageHeight="1100" Version="22.1" FilterString="[Id] = ?applicationid And [PamsPin] = ?pampsPin" DataMember="Flood_FloodApplication_1" DataSource="#Ref-0" Font="Arial, 9.75pt">
+<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Grant_Agreemet" Margins="17, 19, 23, 24" PageWidth="850" PageHeight="1100" Version="22.1" FilterString="[Id] = ?applicationid And [PamsPin] = ?pamsPin" DataMember="Flood_FloodApplication_1" DataSource="#Ref-0" Font="Arial, 9.75pt">
   <Extensions>
     <Item1 Ref="2" Key="VSReportExtInfo" Value=".repx" />
   </Extensions>
   <Parameters>
     <Item1 Ref="4" Visible="false" Description="applicationid" ValueInfo="0" Name="applicationid" Type="#Ref-3" />
-    <Item2 Ref="6" Visible="false" Description="pampsPin" Name="pampsPin" />
+    <Item2 Ref="6" Visible="false" Description="pamsPin" Name="pamsPin" />
   </Parameters>
   <CalculatedFields>
     <Item1 Ref="7" Name="AgencyAddress" Expression="[AddressLine1]+Iif([AddressLine1] IS NULL or [AddressLine2] IS NULL,'' ,' , ' )+&#xA;[AddressLine2]+Iif([AddressLine2] IS NULL OR [AddressLine3] IS NULL,'' ,' , ' )+&#xA;[AddressLine3]+Iif([AddressLine3] IS NULL OR [City] IS NULL,'' ,' , ' )+&#xA;[City]+Iif([City] IS NULL OR [State] IS NULL,'' ,' , ' )+&#xA;[State]+Iif([State] IS NULL OR [Zipcode] IS NULL,'' ,' , ' )+&#xA;[Zipcode]" DataMember="Flood_FloodApplication_1" />

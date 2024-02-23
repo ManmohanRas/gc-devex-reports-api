@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="AnnualAudit" Margins="8, 20, 33, 31" PaperKind="A2" PageWidth="1654" PageHeight="2339" Version="22.1" Font="Arial, 9.75pt">
+  <Extensions>
+    <Item1 Ref="1" Key="VSReportExtInfo" Value=".repx" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="4" Description="Year" ValueSourceSettings="#Ref-2" ValueInfo="0" Name="Year" Type="#Ref-3" />
+  </Parameters>
+  <CalculatedFields>
+    <Item1 Ref="6" Name="CurrentYear" Expression="?Year" DataSource="#Ref-5" DataMember="Query" />
+    <Item2 Ref="7" Name="PreviousYear" Expression="[CurrentYear]-1" DataSource="#Ref-5" DataMember="Query" />
+    <Item3 Ref="8" Name="FundsRealesedCalc" Expression="[][[Title]=[^.Title] and [ClosingYear]=[CurrentYear]].Sum([FundsReleased])" DataSource="#Ref-5" DataMember="Query" />
+  </CalculatedFields>
+  <Bands>
+    <Item1 Ref="9" ControlType="TopMarginBand" Name="TopMargin" HeightF="33" />
+    <Item2 Ref="10" ControlType="DetailBand" Name="Detail" Expanded="false" />
+    <Item3 Ref="11" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="30.6250248" />
+    <Item4 Ref="12" ControlType="DetailReportBand" Name="DetailReport" Level="0" FilterString="[ClosingYear] = ?Year" DataMember="Query" DataSource="#Ref-5">
+      <Bands>
+        <Item1 Ref="13" ControlType="DetailBand" Name="Detail1" HeightF="25">
+          <Controls>
+            <Item1 Ref="14" ControlType="XRTable" Name="table11" TextAlignment="MiddleCenter" SizeF="228.487183,25" LocationFloat="1299.93591,0" Font="Segoe UI Semilight, 11pt" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="15" ControlType="XRTableRow" Name="tableRow12" Weight="1">
+                  <Cells>
+                    <Item1 Ref="16" ControlType="XRTableCell" Name="tableCell36" Weight="1.2841027832031249" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="17" EventName="BeforePrint" PropertyName="Text" Expression="[CAFNumber]" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="18" ControlType="XRTableCell" Name="tableCell37" Weight="1.00076904296875" TextFormatString="{0:#,#}" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="19" EventName="BeforePrint" PropertyName="Text" Expression="[CountyCostshare]" />
+                      </ExpressionBindings>
+                    </Item2>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="20" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="21" ControlType="XRTable" Name="table5" TextAlignment="MiddleCenter" SizeF="521.919739,25" LocationFloat="0,0" Font="Segoe UI Semilight, 11pt" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="22" ControlType="XRTableRow" Name="tableRow6" Weight="1">
+                  <Cells>
+                    <Item1 Ref="23" ControlType="XRTableCell" Name="tableCell20" Weight="1.4377297137116216" Multiline="true" TextAlignment="MiddleLeft">
+                      <ExpressionBindings>
+                        <Item1 Ref="24" EventName="BeforePrint" PropertyName="Text" Expression="[Title]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="25" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="26" ControlType="XRTableCell" Name="tableCell21" Weight="0.62306512482030163" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="[NumberOfHomes]" />
+                      </ExpressionBindings>
+                    </Item2>
+                    <Item3 Ref="28" ControlType="XRTableCell" Name="tableCell22" Weight="0.93920516146807675" TextFormatString="{0:$#,#}" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="29" EventName="BeforePrint" PropertyName="Text" Expression="[FundsEncumbered]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="30" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+          </Controls>
+        </Item1>
+        <Item2 Ref="31" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="73.3333359">
+          <Controls>
+            <Item1 Ref="32" ControlType="XRTable" Name="table10" TextAlignment="MiddleCenter" SizeF="228.487183,36.6666679" LocationFloat="1299.93591,36.6666679" Font="Segoe UI Semilight, 12pt" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="33" ControlType="XRTableRow" Name="tableRow11" Weight="1">
+                  <Cells>
+                    <Item1 Ref="34" ControlType="XRTableCell" Name="tableCell34" Weight="1.2841027832031249" Multiline="true" Text="CAF #" Font="Segoe UI Semilight, 12pt, style=Bold" BackColor="255,250,192,143">
+                      <StylePriority Ref="35" UseFont="false" UseBackColor="false" />
+                    </Item1>
+                    <Item2 Ref="36" ControlType="XRTableCell" Name="tableCell35" Weight="1.00076904296875" Multiline="true" Text="County Costshare %" Font="Segoe UI Semilight, 12pt, style=Bold" BackColor="255,250,192,143">
+                      <StylePriority Ref="37" UseFont="false" UseBackColor="false" />
+                    </Item2>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="38" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="39" ControlType="XRTable" Name="table4" TextAlignment="MiddleCenter" SizeF="521.919739,73.3333359" LocationFloat="0,0" Font="Segoe UI Semilight, 12pt" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="40" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+                  <Cells>
+                    <Item1 Ref="41" ControlType="XRTableCell" Name="tableCell16" Weight="1" Multiline="true" Font="Segoe UI Semilight, 12pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="42" EventName="BeforePrint" PropertyName="Text" Expression="'FLOOD MITIGATION PROGRAM - '+[CurrentYear]+' Audit Report'" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="43" UseFont="false" />
+                    </Item1>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="44" ControlType="XRTableRow" Name="tableRow5" Weight="1">
+                  <Cells>
+                    <Item1 Ref="45" ControlType="XRTableCell" Name="tableCell17" Weight="0.4792432476491712" Multiline="true" Text="New Project Areas" TextAlignment="MiddleLeft" Font="Segoe UI Semilight, 12pt, style=Bold" BackColor="255,250,192,143">
+                      <StylePriority Ref="46" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="47" ControlType="XRTableCell" Name="tableCell18" Weight="0.20768831159566803" Multiline="true" Text="#Homes" Font="Segoe UI Semilight, 12pt, style=Bold" BackColor="255,250,192,143">
+                      <StylePriority Ref="48" UseFont="false" UseBackColor="false" />
+                    </Item2>
+                    <Item3 Ref="49" ControlType="XRTableCell" Name="tableCell19" Weight="0.31306844075516072" Multiline="true" Text="Funds Encumbered" Font="Segoe UI Semilight, 12pt, style=Bold" BackColor="255,250,192,143">
+                      <StylePriority Ref="50" UseFont="false" UseBackColor="false" />
+                    </Item3>
+                  </Cells>
+                </Item2>
+              </Rows>
+              <StylePriority Ref="51" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+          </Controls>
+        </Item2>
+        <Item3 Ref="52" ControlType="ReportFooterBand" Name="ReportFooter" HeightF="30.3333282">
+          <Controls>
+            <Item1 Ref="53" ControlType="XRTable" Name="table9" TextAlignment="MiddleLeft" SizeF="521.919739,25" LocationFloat="0,0" Font="Segoe UI Semilight, 12pt, style=Bold" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="54" ControlType="XRTableRow" Name="tableRow10" Weight="1">
+                  <Cells>
+                    <Item1 Ref="55" ControlType="XRTableCell" Name="tableCell31" Weight="1.437729626003946" Multiline="true" Text="Total:" TextAlignment="MiddleRight" BackColor="Yellow">
+                      <StylePriority Ref="56" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="57" ControlType="XRTableCell" Name="tableCell32" Weight="0.62306494940495016" Multiline="true" TextAlignment="MiddleCenter" BackColor="Yellow">
+                      <Summary Ref="58" Running="Report" />
+                      <ExpressionBindings>
+                        <Item1 Ref="59" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([NumberOfHomes])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="60" UseBackColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="61" ControlType="XRTableCell" Name="tableCell33" Weight="0.9392054245911039" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" BackColor="Yellow">
+                      <Summary Ref="62" Running="Report" />
+                      <ExpressionBindings>
+                        <Item1 Ref="63" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([FundsEncumbered])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="64" UseBackColor="false" UseTextAlignment="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="65" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item3>
+      </Bands>
+    </Item4>
+    <Item5 Ref="66" ControlType="DetailReportBand" Name="DetailReport1" Level="1" FilterString="[ClosingYear] = ?Year" DataMember="Query" DataSource="#Ref-5">
+      <Bands>
+        <Item1 Ref="67" ControlType="DetailBand" Name="Detail2" Expanded="false" HeightF="25" />
+        <Item2 Ref="68" ControlType="ReportHeaderBand" Name="ReportHeader1" HeightF="94.79164">
+          <Controls>
+            <Item1 Ref="69" ControlType="XRTable" Name="table7" TextAlignment="MiddleCenter" SizeF="109.064819,25.0000076" LocationFloat="1103.29431,44.79164" Font="Segoe UI Semilight, 10pt, style=Bold" BackColor="255,229,224,236" Padding="2,2,0,0,96" Borders="Left, Top, Right">
+              <Rows>
+                <Item1 Ref="70" ControlType="XRTableRow" Name="tableRow8" Weight="1">
+                  <Cells>
+                    <Item1 Ref="71" ControlType="XRTableCell" Name="tableCell24" Weight="1" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="72" EventName="BeforePrint" PropertyName="Text" Expression="[CurrentYear]" />
+                      </ExpressionBindings>
+                    </Item1>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="73" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="74" ControlType="XRTable" Name="table6" TextAlignment="MiddleCenter" SizeF="138.680786,25.0000076" LocationFloat="964.6135,44.79164" Font="Segoe UI Semilight, 10pt, style=Bold" BackColor="255,229,224,236" Padding="2,2,0,0,96" Borders="Left, Top, Right">
+              <Rows>
+                <Item1 Ref="75" ControlType="XRTableRow" Name="tableRow7" Weight="1">
+                  <Cells>
+                    <Item1 Ref="76" ControlType="XRTableCell" Name="tableCell23" Weight="1" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="77" EventName="BeforePrint" PropertyName="Text" Expression="'2012 - '+[CurrentYear]" />
+                      </ExpressionBindings>
+                    </Item1>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="78" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="79" ControlType="XRTable" Name="table1" TextAlignment="MiddleCenter" SizeF="1626,25" LocationFloat="0,69.79164" Font="Segoe UI Semilight, 10pt, style=Bold" BackColor="255,251,213,181" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="80" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+                  <Cells>
+                    <Item1 Ref="81" ControlType="XRTableCell" Name="tableCell1" Weight="1.8734949569776984" Multiline="true" Text="Previous Project Areas" BackColor="255,250,192,143">
+                      <StylePriority Ref="82" UseBackColor="false" />
+                    </Item1>
+                    <Item2 Ref="83" ControlType="XRTableCell" Name="tableCell2" Weight="0.58639607143002681" Multiline="true" Text="#Homes" BackColor="255,250,192,143">
+                      <StylePriority Ref="84" UseBackColor="false" />
+                    </Item2>
+                    <Item3 Ref="85" ControlType="XRTableCell" Name="tableCell3" Weight="1.2733409542850949" Multiline="true" Text="Previously Encumbered" BackColor="255,250,192,143">
+                      <StylePriority Ref="86" UseBackColor="false" />
+                    </Item3>
+                    <Item4 Ref="87" ControlType="XRTableCell" Name="tableCell4" Weight="0.907804651794646" Multiline="true" BackColor="255,250,192,143">
+                      <ExpressionBindings>
+                        <Item1 Ref="88" EventName="BeforePrint" PropertyName="Text" Expression="'Funds Released Closing '+[CurrentYear]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="89" UseBackColor="false" />
+                    </Item4>
+                    <Item5 Ref="90" ControlType="XRTableCell" Name="tableCell5" Weight="0.96002496623171807" Multiline="true" BackColor="255,250,192,143">
+                      <ExpressionBindings>
+                        <Item1 Ref="91" EventName="BeforePrint" PropertyName="Text" Expression="'Soft Cost Reimbursed '+[CurrentYear]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="92" UseBackColor="false" />
+                    </Item5>
+                    <Item6 Ref="93" ControlType="XRTableCell" Name="tableCell6" Weight="1.2331888574438867" Multiline="true" BackColor="255,250,192,143">
+                      <ExpressionBindings>
+                        <Item1 Ref="94" EventName="BeforePrint" PropertyName="Text" Expression="'Total Funds Released '+[CurrentYear]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="95" UseBackColor="false" />
+                    </Item6>
+                    <Item7 Ref="96" ControlType="XRTableCell" Name="tableCell7" Weight="0.87791186476607863" Multiline="true" BackColor="255,250,192,143">
+                      <ExpressionBindings>
+                        <Item1 Ref="97" EventName="BeforePrint" PropertyName="Text" Expression="'Total Funds Released 2012 - '+[PreviousYear]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="98" UseBackColor="false" />
+                    </Item7>
+                    <Item8 Ref="99" ControlType="XRTableCell" Name="tableCell8" Weight="1.1087636177313103" Multiline="true" BackColor="255,250,192,143">
+                      <ExpressionBindings>
+                        <Item1 Ref="100" EventName="BeforePrint" PropertyName="Text" Expression="'Total Funds Released 2012 - '+[CurrentYear]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="101" UseBackColor="false" />
+                    </Item8>
+                    <Item9 Ref="102" ControlType="XRTableCell" Name="tableCell9" Weight="0.87198200503581791" Multiline="true" BackColor="255,250,192,143">
+                      <ExpressionBindings>
+                        <Item1 Ref="103" EventName="BeforePrint" PropertyName="Text" Expression="[CurrentYear]+' Closing'" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="104" UseBackColor="false" />
+                    </Item9>
+                    <Item10 Ref="105" ControlType="XRTableCell" Name="tableCell10" Weight="0.700183403887872" Multiline="true" Text="Previous Closings" BackColor="255,250,192,143">
+                      <StylePriority Ref="106" UseBackColor="false" />
+                    </Item10>
+                    <Item11 Ref="107" ControlType="XRTableCell" Name="tableCell11" Weight="1.0266504698280625" Multiline="true" Text="#CAF[*Closed CAF/PO]" BackColor="255,250,192,143">
+                      <StylePriority Ref="108" UseBackColor="false" />
+                    </Item11>
+                    <Item12 Ref="109" ControlType="XRTableCell" Name="tableCell12" Weight="0.80012287923477388" Multiline="true" Text="County CostShare" BackColor="255,250,192,143">
+                      <StylePriority Ref="110" UseBackColor="false" />
+                    </Item12>
+                    <Item13 Ref="111" ControlType="XRTableCell" Name="tableCell13" Weight="0.78013530135301357" Multiline="true" Text="Closed CAF/Funds Returned" BackColor="255,250,192,143">
+                      <StylePriority Ref="112" UseBackColor="false" />
+                    </Item13>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="113" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="114" ControlType="XRTable" Name="table2" TextAlignment="MiddleCenter" SizeF="388.487061,25.0000076" LocationFloat="466.3199,44.79164" Font="Segoe UI Semilight, 10pt, style=Bold" BackColor="255,229,224,236" Padding="2,2,0,0,96" Borders="Left, Top, Right">
+              <Rows>
+                <Item1 Ref="115" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+                  <Cells>
+                    <Item1 Ref="116" ControlType="XRTableCell" Name="tableCell14" Weight="1" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="117" EventName="BeforePrint" PropertyName="Text" Expression="[CurrentYear]" />
+                      </ExpressionBindings>
+                    </Item1>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="118" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="119" ControlType="XRTable" Name="table3" TextAlignment="MiddleCenter" SizeF="109.80658,25.0000076" LocationFloat="854.806946,44.79164" Font="Segoe UI Semilight, 10pt, style=Bold" BackColor="255,229,224,236" Padding="2,2,0,0,96" Borders="Left, Top, Right">
+              <Rows>
+                <Item1 Ref="120" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+                  <Cells>
+                    <Item1 Ref="121" ControlType="XRTableCell" Name="tableCell15" Weight="1" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="122" EventName="BeforePrint" PropertyName="Text" Expression="'2012 - '+[PreviousYear]" />
+                      </ExpressionBindings>
+                    </Item1>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="123" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item5>
+          </Controls>
+        </Item2>
+        <Item3 Ref="124" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="25">
+          <GroupFields>
+            <Item1 Ref="125" FieldName="Title" />
+          </GroupFields>
+          <Controls>
+            <Item1 Ref="126" ControlType="XRTable" Name="table8" TextAlignment="MiddleLeft" SizeF="1626,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="127" ControlType="XRTableRow" Name="tableRow9" Weight="1">
+                  <Cells>
+                    <Item1 Ref="128" ControlType="XRTableCell" Name="tableCell25" Weight="1.2110407949284867" CanShrink="true" Multiline="true" Text="tableCell25">
+                      <ExpressionBindings>
+                        <Item1 Ref="129" EventName="BeforePrint" PropertyName="Text" Expression="[Title]" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="130" ControlType="XRTableCell" Name="tableCell26" Weight="0.37905038876245806" CanShrink="true" TextFormatString="{0:#,#}" Multiline="true" TextAlignment="MiddleCenter">
+                      <ExpressionBindings>
+                        <Item1 Ref="131" EventName="BeforePrint" PropertyName="Text" Expression="[NumberOfHomes]" />
+                        <Item2 Ref="132" EventName="BeforePrint" PropertyName="Tag" Expression="[NumberOfHomes]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="133" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="134" ControlType="XRTableCell" Name="tableCell27" Weight="0.82309754642459254" CanShrink="true" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
+                      <ExpressionBindings>
+                        <Item1 Ref="135" EventName="BeforePrint" PropertyName="Text" Expression="[FundsEncumbered]&#xA;" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="136" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="137" ControlType="XRTableCell" Name="tableCell28" Weight="0.58681126988446264" CanShrink="true" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
+                      <ExpressionBindings>
+                        <Item1 Ref="138" EventName="BeforePrint" PropertyName="Text" Expression="[FundsRealesedCalc]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="139" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="140" ControlType="XRTableCell" Name="tableCell29" Weight="0.62056717366559211" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
+                      <ExpressionBindings>
+                        <Item1 Ref="141" EventName="BeforePrint" PropertyName="Text" Expression="[][[Title]=[^.Title] and [ClosingYear]=[CurrentYear]].Sum([SoftCostsReimbursed])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="142" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="143" ControlType="XRTableCell" Name="tableCell30" Weight="0.7971421727617336" CanShrink="true" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
+                      <ExpressionBindings>
+                        <Item1 Ref="144" EventName="BeforePrint" PropertyName="Text" Expression="[][[Title]=[^.Title] and [ClosingYear]=[CurrentYear]].Sum([TotalFundsReleased])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="145" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="146" ControlType="XRTableCell" Name="tableCell38" Weight="0.56748884916420073" CanShrink="true" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
+                      <ExpressionBindings>
+                        <Item1 Ref="147" EventName="BeforePrint" PropertyName="Text" Expression="[][[Title]=[^.Title] and [ClosingYear]&lt;=[PreviousYear]].Sum([TotalFundsReleased])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="148" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="149" ControlType="XRTableCell" Name="tableCell39" Weight="0.71671366076038734" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
+                      <ExpressionBindings>
+                        <Item1 Ref="150" EventName="BeforePrint" PropertyName="Text" Expression="[][[Title]=[^.Title] ].Sum([TotalFundsReleased])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="151" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="152" ControlType="XRTableCell" Name="tableCell40" Weight="0.563656633263236" Multiline="true" TextAlignment="MiddleCenter">
+                      <ExpressionBindings>
+                        <Item1 Ref="153" EventName="BeforePrint" PropertyName="Text" Expression="[][[Title]=[^.Title] and [ClosingYear]=[CurrentYear]].Sum([Closings])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="154" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="155" ControlType="XRTableCell" Name="tableCell41" Weight="0.45260349015522539" Multiline="true" TextAlignment="MiddleCenter">
+                      <ExpressionBindings>
+                        <Item1 Ref="156" EventName="BeforePrint" PropertyName="Text" Expression="[][[Title]=[^.Title] and [ClosingYear]&lt;=[PreviousYear]].Sum([Closings])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="157" UseTextAlignment="false" />
+                    </Item10>
+                    <Item11 Ref="158" ControlType="XRTableCell" Name="tableCell42" Weight="0.66363488051946873" Multiline="true" TextAlignment="MiddleCenter">
+                      <ExpressionBindings>
+                        <Item1 Ref="159" EventName="BeforePrint" PropertyName="Text" Expression="[CAFNumber]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="160" UseTextAlignment="false" />
+                    </Item11>
+                    <Item12 Ref="161" ControlType="XRTableCell" Name="tableCell43" Weight="0.51720574117812679" Multiline="true" TextAlignment="MiddleCenter">
+                      <ExpressionBindings>
+                        <Item1 Ref="162" EventName="BeforePrint" PropertyName="Text" Expression="[CountyCostshare]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="163" UseTextAlignment="false" />
+                    </Item12>
+                    <Item13 Ref="164" ControlType="XRTableCell" Name="tableCell44" Weight="0.51720574117812679" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
+                      <ExpressionBindings>
+                        <Item1 Ref="165" EventName="BeforePrint" PropertyName="Text" Expression="[][[Title]=[^.Title]].sum([ClosedCAF])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="166" UseTextAlignment="false" />
+                    </Item13>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="167" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item3>
+        <Item4 Ref="168" ControlType="ReportFooterBand" Name="ReportFooter1" HeightF="98.3333359">
+          <Controls>
+            <Item1 Ref="169" ControlType="XRTable" Name="table13" TextAlignment="MiddleCenter" SizeF="1626,98.3333359" LocationFloat="0,0" Font="Segoe UI Semilight, 11pt, style=Bold" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="170" ControlType="XRTableRow" Name="tableRow14" Weight="1" BackColor="Yellow">
+                  <Cells>
+                    <Item1 Ref="171" ControlType="XRTableCell" Name="tableCell49" Weight="2.3433097839355468" Multiline="true" Text="TOTALS:" TextAlignment="MiddleRight">
+                      <StylePriority Ref="172" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="173" ControlType="XRTableCell" Name="tableCell50" Weight="0.72872116088867189" Multiline="true" Font="Segoe UI Semilight, 11pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="174" EventName="BeforePrint" PropertyName="Tag" Expression="[NumberOfHomes]" />
+                        <Item2 Ref="175" EventName="BeforePrint" PropertyName="Text" Expression="[][[Counter2]=1 AND [ClosingYear] = [CurrentYear]].Sum([NumberOfHomes])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="176" UseFont="false" />
+                    </Item2>
+                    <Item3 Ref="177" ControlType="XRTableCell" Name="tableCell51" Weight="1.5902117919921874" TextFormatString="{0:$#,#}" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="178" EventName="BeforePrint" PropertyName="Text" Expression="[][[Counter2]=1 AND [ClosingYear] = [CurrentYear]].Sum([FundsEncumbered])" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="179" ControlType="XRTableCell" Name="tableCell52" Weight="1.1426230076861852" TextFormatString="{0:$#,#}" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="180" EventName="BeforePrint" PropertyName="Text" Expression="[][[ClosingYear]=[CurrentYear]].sum([FundsReleased])" />
+                      </ExpressionBindings>
+                    </Item4>
+                    <Item5 Ref="181" ControlType="XRTableCell" Name="tableCell45" Weight="1.1900119219182306" TextFormatString="{0:$#,#}" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="182" EventName="BeforePrint" PropertyName="Text" Expression="[][[ClosingYear]=[CurrentYear]].sum([SoftCostsReimbursed])" />
+                      </ExpressionBindings>
+                    </Item5>
+                    <Item6 Ref="183" ControlType="XRTableCell" Name="tableCell46" Weight="1.5400662458577283" TextFormatString="{0:$#,#}" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="184" EventName="BeforePrint" PropertyName="Text" Expression="[][[ClosingYear]=[CurrentYear]].sum([TotalFundsReleased])" />
+                      </ExpressionBindings>
+                    </Item6>
+                    <Item7 Ref="185" ControlType="XRTableCell" Name="tableCell47" Weight="1.1111917174305" TextFormatString="{0:$#,#}" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="186" EventName="BeforePrint" PropertyName="Text" Expression="[][[ClosingYear]&lt;=[PreviousYear]].sum([TotalFundsReleased])" />
+                      </ExpressionBindings>
+                    </Item7>
+                    <Item8 Ref="187" ControlType="XRTableCell" Name="tableCell48" Weight="1.3698666607077843" TextFormatString="{0:$#,#}" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="188" EventName="BeforePrint" PropertyName="Text" Expression="[][[ClosingYear] = [CurrentYear]].sum([TotalFundsReleased])" />
+                      </ExpressionBindings>
+                    </Item8>
+                    <Item9 Ref="189" ControlType="XRTableCell" Name="tableCell53" Weight="1.1075900275434534" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="190" EventName="BeforePrint" PropertyName="Text" Expression="[][[ClosingYear]=[CurrentYear]].Sum([Closings])&#xA;" />
+                      </ExpressionBindings>
+                    </Item9>
+                    <Item10 Ref="191" ControlType="XRTableCell" Name="tableCell54" Weight="0.8558090082706824" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="192" EventName="BeforePrint" PropertyName="Text" Expression="[][[ClosingYear]&lt;=[PreviousYear]].Sum([Closings])&#xA;" />
+                      </ExpressionBindings>
+                    </Item10>
+                    <Item11 Ref="193" ControlType="XRTableCell" Name="tableCell55" Weight="1.2821322619693254" Multiline="true" />
+                    <Item12 Ref="194" ControlType="XRTableCell" Name="tableCell56" Weight="0.99923428910143508" Multiline="true" />
+                    <Item13 Ref="195" ControlType="XRTableCell" Name="tableCell57" Weight="0.99923428910143508" TextFormatString="{0:$#,#}" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="196" EventName="BeforePrint" PropertyName="Text" Expression="[][[ClosingYear] = [CurrentYear]].sum([ClosedCAF])&#xA;" />
+                      </ExpressionBindings>
+                    </Item13>
+                  </Cells>
+                  <StylePriority Ref="197" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="198" ControlType="XRTableRow" Name="tableRow13" Weight="1" BackColor="255,115,212,255">
+                  <Cells>
+                    <Item1 Ref="199" ControlType="XRTableCell" Name="tableCell58" Weight="2.3433097839355468" Multiline="true" Text="PROGRAM TOTALS:" TextAlignment="MiddleRight">
+                      <StylePriority Ref="200" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="201" ControlType="XRTableCell" Name="tableCell59" Weight="0.72872116088867189" Multiline="true" Font="Segoe UI Semilight, 11pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="202" EventName="BeforePrint" PropertyName="Text" Expression="[][[Counter2]=1 AND [ClosingYear] = [CurrentYear]].Sum([NumberOfHomes])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="203" UseFont="false" />
+                    </Item2>
+                    <Item3 Ref="204" ControlType="XRTableCell" Name="tableCell60" Weight="1.5902117919921874" TextFormatString="{0:$#,#}" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="205" EventName="BeforePrint" PropertyName="Text" Expression="[][[Counter2]=1 AND [ClosingYear] = [CurrentYear]].Sum([FundsEncumbered])" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="206" ControlType="XRTableCell" Name="tableCell61" Weight="1.1426230076861852" Multiline="true" />
+                    <Item5 Ref="207" ControlType="XRTableCell" Name="tableCell62" Weight="1.1900119219182306" Multiline="true" />
+                    <Item6 Ref="208" ControlType="XRTableCell" Name="tableCell63" Weight="1.5400662458577283" Multiline="true" />
+                    <Item7 Ref="209" ControlType="XRTableCell" Name="tableCell64" Weight="1.1111917174305" Multiline="true" />
+                    <Item8 Ref="210" ControlType="XRTableCell" Name="tableCell65" Weight="1.3698666607077843" Multiline="true" />
+                    <Item9 Ref="211" ControlType="XRTableCell" Name="tableCell66" Weight="1.1075900275434534" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="212" EventName="BeforePrint" PropertyName="Text" Expression="[][[ClosingYear]=[CurrentYear]].Sum([Closings])+[][[ClosingYear]&lt;=[PreviousYear]].Sum([Closings])&#xA;" />
+                      </ExpressionBindings>
+                    </Item9>
+                    <Item10 Ref="213" ControlType="XRTableCell" Name="tableCell67" Weight="0.8558090082706824" Multiline="true" />
+                    <Item11 Ref="214" ControlType="XRTableCell" Name="tableCell68" Weight="1.2821322619693254" Multiline="true" />
+                    <Item12 Ref="215" ControlType="XRTableCell" Name="tableCell69" Weight="0.99923428910143508" Multiline="true" />
+                    <Item13 Ref="216" ControlType="XRTableCell" Name="tableCell70" Weight="0.99923428910143508" Multiline="true" />
+                  </Cells>
+                  <StylePriority Ref="217" UseBackColor="false" />
+                </Item2>
+              </Rows>
+              <StylePriority Ref="218" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item4>
+      </Bands>
+    </Item5>
+  </Bands>
+  <ParameterPanelLayoutItems>
+    <Item1 Ref="219" LayoutItemType="Parameter" Parameter="#Ref-4" />
+  </ParameterPanelLayoutItems>
+  <ComponentStorage>
+    <Item1 Ref="5" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IkN1c3RvbVNxbFF1ZXJ5IiBOYW1lPSJRdWVyeSI+PFNxbD5TRUxFQ1QNCglBbm51YWxGdW5kaW5nLltBbGxvY2F0aW9uWWVhcl0gQVMgW0Nsb3NpbmdZZWFyXSwNCglBbm51YWxBdWRpdC5bSWRdLA0KCUFubnVhbEF1ZGl0LltUaXRsZV0sDQoJQW5udWFsQXVkaXQuW051bWJlck9mSG9tZXNdLA0KCUFubnVhbEF1ZGl0LltGdW5kc0VuY3VtYmVyZWRdLA0KCUFubnVhbEF1ZGl0LltGdW5kc1JlbGVhc2VkXSwNCglBbm51YWxBdWRpdC5bU29mdENvc3RzUmVpbWJ1cnNlZF0sDQoJQW5udWFsQXVkaXQuW1RvdGFsRnVuZHNSZWxlYXNlZF0sDQoJQW5udWFsQXVkaXQuW0Nsb3NpbmdzXSwNCglBbm51YWxBdWRpdC5bQ0FGTnVtYmVyXSwNCglBbm51YWxBdWRpdC5bQ291bnR5Q29zdHNoYXJlXSwNCglBbm51YWxBdWRpdC5bQ2xvc2VkQ0FGXSwNCnJvd19udW1iZXIoKSBvdmVyKHBhcnRpdGlvbiBieSBBbm51YWxBdWRpdC5bVGl0bGVdIG9yZGVyIGJ5IEFubnVhbEF1ZGl0LltJZF0pIGFzIENvdW50ZXIyDQpGUk9NIFtGbG9vZF0uW0Zsb29kQW5udWFsRnVuZGluZ10gQW5udWFsRnVuZGluZw0KTEVGVCBKT0lODQooU0VMRUNUDQoJRkEuW0lkXSwNCglGQS5bVGl0bGVdLA0KCUNBU0UgV0hFTiBQUHkuW1NvZnRDb3N0UGF5bWVudERhdGVdIElTIE5PVCBOVUxMIFRIRU4gWUVBUihQUHkuW1NvZnRDb3N0UGF5bWVudERhdGVdKSBFTFNFIFlFQVIoUFB5LltIYXJkQ29zdFBheW1lbnREYXRlXSkgRU5EIEFTIFtDbG9zaW5nWWVhcl0sDQoJQ0FTRSBXSEVOIFBQLltQcmlvcml0eV0gPSAxIFRIRU4gMSBFTFNFIDAgRU5EIEFTIFtOdW1iZXJPZkhvbWVzXSwNCgkoKFBGLltFc3RpbWF0ZVB1cmNoYXNlUHJpY2VdICogQUYuW01hdGNoUGVyY2VudF0pIC8gMTAwKQ0KCQkrICgoKChQRi5bRXN0aW1hdGVQdXJjaGFzZVByaWNlXSAqIEFGLltNYXRjaFBlcmNlbnRdKSAvIDEwMCkgKiAyNSkgLyAxMDApDQoJCSsgUEYuW0FkZGl0aW9uYWxTb2Z0Q29zdEVzdGltYXRlXSBBUyBbRnVuZHNFbmN1bWJlcmVkXSwNCglQRi5bSGFyZENvc3RGTVBBbXRdIEFTIFtGdW5kc1JlbGVhc2VkXSwNCglQRi5bU29mdENvc3RGTVBBbXRdIEFTIFtTb2Z0Q29zdHNSZWltYnVyc2VkXSwNCgkoUEYuW0hhcmRDb3N0Rk1QQW10XSArIFBGLltTb2Z0Q29zdEZNUEFtdF0pIEFTIFtUb3RhbEZ1bmRzUmVsZWFzZWRdLA0KCUNBU0UgV0hFTiBBUC5bU3RhdHVzSWRdID0gNSBUSEVOIDEgRUxTRSAwIEVORCBBUyBbQ2xvc2luZ3NdLA0KCUNPTkNBVChDQVNFIFdIRU4gQVB5LltDQUZDbG9zZWRdID0gMSBUSEVOICcqJyBFTFNFICcnIEVORCwgQ0FTRSBXSEVOIEZBLltBcHBsaWNhdGlvblN1YlR5cGVJZF0gPSAyIEFORCBBUHkuW0NBRk51bWJlcl0gSVMgTlVMTCBUSEVOICdObyBDQUYnIEVMU0UgQVB5LltDQUZOdW1iZXJdIEVORCkgQVMgW0NBRk51bWJlcl0sDQoJQUYuW01hdGNoUGVyY2VudF0gQVMgW0NvdW50eUNvc3RzaGFyZV0sDQoJQ0FTRSBXSEVOIEZBLltBcHBsaWNhdGlvblN1YlR5cGVJZF0gPSAyIFRIRU4gTlVMTCBFTFNFICgoKChQRi5bRXN0aW1hdGVQdXJjaGFzZVByaWNlXSAqIEFGLltNYXRjaFBlcmNlbnRdKSAvIDEwMCkNCgkJKyAoKCgoUEYuW0VzdGltYXRlUHVyY2hhc2VQcmljZV0gKiBBRi5bTWF0Y2hQZXJjZW50XSkgLyAxMDApICogMjUpIC8gMTAwKQ0KCQkrIFBGLltBZGRpdGlvbmFsU29mdENvc3RFc3RpbWF0ZV0pIC0gKFBGLltIYXJkQ29zdEZNUEFtdF0gKyBQRi5bU29mdENvc3RGTVBBbXRdKSkgRU5EIEFTIFtDbG9zZWRDQUZdDQpGUk9NIFtGbG9vZF0uW0Zsb29kQXBwbGljYXRpb25dIEZBDQpKT0lOIFtGbG9vZF0uW0Zsb29kQXBwbGljYXRpb25QYXJjZWxdIEFQIE9OIEZBLltJZF0gPSBBUC5bQXBwbGljYXRpb25JZF0NCkxFRlQgSk9JTiBbRmxvb2RdLltGbG9vZFBhcmNlbFByb3BlcnR5XSBQUCBPTiBQUC5bUHJpb3JpdHldID0gMSBBTkQgQVAuW0FwcGxpY2F0aW9uSWRdID0gUFAuW0FwcGxpY2F0aW9uSWRdIEFORCBBUC5bUGFtc1Bpbl0gPSBQUC5bUGFtc1Bpbl0NCkxFRlQgSk9JTiBbRmxvb2RdLltGbG9vZEFwcGxpY2F0aW9uRmluYW5jZV0gQUYgT04gQVAuW0FwcGxpY2F0aW9uSWRdID0gQUYuW0FwcGxpY2F0aW9uSWRdDQpMRUZUIEpPSU4gW0Zsb29kXS5bRmxvb2RQYXJjZWxGaW5hbmNlXSBQRiBPTiBBUC5bQXBwbGljYXRpb25JZF0gPSBQRi5bQXBwbGljYXRpb25JZF0gQU5EIEFQLltQYW1zUGluXSA9IFBGLltQYW1zUGluXQ0KTEVGVCBKT0lOIFtGbG9vZF0uW0Zsb29kQXBwbGljYXRpb25QYXltZW50XSBBUHkgT04gQVAuW0FwcGxpY2F0aW9uSWRdID0gQVB5LltBcHBsaWNhdGlvbklkXQ0KTEVGVCBKT0lOIFtGbG9vZF0uW0Zsb29kUGFyY2VsUGF5bWVudF0gUFB5IE9OIChQUHkuW0hhcmRDb3N0UGF5bWVudFN0YXR1c0lkXSA9IDEgT1IgUFB5LltTb2Z0Q29zdFBheW1lbnRTdGF0dXNJZF0gPSAxKSBBTkQgQVAuW0FwcGxpY2F0aW9uSWRdID0gUFB5LltBcHBsaWNhdGlvbklkXSBBTkQgQVAuW1BhbXNQaW5dID0gUFB5LltQYW1zUGluXQ0KV0hFUkUgRkEuW1N0YXR1c0lkXSBJTiAoNiw3LDkpIEFORCBBUC5bU3RhdHVzSWRdIElOICg0LDUsNiw4KSkgQW5udWFsQXVkaXQNCglPTiBBbm51YWxGdW5kaW5nLltBbGxvY2F0aW9uWWVhcl0gPSBBbm51YWxBdWRpdC5bQ2xvc2luZ1llYXJdDQpPUkRFUiBCWSBBbm51YWxGdW5kaW5nLltBbGxvY2F0aW9uWWVhcl0gREVTQywgQW5udWFsQXVkaXQuW0lkXSBBU0M7PC9TcWw+PC9RdWVyeT48UmVzdWx0U2NoZW1hPjxEYXRhU2V0IE5hbWU9InNxbERhdGFTb3VyY2UxIj48VmlldyBOYW1lPSJRdWVyeSI+PEZpZWxkIE5hbWU9IkNsb3NpbmdZZWFyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IklkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVGl0bGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTnVtYmVyT2ZIb21lcyIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkZ1bmRzRW5jdW1iZXJlZCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRnVuZHNSZWxlYXNlZCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iU29mdENvc3RzUmVpbWJ1cnNlZCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iVG90YWxGdW5kc1JlbGVhc2VkIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJDbG9zaW5ncyIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkNBRk51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb3VudHlDb3N0c2hhcmUiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkNsb3NlZENBRiIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iQ291bnRlcjIiIFR5cGU9IkludDY0IiAvPjwvVmlldz48L0RhdGFTZXQ+PC9SZXN1bHRTY2hlbWE+PENvbm5lY3Rpb25PcHRpb25zIENsb3NlQ29ubmVjdGlvbj0idHJ1ZSIgLz48L1NxbERhdGFTb3VyY2U+" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 Ref="2" ObjectType="DevExpress.XtraReports.Parameters.DynamicListLookUpSettings, DevExpress.Printing.v22.1.Core" DataSource="#Ref-5" DataMember="Query" ValueMember="ClosingYear" DisplayMember="ClosingYear" SortOrder="Ascending" />
+    <Item2 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v22.1" Ref="3" Content="System.Int32" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

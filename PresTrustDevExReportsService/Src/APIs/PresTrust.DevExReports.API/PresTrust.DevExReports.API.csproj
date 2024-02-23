@@ -7,15 +7,18 @@
   <ItemGroup>
     <None Remove="PredefinedReports\Flood\.repx" />
     <None Remove="PredefinedReports\Flood\FASTTRACKFinalApprovalNOCAF.repx" />
+    <None Remove="PredefinedReports\Flood\FloodAnnualAuditReport.repx" />
     <None Remove="PredefinedReports\Flood\FloodCongratulationsLettertoHomeOwner.repx" />
     <None Remove="PredefinedReports\Flood\FloodCoreApplicationReport.repx" />
     <None Remove="PredefinedReports\Flood\FloodCoreReviewReport.repx" />
     <None Remove="PredefinedReports\Flood\FloodCountyCostReport.repx" />
     <None Remove="PredefinedReports\Flood\FloodExpirationReport.repx" />
+    <None Remove="PredefinedReports\Flood\FloodFastTrackSoftCostReimbusment.repx" />
     <None Remove="PredefinedReports\Flood\FloodFlapSummary.repx" />
     <None Remove="PredefinedReports\Flood\FloodGrantAgreement.repx" />
     <None Remove="PredefinedReports\Flood\FloodMonthlyFundingSummary.repx" />
     <None Remove="PredefinedReports\Flood\FloodProgramSummaryReport.repx" />
+    <None Remove="PredefinedReports\Flood\FloodSoftCostReimbursementForm.repx" />
     <None Remove="PredefinedReports\Flood\FloodStatusReport.repx" />
     <None Remove="PredefinedReports\Flood\GrantAgreement.repx" />
     <None Remove="PredefinedReports\Flood\MunicipalProgramSummary.repx" />
@@ -58,15 +61,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodAnnualAuditReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodCongratulationsLettertoHomeOwner.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodCoreApplicationReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodCoreReviewReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodCountyCostReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodExpirationReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodFastTrackSoftCostReimbusment.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodFlapSummary.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodGrantAgreement.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodMonthlyFundingSummary.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodProgramSummaryReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodSoftCostReimbursementForm.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodStatusReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\MunicipalProgramSummary.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\MuniCongratulationPrelimFunding.repx" />
@@ -126,6 +132,12 @@
     <Compile Update="PredefinedReports\Flood\FASTTRACKFinalApprovalNOCAF.Designer.cs">
       <DependentUpon>FASTTRACKFinalApprovalNOCAF.repx</DependentUpon>
     </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodAnnualAuditReport.cs">
+      <DependentUpon>FloodAnnualAuditReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodAnnualAuditReport.Designer.cs">
+      <DependentUpon>FloodAnnualAuditReport.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Flood\FloodCongratulationsLettertoHomeOwner.cs">
       <DependentUpon>FloodCongratulationsLettertoHomeOwner.repx</DependentUpon>
     </Compile>
@@ -156,6 +168,12 @@
     <Compile Update="PredefinedReports\Flood\FloodExpirationReport.Designer.cs">
       <DependentUpon>FloodExpirationReport.repx</DependentUpon>
     </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodFastTrackSoftCostReimbusment.cs">
+      <DependentUpon>FloodFastTrackSoftCostReimbusment.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodFastTrackSoftCostReimbusment.Designer.cs">
+      <DependentUpon>FloodFastTrackSoftCostReimbusment.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Flood\FloodFlapSummary.cs">
       <DependentUpon>FloodFlapSummary.repx</DependentUpon>
     </Compile>
@@ -179,6 +197,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Flood\FloodProgramSummaryReport.Designer.cs">
       <DependentUpon>FloodProgramSummaryReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodSoftCostReimbursementForm.cs">
+      <DependentUpon>FloodSoftCostReimbursementForm.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodSoftCostReimbursementForm.Designer.cs">
+      <DependentUpon>FloodSoftCostReimbursementForm.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Flood\FloodStatusReport.cs">
       <DependentUpon>FloodStatusReport.repx</DependentUpon>

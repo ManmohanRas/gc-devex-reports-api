@@ -51,6 +51,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodGrantAgreement"] = () => new FloodGrantAgreement(),
             ["FloodMuniCongratulationPrelimFunding"] = () => new MuniCongratulationPrelimFunding(),
             ["FloodProjectAreaFundsExtensionRequest"] = () => new ProjectAreaFundsExtensionRequest(),
+            ["FloodSoftCostReimbursementForm"] = () => new FloodSoftCostReimbursementForm(),
+            ["FloodFastTrackSoftCostReimbusment"] = () => new FloodFastTrackSoftCostReimbusment(),
+
 
             //Flood Mitigation General reports 
             ["FloodProgramSummaryReport"] = () => new FloodProgramSummaryReport(),
@@ -60,6 +63,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodCountyCostReport"] = () => new FloodCountyCostReport(),
             ["FloodExpirationReport"] = () => new FloodExpirationReport(),
             ["FloodFlapSummary"] = () => new FloodFlapSummary(),
+            ["FloodAnnualAuditReport"] = () => new FloodAnnualAuditReport()
         };
     }
 }
