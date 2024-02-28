@@ -53,8 +53,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.richText2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText2");
 
             // Parameters
-            this.applicationid = reportInitializer.GetParameter("applicationid");
-            this.pampsPin = reportInitializer.GetParameter("pampsPin");
+            this.applicationId = reportInitializer.GetParameter("applicationId");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
@@ -103,7 +102,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.CalculatedField Prioroty1;
         private DevExpress.XtraReports.UI.CalculatedField TotalEncumbered;
         private DevExpress.XtraReports.UI.CalculatedField User;
-        private DevExpress.XtraReports.Parameters.Parameter applicationid;
-        private DevExpress.XtraReports.Parameters.Parameter pampsPin;
+        private DevExpress.XtraReports.Parameters.Parameter applicationId;
     }
 }

@@ -10,10 +10,10 @@
 
 namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
     
-    public partial class FloodFastTrackSoftCostReimbusment : DevExpress.XtraReports.UI.XtraReport {
+    public partial class FloodFMCPreliminaryApprovalMATCHSingle : DevExpress.XtraReports.UI.XtraReport {
         private void InitializeComponent() {
-            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Flood.FloodFastTrackSoftCostReimbusm" +
-                    "ent.repx");
+            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Flood.FloodFMCPreliminaryApprovalMAT" +
+                    "CHSingle.repx");
 
             // Controls
             this.TopMargin = reportInitializer.GetControl<DevExpress.XtraReports.UI.TopMarginBand>("TopMargin");
@@ -23,6 +23,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.DetailReport = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport");
             this.DetailReport1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport1");
             this.DetailReport2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport2");
+            this.DetailReport3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport3");
             this.richText2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText2");
             this.richText1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText1");
             this.Detail1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail1");
@@ -44,12 +45,13 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.Detail2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail2");
             this.richText3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText3");
             this.Detail3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail3");
-            this.ReportFooter = reportInitializer.GetControl<DevExpress.XtraReports.UI.ReportFooterBand>("ReportFooter");
+            this.ReportHeader1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.ReportHeaderBand>("ReportHeader1");
             this.richText4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText4");
+            this.Detail4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail4");
+            this.richText6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText6");
 
             // Parameters
-            this.applicationId = reportInitializer.GetParameter("applicationId");
-            this.pamsPin = reportInitializer.GetParameter("pamsPin");
+            this.applicationid = reportInitializer.GetParameter("applicationid");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
@@ -60,6 +62,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.AgencyAddress = reportInitializer.GetCalculatedField("AgencyAddress");
             this.Comma = reportInitializer.GetCalculatedField("Comma");
             this.TypeCondition = reportInitializer.GetCalculatedField("TypeCondition");
+            this.ValueEstimateCalc = reportInitializer.GetCalculatedField("ValueEstimateCalc");
+            this.Funds = reportInitializer.GetCalculatedField("Funds");
         }
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
@@ -68,6 +72,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport1;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport2;
+        private DevExpress.XtraReports.UI.DetailReportBand DetailReport3;
         private DevExpress.XtraReports.UI.XRRichText richText2;
         private DevExpress.XtraReports.UI.XRRichText richText1;
         private DevExpress.XtraReports.UI.DetailBand Detail1;
@@ -90,14 +95,17 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.DetailBand Detail2;
         private DevExpress.XtraReports.UI.XRRichText richText3;
         private DevExpress.XtraReports.UI.DetailBand Detail3;
-        private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
+        private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader1;
         private DevExpress.XtraReports.UI.XRRichText richText4;
+        private DevExpress.XtraReports.UI.DetailBand Detail4;
+        private DevExpress.XtraReports.UI.XRRichText richText6;
         private DevExpress.XtraReports.UI.CalculatedField Prioroty1;
         private DevExpress.XtraReports.UI.CalculatedField Value1;
         private DevExpress.XtraReports.UI.CalculatedField AgencyAddress;
         private DevExpress.XtraReports.UI.CalculatedField Comma;
         private DevExpress.XtraReports.UI.CalculatedField TypeCondition;
-        private DevExpress.XtraReports.Parameters.Parameter applicationId;
-        private DevExpress.XtraReports.Parameters.Parameter pamsPin;
+        private DevExpress.XtraReports.UI.CalculatedField ValueEstimateCalc;
+        private DevExpress.XtraReports.UI.CalculatedField Funds;
+        private DevExpress.XtraReports.Parameters.Parameter applicationid;
     }
 }

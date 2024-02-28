@@ -15,6 +15,11 @@
     <None Remove="PredefinedReports\Flood\FloodExpirationReport.repx" />
     <None Remove="PredefinedReports\Flood\FloodFastTrackSoftCostReimbusment.repx" />
     <None Remove="PredefinedReports\Flood\FloodFlapSummary.repx" />
+    <None Remove="PredefinedReports\Flood\FloodFMCPreliminaryApprovalCOREMultiple.repx" />
+    <None Remove="PredefinedReports\Flood\FloodFMCPreliminaryApprovalCORESingle.repx" />
+    <None Remove="PredefinedReports\Flood\FloodFMCPreliminaryApprovalMain.repx" />
+    <None Remove="PredefinedReports\Flood\FloodFMCPreliminaryApprovalMATCHMultiple.repx" />
+    <None Remove="PredefinedReports\Flood\FloodFMCPreliminaryApprovalMATCHSingle.repx" />
     <None Remove="PredefinedReports\Flood\FloodGrantAgreement.repx" />
     <None Remove="PredefinedReports\Flood\FloodMonthlyFundingSummary.repx" />
     <None Remove="PredefinedReports\Flood\FloodProgramSummaryReport.repx" />
@@ -69,6 +74,11 @@
     <EmbeddedResource Include="PredefinedReports\Flood\FloodExpirationReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodFastTrackSoftCostReimbusment.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodFlapSummary.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodFMCPreliminaryApprovalCOREMultiple.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodFMCPreliminaryApprovalCORESingle.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodFMCPreliminaryApprovalMain.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodFMCPreliminaryApprovalMATCHMultiple.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodFMCPreliminaryApprovalMATCHSingle.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodGrantAgreement.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodMonthlyFundingSummary.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodProgramSummaryReport.repx" />
@@ -179,6 +189,36 @@
     </Compile>
     <Compile Update="PredefinedReports\Flood\FloodFlapSummary.Designer.cs">
       <DependentUpon>FloodFlapSummary.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodFMCPreliminaryApprovalCOREMultiple.cs">
+      <DependentUpon>FloodFMCPreliminaryApprovalCOREMultiple.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodFMCPreliminaryApprovalCOREMultiple.Designer.cs">
+      <DependentUpon>FloodFMCPreliminaryApprovalCOREMultiple.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodFMCPreliminaryApprovalCORESingle.cs">
+      <DependentUpon>FloodFMCPreliminaryApprovalCORESingle.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodFMCPreliminaryApprovalCORESingle.Designer.cs">
+      <DependentUpon>FloodFMCPreliminaryApprovalCORESingle.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodFMCPreliminaryApprovalMain.cs">
+      <DependentUpon>FloodFMCPreliminaryApprovalMain.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodFMCPreliminaryApprovalMain.Designer.cs">
+      <DependentUpon>FloodFMCPreliminaryApprovalMain.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodFMCPreliminaryApprovalMATCHMultiple.cs">
+      <DependentUpon>FloodFMCPreliminaryApprovalMATCHMultiple.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodFMCPreliminaryApprovalMATCHMultiple.Designer.cs">
+      <DependentUpon>FloodFMCPreliminaryApprovalMATCHMultiple.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodFMCPreliminaryApprovalMATCHSingle.cs">
+      <DependentUpon>FloodFMCPreliminaryApprovalMATCHSingle.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodFMCPreliminaryApprovalMATCHSingle.Designer.cs">
+      <DependentUpon>FloodFMCPreliminaryApprovalMATCHSingle.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Flood\FloodGrantAgreement.cs">
       <DependentUpon>FloodGrantAgreement.repx</DependentUpon>

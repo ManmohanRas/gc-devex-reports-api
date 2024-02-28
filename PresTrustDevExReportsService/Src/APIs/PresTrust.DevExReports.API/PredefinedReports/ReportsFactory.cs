@@ -53,6 +53,13 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodProjectAreaFundsExtensionRequest"] = () => new ProjectAreaFundsExtensionRequest(),
             ["FloodSoftCostReimbursementForm"] = () => new FloodSoftCostReimbursementForm(),
             ["FloodFastTrackSoftCostReimbusment"] = () => new FloodFastTrackSoftCostReimbusment(),
+            ["FloodFMCPreliminaryApprovalCOREMultiple"] = () => new FloodFMCPreliminaryApprovalCOREMultiple(),
+            ["FloodFMCPreliminaryApprovalCORESingle"] = () => new FloodFMCPreliminaryApprovalCORESingle(),
+            ["FloodFMCPreliminaryApprovalMain"] = () => new FloodFMCPreliminaryApprovalMain(),
+            ["FloodFMCPreliminaryApprovalMATCHMultiple"] = () => new FloodFMCPreliminaryApprovalMATCHMultiple(),
+            ["FloodFMCPreliminaryApprovalMATCHSingle"] = () => new FloodFMCPreliminaryApprovalMATCHSingle(),
+
+
 
 
             //Flood Mitigation General reports 
