@@ -62,6 +62,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.tableRow6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow6");
             this.tableRow7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow7");
             this.tableRow8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow8");
+            this.tableRow9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow9");
             this.tableCell13 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell13");
             this.tableCell15 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell15");
             this.tableCell17 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell17");
@@ -146,7 +147,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.tableCell94 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell94");
             this.tableCell95 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell95");
             this.tableCell96 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell96");
-            this.tableRow9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow9");
             this.tableCell97 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell97");
             this.tableCell98 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell98");
             this.tableCell99 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell99");
@@ -212,6 +212,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRTableRow tableRow6;
         private DevExpress.XtraReports.UI.XRTableRow tableRow7;
         private DevExpress.XtraReports.UI.XRTableRow tableRow8;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow9;
         private DevExpress.XtraReports.UI.XRTableCell tableCell13;
         private DevExpress.XtraReports.UI.XRTableCell tableCell15;
         private DevExpress.XtraReports.UI.XRTableCell tableCell17;
@@ -296,9 +297,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRTableCell tableCell94;
         private DevExpress.XtraReports.UI.XRTableCell tableCell95;
         private DevExpress.XtraReports.UI.XRTableCell tableCell96;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.XtraReports.UI.CalculatedField Date;
-        private DevExpress.XtraReports.UI.XRTableRow tableRow9;
         private DevExpress.XtraReports.UI.XRTableCell tableCell97;
         private DevExpress.XtraReports.UI.XRTableCell tableCell98;
         private DevExpress.XtraReports.UI.XRTableCell tableCell99;
@@ -311,5 +309,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRTableCell tableCell106;
         private DevExpress.XtraReports.UI.XRTableCell tableCell107;
         private DevExpress.XtraReports.UI.XRTableCell tableCell108;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
+        private DevExpress.XtraReports.UI.CalculatedField Date;
     }
 }

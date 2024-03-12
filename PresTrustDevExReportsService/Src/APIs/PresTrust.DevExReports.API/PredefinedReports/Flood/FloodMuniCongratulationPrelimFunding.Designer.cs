@@ -10,10 +10,10 @@
 
 namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
     
-    public partial class MuniCongratulationPrelimFunding : DevExpress.XtraReports.UI.XtraReport {
+    public partial class FloodMuniCongratulationPrelimFunding : DevExpress.XtraReports.UI.XtraReport {
         private void InitializeComponent() {
-            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Flood.MuniCongratulationPrelimFundin" +
-                    "g.repx");
+            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Flood.FloodMuniCongratulationPrelimF" +
+                    "unding.repx");
 
             // Controls
             this.TopMargin = reportInitializer.GetControl<DevExpress.XtraReports.UI.TopMarginBand>("TopMargin");

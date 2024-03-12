@@ -49,7 +49,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodCoreReviewReport"] = () => new FloodCoreReviewReport(),
             ["FloodCongratulationsLettertoHomeOwner"] = () => new FloodCongratulationsLettertoHomeOwner(),
             ["FloodGrantAgreement"] = () => new FloodGrantAgreement(),
-            ["FloodMuniCongratulationPrelimFunding"] = () => new MuniCongratulationPrelimFunding(),
+            ["FloodMuniCongratulationPrelimFunding"] = () => new FloodMuniCongratulationPrelimFunding(),
             ["FloodProjectAreaFundsExtensionRequest"] = () => new ProjectAreaFundsExtensionRequest(),
             ["FloodSoftCostReimbursementForm"] = () => new FloodSoftCostReimbursementForm(),
             ["FloodFastTrackSoftCostReimbusment"] = () => new FloodFastTrackSoftCostReimbusment(),
@@ -58,14 +58,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodFMCPreliminaryApprovalMain"] = () => new FloodFMCPreliminaryApprovalMain(),
             ["FloodFMCPreliminaryApprovalMATCHMultiple"] = () => new FloodFMCPreliminaryApprovalMATCHMultiple(),
             ["FloodFMCPreliminaryApprovalMATCHSingle"] = () => new FloodFMCPreliminaryApprovalMATCHSingle(),
-
-
-
-
             //Flood Mitigation General reports 
             ["FloodProgramSummaryReport"] = () => new FloodProgramSummaryReport(),
             ["FloodStatusReport"] = () => new FloodStatusReport(),
-            ["FloodMonthlyFundingSummaryReport"] = () => new FloodMonthlyFundingSummary(),
+            ["FloodMonthlyFundingSummary"] = () => new FloodMonthlyFundingSummary(),
             ["FloodMunicipalProgramSummaryReport"] = () => new MunicipalProgramSummary(),
             ["FloodCountyCostReport"] = () => new FloodCountyCostReport(),
             ["FloodExpirationReport"] = () => new FloodExpirationReport(),
