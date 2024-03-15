@@ -153,12 +153,12 @@
     </Item4>
     <Item5 Ref="81" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="24.666647">
       <GroupFields>
-        <Item1 Ref="82" FieldName="Name" />
+        <Item1 Ref="82" FieldName="ApplicationStatus" />
       </GroupFields>
       <Controls>
         <Item1 Ref="83" ControlType="XRLabel" Name="label17" Multiline="true" Text="label17" TextAlignment="MiddleLeft" SizeF="1244.00012,24.666647" LocationFloat="0,0" Font="Segoe UI Semilight, 14pt, style=Bold" BackColor="LightGray" Padding="2,2,0,0,100">
           <ExpressionBindings>
-            <Item1 Ref="84" EventName="BeforePrint" PropertyName="Text" Expression="[Name]" />
+            <Item1 Ref="84" EventName="BeforePrint" PropertyName="Text" Expression="[ApplicationStatus]" />
           </ExpressionBindings>
           <StylePriority Ref="85" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
         </Item1>

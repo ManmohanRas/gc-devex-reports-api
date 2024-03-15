@@ -49,7 +49,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodCoreReviewReport"] = () => new FloodCoreReviewReport(),
             ["FloodCongratulationsLettertoHomeOwner"] = () => new FloodCongratulationsLettertoHomeOwner(),
             ["FloodGrantAgreement"] = () => new FloodGrantAgreement(),
-            ["FloodMuniCongratulationPrelimFunding"] = () => new FloodMuniCongratulationPrelimFunding(),
             ["FloodProjectAreaFundsExtensionRequest"] = () => new ProjectAreaFundsExtensionRequest(),
             ["FloodSoftCostReimbursementForm"] = () => new FloodSoftCostReimbursementForm(),
             ["FloodFastTrackSoftCostReimbusment"] = () => new FloodFastTrackSoftCostReimbusment(),
@@ -58,6 +57,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodFMCPreliminaryApprovalMain"] = () => new FloodFMCPreliminaryApprovalMain(),
             ["FloodFMCPreliminaryApprovalMATCHMultiple"] = () => new FloodFMCPreliminaryApprovalMATCHMultiple(),
             ["FloodFMCPreliminaryApprovalMATCHSingle"] = () => new FloodFMCPreliminaryApprovalMATCHSingle(),
+            ["FASTTRACKFinalApprovalWITHCAF"] = () => new FASTTRACKFinalApprovalWITHCAF(),
+            ["FASTTRACKFinalApprovalNOCAFF"] = () => new FASTTRACKFinalApprovalNOCAF(),
+            ["FloodFastTrackFinalApproval"] = () => new FloodFastTrackFinalApproval(),
             //Flood Mitigation General reports 
             ["FloodProgramSummaryReport"] = () => new FloodProgramSummaryReport(),
             ["FloodStatusReport"] = () => new FloodStatusReport(),
@@ -66,7 +68,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodCountyCostReport"] = () => new FloodCountyCostReport(),
             ["FloodExpirationReport"] = () => new FloodExpirationReport(),
             ["FloodFlapSummary"] = () => new FloodFlapSummary(),
-            ["FloodAnnualAuditReport"] = () => new FloodAnnualAuditReport()
+            ["FloodAnnualAuditReport"] = () => new FloodAnnualAuditReport(),
+            ["FloodMuniCongratulationPrelimFunding"] = () => new FloodMuniCongratulationPrelimFunding()
         };
     }
 }
