@@ -69,7 +69,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodExpirationReport"] = () => new FloodExpirationReport(),
             ["FloodFlapSummary"] = () => new FloodFlapSummary(),
             ["FloodAnnualAuditReport"] = () => new FloodAnnualAuditReport(),
-            ["FloodMuniCongratulationPrelimFunding"] = () => new FloodMuniCongratulationPrelimFunding()
+            ["FloodMuniCongratulationPrelimFunding"] = () => new FloodMuniCongratulationPrelimFunding(),
+            ["FloodReleaseOfFunds"] = () => new FloodReleaseOfFunds(),
+            ["FloodReleaseOfFundsSCSingle"] = () => new FloodReleaseOfFundsSCSingle(),
+            ["FloodReleaseOfFundsSCMultiple"] = () => new FloodReleaseOfFundsSCMultiple()
         };
     }
 }

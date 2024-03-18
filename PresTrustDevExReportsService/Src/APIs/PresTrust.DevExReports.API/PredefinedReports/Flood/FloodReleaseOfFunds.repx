@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="ReleaseOfFunds" Margins="20, 20, 24, 24" PageWidth="850" PageHeight="1100" Version="22.1" DataMember="Flood_FloodApplication_1" DataSource="#Ref-0" Font="Arial, 9.75pt">
+  <Extensions>
+    <Item1 Ref="2" Key="VSReportExtInfo" Value=".repx" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="4" Visible="false" Description="applicationid" ValueInfo="0" Name="applicationid" Type="#Ref-3" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="5" ControlType="TopMarginBand" Name="TopMargin" HeightF="24" />
+    <Item2 Ref="6" ControlType="DetailBand" Name="Detail" Expanded="false" />
+    <Item3 Ref="7" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="24" />
+    <Item4 Ref="8" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="109.333328">
+      <Controls>
+        <Item1 Ref="9" ControlType="XRSubreport" Name="subreport2" SizeF="810,54.6666641" LocationFloat="0,54.6666641">
+          <ParameterBindings>
+            <Item1 Ref="11" ParameterName="applicationId" Parameter="#Ref-4" />
+          </ParameterBindings>
+          <ExpressionBindings>
+            <Item1 Ref="12" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([PamsPin]&gt;1,1 ,0 )" />
+          </ExpressionBindings>
+        </Item1>
+        <Item2 Ref="13" ControlType="XRSubreport" Name="subreport1" SizeF="810,54.6666641" LocationFloat="0,0">
+          <ParameterBindings>
+            <Item1 Ref="14" ParameterName="applicationId" Parameter="#Ref-4" />
+          </ParameterBindings>
+          <ExpressionBindings>
+            <Item1 Ref="15" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([PamsPin]=1,1 ,0 )" />
+          </ExpressionBindings>
+        </Item2>
+      </Controls>
+    </Item4>
+  </Bands>
+  <ParameterPanelLayoutItems>
+    <Item1 Ref="16" LayoutItemType="Parameter" Parameter="#Ref-4" />
+  </ParameterPanelLayoutItems>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJGbG9vZF9GbG9vZEFwcGxpY2F0aW9uXzEiPjxUYWJsZXM+PFRhYmxlIE5hbWU9IkZsb29kLkZsb29kQXBwbGljYXRpb24iIFg9IjMwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIyOTUiIC8+PFRhYmxlIE5hbWU9IkZsb29kLkZsb29kQXBwbGljYXRpb25QYXJjZWwiIFg9IjE4NSIgWT0iMzAiIFdpZHRoPSIxMjUiIEhlaWdodD0iMTk1IiAvPjxSZWxhdGlvbiBUeXBlPSJMZWZ0T3V0ZXIiIFBhcmVudD0iRmxvb2QuRmxvb2RBcHBsaWNhdGlvbiIgTmVzdGVkPSJGbG9vZC5GbG9vZEFwcGxpY2F0aW9uUGFyY2VsIj48S2V5Q29sdW1uIFBhcmVudD0iSWQiIE5lc3RlZD0iQXBwbGljYXRpb25JZCIgLz48L1JlbGF0aW9uPjwvVGFibGVzPjxDb2x1bW5zPjxDb2x1bW4gVGFibGU9IkZsb29kLkZsb29kQXBwbGljYXRpb24iIE5hbWU9IklkIiAvPjxDb2x1bW4gVGFibGU9IkZsb29kLkZsb29kQXBwbGljYXRpb25QYXJjZWwiIE5hbWU9IlBhbXNQaW4iIC8+PC9Db2x1bW5zPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMSI+PFZpZXcgTmFtZT0iRmxvb2RfRmxvb2RBcHBsaWNhdGlvbl8xIj48RmllbGQgTmFtZT0iSWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJQYW1zUGluIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v22.1" Ref="3" Content="System.Int16" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

@@ -26,6 +26,9 @@
     <None Remove="PredefinedReports\Flood\FloodMonthlyFundingSummary.repx" />
     <None Remove="PredefinedReports\Flood\FloodMuniCongratulationPrelimFunding.repx" />
     <None Remove="PredefinedReports\Flood\FloodProgramSummaryReport.repx" />
+    <None Remove="PredefinedReports\Flood\FloodReleaseOfFunds.repx" />
+    <None Remove="PredefinedReports\Flood\FloodReleaseOfFundsSCMultiple.repx" />
+    <None Remove="PredefinedReports\Flood\FloodReleaseOfFundsSCSingle.repx" />
     <None Remove="PredefinedReports\Flood\FloodSoftCostReimbursementForm.repx" />
     <None Remove="PredefinedReports\Flood\FloodStatusReport.repx" />
     <None Remove="PredefinedReports\Flood\GrantAgreement.repx" />
@@ -89,6 +92,9 @@
     <EmbeddedResource Include="PredefinedReports\Flood\FloodMonthlyFundingSummary.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodMuniCongratulationPrelimFunding.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodProgramSummaryReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodReleaseOfFunds.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodReleaseOfFundsSCMultiple.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodReleaseOfFundsSCSingle.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodSoftCostReimbursementForm.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodStatusReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\MunicipalProgramSummary.repx" />
@@ -261,6 +267,24 @@
     </Compile>
     <Compile Update="PredefinedReports\Flood\FloodProgramSummaryReport.Designer.cs">
       <DependentUpon>FloodProgramSummaryReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodReleaseOfFunds.cs">
+      <DependentUpon>FloodReleaseOfFunds.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodReleaseOfFunds.Designer.cs">
+      <DependentUpon>FloodReleaseOfFunds.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodReleaseOfFundsSCMultiple.cs">
+      <DependentUpon>FloodReleaseOfFundsSCMultiple.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodReleaseOfFundsSCMultiple.Designer.cs">
+      <DependentUpon>FloodReleaseOfFundsSCMultiple.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodReleaseOfFundsSCSingle.cs">
+      <DependentUpon>FloodReleaseOfFundsSCSingle.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodReleaseOfFundsSCSingle.Designer.cs">
+      <DependentUpon>FloodReleaseOfFundsSCSingle.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Flood\FloodSoftCostReimbursementForm.cs">
       <DependentUpon>FloodSoftCostReimbursementForm.repx</DependentUpon>
