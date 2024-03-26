@@ -23,6 +23,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.DetailReport1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport1");
             this.DetailReport2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport2");
             this.DetailReport3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport3");
+            this.line2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line2");
             this.pageBreak3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageBreak>("pageBreak3");
             this.richText3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText3");
             this.pageBreak2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageBreak>("pageBreak2");
@@ -116,6 +117,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport1;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport2;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport3;
+        private DevExpress.XtraReports.UI.XRLine line2;
         private DevExpress.XtraReports.UI.XRPageBreak pageBreak3;
         private DevExpress.XtraReports.UI.XRRichText richText3;
         private DevExpress.XtraReports.UI.XRPageBreak pageBreak2;

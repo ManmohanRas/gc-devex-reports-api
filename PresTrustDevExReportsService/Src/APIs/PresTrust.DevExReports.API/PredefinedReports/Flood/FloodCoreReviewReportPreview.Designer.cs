@@ -10,9 +10,10 @@
 
 namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
     
-    public partial class FloodCoreReviewReport : DevExpress.XtraReports.UI.XtraReport {
+    public partial class FloodCoreReviewReportPreview : DevExpress.XtraReports.UI.XtraReport {
         private void InitializeComponent() {
-            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Flood.FloodCoreReviewReport.repx");
+            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Flood.FloodCoreReviewReportPreview.r" +
+                    "epx");
 
             // Controls
             this.TopMargin = reportInitializer.GetControl<DevExpress.XtraReports.UI.TopMarginBand>("TopMargin");
@@ -114,7 +115,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.tableCell62 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell62");
 
             // Parameters
-            this.applicationid = reportInitializer.GetParameter("applicationid");
+            this.ApplicationTitle = reportInitializer.GetParameter("ApplicationTitle");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
@@ -221,6 +222,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRTableCell tableCell61;
         private DevExpress.XtraReports.UI.XRTableCell tableCell62;
         private DevExpress.XtraReports.UI.CalculatedField FEMAStatus;
-        private DevExpress.XtraReports.Parameters.Parameter applicationid;
+        private DevExpress.XtraReports.Parameters.Parameter ApplicationTitle;
     }
 }

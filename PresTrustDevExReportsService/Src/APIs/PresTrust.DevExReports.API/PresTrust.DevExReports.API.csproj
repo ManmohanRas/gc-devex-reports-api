@@ -11,7 +11,9 @@
     <None Remove="PredefinedReports\Flood\FloodAnnualAuditReport.repx" />
     <None Remove="PredefinedReports\Flood\FloodCongratulationsLettertoHomeOwner.repx" />
     <None Remove="PredefinedReports\Flood\FloodCoreApplicationReport.repx" />
+    <None Remove="PredefinedReports\Flood\FloodCoreApplicationReportGeneral.repx" />
     <None Remove="PredefinedReports\Flood\FloodCoreReviewReport.repx" />
+    <None Remove="PredefinedReports\Flood\FloodCoreReviewReportPreview.repx" />
     <None Remove="PredefinedReports\Flood\FloodCountyCostReport.repx" />
     <None Remove="PredefinedReports\Flood\FloodExpirationReport.repx" />
     <None Remove="PredefinedReports\Flood\FloodFastTrackFinalApproval.repx" />
@@ -77,7 +79,9 @@
     <EmbeddedResource Include="PredefinedReports\Flood\FloodAnnualAuditReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodCongratulationsLettertoHomeOwner.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodCoreApplicationReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodCoreApplicationReportGeneral.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodCoreReviewReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Flood\FloodCoreReviewReportPreview.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodCountyCostReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodExpirationReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodFastTrackFinalApproval.repx" />
@@ -178,11 +182,23 @@
     <Compile Update="PredefinedReports\Flood\FloodCoreApplicationReport.Designer.cs">
       <DependentUpon>FloodCoreApplicationReport.repx</DependentUpon>
     </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodCoreApplicationReportGeneral.cs">
+      <DependentUpon>FloodCoreApplicationReportGeneral.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodCoreApplicationReportGeneral.Designer.cs">
+      <DependentUpon>FloodCoreApplicationReportGeneral.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Flood\FloodCoreReviewReport.cs">
       <DependentUpon>FloodCoreReviewReport.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Flood\FloodCoreReviewReport.Designer.cs">
       <DependentUpon>FloodCoreReviewReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodCoreReviewReportPreview.cs">
+      <DependentUpon>FloodCoreReviewReportPreview.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Flood\FloodCoreReviewReportPreview.Designer.cs">
+      <DependentUpon>FloodCoreReviewReportPreview.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Flood\FloodCountyCostReport.cs">
       <DependentUpon>FloodCountyCostReport.repx</DependentUpon>

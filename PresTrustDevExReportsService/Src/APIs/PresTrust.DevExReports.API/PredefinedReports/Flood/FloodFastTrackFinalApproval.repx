@@ -11,31 +11,29 @@
     <Item1 Ref="7" ControlType="TopMarginBand" Name="TopMargin" HeightF="24" />
     <Item2 Ref="8" ControlType="DetailBand" Name="Detail">
       <Controls>
-        <Item1 Ref="9" ControlType="XRSubreport" Name="subreport2" ReportSourceUrl="D:\Right Angle Solution\Flood Reports\FASTTRACKFinalApprovalWITHCAF.repx" SizeF="800.000244,32.9999771" LocationFloat="10.0000067,67.00001">
+        <Item1 Ref="9" ControlType="XRSubreport" Name="subreport2" SizeF="810,44.24998" LocationFloat="0,55.74999">
           <ParameterBindings>
-            <Item1 Ref="11" ParameterName="applicationId" Parameter="#Ref-4" />
-            <Item2 Ref="12" ParameterName="pampsPin" Parameter="#Ref-6" />
+            <Item1 Ref="11" ParameterName="applicationid" Parameter="#Ref-4" />
           </ParameterBindings>
           <ExpressionBindings>
-            <Item1 Ref="13" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([CAFNumber] IS NOT NULL,1 ,0 )&#xA;" />
+            <Item1 Ref="12" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Flood.FloodApplicationType_Title]='CORE' AND [Count_PamsPin]&gt;1,1 ,0 )" />
           </ExpressionBindings>
         </Item1>
-        <Item2 Ref="14" ControlType="XRSubreport" Name="subreport1" ReportSourceUrl="D:\Right Angle Solution\Flood Reports\FASTTRACKFinalApprovalNOCAF.repx" SizeF="800.0001,34.66667" LocationFloat="10.0000219,10.0000067">
+        <Item2 Ref="13" ControlType="XRSubreport" Name="subreport1" SizeF="810,45.2916641" LocationFloat="0,0">
           <ParameterBindings>
-            <Item1 Ref="15" ParameterName="applicationId" Parameter="#Ref-4" />
-            <Item2 Ref="16" ParameterName="pampsPin" Parameter="#Ref-6" />
+            <Item1 Ref="14" ParameterName="applicationid" Parameter="#Ref-4" />
           </ParameterBindings>
           <ExpressionBindings>
-            <Item1 Ref="17" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([CAFNumber] IS NULL,1 ,0 )" />
+            <Item1 Ref="15" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Flood.FloodApplicationType_Title]='CORE' AND [Count_PamsPin]=1,1 ,0 )" />
           </ExpressionBindings>
         </Item2>
       </Controls>
     </Item2>
-    <Item3 Ref="18" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="25" />
+    <Item3 Ref="16" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="25" />
   </Bands>
   <ParameterPanelLayoutItems>
-    <Item1 Ref="19" LayoutItemType="Parameter" Parameter="#Ref-4" />
-    <Item2 Ref="20" LayoutItemType="Parameter" Parameter="#Ref-6" />
+    <Item1 Ref="17" LayoutItemType="Parameter" Parameter="#Ref-4" />
+    <Item2 Ref="18" LayoutItemType="Parameter" Parameter="#Ref-6" />
   </ParameterPanelLayoutItems>
   <ComponentStorage>
     <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJGbG9vZF9GbG9vZEFwcGxpY2F0aW9uXzEiPjxUYWJsZXM+PFRhYmxlIE5hbWU9IkZsb29kLkZsb29kQXBwbGljYXRpb24iIFg9IjMwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIyOTUiIC8+PFRhYmxlIE5hbWU9IkZsb29kLkZsb29kQXBwbGljYXRpb25QYXltZW50IiBYPSIxODUiIFk9IjMwIiBXaWR0aD0iMTI1IiBIZWlnaHQ9IjE5NSIgLz48VGFibGUgTmFtZT0iRmxvb2QuRmxvb2RBcHBsaWNhdGlvblBhcmNlbCIgWD0iMzQwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIxOTUiIC8+PFJlbGF0aW9uIFR5cGU9IkxlZnRPdXRlciIgUGFyZW50PSJGbG9vZC5GbG9vZEFwcGxpY2F0aW9uIiBOZXN0ZWQ9IkZsb29kLkZsb29kQXBwbGljYXRpb25QYXltZW50Ij48S2V5Q29sdW1uIFBhcmVudD0iSWQiIE5lc3RlZD0iQXBwbGljYXRpb25JZCIgLz48L1JlbGF0aW9uPjxSZWxhdGlvbiBUeXBlPSJMZWZ0T3V0ZXIiIFBhcmVudD0iRmxvb2QuRmxvb2RBcHBsaWNhdGlvbiIgTmVzdGVkPSJGbG9vZC5GbG9vZEFwcGxpY2F0aW9uUGFyY2VsIj48S2V5Q29sdW1uIFBhcmVudD0iSWQiIE5lc3RlZD0iQXBwbGljYXRpb25JZCIgLz48L1JlbGF0aW9uPjwvVGFibGVzPjxDb2x1bW5zPjxDb2x1bW4gVGFibGU9IkZsb29kLkZsb29kQXBwbGljYXRpb24iIE5hbWU9IlRpdGxlIiAvPjxDb2x1bW4gVGFibGU9IkZsb29kLkZsb29kQXBwbGljYXRpb25QYXltZW50IiBOYW1lPSJDQUZOdW1iZXIiIC8+PENvbHVtbiBUYWJsZT0iRmxvb2QuRmxvb2RBcHBsaWNhdGlvblBhcmNlbCIgTmFtZT0iUGFtc1BpbiIgLz48Q29sdW1uIFRhYmxlPSJGbG9vZC5GbG9vZEFwcGxpY2F0aW9uIiBOYW1lPSJJZCIgLz48L0NvbHVtbnM+PC9RdWVyeT48UmVzdWx0U2NoZW1hPjxEYXRhU2V0IE5hbWU9InNxbERhdGFTb3VyY2UxIj48VmlldyBOYW1lPSJGbG9vZF9GbG9vZEFwcGxpY2F0aW9uXzEiPjxGaWVsZCBOYW1lPSJUaXRsZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDQUZOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUGFtc1BpbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJZCIgVHlwZT0iSW50MzIiIC8+PC9WaWV3PjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
