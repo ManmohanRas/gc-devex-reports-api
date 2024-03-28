@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="FMCMain" Margins="20, 20, 24, 25" PageWidth="850" PageHeight="1100" Version="22.1" FilterString="[Id] = ?applicationId And [PamsPin] = ?pamsPin" DataMember="Flood_FloodApplication_1" DataSource="#Ref-0" Font="Arial, 9.75pt">
+<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="FMCMain" Margins="20, 20, 24, 25" PageWidth="850" PageHeight="1100" Version="22.1" FilterString="[Id] = ?applicationid And [PamsPin] = ?pamsPin" DataMember="Flood_FloodApplication_1" DataSource="#Ref-0" Font="Arial, 9.75pt">
   <Extensions>
     <Item1 Ref="2" Key="VSReportExtInfo" Value=".repx" />
   </Extensions>
   <Parameters>
-    <Item1 Ref="4" Visible="false" Description="applicationId" ValueInfo="0" Name="applicationId" Type="#Ref-3" />
-    <Item2 Ref="6" Description="pamsPin" Name="pamsPin" />
+    <Item1 Ref="4" Visible="false" Description="applicationid" ValueInfo="236" Name="applicationid" Type="#Ref-3" />
+    <Item2 Ref="6" Visible="false" Description="pamsPin" ValueInfo="1401_10_4.01" Name="pamsPin" />
   </Parameters>
   <Bands>
     <Item1 Ref="7" ControlType="TopMarginBand" Name="TopMargin" HeightF="24" />
@@ -14,29 +14,31 @@
         <Item1 Ref="9" ControlType="XRSubreport" Name="subreport2" SizeF="810,44.24998" LocationFloat="0,55.74999">
           <ParameterBindings>
             <Item1 Ref="11" ParameterName="applicationid" Parameter="#Ref-4" />
+            <Item2 Ref="12" ParameterName="pamsPin" Parameter="#Ref-6" DataMember="Flood_FloodApplication_1.PamsPin" />
           </ParameterBindings>
           <ExpressionBindings>
-            <Item1 Ref="12" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Flood.FloodApplicationType_Title]='CORE' AND [Count_PamsPin]&gt;1,1 ,0 )" />
+            <Item1 Ref="13" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([CAFNumber] is not null,1 ,0 )" />
           </ExpressionBindings>
         </Item1>
-        <Item2 Ref="13" ControlType="XRSubreport" Name="subreport1" SizeF="810,45.2916641" LocationFloat="0,0">
+        <Item2 Ref="14" ControlType="XRSubreport" Name="subreport1" SizeF="810,45.2916641" LocationFloat="0,0">
           <ParameterBindings>
-            <Item1 Ref="14" ParameterName="applicationid" Parameter="#Ref-4" />
+            <Item1 Ref="15" ParameterName="applicationid" Parameter="#Ref-4" />
+            <Item2 Ref="16" ParameterName="pamsPin" Parameter="#Ref-6" DataMember="Flood_FloodApplication_1.PamsPin" />
           </ParameterBindings>
           <ExpressionBindings>
-            <Item1 Ref="15" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Flood.FloodApplicationType_Title]='CORE' AND [Count_PamsPin]=1,1 ,0 )" />
+            <Item1 Ref="17" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([CAFNumber] is null,1 ,0 )" />
           </ExpressionBindings>
         </Item2>
       </Controls>
     </Item2>
-    <Item3 Ref="16" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="25" />
+    <Item3 Ref="18" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="25" />
   </Bands>
   <ParameterPanelLayoutItems>
-    <Item1 Ref="17" LayoutItemType="Parameter" Parameter="#Ref-4" />
-    <Item2 Ref="18" LayoutItemType="Parameter" Parameter="#Ref-6" />
+    <Item1 Ref="19" LayoutItemType="Parameter" Parameter="#Ref-4" />
+    <Item2 Ref="20" LayoutItemType="Parameter" Parameter="#Ref-6" />
   </ParameterPanelLayoutItems>
   <ComponentStorage>
-    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJGbG9vZF9GbG9vZEFwcGxpY2F0aW9uXzEiPjxUYWJsZXM+PFRhYmxlIE5hbWU9IkZsb29kLkZsb29kQXBwbGljYXRpb24iIFg9IjMwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIyOTUiIC8+PFRhYmxlIE5hbWU9IkZsb29kLkZsb29kQXBwbGljYXRpb25QYXltZW50IiBYPSIxODUiIFk9IjMwIiBXaWR0aD0iMTI1IiBIZWlnaHQ9IjE5NSIgLz48VGFibGUgTmFtZT0iRmxvb2QuRmxvb2RBcHBsaWNhdGlvblBhcmNlbCIgWD0iMzQwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIxOTUiIC8+PFJlbGF0aW9uIFR5cGU9IkxlZnRPdXRlciIgUGFyZW50PSJGbG9vZC5GbG9vZEFwcGxpY2F0aW9uIiBOZXN0ZWQ9IkZsb29kLkZsb29kQXBwbGljYXRpb25QYXltZW50Ij48S2V5Q29sdW1uIFBhcmVudD0iSWQiIE5lc3RlZD0iQXBwbGljYXRpb25JZCIgLz48L1JlbGF0aW9uPjxSZWxhdGlvbiBUeXBlPSJMZWZ0T3V0ZXIiIFBhcmVudD0iRmxvb2QuRmxvb2RBcHBsaWNhdGlvbiIgTmVzdGVkPSJGbG9vZC5GbG9vZEFwcGxpY2F0aW9uUGFyY2VsIj48S2V5Q29sdW1uIFBhcmVudD0iSWQiIE5lc3RlZD0iQXBwbGljYXRpb25JZCIgLz48L1JlbGF0aW9uPjwvVGFibGVzPjxDb2x1bW5zPjxDb2x1bW4gVGFibGU9IkZsb29kLkZsb29kQXBwbGljYXRpb24iIE5hbWU9IlRpdGxlIiAvPjxDb2x1bW4gVGFibGU9IkZsb29kLkZsb29kQXBwbGljYXRpb25QYXltZW50IiBOYW1lPSJDQUZOdW1iZXIiIC8+PENvbHVtbiBUYWJsZT0iRmxvb2QuRmxvb2RBcHBsaWNhdGlvblBhcmNlbCIgTmFtZT0iUGFtc1BpbiIgLz48Q29sdW1uIFRhYmxlPSJGbG9vZC5GbG9vZEFwcGxpY2F0aW9uIiBOYW1lPSJJZCIgLz48L0NvbHVtbnM+PC9RdWVyeT48UmVzdWx0U2NoZW1hPjxEYXRhU2V0IE5hbWU9InNxbERhdGFTb3VyY2UxIj48VmlldyBOYW1lPSJGbG9vZF9GbG9vZEFwcGxpY2F0aW9uXzEiPjxGaWVsZCBOYW1lPSJUaXRsZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDQUZOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUGFtc1BpbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJZCIgVHlwZT0iSW50MzIiIC8+PC9WaWV3PjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJGbG9vZF9GbG9vZEFwcGxpY2F0aW9uXzEiPjxUYWJsZXM+PFRhYmxlIE5hbWU9IkZsb29kLkZsb29kQXBwbGljYXRpb24iIFg9IjMwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIyODMiIC8+PFRhYmxlIE5hbWU9IkZsb29kLkZsb29kQXBwbGljYXRpb25QYXltZW50IiBYPSIxODUiIFk9IjMwIiBXaWR0aD0iMTI1IiBIZWlnaHQ9IjE4MyIgLz48VGFibGUgTmFtZT0iRmxvb2QuRmxvb2RBcHBsaWNhdGlvblBhcmNlbCIgWD0iMzQwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIxODMiIC8+PFJlbGF0aW9uIFR5cGU9IkxlZnRPdXRlciIgUGFyZW50PSJGbG9vZC5GbG9vZEFwcGxpY2F0aW9uIiBOZXN0ZWQ9IkZsb29kLkZsb29kQXBwbGljYXRpb25QYXltZW50Ij48S2V5Q29sdW1uIFBhcmVudD0iSWQiIE5lc3RlZD0iQXBwbGljYXRpb25JZCIgLz48L1JlbGF0aW9uPjxSZWxhdGlvbiBUeXBlPSJMZWZ0T3V0ZXIiIFBhcmVudD0iRmxvb2QuRmxvb2RBcHBsaWNhdGlvbiIgTmVzdGVkPSJGbG9vZC5GbG9vZEFwcGxpY2F0aW9uUGFyY2VsIj48S2V5Q29sdW1uIFBhcmVudD0iSWQiIE5lc3RlZD0iQXBwbGljYXRpb25JZCIgLz48L1JlbGF0aW9uPjwvVGFibGVzPjxDb2x1bW5zPjxDb2x1bW4gVGFibGU9IkZsb29kLkZsb29kQXBwbGljYXRpb24iIE5hbWU9IlRpdGxlIiAvPjxDb2x1bW4gVGFibGU9IkZsb29kLkZsb29kQXBwbGljYXRpb25QYXltZW50IiBOYW1lPSJDQUZOdW1iZXIiIC8+PENvbHVtbiBUYWJsZT0iRmxvb2QuRmxvb2RBcHBsaWNhdGlvblBhcmNlbCIgTmFtZT0iUGFtc1BpbiIgLz48Q29sdW1uIFRhYmxlPSJGbG9vZC5GbG9vZEFwcGxpY2F0aW9uIiBOYW1lPSJJZCIgLz48L0NvbHVtbnM+PC9RdWVyeT48UmVzdWx0U2NoZW1hPjxEYXRhU2V0IE5hbWU9InNxbERhdGFTb3VyY2UxIj48VmlldyBOYW1lPSJGbG9vZF9GbG9vZEFwcGxpY2F0aW9uXzEiPjxGaWVsZCBOYW1lPSJUaXRsZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDQUZOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUGFtc1BpbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJZCIgVHlwZT0iSW50MzIiIC8+PC9WaWV3PjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
   </ComponentStorage>
   <ObjectStorage>
     <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v22.1" Ref="3" Content="System.Int16" Type="System.Type" />

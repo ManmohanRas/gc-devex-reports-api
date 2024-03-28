@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="SoftCostReimbursement" Margins="20, 20, 33, 24" PageWidth="850" PageHeight="1100" Version="22.1" FilterString="[Id] = ?applicationId And [PamsPin] = ?pamsPin" DataMember="Flood_FloodApplication_1" DataSource="#Ref-0" Font="Arial, 9.75pt">
+<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="SoftCostReimbursement" Margins="20, 20, 33, 24" PageWidth="850" PageHeight="1100" Version="22.1" FilterString="[Id] = ?applicationid And [PamsPin] = ?pamsPin" DataMember="Flood_FloodApplication_1" DataSource="#Ref-0" Font="Arial, 9.75pt">
   <Extensions>
     <Item1 Ref="2" Key="VSReportExtInfo" Value=".repx" />
   </Extensions>
   <Parameters>
-    <Item1 Ref="4" Visible="false" Description="applicationId" AllowNull="true" Name="applicationId" Type="#Ref-3" />
+    <Item1 Ref="4" Visible="false" Description="applicationid" ValueInfo="0" Name="applicationid" Type="#Ref-3" />
     <Item2 Ref="6" Visible="false" Description="pamsPin" Name="pamsPin" />
   </Parameters>
   <CalculatedFields>
@@ -80,7 +80,7 @@
         </Item1>
       </Bands>
     </Item6>
-    <Item7 Ref="42" ControlType="DetailReportBand" Name="DetailReport2" Level="2" FilterString="[Id] = ?applicationid And [PamsPin] = [PamsPin]" DataMember="Flood_FloodApplication_1" DataSource="#Ref-0">
+    <Item7 Ref="42" ControlType="DetailReportBand" Name="DetailReport2" Level="2" FilterString="[Id] = ?applicationid And [PamsPin] = ?pamsPin" DataMember="Flood_FloodApplication_1" DataSource="#Ref-0">
       <Bands>
         <Item1 Ref="43" ControlType="DetailBand" Name="Detail3" Expanded="false" HeightF="178" />
         <Item2 Ref="44" ControlType="ReportFooterBand" Name="ReportFooter" HeightF="176">

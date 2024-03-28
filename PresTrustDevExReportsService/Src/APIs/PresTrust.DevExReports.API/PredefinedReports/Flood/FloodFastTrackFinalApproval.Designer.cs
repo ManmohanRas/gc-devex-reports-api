@@ -19,13 +19,13 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.TopMargin = reportInitializer.GetControl<DevExpress.XtraReports.UI.TopMarginBand>("TopMargin");
             this.Detail = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail");
             this.BottomMargin = reportInitializer.GetControl<DevExpress.XtraReports.UI.BottomMarginBand>("BottomMargin");
-            this.subreport1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRSubreport>("subreport1");
-            this.subreport1.ReportSource = new PresTrust.DevExReports.API.PredefinedReports.Flood.FASTTRACKFinalApprovalNOCAF();
             this.subreport2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRSubreport>("subreport2");
             this.subreport2.ReportSource = new PresTrust.DevExReports.API.PredefinedReports.Flood.FASTTRACKFinalApprovalWITHCAF();
+            this.subreport1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRSubreport>("subreport1");
+            this.subreport1.ReportSource = new PresTrust.DevExReports.API.PredefinedReports.Flood.FASTTRACKFinalApprovalNOCAF();
 
             // Parameters
-            this.applicationId = reportInitializer.GetParameter("applicationId");
+            this.applicationid = reportInitializer.GetParameter("applicationid");
             this.pamsPin = reportInitializer.GetParameter("pamsPin");
 
             // Data Sources
@@ -34,10 +34,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
+        private DevExpress.XtraReports.UI.XRSubreport subreport2;
         private DevExpress.XtraReports.UI.XRSubreport subreport1;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.XtraReports.Parameters.Parameter applicationId;
+        private DevExpress.XtraReports.Parameters.Parameter applicationid;
         private DevExpress.XtraReports.Parameters.Parameter pamsPin;
-        private DevExpress.XtraReports.UI.XRSubreport subreport2;
     }
 }

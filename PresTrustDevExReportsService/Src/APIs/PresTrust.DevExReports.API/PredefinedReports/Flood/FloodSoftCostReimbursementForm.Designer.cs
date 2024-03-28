@@ -71,7 +71,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.tableCell19 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell19");
 
             // Parameters
-            this.applicationId = reportInitializer.GetParameter("applicationId");
+            this.applicationid = reportInitializer.GetParameter("applicationid");
             this.pamsPin = reportInitializer.GetParameter("pamsPin");
 
             // Data Sources
@@ -135,7 +135,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRTableCell tableCell19;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.CalculatedField Total;
-        private DevExpress.XtraReports.Parameters.Parameter applicationId;
+        private DevExpress.XtraReports.Parameters.Parameter applicationid;
         private DevExpress.XtraReports.Parameters.Parameter pamsPin;
     }
 }

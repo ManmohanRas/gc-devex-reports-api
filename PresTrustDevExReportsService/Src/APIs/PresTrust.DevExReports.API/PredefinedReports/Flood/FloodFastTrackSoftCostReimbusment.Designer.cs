@@ -48,7 +48,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.richText4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText4");
 
             // Parameters
-            this.applicationId = reportInitializer.GetParameter("applicationId");
+            this.applicationid = reportInitializer.GetParameter("applicationid");
             this.pamsPin = reportInitializer.GetParameter("pamsPin");
 
             // Data Sources
@@ -97,7 +97,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.CalculatedField AgencyAddress;
         private DevExpress.XtraReports.UI.CalculatedField Comma;
         private DevExpress.XtraReports.UI.CalculatedField TypeCondition;
-        private DevExpress.XtraReports.Parameters.Parameter applicationId;
+        private DevExpress.XtraReports.Parameters.Parameter applicationid;
         private DevExpress.XtraReports.Parameters.Parameter pamsPin;
     }
 }
