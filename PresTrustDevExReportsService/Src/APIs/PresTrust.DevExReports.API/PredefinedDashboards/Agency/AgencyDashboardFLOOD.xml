@@ -1,268 +1,73 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard CurrencyCulture="chr-Cher-US">
   <Title Text="" Alignment="Left" />
   <DataSources>
-    <SqlDataSource Name="rept_usp_get_hist_annual_summary_report" ComponentName="sqlDataSource1">
+    <SqlDataSource Name="rept_usp_get_flood_annual_summary_report" ComponentName="sqlDataSource1">
       <Connection Name="PresTrustDbConnectionStrings" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="Core_View_AgencyEntities_HIST">
-        <Tables>
-          <Table Name="Core.View_AgencyEntities_HIST" />
-        </Tables>
-        <Columns>
-          <Column Table="Core.View_AgencyEntities_HIST" Name="AgencyId" />
-          <Column Table="Core.View_AgencyEntities_HIST" Name="AgencyName" />
-        </Columns>
+      <Query Type="CustomSqlQuery" Name="Core_View_AgencyEntities_FLOOD">
+        <Sql>select "Core.View_AgencyEntities_FLOOD"."AgencyId","Core.View_AgencyEntities_FLOOD"."AgencyName" from "Core"."View_AgencyEntities_FLOOD" "Core.View_AgencyEntities_FLOOD"</Sql>
       </Query>
-      <Query Type="StoredProcQuery" Name="rept_usp_get_hist_annual_summary_report">
-        <ProcName>rept.usp_get_hist_annual_summary_report</ProcName>
-      </Query>
-      <Query Type="StoredProcQuery" Name="rept_usp_get_level2_hist_annual_summary_report">
-        <ProcName>rept.usp_get_level2_hist_annual_summary_report</ProcName>
-      </Query>
-      <Query Type="StoredProcQuery" Name="rept_usp_get_Level3_hist_annual_summary_report">
-        <ProcName>rept.usp_get_Level3_hist_annual_summary_report</ProcName>
+      <Query Type="StoredProcQuery" Name="rept_usp_get_flood_annual_summary_report">
+        <ProcName>rept.usp_get_flood_annual_summary_report</ProcName>
       </Query>
       <ConnectionOptions CloseConnection="true" />
-      <CalculatedFields>
-        <CalculatedField Name="ApprovedApplicationsL2" Expression="Sum([CompletedApplications])+Sum([ApprovedApplications])+Sum([GrantExpiredApplications])+Sum([EasementExpiredApplications])+Sum([DeniedApplications])" DataType="Auto" DataMember="rept_usp_get_level2_hist_annual_summary_report" />
-        <CalculatedField Name="HighestAwardedApp" Expression="filter(Max([HighestAwardedApplication]), [HighestAwardedAmount] = aggr(Max([HighestAwardedAmount]),[FundingYear]))" DataType="Auto" DataMember="rept_usp_get_Level3_hist_annual_summary_report" />
-        <CalculatedField Name="ApprovedApplicationL2" Expression="Sum([CompletedApplications])+Sum([ApprovedApplications])+Sum([GrantExpiredApplications])+Sum([EasementExpiredApplications])+Sum([DeniedApplications])" DataType="Auto" DataMember="rept_usp_get_Level3_hist_annual_summary_report" />
-      </CalculatedFields>
     </SqlDataSource>
+    <FederationDataSource Name="Federated Data Source 1" ComponentName="federationDataSource1">
+      <Sources>
+        <Source Name="rept_usp_get_flood_annual_summary_report_rept_usp_get_flood_annual_summary_report">
+          <DataSource>sqlDataSource1</DataSource>
+          <DataMember>rept_usp_get_flood_annual_summary_report</DataMember>
+        </Source>
+        <Source Name="rept_usp_get_flood_annual_summary_report_Core_View_AgencyEntities_FLOOD">
+          <DataSource>sqlDataSource1</DataSource>
+          <DataMember>Core_View_AgencyEntities_FLOOD</DataMember>
+        </Source>
+      </Sources>
+      <Queries>
+        <Query Alias="rept_usp_get_flood_annual_summary_report" QueryType="SelectNode">
+          <Root Alias="rept_usp_get_flood_annual_summary_report" QueryType="SourceNode" SourceName="rept_usp_get_flood_annual_summary_report_rept_usp_get_flood_annual_summary_report" />
+          <SubNodes>
+            <JoinElement Condition="[Core_View_AgencyEntities_FLOOD.AgencyId] = [rept_usp_get_flood_annual_summary_report.AgencyId]">
+              <Query Alias="Core_View_AgencyEntities_FLOOD" QueryType="SourceNode" SourceName="rept_usp_get_flood_annual_summary_report_Core_View_AgencyEntities_FLOOD" />
+            </JoinElement>
+          </SubNodes>
+          <Expressions>
+            <Expression ExpressionType="SelectAllNodeColumnsExpression" NodeAlias="Core_View_AgencyEntities_FLOOD" />
+            <Expression ExpressionType="SelectColumnExpression" Name="AgencyId" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="CountyExpenses" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="ExpiringWithInAYear" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="FundingYear" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="FundsEncumbered" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="FundsReimbursed" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="FundsSpent" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="HardCosts" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_OfHomes" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_Pending" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_Preserved" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_PropertyExpired" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_PropertyGrantExpired" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_Rejected" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_Withdrawn" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="PA_Active" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="PA_Closed" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="PA_Rejected" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="PA_Submitted" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="PA_Withdrawn" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="SoftCosts" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="TotalAllocated" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="AgencyId" Alias="Core_View_AgencyEntities_FLOOD_AgencyId" NodeAlias="Core_View_AgencyEntities_FLOOD" />
+            <Expression ExpressionType="SelectColumnExpression" Name="AgencyName" NodeAlias="Core_View_AgencyEntities_FLOOD" />
+          </Expressions>
+        </Query>
+      </Queries>
+    </FederationDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem4" Name="Year Vs Construction / Non-Construction" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_hist_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
-      <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
-      <InteractivityOptions IsDrillDownEnabled="true" />
+    <TextBox ComponentName="textBoxDashboardItem1" Name="Active Project Areas Vs Expiring Project Areas" DataSource="sqlDataSource1" DataMember="rept_usp_get_flood_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
       <DataItems>
-        <Dimension DataMember="FundingYear" IsDiscreteScale="true" DefaultId="DataItem0">
-          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
-        </Dimension>
-        <Measure DataMember="ConstructionApplications" DefaultId="DataItem1" />
-        <Measure DataMember="NonConstructionApplications" DefaultId="DataItem2" />
+        <Measure DataMember="PA_Active" DefaultId="DataItem0" />
+        <Measure DataMember="ExpiringWithInAYear" DefaultId="DataItem1" />
       </DataItems>
-      <Arguments>
-        <Argument DefaultId="DataItem0" />
-      </Arguments>
-      <ColorScheme>
-        <Entry DataSource="dashboardExcelDataSource5" Color="-2780010">
-          <MeasureKey>
-            <Definition DataMember="Non-Construction" />
-          </MeasureKey>
-        </Entry>
-      </ColorScheme>
-      <Panes>
-        <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" AlwaysShowZeroLevel="false" LogarithmicBase="Base2" />
-          <Series>
-            <Simple Name="Construction" SeriesType="Line">
-              <Value DefaultId="DataItem1" />
-            </Simple>
-            <Simple Name="Non-Construction" SeriesType="Line">
-              <Value DefaultId="DataItem2" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-    </Chart>
-    <Chart ComponentName="chartDashboardItem1" Name="Funds Available Vs Funds Requested" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_hist_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
-      <InteractivityOptions IsDrillDownEnabled="true" />
-      <DataItems>
-        <Dimension DataMember="FundingYear" IsDiscreteScale="true" DefaultId="DataItem0">
-          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
-        </Dimension>
-        <Measure DataMember="FundsAvailable" SummaryType="Min" DefaultId="DataItem2" />
-        <Measure DataMember="TotalFundsRequested" DefaultId="DataItem3" />
-      </DataItems>
-      <Arguments>
-        <Argument DefaultId="DataItem0" />
-      </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" AlwaysShowZeroLevel="false" />
-          <Series>
-            <Simple Name="FundsAvailable" SeriesType="Line">
-              <Value DefaultId="DataItem2" />
-            </Simple>
-            <Simple Name="TotalFundsRequested" SeriesType="Line">
-              <Value DefaultId="DataItem3" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-    </Chart>
-    <Grid ComponentName="gridDashboardItem2" Name="" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_Level3_hist_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
-      <DataItems>
-        <Dimension DataMember="FundingYear" DefaultId="DataItem0">
-          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
-        </Dimension>
-        <Measure DataMember="TotalFundsRequested" DefaultId="DataItem7">
-          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
-        </Measure>
-        <Measure DataMember="TotalFundsAwarded" DefaultId="DataItem10">
-          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
-        </Measure>
-        <Measure DataMember="AcquisitionFunds" DefaultId="DataItem12">
-          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
-        </Measure>
-        <Measure DataMember="PlanningDesignFunds" DefaultId="DataItem13">
-          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
-        </Measure>
-        <Measure DataMember="GrantExpiredApplications" DefaultId="DataItem14" />
-        <Measure DataMember="FundsDistributed" DefaultId="DataItem15">
-          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
-        </Measure>
-        <Measure DataMember="HighestAwardedApp" SummaryType="Count" DefaultId="DataItem16" />
-        <Measure DataMember="ConstructionFunds" DefaultId="DataItem9">
-          <NumericFormat FormatType="Currency" Precision="0" Unit="Ones" IncludeGroupSeparator="true" CurrencyCultureName="chr-Cher-US" />
-        </Measure>
-        <Measure DataMember="Applications" DefaultId="DataItem1" />
-        <Measure DataMember="ApprovedApplications" DefaultId="DataItem2" />
-        <Measure DataMember="CompletedApplications" DefaultId="DataItem3" />
-        <Measure DataMember="NoAwardApplications" DefaultId="DataItem6" />
-        <Measure DataMember="RejectedApplications" DefaultId="DataItem4" />
-        <Measure DataMember="WithdrawnApplications" DefaultId="DataItem5" />
-        <Measure DataMember="DeniedApplications" DefaultId="DataItem8" />
-        <Measure DataMember="SitesApproved" DefaultId="DataItem11" />
-        <Measure DataMember="EasementExpiredApplications" DefaultId="DataItem17" />
-      </DataItems>
-      <GridColumns>
-        <GridDimensionColumn Name="Year" Weight="45.577746077032813">
-          <Dimension DefaultId="DataItem0" />
-        </GridDimensionColumn>
-        <GridMeasureColumn Name="Total Funds Requested" Weight="72.608458504657207">
-          <Measure DefaultId="DataItem7" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Total Funds Awarded" Weight="72.467779593166455">
-          <Measure DefaultId="DataItem10" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Acqusition Funds" Weight="72.318825451588">
-          <Measure DefaultId="DataItem12" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Construction Funds" Weight="96.2910128388017">
-          <Measure DefaultId="DataItem9" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Planning / Design Funds" Weight="72.161109301681421">
-          <Measure DefaultId="DataItem13" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Applications" Weight="102.71041369472182">
-          <Measure DefaultId="DataItem1" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Approved" Weight="65.47788873038516">
-          <Measure DefaultId="DataItem2" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Completed" Weight="67.4037089871612">
-          <Measure DefaultId="DataItem3" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="No-Award" Weight="68.687589158345219">
-          <Measure DefaultId="DataItem6" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Easement Expired" Weight="71.431850792654657">
-          <Measure DefaultId="DataItem17" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Rejected" Weight="60.984308131241086">
-          <Measure DefaultId="DataItem4" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Withdrawn" Weight="68.0456490727532">
-          <Measure DefaultId="DataItem5" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Declined" Weight="59.700427960057063">
-          <Measure DefaultId="DataItem8" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Grant-Expired" Weight="71.9941157311921">
-          <Measure DefaultId="DataItem14" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Funds Distributed" Weight="71.817299009497518">
-          <Measure DefaultId="DataItem15" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Sites Approved" Weight="74.465049928673324">
-          <Measure DefaultId="DataItem11" />
-          <Totals>
-            <Total Type="Auto" />
-          </Totals>
-        </GridMeasureColumn>
-        <GridMeasureColumn Name="Highiest Awarded App" Weight="71.630081304173828">
-          <Measure DefaultId="DataItem16" />
-        </GridMeasureColumn>
-      </GridColumns>
-      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" />
-      <ColumnFilterOptions />
-    </Grid>
-    <ComboBox ComponentName="comboBoxDashboardItem1" Name="AGENCY" DataSource="sqlDataSource1" DataMember="Core_View_AgencyEntities_HIST" FilterString="[DataItem1] In(?User_AgencyIds)" IsMasterFilterCrossDataSource="true">
-      <InteractivityOptions IgnoreMasterFilters="false" />
-      <DataItems>
-        <Dimension DataMember="AgencyName" DefaultId="DataItem0" />
-        <Dimension DataMember="AgencyId" DefaultId="DataItem1" />
-        <Dimension DataMember="AgencyId" DefaultId="DataItem2">
-          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
-        </Dimension>
-      </DataItems>
-      <HiddenDimensions>
-        <Dimension DefaultId="DataItem1" />
-      </HiddenDimensions>
-      <FilterDimensions>
-        <Dimension DefaultId="DataItem0" />
-        <Dimension DefaultId="DataItem2" />
-      </FilterDimensions>
-    </ComboBox>
-    <ListBox ComponentName="listBoxDashboardItem1" Name="Funding Year" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_Level3_hist_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
-      <InteractivityOptions IgnoreMasterFilters="false" />
-      <DataItems>
-        <Dimension DataMember="FundingYear" DefaultId="DataItem0">
-          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
-        </Dimension>
-      </DataItems>
-      <FilterDimensions>
-        <Dimension DefaultId="DataItem0" />
-      </FilterDimensions>
-    </ListBox>
-    <TextBox ComponentName="textBoxDashboardItem1" Name="Active Project Areas Vs Expiring Project Areas">
-      <Text>{\rtf1\deff0 \stshfdbch3\stshfloch2\stshfhich2\stshfbi1{\fonttbl{\f0 Calibri;}{\fbiminor\f1 Times New Roman;}{\fhiminor\f2 Calibri;}{\fdbminor\f3 Times New Roman;}}{\colortbl ;\red0\green0\blue255 ;}{\*\defchp \fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\cgrid1\fs24}{\*\defpap \widctlpar}{\stylesheet {\ql\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24 Normal;}{\*\cs1\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24 Default Paragraph Font;}{\*\cs2\sbasedon1\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24 Line Number;}{\*\cs3\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24\ul\cf1 Hyperlink;}{\*\ts4\tsrowd\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24\ql\tscellpaddfl3\tscellpaddl108\tscellpaddfb3\tscellpaddfr3\tscellpaddr108\tscellpaddft3\tsvertalt\cltxlrtb Normal Table;}{\*\ts5\tsrowd\sbasedon4\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24\ql\trbrdrt\brdrs\brdrw10\trbrdrl\brdrs\brdrw10\trbrdrb\brdrs\brdrw10\trbrdrr\brdrs\brdrw10\trbrdrh\brdrs\brdrw10\trbrdrv\brdrs\brdrw10\tscellpaddfl3\tscellpaddl108\tscellpaddfr3\tscellpaddr108\tsvertalt\cltxlrtb Table Simple 1;}}{\*\listoverridetable}\nouicompat\htmautsp\splytwnine\alntblind\expshrtn\spltpgpar\nogrowautofit\utinl\nobrkwrptbl\ftnlytwnine\notcvasp\dntblnsbdb\newtblstyruls\formshade\sectd\trowd\irow0\irowband-1\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh495\trftsWidth1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth3750\clpadfr3\clpadr108\clpadft3\clpadt108\cellx3660\pard\plain\qj\intbl\widctlpar\yts5{\fcs1\af1\alang1033\ltrch\fcs0\hich\af2\dbch\af3\loch\f2\fs24\lang1033\langfe1033\langnp1033\langfenp1033\b\cf0 Total Active Project Areas}\fcs1\af1\ltrch\fcs0\hich\af2\dbch\af3\loch\f2\fs24\b\cell\trowd\irow0\irowband-1\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh495\trftsWidth1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth3750\clpadfr3\clpadr108\clpadft3\clpadt108\cellx3660\row\trowd\irow1\irowband0\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh720\trftsWidth1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth3750\clpadfr3\clpadr108\clpadft3\clpadt108\cellx3660\pard\plain\qj\intbl\widctlpar\yts5{\fcs1\af1\alang1033\ltrch\fcs0\hich\af2\dbch\af3\loch\f2\fs24\lang1033\langfe1033\langnp1033\langfenp1033\cf0 35}\fcs1\af1\ltrch\fcs0\hich\af2\dbch\af3\loch\f2\fs24\cell\trowd\irow1\irowband0\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh720\trftsWidth1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth3750\clpadfr3\clpadr108\clpadft3\clpadt108\cellx3660\row\trowd\irow2\irowband1\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh450\trftsWidth1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth3750\clpadfr3\clpadr108\clpadft3\clpadt108\cellx3660\pard\plain\qj\intbl\widctlpar\yts5{\fcs1\af1\alang1033\ltrch\fcs0\hich\af2\dbch\af3\loch\f2\fs24\lang1033\langfe1033\langnp1033\langfenp1033\b\cf0 Expiring Within A Year}\fcs1\af1\ltrch\fcs0\hich\af2\dbch\af3\loch\f2\fs24\b\cell\trowd\irow2\irowband1\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh450\trftsWidth1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth3750\clpadfr3\clpadr108\clpadft3\clpadt108\cellx3660\row\trowd\irow3\irowband2\lastrow\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh630\trftsWidth1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth3750\clpadfr3\clpadr108\clpadft3\clpadt108\cellx3660\pard\plain\qj\intbl\widctlpar\yts5{\fcs1\af1\alang1033\ltrch\fcs0\hich\af2\dbch\af3\loch\f2\fs24\lang1033\langfe1033\langnp1033\langfenp1033\cf0 15}\fcs1\af1\ltrch\fcs0\hich\af2\dbch\af3\loch\f2\fs24\cell\trowd\irow3\irowband2\lastrow\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh630\trftsWidth1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth3750\clpadfr3\clpadr108\clpadft3\clpadt108\cellx3660\row\pard\plain\ql\widctlpar\fcs1\af1\ltrch\fcs0\hich\af2\dbch\af3\loch\f2\fs24\par{\*\themedata 
+      <Text>{\rtf1\deff0 \stshfdbch3\stshfloch2\stshfhich2\stshfbi1{\fonttbl{\f0 Calibri;}{\fbiminor\f1 Times New Roman;}{\fhiminor\f2 Calibri;}{\fdbminor\f3 Times New Roman;}}{\colortbl ;\red0\green0\blue255 ;}{\*\defchp \fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\cgrid1\fs24}{\*\defpap \widctlpar}{\stylesheet {\ql\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24 Normal;}{\*\cs1\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24 Default Paragraph Font;}{\*\cs2\sbasedon1\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24 Line Number;}{\*\cs3\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24\ul\cf1 Hyperlink;}{\*\ts4\tsrowd\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24\ql\tscellpaddfl3\tscellpaddl108\tscellpaddfb3\tscellpaddfr3\tscellpaddr108\tscellpaddft3\tsvertalt\cltxlrtb Normal Table;}{\*\ts5\tsrowd\sbasedon4\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24\ql\trbrdrt\brdrs\brdrw10\trbrdrl\brdrs\brdrw10\trbrdrb\brdrs\brdrw10\trbrdrr\brdrs\brdrw10\trbrdrh\brdrs\brdrw10\trbrdrv\brdrs\brdrw10\tscellpaddfl3\tscellpaddl108\tscellpaddfr3\tscellpaddr108\tsvertalt\cltxlrtb Table Simple 1;}}{\*\listoverridetable}\nouicompat\htmautsp\splytwnine\alntblind\expshrtn\spltpgpar\nogrowautofit\utinl\nobrkwrptbl\ftnlytwnine\notcvasp\dntblnsbdb\newtblstyruls\formshade\sectd\trowd\irow0\irowband-1\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh570\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\ql\intbl\widctlpar\yts5{\fcs1\af0\alang1033\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\lang1033\langfe1033\langnp1033\langfenp1033\b\cf0 Total Active Project Area}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cell\trowd\irow0\irowband-1\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh570\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\trowd\irow1\irowband0\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\ql\intbl\widctlpar\yts5{\field{\*\fldinst{\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cf0 DOCVARIABLE DataItem0}}{\fldrslt{\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cf0 PA_Active}}}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cell\trowd\irow1\irowband0\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\trowd\irow2\irowband1\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh555\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\qj\intbl\widctlpar\yts5{\fcs1\af0\alang1033\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\lang1033\langfe1033\langnp1033\langfenp1033\b\cf0 Expiring Within A Year}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cell\trowd\irow2\irowband1\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh555\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\trowd\irow3\irowband2\lastrow\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\ql\intbl\widctlpar\yts5{\field{\*\fldinst{\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cf0 DOCVARIABLE DataItem1}}{\fldrslt{\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cf0 ExpiringWithInAYear}}}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs22\cell\trowd\irow3\irowband2\lastrow\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\pard\plain\ql\widctlpar\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs22\par{\*\themedata 
 504b03041400020008000000210201159325ae000000270100000b0000005f72656c732f2e72656c738d8f310ec2300c45af1279a76e1910424dbbb07460415c204a9d34a24da224457036068ec415c8d82206164b5ffe7efffbfd7cd5ed7d1ad98d4234
 ce72a88a121859e97a63358739a9cd1edaa63ed3285276c4c1f8c8f2898d1c8694fc0131ca8126110be7c9e68d72611229cba0d10b79159a705b963b0c4b06ac99aceb3984aeaf805d1e9efe613ba58ca4a393f34436fd88f87264b2089a12879499848b
 791236b70c454e00864d8dab779b0f504b0304140002000800000021027f624aeb730000007b0000001c0000007468656d652f7468656d652f7468656d654d616e616765722e786d6c0d8cc10d83300c005789fc2f4e7954554460820e61810991888392
@@ -294,7 +99,226 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
 302220656e636f64696e673d227574662d38223f3e3c613a636c724d617020786d6c6e733a613d22687474703a2f2f736368656d61732e6f70656e786d6c666f726d6174732e6f72672f64726177696e676d6c2f323030362f6d61696e22206267313d22
 6c743122207478313d22646b3122206267323d226c743222207478323d22646b322220616363656e74313d22616363656e74312220616363656e74323d22616363656e74322220616363656e74333d22616363656e74332220616363656e74343d226163
 63656e74342220616363656e74353d22616363656e74352220616363656e74363d22616363656e74362220686c696e6b3d22686c696e6b2220666f6c486c696e6b3d22666f6c486c696e6b22202f3e}}</Text>
+      <Values>
+        <Value DefaultId="DataItem0" />
+        <Value DefaultId="DataItem1" />
+      </Values>
     </TextBox>
+    <Pie ComponentName="pieDashboardItem1" Name="No of Homes Preserved/ Agency" DataSource="federationDataSource1" DataMember="rept_usp_get_flood_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)" PieType="Donut" ShowPieCaptions="false">
+      <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Dimension DataMember="AgencyName" IsDiscreteScale="true" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Measure DataMember="P_OfHomes" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <ColorScheme>
+        <Entry DataSource="dashboardExcelDataSource5" Color="-2780010">
+          <MeasureKey>
+            <Definition DataMember="Non-Construction" />
+          </MeasureKey>
+        </Entry>
+      </ColorScheme>
+      <Values>
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartDashboardItem1" Name="Total Allocated Vs Total Funds Spent " DataSource="sqlDataSource1" DataMember="rept_usp_get_flood_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Dimension DataMember="FundingYear" IsDiscreteScale="true" TopNEnabled="true" TopNCount="10" TopNMeasure="DataItem2" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Measure DataMember="TotalAllocated" DefaultId="DataItem2" />
+        <Measure DataMember="FundsSpent" DefaultId="DataItem3" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" AlwaysShowZeroLevel="false" />
+          <Series>
+            <Simple Name="Total Funds Spent" SeriesType="Line">
+              <Value DefaultId="DataItem2" />
+            </Simple>
+            <Simple Name="Total Funds Allocated" SeriesType="Line">
+              <Value DefaultId="DataItem3" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Grid ComponentName="gridDashboardItem2" Name="" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_flood_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
+      <DataItems>
+        <Measure DataMember="FundsEncumbered" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="FundsReimbursed" DefaultId="DataItem4">
+          <NumericFormat FormatType="Currency" Precision="1" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="HardCosts" DefaultId="DataItem6">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="P_OfHomes" DefaultId="DataItem7">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Measure>
+        <Measure DataMember="P_Pending" DefaultId="DataItem8" />
+        <Measure DataMember="P_Preserved" DefaultId="DataItem9" />
+        <Measure DataMember="P_PropertyGrantExpired" DefaultId="DataItem10" />
+        <Measure DataMember="P_Rejected" DefaultId="DataItem11" />
+        <Measure DataMember="P_Withdrawn" DefaultId="DataItem12" />
+        <Measure DataMember="PA_Active" DefaultId="DataItem13" />
+        <Measure DataMember="PA_Closed" DefaultId="DataItem14" />
+        <Measure DataMember="PA_Rejected" DefaultId="DataItem15" />
+        <Measure DataMember="PA_Submitted" DefaultId="DataItem16" />
+        <Measure DataMember="PA_Withdrawn" DefaultId="DataItem17" />
+        <Measure DataMember="SoftCosts" DefaultId="DataItem18" />
+        <Dimension DataMember="FundingYear" DefaultId="DataItem3">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Measure DataMember="CountyExpenses" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem3" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="FundsEncumbered">
+          <Measure DefaultId="DataItem0" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="FundsReimbursed">
+          <Measure DefaultId="DataItem4" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Project Area Submitted">
+          <Measure DefaultId="DataItem16" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Project Area Active">
+          <Measure DefaultId="DataItem13" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Project Area Rejected">
+          <Measure DefaultId="DataItem15" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Project Area Withdrawn ">
+          <Measure DefaultId="DataItem17" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Project Area Closed">
+          <Measure DefaultId="DataItem14" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="No Of Homes">
+          <Measure DefaultId="DataItem7" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Properties Pending">
+          <Measure DefaultId="DataItem8" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Properties Preserved">
+          <Measure DefaultId="DataItem9" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Properties Withdrawn">
+          <Measure DefaultId="DataItem12" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Properties Rejected">
+          <Measure DefaultId="DataItem11" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="Property Grant Expired">
+          <Measure DefaultId="DataItem10" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="HardCosts">
+          <Measure DefaultId="DataItem6" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="SoftCosts">
+          <Measure DefaultId="DataItem18" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="CountyExpenses">
+          <Measure DefaultId="DataItem1" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" />
+      <ColumnFilterOptions />
+    </Grid>
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="AGENCY" DataSource="sqlDataSource1" DataMember="Core_View_AgencyEntities_FLOOD" FilterString="[DataItem1] In(?User_AgencyIds)" IsMasterFilterCrossDataSource="true">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="AgencyId" DefaultId="DataItem1" />
+        <Dimension DataMember="AgencyId" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Dimension DataMember="AgencyName" DefaultId="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension DefaultId="DataItem1" />
+      </HiddenDimensions>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+        <Dimension DefaultId="DataItem2" />
+      </FilterDimensions>
+    </ComboBox>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="Funding Year" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_flood_annual_summary_report">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="FundingYear" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
   </Items>
   <Groups>
     <Group ComponentName="groupDashboardItem1" Name="Group 1" ShowCaption="false">
@@ -318,15 +342,19 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
   </LayoutOptions>
   <LayoutTree>
     <LayoutGroup Orientation="Vertical" Weight="100">
-      <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="6.6304347826086953" />
-      <LayoutGroup Weight="31.956521739130434">
-        <LayoutItem DashboardItem="textBoxDashboardItem1" Weight="33.333333333333336" />
-        <LayoutItem DashboardItem="chartDashboardItem4" Weight="36.593479707252165" />
-        <LayoutItem DashboardItem="chartDashboardItem1" Weight="30.073186959414503" />
-      </LayoutGroup>
-      <LayoutGroup DashboardItem="groupDashboardItem1" Weight="61.413043478260867">
-        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="8.91550232867598" />
-        <LayoutItem DashboardItem="gridDashboardItem2" Weight="91.084497671324016" />
+      <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="11.086956521739129" />
+      <LayoutGroup Weight="188.91304347826087">
+        <LayoutGroup Orientation="Vertical" Weight="100">
+          <LayoutGroup Weight="35.60606060606061">
+            <LayoutItem DashboardItem="textBoxDashboardItem1" Weight="30.425680390788557" />
+            <LayoutItem DashboardItem="pieDashboardItem1" Weight="35.98299069236162" />
+            <LayoutItem DashboardItem="chartDashboardItem1" Weight="33.591328916849825" />
+          </LayoutGroup>
+          <LayoutGroup DashboardItem="groupDashboardItem1" Weight="64.39393939393939">
+            <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="11.957305079290796" />
+            <LayoutItem DashboardItem="gridDashboardItem2" Weight="116.830573708588" />
+          </LayoutGroup>
+        </LayoutGroup>
       </LayoutGroup>
     </LayoutGroup>
   </LayoutTree>
