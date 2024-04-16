@@ -51,9 +51,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.table2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table2");
             this.tableRow3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow3");
             this.tableCell8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell8");
-            this.label7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label7");
             this.label6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label6");
             this.line1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line1");
+            this.label7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label7");
 
             // Parameters
             this.Muncipality = reportInitializer.GetParameter("Muncipality");
@@ -97,10 +97,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRTable table2;
         private DevExpress.XtraReports.UI.XRTableRow tableRow3;
         private DevExpress.XtraReports.UI.XRTableCell tableCell8;
-        private DevExpress.XtraReports.UI.XRLabel label7;
         private DevExpress.XtraReports.UI.XRLabel label6;
         private DevExpress.XtraReports.UI.XRLine line1;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.Parameters.Parameter Muncipality;
+        private DevExpress.XtraReports.UI.XRLabel label7;
     }
 }

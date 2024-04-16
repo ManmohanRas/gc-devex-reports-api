@@ -28,7 +28,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.label8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label8");
             this.line1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line1");
             this.label6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label6");
-            this.label7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label7");
             this.Detail1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail1");
             this.GroupHeader3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupHeaderBand>("GroupHeader3");
             this.GroupHeader1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupHeaderBand>("GroupHeader1");
@@ -65,6 +64,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.tableCell5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell5");
             this.tableCell6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell6");
             this.tableCell7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell7");
+            this.label7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label7");
 
             // Parameters
             this.Date = reportInitializer.GetParameter("Date");
@@ -92,7 +92,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRLabel label8;
         private DevExpress.XtraReports.UI.XRLine line1;
         private DevExpress.XtraReports.UI.XRLabel label6;
-        private DevExpress.XtraReports.UI.XRLabel label7;
         private DevExpress.XtraReports.UI.DetailBand Detail1;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader3;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
@@ -136,5 +135,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.Parameters.RangeStartParameter StartDate;
         private DevExpress.XtraReports.Parameters.RangeEndParameter EndDate;
         private DevExpress.XtraReports.Parameters.Parameter Municipality;
+        private DevExpress.XtraReports.UI.XRLabel label7;
     }
 }

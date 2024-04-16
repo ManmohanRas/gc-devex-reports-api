@@ -197,12 +197,12 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.tableCell9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell9");
             this.tableCell12 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell12");
             this.line6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line6");
-            this.label7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label7");
             this.label6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label6");
             this.pictureBox1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox1");
             this.line7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line7");
             this.label98 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label98");
             this.label8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label8");
+            this.label7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label7");
 
             // Parameters
             this.ApplicationTitle = reportInitializer.GetParameter("ApplicationTitle");
@@ -391,7 +391,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRTableCell tableCell9;
         private DevExpress.XtraReports.UI.XRTableCell tableCell12;
         private DevExpress.XtraReports.UI.XRLine line6;
-        private DevExpress.XtraReports.UI.XRLabel label7;
         private DevExpress.XtraReports.UI.XRLabel label6;
         private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
         private DevExpress.XtraReports.UI.XRLine line7;
@@ -399,5 +398,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRLabel label8;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.Parameters.Parameter ApplicationTitle;
+        private DevExpress.XtraReports.UI.XRLabel label7;
     }
 }
