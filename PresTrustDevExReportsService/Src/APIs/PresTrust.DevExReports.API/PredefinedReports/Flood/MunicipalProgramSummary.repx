@@ -148,7 +148,7 @@
         <Item1 Ref="67" ControlType="XRLabel" Name="label7" Multiline="true" Text="Please visit our website: https://www.morriscountynj.gov/Departments/Flood-Mitigation-Program" TextAlignment="MiddleLeft" SizeF="546.1806,23.0000038" LocationFloat="0,39.0000153" Font="Segoe UI Semilight, 9pt" Padding="2,2,0,0,100">
           <StylePriority Ref="68" UseFont="false" UseTextAlignment="false" />
         </Item1>
-        <Item2 Ref="69" ControlType="XRLabel" Name="label6" Multiline="true" Text="For more information contact mdigulio@co.morris.nj.us" SizeF="513.888855,22.9999981" LocationFloat="0,16.0000172" Padding="2,2,0,0,100" />
+        <Item2 Ref="69" ControlType="XRLabel" Name="label6" Multiline="true" Text="For more information contact mdigiulio@co.morris.nj.us" SizeF="513.888855,22.9999981" LocationFloat="0,16.0000172" Padding="2,2,0,0,100" />
         <Item3 Ref="70" ControlType="XRLine" Name="line1" SizeF="786,5.4999795" LocationFloat="0,0" />
       </Controls>
     </Item7>

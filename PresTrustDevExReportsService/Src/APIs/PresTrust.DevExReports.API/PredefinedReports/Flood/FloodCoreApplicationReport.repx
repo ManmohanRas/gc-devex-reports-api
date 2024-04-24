@@ -445,7 +445,7 @@
             <Item2 Ref="179" ControlType="XRTableRow" Name="tableRow6" Weight="1">
               <Cells>
                 <Item1 Ref="180" ControlType="XRTableCell" Name="tableCell19" Weight="1.5581843945977818" Multiline="true" Text="Square Footage:" />
-                <Item2 Ref="181" ControlType="XRTableCell" Name="tableCell20" Weight="1.6418153002264368" TextFormatString="{0:$#,0}" Multiline="true">
+                <Item2 Ref="181" ControlType="XRTableCell" Name="tableCell20" Weight="1.6418153002264368" TextFormatString="{0:#,0}" Multiline="true">
                   <ExpressionBindings>
                     <Item1 Ref="182" EventName="BeforePrint" PropertyName="Text" Expression="[SquareFootage]" />
                   </ExpressionBindings>
@@ -668,7 +668,7 @@
         <Item2 Ref="277" ControlType="XRLabel" Name="label7" Multiline="true" Text="Please visit our website: https://www.morriscountynj.gov/Departments/Flood-Mitigation-Program" TextAlignment="MiddleLeft" SizeF="546.1806,23.0000038" LocationFloat="0,32.9999275" Font="Segoe UI Semilight, 9pt" Padding="2,2,0,0,100">
           <StylePriority Ref="278" UseFont="false" UseTextAlignment="false" />
         </Item2>
-        <Item3 Ref="279" ControlType="XRLabel" Name="label6" Multiline="true" Text="For more information contact mdigulio@co.morris.nj.us" TextAlignment="MiddleLeft" SizeF="406.388824,23" LocationFloat="5.086263E-05,10" Font="Segoe UI Semilight, 9pt" Padding="2,2,0,0,100">
+        <Item3 Ref="279" ControlType="XRLabel" Name="label6" Multiline="true" Text="For more information contact mdigiulio@co.morris.nj.us" TextAlignment="MiddleLeft" SizeF="406.388824,23" LocationFloat="5.086263E-05,10" Font="Segoe UI Semilight, 9pt" Padding="2,2,0,0,100">
           <StylePriority Ref="280" UseFont="false" UseTextAlignment="false" />
         </Item3>
       </Controls>

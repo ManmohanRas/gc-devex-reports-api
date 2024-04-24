@@ -38,13 +38,13 @@
         <Item8 Ref="20" ControlType="XRLabel" Name="label6" Multiline="true" Text="6 mo. Extensions:" TextAlignment="MiddleLeft" SizeF="114.166656,23" LocationFloat="235,25" Padding="2,2,0,0,100">
           <StylePriority Ref="21" UseTextAlignment="false" />
         </Item8>
-        <Item9 Ref="22" ControlType="XRLabel" Name="label7" TextFormatString="{0:dd-MM-yyyy}" Multiline="true" Text="label7" TextAlignment="MiddleLeft" SizeF="100,23" LocationFloat="305.833344,0" Padding="2,2,0,0,100">
+        <Item9 Ref="22" ControlType="XRLabel" Name="label7" TextFormatString="{0:MM-dd-yyyy}" Multiline="true" Text="label7" TextAlignment="MiddleLeft" SizeF="100,23" LocationFloat="305.833344,0" Padding="2,2,0,0,100">
           <ExpressionBindings>
             <Item1 Ref="23" EventName="BeforePrint" PropertyName="Text" Expression="[ExpirationDate]" />
           </ExpressionBindings>
           <StylePriority Ref="24" UseTextAlignment="false" />
         </Item9>
-        <Item10 Ref="25" ControlType="XRLabel" Name="label9" TextFormatString="{0:dd-MM-yyyy}" Multiline="true" Text="label7" TextAlignment="MiddleLeft" SizeF="100,23" LocationFloat="517.1667,0" Padding="2,2,0,0,100">
+        <Item10 Ref="25" ControlType="XRLabel" Name="label9" TextFormatString="{0:MM-dd-yyyy}" Multiline="true" Text="label7" TextAlignment="MiddleLeft" SizeF="100,23" LocationFloat="517.1667,0" Padding="2,2,0,0,100">
           <ExpressionBindings>
             <Item1 Ref="26" EventName="BeforePrint" PropertyName="Text" Expression="[ExtensionDate]" />
           </ExpressionBindings>
@@ -142,7 +142,7 @@
           <StylePriority Ref="73" UseFont="false" UseTextAlignment="false" />
         </Item1>
         <Item2 Ref="74" ControlType="XRLine" Name="line1" SizeF="786,2.00002027" LocationFloat="0,10.9999962" />
-        <Item3 Ref="75" ControlType="XRLabel" Name="label17" Multiline="true" Text="For more information contact mdigulio@co.morris.nj.us" SizeF="513.888855,22.9999981" LocationFloat="0,20.0000172" Padding="2,2,0,0,100" />
+        <Item3 Ref="75" ControlType="XRLabel" Name="label17" Multiline="true" Text="For more information contact mdigiulio@co.morris.nj.us" SizeF="513.888855,22.9999981" LocationFloat="0,20.0000172" Padding="2,2,0,0,100" />
         <Item4 Ref="76" ControlType="XRPageInfo" Name="pageInfo2" TextFormatString="Page : {0 } / {1}" TextAlignment="MiddleCenter" SizeF="96.9996948,22.9999771" LocationFloat="689.0002,43.00003" Font="Segoe UI Semilight, 9pt" Padding="2,2,0,0,100">
           <StylePriority Ref="77" UseFont="false" UseTextAlignment="false" />
         </Item4>

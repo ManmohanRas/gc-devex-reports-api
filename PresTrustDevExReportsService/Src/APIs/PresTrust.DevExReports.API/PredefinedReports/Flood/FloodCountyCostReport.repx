@@ -56,7 +56,7 @@
                 <Item1 Ref="25" ControlType="XRTableCell" Name="tableCell1" Weight="0.62903298544949382" Multiline="true" Text="Year" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 12pt, style=Bold">
                   <StylePriority Ref="26" UseFont="false" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="27" ControlType="XRTableCell" Name="tableCell2" Weight="1.0693554333383111" Multiline="true" Text="Appariser Fee" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 12pt, style=Bold">
+                <Item2 Ref="27" ControlType="XRTableCell" Name="tableCell2" Weight="1.0693554333383111" Multiline="true" Text="Appraiser Fee" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 12pt, style=Bold">
                   <StylePriority Ref="28" UseFont="false" UseTextAlignment="false" />
                 </Item2>
                 <Item3 Ref="29" ControlType="XRTableCell" Name="tableCell3" Weight="1.0155690247845275" Multiline="true" Text="Surveyor Fee" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 12pt, style=Bold">
@@ -100,7 +100,7 @@
         <Item1 Ref="49" ControlType="XRLabel" Name="label7" Multiline="true" Text="Please visit our website: https://www.morriscountynj.gov/Departments/Flood-Mitigation-Program" TextAlignment="MiddleLeft" SizeF="546.1806,23.0000038" LocationFloat="0,43.00003" Font="Segoe UI Semilight, 9pt" Padding="2,2,0,0,100">
           <StylePriority Ref="50" UseFont="false" UseTextAlignment="false" />
         </Item1>
-        <Item2 Ref="51" ControlType="XRLabel" Name="label6" Multiline="true" Text="For more information contact mdigulio@co.morris.nj.us" SizeF="513.888855,22.9999981" LocationFloat="0,20.0000172" Padding="2,2,0,0,100" />
+        <Item2 Ref="51" ControlType="XRLabel" Name="label6" Multiline="true" Text="For more information contact mdigiulio@co.morris.nj.us" SizeF="513.888855,22.9999981" LocationFloat="0,20.0000172" Padding="2,2,0,0,100" />
         <Item3 Ref="52" ControlType="XRPageInfo" Name="pageInfo2" TextFormatString="Page : {0 } / {1}" TextAlignment="MiddleCenter" SizeF="96.9996948,22.9999771" LocationFloat="689.0002,43.00003" Font="Segoe UI Semilight, 9pt" Padding="2,2,0,0,100">
           <StylePriority Ref="53" UseFont="false" UseTextAlignment="false" />
         </Item3>

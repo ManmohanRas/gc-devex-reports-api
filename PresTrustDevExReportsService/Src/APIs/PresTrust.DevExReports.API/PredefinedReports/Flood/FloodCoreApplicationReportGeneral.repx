@@ -440,7 +440,7 @@
             <Item2 Ref="178" ControlType="XRTableRow" Name="tableRow6" Weight="1">
               <Cells>
                 <Item1 Ref="179" ControlType="XRTableCell" Name="tableCell19" Weight="1.5581843945977818" Multiline="true" Text="Square Footage:" />
-                <Item2 Ref="180" ControlType="XRTableCell" Name="tableCell20" Weight="1.6418153002264368" TextFormatString="{0:$#,0}" Multiline="true">
+                <Item2 Ref="180" ControlType="XRTableCell" Name="tableCell20" Weight="1.6418153002264368" TextFormatString="{0:#,0}" Multiline="true">
                   <ExpressionBindings>
                     <Item1 Ref="181" EventName="BeforePrint" PropertyName="Text" Expression="[SquareFootage]" />
                   </ExpressionBindings>
@@ -663,7 +663,7 @@
         <Item2 Ref="276" ControlType="XRLine" Name="line6" SizeF="773.999939,5.49997663" LocationFloat="3.81469727E-05,4.27525854" ForeColor="255,217,217,230">
           <StylePriority Ref="277" UseForeColor="false" />
         </Item2>
-        <Item3 Ref="278" ControlType="XRLabel" Name="label6" Multiline="true" Text="For more information contact mdigulio@co.morris.nj.us" TextAlignment="MiddleLeft" SizeF="406.388824,23" LocationFloat="5.086263E-05,10" Font="Segoe UI Semilight, 9pt" Padding="2,2,0,0,100">
+        <Item3 Ref="278" ControlType="XRLabel" Name="label6" Multiline="true" Text="For more information contact mdigiulio@co.morris.nj.us" TextAlignment="MiddleLeft" SizeF="406.388824,23" LocationFloat="5.086263E-05,10" Font="Segoe UI Semilight, 9pt" Padding="2,2,0,0,100">
           <StylePriority Ref="279" UseFont="false" UseTextAlignment="false" />
         </Item3>
       </Controls>

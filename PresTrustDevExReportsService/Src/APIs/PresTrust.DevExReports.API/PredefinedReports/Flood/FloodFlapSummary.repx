@@ -71,7 +71,7 @@
                 <Item1 Ref="37" ControlType="XRTableCell" Name="tableCell6" Weight="0.90128211388221158" Multiline="true" Text="Municipality" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold">
                   <StylePriority Ref="38" UseFont="false" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="39" ControlType="XRTableCell" Name="tableCell7" Weight="0.94230750450721157" Multiline="true" Text="FLAPStatus" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold">
+                <Item2 Ref="39" ControlType="XRTableCell" Name="tableCell7" Weight="0.94230750450721157" Multiline="true" Text="FLAP Status" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold">
                   <StylePriority Ref="40" UseFont="false" UseTextAlignment="false" />
                 </Item2>
                 <Item3 Ref="41" ControlType="XRTableCell" Name="tableCell8" Weight="1.1564103816105769" Multiline="true" Text="Approved Date" TextAlignment="MiddleCenter" Font="Segoe UI Semilight, 10pt, style=Bold">
@@ -109,7 +109,7 @@
         <Item1 Ref="54" ControlType="XRLabel" Name="label7" Multiline="true" Text="Please visit our website: https://www.morriscountynj.gov/Departments/Flood-Mitigation-Program" TextAlignment="MiddleLeft" SizeF="546.1806,23.0000038" LocationFloat="0,35.9999733" Font="Segoe UI Semilight, 9pt" Padding="2,2,0,0,100">
           <StylePriority Ref="55" UseFont="false" UseTextAlignment="false" />
         </Item1>
-        <Item2 Ref="56" ControlType="XRLabel" Name="label6" Multiline="true" Text="For more information contact mdigulio@co.morris.nj.us" TextAlignment="MiddleLeft" SizeF="406.388824,23" LocationFloat="5.086263E-05,13" Font="Segoe UI Semilight, 9pt" Padding="2,2,0,0,100">
+        <Item2 Ref="56" ControlType="XRLabel" Name="label6" Multiline="true" Text="For more information contact mdigiulio@co.morris.nj.us" TextAlignment="MiddleLeft" SizeF="406.388824,23" LocationFloat="5.086263E-05,13" Font="Segoe UI Semilight, 9pt" Padding="2,2,0,0,100">
           <StylePriority Ref="57" UseFont="false" UseTextAlignment="false" />
         </Item2>
         <Item3 Ref="58" ControlType="XRLine" Name="line6" SizeF="773.999939,5.49997663" LocationFloat="3.81469727E-05,7.27525854" ForeColor="255,217,217,230">
