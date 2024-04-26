@@ -60,7 +60,7 @@
                     </Item1>
                     <Item2 Ref="38" ControlType="XRTableCell" Name="tableCell17" Weight="1.0000000182397122" Multiline="true" TextAlignment="MiddleCenter">
                       <ExpressionBindings>
-                        <Item1 Ref="39" EventName="BeforePrint" PropertyName="Text" Expression="[Name]" />
+                        <Item1 Ref="39" EventName="BeforePrint" PropertyName="Text" Expression="Iif([Name]='IN_REVIEW','IN REVIEW' , [Name])" />
                       </ExpressionBindings>
                       <StylePriority Ref="40" UseTextAlignment="false" />
                     </Item2>
