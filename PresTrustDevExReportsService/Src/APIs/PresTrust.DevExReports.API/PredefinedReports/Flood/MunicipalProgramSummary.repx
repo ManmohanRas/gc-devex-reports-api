@@ -21,7 +21,7 @@
                 </Item1>
                 <Item2 Ref="12" ControlType="XRTableCell" Name="tableCell11" Weight="1" Multiline="true">
                   <ExpressionBindings>
-                    <Item1 Ref="13" EventName="BeforePrint" PropertyName="Text" Expression="[ParcelStatus]" />
+                    <Item1 Ref="13" EventName="BeforePrint" PropertyName="Text" Expression="Iif([ParcelStatus]='GRANT_EXPIRED','GRANT EXPIRED' , Iif([ParcelStatus]='PROJECT_AREA_EXPIRED','PROJECT AREA EXPIRED' ,[ParcelStatus] ))" />
                   </ExpressionBindings>
                 </Item2>
                 <Item3 Ref="14" ControlType="XRTableCell" Name="tableCell12" Weight="1" TextFormatString="{0:$#,0}" Multiline="true">
@@ -112,7 +112,7 @@
                 <Item2 Ref="52" ControlType="XRTableCell" Name="tableCell2" Weight="1" Multiline="true" Text="Status" />
                 <Item3 Ref="53" ControlType="XRTableCell" Name="tableCell3" Weight="1" Multiline="true" Text="Hard Cost" />
                 <Item4 Ref="54" ControlType="XRTableCell" Name="tableCell4" Weight="1" Multiline="true" Text="Soft Cost" />
-                <Item5 Ref="55" ControlType="XRTableCell" Name="tableCell5" Weight="1" Multiline="true" Text="Year brought Out" />
+                <Item5 Ref="55" ControlType="XRTableCell" Name="tableCell5" Weight="1" Multiline="true" Text="Year Bought Out" />
                 <Item6 Ref="56" ControlType="XRTableCell" Name="tableCell6" Weight="1" Multiline="true" Text="Alternate" />
               </Cells>
             </Item2>

@@ -38,13 +38,13 @@
         <Item8 Ref="20" ControlType="XRLabel" Name="label6" Multiline="true" Text="6 mo. Extensions:" TextAlignment="MiddleLeft" SizeF="114.166656,23" LocationFloat="235,25" Padding="2,2,0,0,100">
           <StylePriority Ref="21" UseTextAlignment="false" />
         </Item8>
-        <Item9 Ref="22" ControlType="XRLabel" Name="label7" TextFormatString="{0:MM-dd-yyyy}" Multiline="true" Text="label7" TextAlignment="MiddleLeft" SizeF="100,23" LocationFloat="305.833344,0" Padding="2,2,0,0,100">
+        <Item9 Ref="22" ControlType="XRLabel" Name="label7" TextFormatString="{0:MMMM-dd-yyyy}" Multiline="true" Text="label7" TextAlignment="MiddleLeft" SizeF="100,23" LocationFloat="305.833344,0" Padding="2,2,0,0,100">
           <ExpressionBindings>
             <Item1 Ref="23" EventName="BeforePrint" PropertyName="Text" Expression="[ExpirationDate]" />
           </ExpressionBindings>
           <StylePriority Ref="24" UseTextAlignment="false" />
         </Item9>
-        <Item10 Ref="25" ControlType="XRLabel" Name="label9" TextFormatString="{0:MM-dd-yyyy}" Multiline="true" Text="label7" TextAlignment="MiddleLeft" SizeF="100,23" LocationFloat="517.1667,0" Padding="2,2,0,0,100">
+        <Item10 Ref="25" ControlType="XRLabel" Name="label9" TextFormatString="{0:MMMM-dd-yyyy}" Multiline="true" Text="label7" TextAlignment="MiddleLeft" SizeF="100,23" LocationFloat="517.1667,0" Padding="2,2,0,0,100">
           <ExpressionBindings>
             <Item1 Ref="26" EventName="BeforePrint" PropertyName="Text" Expression="[ExtensionDate]" />
           </ExpressionBindings>

@@ -34,7 +34,13 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.label2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label2");
             this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
             this.label3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label3");
+            this.table5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table5");
             this.table3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table3");
+            this.tableRow10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow10");
+            this.tableCell30 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell30");
+            this.tableCell31 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell31");
+            this.tableCell32 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell32");
+            this.tableCell34 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell34");
             this.tableRow8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow8");
             this.tableCell20 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell20");
             this.tableCell21 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell21");
@@ -69,12 +75,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.tableCell17 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell17");
             this.tableCell18 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell18");
             this.tableCell19 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell19");
-            this.table5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table5");
-            this.tableRow10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow10");
-            this.tableCell30 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell30");
-            this.tableCell31 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell31");
-            this.tableCell32 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell32");
-            this.tableCell34 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell34");
 
             // Parameters
             this.applicationid = reportInitializer.GetParameter("applicationid");
@@ -104,7 +104,13 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRLabel label2;
         private DevExpress.XtraReports.UI.XRLabel label1;
         private DevExpress.XtraReports.UI.XRLabel label3;
+        private DevExpress.XtraReports.UI.XRTable table5;
         private DevExpress.XtraReports.UI.XRTable table3;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow10;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell30;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell31;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell32;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell34;
         private DevExpress.XtraReports.UI.XRTableRow tableRow8;
         private DevExpress.XtraReports.UI.XRTableCell tableCell20;
         private DevExpress.XtraReports.UI.XRTableCell tableCell21;
@@ -143,11 +149,5 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.CalculatedField Total;
         private DevExpress.XtraReports.Parameters.Parameter applicationid;
         private DevExpress.XtraReports.Parameters.Parameter pamsPin;
-        private DevExpress.XtraReports.UI.XRTable table5;
-        private DevExpress.XtraReports.UI.XRTableRow tableRow10;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell30;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell31;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell32;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell34;
     }
 }

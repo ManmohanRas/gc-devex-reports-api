@@ -9,5 +9,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood
         {
             InitializeComponent();
         }
+
+        private void tableCell12_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+
+        }
     }
 }
