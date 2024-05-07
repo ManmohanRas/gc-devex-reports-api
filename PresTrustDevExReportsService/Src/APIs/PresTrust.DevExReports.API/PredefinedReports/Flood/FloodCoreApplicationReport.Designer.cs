@@ -55,6 +55,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.tableCell102 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell102");
             this.tableRow36 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow36");
             this.tableRow37 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow37");
+            this.tableRow53 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow53");
             this.tableRow38 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow38");
             this.tableRow39 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow39");
             this.tableRow44 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow44");
@@ -67,6 +68,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.tableCell80 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell80");
             this.tableCell81 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell81");
             this.tableCell82 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell82");
+            this.tableCell100 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell100");
+            this.tableCell104 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell104");
             this.tableCell83 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell83");
             this.tableCell84 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell84");
             this.tableCell85 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell85");
@@ -214,9 +217,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.label9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label9");
             this.label10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label10");
             this.label11 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label11");
-            this.tableRow53 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow53");
-            this.tableCell100 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell100");
-            this.tableCell104 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell104");
 
             // Parameters
             this.applicationid = reportInitializer.GetParameter("applicationid");
@@ -263,6 +263,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRTableCell tableCell102;
         private DevExpress.XtraReports.UI.XRTableRow tableRow36;
         private DevExpress.XtraReports.UI.XRTableRow tableRow37;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow53;
         private DevExpress.XtraReports.UI.XRTableRow tableRow38;
         private DevExpress.XtraReports.UI.XRTableRow tableRow39;
         private DevExpress.XtraReports.UI.XRTableRow tableRow44;
@@ -275,6 +276,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRTableCell tableCell80;
         private DevExpress.XtraReports.UI.XRTableCell tableCell81;
         private DevExpress.XtraReports.UI.XRTableCell tableCell82;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell100;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell104;
         private DevExpress.XtraReports.UI.XRTableCell tableCell83;
         private DevExpress.XtraReports.UI.XRTableCell tableCell84;
         private DevExpress.XtraReports.UI.XRTableCell tableCell85;
@@ -424,8 +427,5 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRLabel label11;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.Parameters.Parameter applicationid;
-        private DevExpress.XtraReports.UI.XRTableRow tableRow53;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell100;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell104;
     }
 }

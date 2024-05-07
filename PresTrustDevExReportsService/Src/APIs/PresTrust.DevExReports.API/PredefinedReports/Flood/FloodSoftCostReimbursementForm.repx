@@ -24,13 +24,13 @@
                   </ExpressionBindings>
                   <StylePriority Ref="14" UseFont="false" />
                 </Item1>
-                <Item2 Ref="15" ControlType="XRTableCell" Name="tableCell26" Weight="0.895258907951511" TextFormatString="{0:#.00}" Multiline="true" TextAlignment="MiddleLeft" Font="Times New Roman, 11pt">
+                <Item2 Ref="15" ControlType="XRTableCell" Name="tableCell26" Weight="0.895258907951511" TextFormatString="{0:$#.00}" Multiline="true" TextAlignment="MiddleLeft" Font="Times New Roman, 11pt">
                   <ExpressionBindings>
                     <Item1 Ref="16" EventName="BeforePrint" PropertyName="Text" Expression="[InvoiceAmount]" />
                   </ExpressionBindings>
                   <StylePriority Ref="17" UseFont="false" UseTextAlignment="false" />
                 </Item2>
-                <Item3 Ref="18" ControlType="XRTableCell" Name="tableCell27" Weight="0.88974676609840575" TextFormatString="{0:#.00}" Multiline="true" TextAlignment="MiddleLeft" Font="Times New Roman, 11pt">
+                <Item3 Ref="18" ControlType="XRTableCell" Name="tableCell27" Weight="0.88974676609840575" TextFormatString="{0:$#.00}" Multiline="true" TextAlignment="MiddleLeft" Font="Times New Roman, 11pt">
                   <ExpressionBindings>
                     <Item1 Ref="19" EventName="BeforePrint" PropertyName="Text" Expression="[PaymentAmount]" />
                   </ExpressionBindings>
@@ -42,7 +42,7 @@
                   </ExpressionBindings>
                   <StylePriority Ref="23" UseFont="false" UseTextAlignment="false" />
                 </Item4>
-                <Item5 Ref="24" ControlType="XRTableCell" Name="tableCell29" Weight="0.75192939096485178" TextFormatString="{0:#.00}" Multiline="true" TextAlignment="MiddleLeft" Font="Times New Roman, 11pt">
+                <Item5 Ref="24" ControlType="XRTableCell" Name="tableCell29" Weight="0.75192939096485178" TextFormatString="{0:$#.00}" Multiline="true" TextAlignment="MiddleLeft" Font="Times New Roman, 11pt">
                   <ExpressionBindings>
                     <Item1 Ref="25" EventName="BeforePrint" PropertyName="Text" Expression="[Total]" />
                   </ExpressionBindings>
@@ -116,7 +116,7 @@
                 <Item2 Ref="57" ControlType="XRTableCell" Name="tableCell21" Weight="0.895258907951511" Multiline="true" />
                 <Item3 Ref="58" ControlType="XRTableCell" Name="tableCell22" Weight="0.88974676609840575" Multiline="true" />
                 <Item4 Ref="59" ControlType="XRTableCell" Name="tableCell23" Weight="0.65821359202446539" Multiline="true" />
-                <Item5 Ref="60" ControlType="XRTableCell" Name="tableCell24" Weight="0.75192939096485178" TextFormatString="{0:#.00}" Multiline="true" TextAlignment="MiddleLeft" Font="Times New Roman, 11pt, style=Bold">
+                <Item5 Ref="60" ControlType="XRTableCell" Name="tableCell24" Weight="0.75192939096485178" TextFormatString="{0:$#.00}" Multiline="true" TextAlignment="MiddleLeft" Font="Times New Roman, 11pt, style=Bold">
                   <Summary Ref="61" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="62" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Total])" />

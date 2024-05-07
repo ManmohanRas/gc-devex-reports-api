@@ -19,7 +19,7 @@
                     <Item1 Ref="9" EventName="BeforePrint" PropertyName="Text" Expression="[AgencyName]+' - '+[Title]+'/'+[ApplicationType_Title]" />
                   </ExpressionBindings>
                 </Item1>
-                <Item2 Ref="10" ControlType="XRTableCell" Name="tableCell2" Weight="0.98556015014649023" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight" BackColor="255,254,255,153">
+                <Item2 Ref="10" ControlType="XRTableCell" Name="tableCell2" Weight="0.98556015014649023" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,254,255,153">
                   <ExpressionBindings>
                     <Item1 Ref="11" EventName="BeforePrint" PropertyName="Text" Expression="[CAFAmount]" />
                   </ExpressionBindings>
@@ -49,37 +49,37 @@
                   </ExpressionBindings>
                   <StylePriority Ref="24" UseTextAlignment="false" />
                 </Item6>
-                <Item7 Ref="25" ControlType="XRTableCell" Name="tableCell7" Weight="0.93943008249049975" TextFormatString="{0:#}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,254,254,154">
+                <Item7 Ref="25" ControlType="XRTableCell" Name="tableCell7" Weight="0.93943008249049975" TextFormatString="{0:#,%}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,254,254,154">
                   <ExpressionBindings>
                     <Item1 Ref="26" EventName="BeforePrint" PropertyName="Text" Expression="[MatchPercent]" />
                   </ExpressionBindings>
                   <StylePriority Ref="27" UseBackColor="false" UseTextAlignment="false" />
                 </Item7>
-                <Item8 Ref="28" ControlType="XRTableCell" Name="tableCell8" Weight="1.2560987279633109" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item8 Ref="28" ControlType="XRTableCell" Name="tableCell8" Weight="1.2560987279633109" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
                   <ExpressionBindings>
                     <Item1 Ref="29" EventName="BeforePrint" PropertyName="Text" Expression="[AcquistionCost]" />
                   </ExpressionBindings>
                   <StylePriority Ref="30" UseTextAlignment="false" />
                 </Item8>
-                <Item9 Ref="31" ControlType="XRTableCell" Name="tableCell9" Weight="1.1083320440492745" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item9 Ref="31" ControlType="XRTableCell" Name="tableCell9" Weight="1.1083320440492745" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
                   <ExpressionBindings>
                     <Item1 Ref="32" EventName="BeforePrint" PropertyName="Text" Expression="[SoftCost]" />
                   </ExpressionBindings>
                   <StylePriority Ref="33" UseTextAlignment="false" />
                 </Item9>
-                <Item10 Ref="34" ControlType="XRTableCell" Name="tableCell10" Weight="0.93943254648270758" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item10 Ref="34" ControlType="XRTableCell" Name="tableCell10" Weight="0.93943254648270758" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
                   <ExpressionBindings>
                     <Item1 Ref="35" EventName="BeforePrint" PropertyName="Text" Expression="[FinalCost]" />
                   </ExpressionBindings>
                   <StylePriority Ref="36" UseTextAlignment="false" />
                 </Item10>
-                <Item11 Ref="37" ControlType="XRTableCell" Name="tableCell11" Weight="0.93943254648270758" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item11 Ref="37" ControlType="XRTableCell" Name="tableCell11" Weight="0.93943254648270758" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
                   <ExpressionBindings>
                     <Item1 Ref="38" EventName="BeforePrint" PropertyName="Text" Expression="[ReturnedAmount]" />
                   </ExpressionBindings>
                   <StylePriority Ref="39" UseTextAlignment="false" />
                 </Item11>
-                <Item12 Ref="40" ControlType="XRTableCell" Name="tableCell12" Weight="0.971705488762873" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item12 Ref="40" ControlType="XRTableCell" Name="tableCell12" Weight="0.971705488762873" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
                   <ExpressionBindings>
                     <Item1 Ref="41" EventName="BeforePrint" PropertyName="Text" Expression="[RemainingEncumberanc]" />
                   </ExpressionBindings>
@@ -131,7 +131,7 @@
         <Item11 Ref="67" ControlType="XRLabel" Name="label5" Multiline="true" Text="Houses" TextAlignment="MiddleCenter" SizeF="283.946259,41.2500038" LocationFloat="344.6105,70.8333359" Font="Segoe UI Semilight, 11pt, style=Bold" BackColor="255,197,217,241" Padding="2,2,0,0,100" Borders="All">
           <StylePriority Ref="68" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
         </Item11>
-        <Item12 Ref="69" ControlType="XRLabel" Name="label6" Multiline="true" Text="Costshare" TextAlignment="MiddleCenter" SizeF="93.94318,82.49999" LocationFloat="628.556763,70.8333359" Font="Segoe UI Semilight, 11pt, style=Bold" BackColor="255,197,217,241" Padding="2,2,0,0,100" Borders="All">
+        <Item12 Ref="69" ControlType="XRLabel" Name="label6" Multiline="true" Text="Cost share" TextAlignment="MiddleCenter" SizeF="93.94318,82.49999" LocationFloat="628.556763,70.8333359" Font="Segoe UI Semilight, 11pt, style=Bold" BackColor="255,197,217,241" Padding="2,2,0,0,100" Borders="All">
           <StylePriority Ref="70" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
         </Item12>
         <Item13 Ref="71" ControlType="XRLabel" Name="label9" Multiline="true" Text="Funded" TextAlignment="MiddleCenter" SizeF="58.6614075,41.25" LocationFloat="344.6105,112.083344" Font="Segoe UI Semilight, 11pt, style=Bold" BackColor="255,151,255,101" Padding="2,2,0,0,100" Borders="All">
@@ -173,7 +173,7 @@
                 <Item1 Ref="89" ControlType="XRTableCell" Name="tableCell13" Weight="2.460545349121094" Multiline="true" Text="TOTAL, ORIGINAL ENCUMBERANCES" BackColor="255,153,255,100">
                   <StylePriority Ref="90" UseBackColor="false" />
                 </Item1>
-                <Item2 Ref="91" ControlType="XRTableCell" Name="tableCell15" Weight="0.9855599975585938" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight" BackColor="255,151,255,102">
+                <Item2 Ref="91" ControlType="XRTableCell" Name="tableCell15" Weight="0.9855599975585938" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,151,255,102">
                   <Summary Ref="92" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="93" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([CAFAmount])" />
@@ -217,34 +217,34 @@
                 <Item1 Ref="116" ControlType="XRTableCell" Name="tableCell14" Weight="2.460545349121094" Multiline="true" Text=" TOTAL Allocation + Interest  " BackColor="Yellow">
                   <StylePriority Ref="117" UseBackColor="false" />
                 </Item1>
-                <Item2 Ref="118" ControlType="XRTableCell" Name="tableCell16" Weight="0.9855599975585938" Multiline="true" TextAlignment="MiddleRight" BackColor="255,254,255,2">
+                <Item2 Ref="118" ControlType="XRTableCell" Name="tableCell16" Weight="0.9855599975585938" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,254,255,2">
                   <ExpressionBindings>
                     <Item1 Ref="119" EventName="BeforePrint" PropertyName="Text" Expression="[Query].[Sum_Interest]+[Query].[Sum_AllocationAmount]+[Query].[Sum_AddedOrOmittedAmount]" />
                   </ExpressionBindings>
                   <StylePriority Ref="120" UseBackColor="false" UseTextAlignment="false" />
                 </Item2>
-                <Item3 Ref="121" ControlType="XRTableCell" Name="tableCell18" Weight="0.58661376953125011" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,155,254,104">
+                <Item3 Ref="121" ControlType="XRTableCell" Name="tableCell18" Weight="0.58661376953125011" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,155,254,104">
                   <Summary Ref="122" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="123" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Funded])" />
                   </ExpressionBindings>
                   <StylePriority Ref="124" UseBackColor="false" UseTextAlignment="false" />
                 </Item3>
-                <Item4 Ref="125" ControlType="XRTableCell" Name="tableCell20" Weight="0.58661376953125011" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,253,233,219">
+                <Item4 Ref="125" ControlType="XRTableCell" Name="tableCell20" Weight="0.58661376953125011" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,253,233,219">
                   <Summary Ref="126" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="127" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Pending])" />
                   </ExpressionBindings>
                   <StylePriority Ref="128" UseBackColor="false" UseTextAlignment="false" />
                 </Item4>
-                <Item5 Ref="129" ControlType="XRTableCell" Name="tableCell22" Weight="0.93514038085937523" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,185,220,232">
+                <Item5 Ref="129" ControlType="XRTableCell" Name="tableCell22" Weight="0.93514038085937523" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,185,220,232">
                   <Summary Ref="130" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="131" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Preserved])" />
                   </ExpressionBindings>
                   <StylePriority Ref="132" UseBackColor="false" UseTextAlignment="false" />
                 </Item5>
-                <Item6 Ref="133" ControlType="XRTableCell" Name="tableCell24" Weight="0.73109619140625015" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,205,192,219">
+                <Item6 Ref="133" ControlType="XRTableCell" Name="tableCell24" Weight="0.73109619140625015" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,205,192,219">
                   <Summary Ref="134" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="135" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Withdraw])" />
@@ -254,35 +254,35 @@
                 <Item7 Ref="137" ControlType="XRTableCell" Name="tableCell26" Weight="0.93942932128906265" Multiline="true" TextAlignment="MiddleCenter">
                   <StylePriority Ref="138" UseTextAlignment="false" />
                 </Item7>
-                <Item8 Ref="139" ControlType="XRTableCell" Name="tableCell28" Weight="1.2560986328125001" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight" BackColor="255,151,255,156">
+                <Item8 Ref="139" ControlType="XRTableCell" Name="tableCell28" Weight="1.2560986328125001" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,151,255,156">
                   <Summary Ref="140" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="141" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([AcquistionCost])" />
                   </ExpressionBindings>
                   <StylePriority Ref="142" UseBackColor="false" UseTextAlignment="false" />
                 </Item8>
-                <Item9 Ref="143" ControlType="XRTableCell" Name="tableCell30" Weight="1.1083331298828125" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight" BackColor="255,251,190,144">
+                <Item9 Ref="143" ControlType="XRTableCell" Name="tableCell30" Weight="1.1083331298828125" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,251,190,144">
                   <Summary Ref="144" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="145" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([SoftCost])" />
                   </ExpressionBindings>
                   <StylePriority Ref="146" UseBackColor="false" UseTextAlignment="false" />
                 </Item9>
-                <Item10 Ref="147" ControlType="XRTableCell" Name="tableCell32" Weight="0.939433661312181" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight" BackColor="255,187,222,228">
+                <Item10 Ref="147" ControlType="XRTableCell" Name="tableCell32" Weight="0.939433661312181" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,187,222,228">
                   <Summary Ref="148" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="149" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([FinalCost])" />
                   </ExpressionBindings>
                   <StylePriority Ref="150" UseBackColor="false" UseTextAlignment="false" />
                 </Item10>
-                <Item11 Ref="151" ControlType="XRTableCell" Name="tableCell34" Weight="0.93943228802109435" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight" BackColor="255,230,185,183">
+                <Item11 Ref="151" ControlType="XRTableCell" Name="tableCell34" Weight="0.93943228802109435" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,230,185,183">
                   <Summary Ref="152" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="153" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([ReturnedAmount])" />
                   </ExpressionBindings>
                   <StylePriority Ref="154" UseBackColor="false" UseTextAlignment="false" />
                 </Item11>
-                <Item12 Ref="155" ControlType="XRTableCell" Name="tableCell36" Weight="0.97170523856081226" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight" BackColor="255,216,228,188">
+                <Item12 Ref="155" ControlType="XRTableCell" Name="tableCell36" Weight="0.97170523856081226" TextFormatString="{0:$#,0}" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,216,228,188">
                   <Summary Ref="156" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="157" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([RemainingEncumberanc])" />
@@ -296,7 +296,7 @@
                 <Item1 Ref="160" ControlType="XRTableCell" Name="tableCell37" Weight="2.460545349121094" Multiline="true" Text="Current Encumberances" TextAlignment="MiddleRight" ForeColor="255,217,47,46">
                   <StylePriority Ref="161" UseForeColor="false" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="162" ControlType="XRTableCell" Name="tableCell38" Weight="0.9855599975585938" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item2 Ref="162" ControlType="XRTableCell" Name="tableCell38" Weight="0.9855599975585938" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
                   <Summary Ref="163" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="164" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([RemainingEncumberanc])" />
@@ -340,7 +340,7 @@
                 <Item1 Ref="187" ControlType="XRTableCell" Name="tableCell49" Weight="2.460545349121094" Multiline="true" Text="Reimbursed Hard/Soft Costs" TextAlignment="MiddleRight" ForeColor="255,217,47,46">
                   <StylePriority Ref="188" UseForeColor="false" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="189" ControlType="XRTableCell" Name="tableCell50" Weight="0.9855599975585938" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item2 Ref="189" ControlType="XRTableCell" Name="tableCell50" Weight="0.9855599975585938" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
                   <Summary Ref="190" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="191" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([FinalCost])" />
@@ -384,7 +384,7 @@
                 <Item1 Ref="214" ControlType="XRTableCell" Name="tableCell61" Weight="2.460545349121094" Multiline="true" Text="County Appraisal/Survey Costs" TextAlignment="MiddleRight" ForeColor="255,217,47,46">
                   <StylePriority Ref="215" UseForeColor="false" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="216" ControlType="XRTableCell" Name="tableCell62" Weight="0.9855599975585938" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item2 Ref="216" ControlType="XRTableCell" Name="tableCell62" Weight="0.9855599975585938" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
                   <Summary Ref="217" Running="Report" />
                   <ExpressionBindings>
                     <Item1 Ref="218" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([CountyAppraisal])" />
@@ -428,7 +428,7 @@
                 <Item1 Ref="241" ControlType="XRTableCell" Name="tableCell73" Weight="2.460545349121094" Multiline="true" Text="Program Expenses" TextAlignment="MiddleRight" ForeColor="255,217,47,46">
                   <StylePriority Ref="242" UseForeColor="false" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="243" ControlType="XRTableCell" Name="tableCell74" Weight="0.9855599975585938" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleRight">
+                <Item2 Ref="243" ControlType="XRTableCell" Name="tableCell74" Weight="0.9855599975585938" TextFormatString="{0:$#,#}" Multiline="true" TextAlignment="MiddleCenter">
                   <ExpressionBindings>
                     <Item1 Ref="244" EventName="BeforePrint" PropertyName="Text" Expression="[Query_1].[Sum_ExpenseAmount]" />
                   </ExpressionBindings>
@@ -471,7 +471,7 @@
                 <Item1 Ref="267" ControlType="XRTableCell" Name="tableCell85" Weight="2.460545349121094" Multiline="true" Text="TOTAL FUNDS AVAILABLE" BackColor="255,251,213,181">
                   <StylePriority Ref="268" UseBackColor="false" />
                 </Item1>
-                <Item2 Ref="269" ControlType="XRTableCell" Name="tableCell86" Weight="0.9855599975585938" Multiline="true" TextAlignment="MiddleRight" BackColor="255,254,213,177">
+                <Item2 Ref="269" ControlType="XRTableCell" Name="tableCell86" Weight="0.9855599975585938" Multiline="true" TextAlignment="MiddleCenter" BackColor="255,254,213,177">
                   <StylePriority Ref="270" UseBackColor="false" UseTextAlignment="false" />
                 </Item2>
                 <Item3 Ref="271" ControlType="XRTableCell" Name="tableCell87" Weight="0.58661376953125011" Multiline="true" TextAlignment="MiddleCenter">
