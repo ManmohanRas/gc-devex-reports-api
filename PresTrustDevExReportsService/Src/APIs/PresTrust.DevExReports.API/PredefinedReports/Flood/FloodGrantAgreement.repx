@@ -203,7 +203,7 @@
                 </Item7>
                 <Item8 Ref="103" ControlType="XRTableRow" Name="tableRow8" Weight="1.3333349609375003">
                   <Cells>
-                    <Item1 Ref="104" ControlType="XRTableCell" Name="tableCell9" Weight="1" Multiline="true" Text="Final Offer " TextAlignment="MiddleLeft" Font="Times New Roman, 16pt, style=Bold">
+                    <Item1 Ref="104" ControlType="XRTableCell" Name="tableCell9" Weight="1" Multiline="true" Text="Final Offer " TextAlignment="MiddleLeft" Font="Times New Roman, 16pt, style=Bold, Underline">
                       <StylePriority Ref="105" UseFont="false" UseTextAlignment="false" />
                     </Item1>
                   </Cells>
@@ -360,7 +360,7 @@
                     </Item1>
                     <Item2 Ref="176" ControlType="XRTableCell" Name="tableCell44" Weight="0.63477361231674378" TextFormatString="{0:$#,0.00}" Multiline="true" TextAlignment="MiddleLeft" Font="Times New Roman, 18pt">
                       <ExpressionBindings>
-                        <Item1 Ref="177" EventName="BeforePrint" PropertyName="Text" Expression="[SoftCostFMPAmt]+[HardCostFMPAmt]" />
+                        <Item1 Ref="177" EventName="BeforePrint" PropertyName="Text" Expression="[SoftCostFMPAmt]+[HardCostFMPAmt]&#xA;" />
                       </ExpressionBindings>
                       <StylePriority Ref="178" UseFont="false" UseTextAlignment="false" />
                     </Item2>
