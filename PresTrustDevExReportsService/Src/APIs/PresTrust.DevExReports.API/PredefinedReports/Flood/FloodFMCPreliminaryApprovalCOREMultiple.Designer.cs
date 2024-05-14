@@ -84,6 +84,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.Property = reportInitializer.GetCalculatedField("Property");
             this.Was = reportInitializer.GetCalculatedField("Was");
             this.ValueEstimateCalc = reportInitializer.GetCalculatedField("ValueEstimateCalc");
+            this.SoftEstimateCalc = reportInitializer.GetCalculatedField("SoftEstimateCalc");
+            this.FundsEncumberedCalc = reportInitializer.GetCalculatedField("FundsEncumberedCalc");
+            this.MunicipalMatchCalc = reportInitializer.GetCalculatedField("MunicipalMatchCalc");
         }
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
@@ -146,6 +149,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.CalculatedField Property;
         private DevExpress.XtraReports.UI.CalculatedField Was;
         private DevExpress.XtraReports.UI.CalculatedField ValueEstimateCalc;
+        private DevExpress.XtraReports.UI.CalculatedField SoftEstimateCalc;
+        private DevExpress.XtraReports.UI.CalculatedField FundsEncumberedCalc;
         private DevExpress.XtraReports.Parameters.Parameter applicationid;
+        private DevExpress.XtraReports.UI.CalculatedField MunicipalMatchCalc;
     }
 }
