@@ -21,7 +21,7 @@
                 <Item1 Ref="12" ControlType="XRTableCell" Name="tableCell93" Weight="0.63820544577859861" Multiline="true" Text="10%" Font="Segoe UI Semilight, 10pt, style=Bold">
                   <StylePriority Ref="13" UseFont="false" />
                 </Item1>
-                <Item2 Ref="14" ControlType="XRTableCell" Name="tableCell94" Weight="1.1863230930160411" TextFormatString="{0:#.00}" Multiline="true">
+                <Item2 Ref="14" ControlType="XRTableCell" Name="tableCell94" Weight="1.1863230930160411" TextFormatString="{0:#,#.00}" Multiline="true">
                   <ExpressionBindings>
                     <Item1 Ref="15" EventName="BeforePrint" PropertyName="Text" Expression="[TenPercent]" />
                   </ExpressionBindings>
@@ -29,7 +29,7 @@
                 <Item3 Ref="16" ControlType="XRTableCell" Name="tableCell64" Weight="0.64602167421431833" Multiline="true" Text="2%" Font="Segoe UI Semilight, 10pt, style=Bold">
                   <StylePriority Ref="17" UseFont="false" />
                 </Item3>
-                <Item4 Ref="18" ControlType="XRTableCell" Name="tableCell105" Weight="1.015356141130737" TextFormatString="{0:#.00}" Multiline="true">
+                <Item4 Ref="18" ControlType="XRTableCell" Name="tableCell105" Weight="1.015356141130737" TextFormatString="{0:#,#.00}" Multiline="true">
                   <ExpressionBindings>
                     <Item1 Ref="19" EventName="BeforePrint" PropertyName="Text" Expression="[TwoPercent]" />
                   </ExpressionBindings>
@@ -37,7 +37,7 @@
                 <Item5 Ref="20" ControlType="XRTableCell" Name="tableCell66" Weight="0.50767807056536851" Multiline="true" Text="1%" Font="Segoe UI Semilight, 10pt, style=Bold">
                   <StylePriority Ref="21" UseFont="false" />
                 </Item5>
-                <Item6 Ref="22" ControlType="XRTableCell" Name="tableCell107" Weight="0.93013021902734572" TextFormatString="{0:#.00}" Multiline="true">
+                <Item6 Ref="22" ControlType="XRTableCell" Name="tableCell107" Weight="0.93013021902734572" TextFormatString="{0:#,#.00}" Multiline="true">
                   <ExpressionBindings>
                     <Item1 Ref="23" EventName="BeforePrint" PropertyName="Text" Expression="[OnePercent]" />
                   </ExpressionBindings>
@@ -45,7 +45,7 @@
                 <Item7 Ref="24" ControlType="XRTableCell" Name="tableCell108" Weight="0.70384243434367266" Multiline="true" Text="0.1%" Font="Segoe UI Semilight, 10pt, style=Bold">
                   <StylePriority Ref="25" UseFont="false" />
                 </Item7>
-                <Item8 Ref="26" ControlType="XRTableCell" Name="tableCell112" Weight="1.0376409010550649" TextFormatString="{0:#.00}" Multiline="true">
+                <Item8 Ref="26" ControlType="XRTableCell" Name="tableCell112" Weight="1.0376409010550649" TextFormatString="{0:#,#.00}" Multiline="true">
                   <ExpressionBindings>
                     <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="[PointOnePercent]" />
                   </ExpressionBindings>
@@ -357,7 +357,7 @@
               <Cells>
                 <Item1 Ref="150" ControlType="XRTableCell" Name="tableCell53" Weight="3.1999996948242186" Multiline="true">
                   <Controls>
-                    <Item1 Ref="151" ControlType="XRCheckBox" Name="checkBox2" Text="Is the property within the Passaic River Basin" SizeF="344.583252,22.999939" LocationFloat="0,0" Padding="2,2,0,0,100">
+                    <Item1 Ref="151" ControlType="XRCheckBox" Name="checkBox2" Text="Is the property within the Passaic River Basin" SizeF="342.02774,22.999939" LocationFloat="2.55552673,0" Padding="2,2,0,0,100">
                       <ExpressionBindings>
                         <Item1 Ref="152" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="[IsthepropertywithinthePassaicRiverBasin]" />
                       </ExpressionBindings>
@@ -383,7 +383,7 @@
               <Cells>
                 <Item1 Ref="158" ControlType="XRTableCell" Name="tableCell57" Weight="3.1999996948242186" Multiline="true">
                   <Controls>
-                    <Item1 Ref="159" ControlType="XRCheckBox" Name="checkBox5" Text="Is the property within Flood plain" SizeF="342.583282,23" LocationFloat="1.9999609,2" Padding="2,2,0,0,100">
+                    <Item1 Ref="159" ControlType="XRCheckBox" Name="checkBox5" Text="Is the property within Flood plain" SizeF="342.027679,23" LocationFloat="2.55552673,2" Padding="2,2,0,0,100">
                       <ExpressionBindings>
                         <Item1 Ref="160" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="[IsthepropertywithinFloodplain]" />
                       </ExpressionBindings>
