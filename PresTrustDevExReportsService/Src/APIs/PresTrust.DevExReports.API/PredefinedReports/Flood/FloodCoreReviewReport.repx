@@ -206,17 +206,17 @@
     <Item8 Ref="94" ControlType="DetailReportBand" Name="DetailReport2" Level="3" FilterString="[Id] = ?applicationid" DataMember="Query_2" DataSource="#Ref-4">
       <Bands>
         <Item1 Ref="95" ControlType="DetailBand" Name="Detail3" Expanded="false" />
-        <Item2 Ref="96" ControlType="ReportHeaderBand" Name="ReportHeader1" HeightF="220.5555">
+        <Item2 Ref="96" ControlType="ReportHeaderBand" Name="ReportHeader1" HeightF="224.2221">
           <Controls>
             <Item1 Ref="97" ControlType="XRTable" Name="table5" TextAlignment="MiddleLeft" SizeF="261.0277,100.000015" LocationFloat="265.416718,44.1666527" Font="Segoe UI Semilight, 10pt" Padding="2,2,0,0,96">
               <Rows>
                 <Item1 Ref="98" ControlType="XRTableRow" Name="tableRow17" Weight="1">
                   <Cells>
                     <Item1 Ref="99" ControlType="XRTableCell" Name="tableCell27" Weight="2.1951911787805751" Multiline="true" Text="% Floodplain:" />
-                    <Item2 Ref="100" ControlType="XRTableCell" Name="tableCell28" Weight="1.7667238870136233" TextFormatString="{0:#.0}" Multiline="true">
+                    <Item2 Ref="100" ControlType="XRTableCell" Name="tableCell28" Weight="1.7667238870136233" TextFormatString="{0:n1}%" Multiline="true">
                       <Summary Ref="101" Running="Report" />
                       <ExpressionBindings>
-                        <Item1 Ref="102" EventName="BeforePrint" PropertyName="Text" Expression="(sumSum([IsthepropertywithinFloodplain])/ sumCount([PamsPin])) * 100&#xA;+'%'&#xA;" />
+                        <Item1 Ref="102" EventName="BeforePrint" PropertyName="Text" Expression="(sumSum([IsthepropertywithinFloodplain])/ sumCount([PamsPin])) * 100&#xA;&#xA;" />
                       </ExpressionBindings>
                     </Item2>
                   </Cells>
@@ -224,10 +224,10 @@
                 <Item2 Ref="103" ControlType="XRTableRow" Name="tableRow18" Weight="1">
                   <Cells>
                     <Item1 Ref="104" ControlType="XRTableCell" Name="tableCell29" Weight="2.1951911787805751" Multiline="true" Text="% Floodway:" />
-                    <Item2 Ref="105" ControlType="XRTableCell" Name="tableCell30" Weight="1.7667238870136233" TextFormatString="{0:#.0}" Multiline="true">
+                    <Item2 Ref="105" ControlType="XRTableCell" Name="tableCell30" Weight="1.7667238870136233" TextFormatString="{0:n1}%" Multiline="true">
                       <Summary Ref="106" Running="Report" />
                       <ExpressionBindings>
-                        <Item1 Ref="107" EventName="BeforePrint" PropertyName="Text" Expression="(sumSum([IsthepropertywithinFloodway])/ sumCount([PamsPin])) * 100+'%'&#xA;" />
+                        <Item1 Ref="107" EventName="BeforePrint" PropertyName="Text" Expression="(sumSum([IsthepropertywithinFloodway])/ sumCount([PamsPin])) * 100&#xA;" />
                       </ExpressionBindings>
                     </Item2>
                   </Cells>
@@ -235,10 +235,10 @@
                 <Item3 Ref="108" ControlType="XRTableRow" Name="tableRow19" Weight="1">
                   <Cells>
                     <Item1 Ref="109" ControlType="XRTableCell" Name="tableCell31" Weight="2.1951911787805751" Multiline="true" Text="% Passaic River Basin:" />
-                    <Item2 Ref="110" ControlType="XRTableCell" Name="tableCell32" Weight="1.7667238870136233" TextFormatString="{0:#.0}" Multiline="true">
+                    <Item2 Ref="110" ControlType="XRTableCell" Name="tableCell32" Weight="1.7667238870136233" TextFormatString="{0:n1}%" Multiline="true">
                       <Summary Ref="111" Running="Report" />
                       <ExpressionBindings>
-                        <Item1 Ref="112" EventName="BeforePrint" PropertyName="Text" Expression="(sumSum([IsthepropertywithinthePassaicRiverBasin])/ sumCount([PamsPin])) * 100+'%'&#xA;" />
+                        <Item1 Ref="112" EventName="BeforePrint" PropertyName="Text" Expression="(sumSum([IsthepropertywithinthePassaicRiverBasin])/ sumCount([PamsPin])) * 100&#xA;" />
                       </ExpressionBindings>
                     </Item2>
                   </Cells>
@@ -282,9 +282,9 @@
                 <Item3 Ref="128" ControlType="XRTableRow" Name="tableRow2" Weight="1">
                   <Cells>
                     <Item1 Ref="129" ControlType="XRTableCell" Name="tableCell8" Weight="2.1459857187152394" Multiline="true" Text="% Contiguous:" />
-                    <Item2 Ref="130" ControlType="XRTableCell" Name="tableCell11" Weight="1.2061566741801004" TextFormatString="{0:#.0}" Multiline="true">
+                    <Item2 Ref="130" ControlType="XRTableCell" Name="tableCell11" Weight="1.2061566741801004" TextFormatString="{0:n1}%" Multiline="true">
                       <ExpressionBindings>
-                        <Item1 Ref="131" EventName="BeforePrint" PropertyName="Text" Expression="ToDecimal([NoOfContiguousHomes] / [NoOfHomes])*100+'%'" />
+                        <Item1 Ref="131" EventName="BeforePrint" PropertyName="Text" Expression="ToDecimal([NoOfContiguousHomes]) / [NoOfHomes]*100" />
                       </ExpressionBindings>
                     </Item2>
                   </Cells>
@@ -292,10 +292,10 @@
                 <Item4 Ref="132" ControlType="XRTableRow" Name="tableRow3" Weight="1">
                   <Cells>
                     <Item1 Ref="133" ControlType="XRTableCell" Name="tableCell9" Weight="2.1459856021263883" Multiline="true" Text="% NFIP: " />
-                    <Item2 Ref="134" ControlType="XRTableCell" Name="tableCell12" Weight="1.2061565878892584" TextFormatString="{0:#.0}" Multiline="true">
+                    <Item2 Ref="134" ControlType="XRTableCell" Name="tableCell12" Weight="1.2061565878892584" TextFormatString="{0:n1}%" Multiline="true">
                       <Summary Ref="135" Running="Report" />
                       <ExpressionBindings>
-                        <Item1 Ref="136" EventName="BeforePrint" PropertyName="Text" Expression="(sumCount([NfipPolicyNo])/[NoOfHomes])*100+'%'&#xA;" />
+                        <Item1 Ref="136" EventName="BeforePrint" PropertyName="Text" Expression="(sumCount([NfipPolicyNo])/[NoOfHomes])*100&#xA;" />
                       </ExpressionBindings>
                     </Item2>
                   </Cells>
@@ -303,10 +303,10 @@
                 <Item5 Ref="137" ControlType="XRTableRow" Name="tableRow15" Weight="1">
                   <Cells>
                     <Item1 Ref="138" ControlType="XRTableCell" Name="tableCell43" Weight="2.1459856021263883" Multiline="true" Text="% SRL:" />
-                    <Item2 Ref="139" ControlType="XRTableCell" Name="tableCell44" Weight="1.2061565878892584" TextFormatString="{0:#.0}" Multiline="true">
+                    <Item2 Ref="139" ControlType="XRTableCell" Name="tableCell44" Weight="1.2061565878892584" TextFormatString="{0:n1}%" Multiline="true">
                       <Summary Ref="140" Running="Report" />
                       <ExpressionBindings>
-                        <Item1 Ref="141" EventName="BeforePrint" PropertyName="Text" Expression="(sumSum([FEMARepetitiveLossList])/sumCount([PamsPin]))*100+'%'" />
+                        <Item1 Ref="141" EventName="BeforePrint" PropertyName="Text" Expression="(sumSum([FEMARepetitiveLossList])/sumCount([PamsPin]))*100" />
                       </ExpressionBindings>
                     </Item2>
                   </Cells>
@@ -314,10 +314,10 @@
                 <Item6 Ref="142" ControlType="XRTableRow" Name="tableRow16" Weight="1">
                   <Cells>
                     <Item1 Ref="143" ControlType="XRTableCell" Name="tableCell47" Weight="2.1459856021263883" Multiline="true" Text="% RL:" />
-                    <Item2 Ref="144" ControlType="XRTableCell" Name="tableCell48" Weight="1.2061565878892584" TextFormatString="{0:#.0}" Multiline="true" Text="tableCell48">
+                    <Item2 Ref="144" ControlType="XRTableCell" Name="tableCell48" Weight="1.2061565878892584" TextFormatString="{0:n1}%" Multiline="true" Text="tableCell48">
                       <Summary Ref="145" Running="Report" />
                       <ExpressionBindings>
-                        <Item1 Ref="146" EventName="BeforePrint" PropertyName="Text" Expression="(sumSum([FEMARepetitiveLossList])/sumCount([PamsPin])) * 100+'%'&#xA;" />
+                        <Item1 Ref="146" EventName="BeforePrint" PropertyName="Text" Expression="(sumSum([FEMARepetitiveLossList])/sumCount([PamsPin])) * 100&#xA;" />
                       </ExpressionBindings>
                     </Item2>
                   </Cells>

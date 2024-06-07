@@ -24,6 +24,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.DetailReport2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport2");
             this.DetailReport3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport3");
             this.DetailReport4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport4");
+            this.DetailReport5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport5");
             this.Detail1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail1");
             this.GroupHeader1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupHeaderBand>("GroupHeader1");
             this.table2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table2");
@@ -33,35 +34,30 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.tableRow4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow4");
             this.tableRow5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow5");
             this.tableRow6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow6");
-            this.tableRow7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow7");
-            this.tableRow8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow8");
             this.tableCell3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell3");
             this.tableCell4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell4");
             this.tableCell5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell5");
             this.tableCell6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell6");
             this.tableCell7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell7");
-            this.tableCell8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell8");
-            this.tableCell9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell9");
             this.Detail2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail2");
             this.ReportHeader = reportInitializer.GetControl<DevExpress.XtraReports.UI.ReportHeaderBand>("ReportHeader");
             this.richText5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText5");
             this.Detail3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail3");
             this.GroupHeader2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupHeaderBand>("GroupHeader2");
-            this.GroupFooter1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupFooterBand>("GroupFooter1");
             this.table1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table1");
             this.tableRow1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow1");
             this.tableCell1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell1");
             this.tableCell2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell2");
             this.richText6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText6");
-            this.richText2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText2");
             this.Detail4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail4");
             this.GroupFooter2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupFooterBand>("GroupFooter2");
             this.richText3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText3");
             this.Detail5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail5");
             this.GroupFooter3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupFooterBand>("GroupFooter3");
             this.richText4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText4");
-            this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
-            this.label3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label3");
+            this.Detail6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail6");
+            this.GroupHeader3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupHeaderBand>("GroupHeader3");
+            this.richText1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRRichText>("richText1");
 
             // Parameters
             this.applicationid = reportInitializer.GetParameter("applicationid");
@@ -72,7 +68,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             // Calculated Fields
             this.Prioroty1 = reportInitializer.GetCalculatedField("Prioroty1");
             this.User = reportInitializer.GetCalculatedField("User");
-            this.TotalEncumbered = reportInitializer.GetCalculatedField("TotalEncumbered");
+            this.HouseEncubrance = reportInitializer.GetCalculatedField("HouseEncubrance");
+            this.SoftEstimateInit = reportInitializer.GetCalculatedField("SoftEstimateInit");
+            this.SoftEstimate = reportInitializer.GetCalculatedField("SoftEstimate");
+            this.TotalFundsEncumbered = reportInitializer.GetCalculatedField("TotalFundsEncumbered");
         }
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
@@ -82,6 +81,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport2;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport3;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport4;
+        private DevExpress.XtraReports.UI.DetailReportBand DetailReport5;
         private DevExpress.XtraReports.UI.DetailBand Detail1;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
         private DevExpress.XtraReports.UI.XRTable table2;
@@ -91,39 +91,37 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.XRTableRow tableRow4;
         private DevExpress.XtraReports.UI.XRTableRow tableRow5;
         private DevExpress.XtraReports.UI.XRTableRow tableRow6;
-        private DevExpress.XtraReports.UI.XRTableRow tableRow7;
-        private DevExpress.XtraReports.UI.XRTableRow tableRow8;
         private DevExpress.XtraReports.UI.XRTableCell tableCell3;
         private DevExpress.XtraReports.UI.XRTableCell tableCell4;
         private DevExpress.XtraReports.UI.XRTableCell tableCell5;
         private DevExpress.XtraReports.UI.XRTableCell tableCell6;
         private DevExpress.XtraReports.UI.XRTableCell tableCell7;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell8;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell9;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.DetailBand Detail2;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
         private DevExpress.XtraReports.UI.XRRichText richText5;
         private DevExpress.XtraReports.UI.DetailBand Detail3;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader2;
-        private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter1;
         private DevExpress.XtraReports.UI.XRTable table1;
         private DevExpress.XtraReports.UI.XRTableRow tableRow1;
         private DevExpress.XtraReports.UI.XRTableCell tableCell1;
         private DevExpress.XtraReports.UI.XRTableCell tableCell2;
         private DevExpress.XtraReports.UI.XRRichText richText6;
-        private DevExpress.XtraReports.UI.XRRichText richText2;
         private DevExpress.XtraReports.UI.DetailBand Detail4;
         private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter2;
         private DevExpress.XtraReports.UI.XRRichText richText3;
         private DevExpress.XtraReports.UI.DetailBand Detail5;
         private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter3;
         private DevExpress.XtraReports.UI.XRRichText richText4;
+        private DevExpress.XtraReports.UI.DetailBand Detail6;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader3;
+        private DevExpress.XtraReports.UI.XRRichText richText1;
         private DevExpress.XtraReports.UI.CalculatedField Prioroty1;
         private DevExpress.XtraReports.UI.CalculatedField User;
-        private DevExpress.XtraReports.UI.CalculatedField TotalEncumbered;
+        private DevExpress.XtraReports.UI.CalculatedField HouseEncubrance;
+        private DevExpress.XtraReports.UI.CalculatedField SoftEstimateInit;
+        private DevExpress.XtraReports.UI.CalculatedField SoftEstimate;
+        private DevExpress.XtraReports.UI.CalculatedField TotalFundsEncumbered;
         private DevExpress.XtraReports.Parameters.Parameter applicationid;
-        private DevExpress.XtraReports.UI.XRLabel label1;
-        private DevExpress.XtraReports.UI.XRLabel label3;
     }
 }
