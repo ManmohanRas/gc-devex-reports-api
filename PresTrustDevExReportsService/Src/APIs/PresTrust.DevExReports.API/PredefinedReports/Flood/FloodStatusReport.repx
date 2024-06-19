@@ -83,87 +83,87 @@
             </Item1>
           </Controls>
         </Item1>
-        <Item2 Ref="48" ControlType="GroupHeaderBand" Name="GroupHeader3" Level="1" HeightF="50.2917">
+        <Item2 Ref="48" ControlType="GroupHeaderBand" Name="GroupHeader3" Level="1" HeightF="82.9166641">
           <GroupFields>
             <Item1 Ref="49" FieldName="Title" />
           </GroupFields>
           <Controls>
-            <Item1 Ref="50" ControlType="XRTable" Name="table6" SizeF="810,34.3750038" LocationFloat="0,15" BackColor="Transparent" Padding="2,2,0,0,96">
+            <Item1 Ref="50" ControlType="XRTable" Name="table5" SizeF="810,34.375" LocationFloat="0,10" Padding="2,2,0,0,96">
               <Rows>
-                <Item1 Ref="51" ControlType="XRTableRow" Name="tableRow6" Weight="1">
+                <Item1 Ref="51" ControlType="XRTableRow" Name="tableRow5" Weight="1">
                   <Cells>
-                    <Item1 Ref="52" ControlType="XRTableCell" Name="tableCell13" Weight="2.88934281327106" Multiline="true" Text="Project Area Title " TextAlignment="MiddleCenter" Font="Arial, 9.75pt, style=Bold" ForeColor="Black" BackColor="255,215,228,242" BorderColor="White" Borders="Right">
+                    <Item1 Ref="52" ControlType="XRTableCell" Name="tableCell12" Weight="3" TextFormatString="{0}" Multiline="true" Text="Agency_Name (Municipality)" TextAlignment="MiddleCenter" Font="Arial, 9.75pt, style=Bold" ForeColor="Black" BackColor="Yellow">
                       <ExpressionBindings>
-                        <Item1 Ref="53" EventName="BeforePrint" PropertyName="Text" Expression="[Title]" />
+                        <Item1 Ref="53" EventName="BeforePrint" PropertyName="Text" Expression="[AgencyName]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="54" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                      <StylePriority Ref="54" UseFont="false" UseForeColor="false" UseBackColor="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="55" ControlType="XRTableCell" Name="tableCell23" Weight="2.8893426727539469" Multiline="true" Text="tableCell23" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="Black" BackColor="255,215,228,242" BorderColor="White" Borders="Left">
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+            <Item2 Ref="55" ControlType="XRTable" Name="table6" SizeF="810,34.3750038" LocationFloat="0,48.54166" BackColor="255,33,185,255" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="56" ControlType="XRTableRow" Name="tableRow6" Weight="1">
+                  <Cells>
+                    <Item1 Ref="57" ControlType="XRTableCell" Name="tableCell13" Weight="2.88934281327106" Multiline="true" Text="Project Area Title " TextAlignment="MiddleCenter" Font="Arial, 9.75pt, style=Bold" ForeColor="Black" BackColor="255,215,228,242" BorderColor="White" Borders="Right">
                       <ExpressionBindings>
-                        <Item1 Ref="56" EventName="BeforePrint" PropertyName="Text" Expression="Iif([][[Priority]=1 And [Title]=[^.Title]].Count()=0,'' ,[][[Priority]=1 And [Title]=[^.Title]].Count() )+'  '+Iif([][[Priority]=1 And [Title]=[^.Title]].Count()=0,'','Home(s)')+Iif([][[Name]='PENDING' AND [Title]=[^.Title]].Count()=0,'' ,' - ')+&#xA;Iif([][[Name]='PENDING' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='PENDING' AND [Title]=[^.Title]].Count() )+'  '+Iif(&#xA;[][[Name]='PENDING' AND [Title]=[^.Title]].Count()&#xA;=0,'' ,'Pending' )+Iif([][[Name]='REJECTED' AND [Title]=[^.Title]].Count()=0,'' , ' - ')+&#xA;Iif([][[Name]='REJECTED' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='REJECTED' AND [Title]=[^.Title]].Count() )+'  '&#xA;+Iif([][[Name]='REJECTED' AND [Title]=[^.Title]].Count()=0,'' ,'Rejected' )&#xA;+Iif([][[Name]='GRANT_EXPIRED' AND [Title]=[^.Title]].Count()=0,'' , ' - ')+&#xA;Iif([][[Name]='GRANT_EXPIRED' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='GRANT_EXPIRED' AND [Title]=[^.Title]].Count() )+'  '&#xA;+Iif([][[Name]='GRANT_EXPIRED' AND [Title]=[^.Title]].Count()=0,'' ,'Grant Expired' )&#xA;+Iif([][[Name]='APPROVED' AND [Title]=[^.Title]].Count()=0,'' , ' - ')+&#xA;Iif([][[Name]='APPROVED' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='APPROVED' AND [Title]=[^.Title]].Count() )+'  '&#xA;+Iif([][[Name]='APPROVED' AND [Title]=[^.Title]].Count()=0,'' ,'Approved' )&#xA;+Iif([][[Name]='PROJECT_AREA_EXPIRED' AND [Title]=[^.Title]].Count()=0,'' , ' - ')+&#xA;Iif([][[Name]='PROJECT_AREA_EXPIRED' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='PROJECT_AREA_EXPIRED' AND [Title]=[^.Title]].Count() )+'  '&#xA;+Iif([][[Name]='PROJECT_AREA_EXPIRED' AND [Title]=[^.Title]].Count()=0,'' ,'Project Area Expired' )&#xA;+Iif([][[Name]='WITHDRAWN' AND [Title]=[^.Title]].Count()=0,'' , ' - ')+&#xA;Iif([][[Name]='WITHDRAWN' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='WITHDRAWN' AND [Title]=[^.Title]].Count() )+'  '&#xA;+Iif([][[Name]='WITHDRAWN' AND [Title]=[^.Title]].Count()=0,'' ,'Withdrawn' )&#xA;+Iif([][[Name]='PRESERVED' AND [Title]=[^.Title]].Count()=0,'' , ' - ')+&#xA;Iif([][[Name]='PRESERVED' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='PRESERVED' AND [Title]=[^.Title]].Count() )+'  '&#xA;+Iif([][[Name]='PRESERVED' AND [Title]=[^.Title]].Count()=0,'' ,'Preserved' )&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;" />
+                        <Item1 Ref="58" EventName="BeforePrint" PropertyName="Text" Expression="[Title]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="57" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                      <StylePriority Ref="59" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="60" ControlType="XRTableCell" Name="tableCell23" Weight="2.8893426727539469" Multiline="true" Text="tableCell23" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="Black" BackColor="255,215,228,242" BorderColor="White" Borders="Left">
+                      <ExpressionBindings>
+                        <Item1 Ref="61" EventName="BeforePrint" PropertyName="Text" Expression="Iif([][[Priority]=1 And [Title]=[^.Title]].Count()=0,'' ,[][[Priority]=1 And [Title]=[^.Title]].Count() )+'  '+Iif([][[Priority]=1 And [Title]=[^.Title]].Count()=0,'','Home(s)')+Iif([][[Name]='PENDING' AND [Title]=[^.Title]].Count()=0,'' ,' - ')+&#xA;Iif([][[Name]='PENDING' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='PENDING' AND [Title]=[^.Title]].Count() )+'  '+Iif(&#xA;[][[Name]='PENDING' AND [Title]=[^.Title]].Count()&#xA;=0,'' ,'Pending' )+Iif([][[Name]='REJECTED' AND [Title]=[^.Title]].Count()=0,'' , ' - ')+&#xA;Iif([][[Name]='REJECTED' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='REJECTED' AND [Title]=[^.Title]].Count() )+'  '&#xA;+Iif([][[Name]='REJECTED' AND [Title]=[^.Title]].Count()=0,'' ,'Rejected' )&#xA;+Iif([][[Name]='GRANT_EXPIRED' AND [Title]=[^.Title]].Count()=0,'' , ' - ')+&#xA;Iif([][[Name]='GRANT_EXPIRED' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='GRANT_EXPIRED' AND [Title]=[^.Title]].Count() )+'  '&#xA;+Iif([][[Name]='GRANT_EXPIRED' AND [Title]=[^.Title]].Count()=0,'' ,'Grant Expired' )&#xA;+Iif([][[Name]='APPROVED' AND [Title]=[^.Title]].Count()=0,'' , ' - ')+&#xA;Iif([][[Name]='APPROVED' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='APPROVED' AND [Title]=[^.Title]].Count() )+'  '&#xA;+Iif([][[Name]='APPROVED' AND [Title]=[^.Title]].Count()=0,'' ,'Approved' )&#xA;+Iif([][[Name]='PROJECT_AREA_EXPIRED' AND [Title]=[^.Title]].Count()=0,'' , ' - ')+&#xA;Iif([][[Name]='PROJECT_AREA_EXPIRED' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='PROJECT_AREA_EXPIRED' AND [Title]=[^.Title]].Count() )+'  '&#xA;+Iif([][[Name]='PROJECT_AREA_EXPIRED' AND [Title]=[^.Title]].Count()=0,'' ,'Project Area Expired' )&#xA;+Iif([][[Name]='WITHDRAWN' AND [Title]=[^.Title]].Count()=0,'' , ' - ')+&#xA;Iif([][[Name]='WITHDRAWN' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='WITHDRAWN' AND [Title]=[^.Title]].Count() )+'  '&#xA;+Iif([][[Name]='WITHDRAWN' AND [Title]=[^.Title]].Count()=0,'' ,'Withdrawn' )&#xA;+Iif([][[Name]='PRESERVED' AND [Title]=[^.Title]].Count()=0,'' , ' - ')+&#xA;Iif([][[Name]='PRESERVED' AND [Title]=[^.Title]].Count()=0,'' ,[][[Name]='PRESERVED' AND [Title]=[^.Title]].Count() )+'  '&#xA;+Iif([][[Name]='PRESERVED' AND [Title]=[^.Title]].Count()=0,'' ,'Preserved' )&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="62" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
                     </Item2>
                   </Cells>
                 </Item1>
               </Rows>
-              <StylePriority Ref="58" UseBackColor="false" />
-            </Item1>
+              <StylePriority Ref="63" UseBackColor="false" />
+            </Item2>
           </Controls>
         </Item2>
-        <Item3 Ref="59" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="54.16667" BorderWidth="1">
+        <Item3 Ref="64" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="54.16667" BorderWidth="1">
           <Controls>
-            <Item1 Ref="60" ControlType="XRTable" Name="table1" SizeF="810,33.3333359" LocationFloat="0,20.833334" Padding="2,2,0,0,96" Borders="All">
+            <Item1 Ref="65" ControlType="XRTable" Name="table1" SizeF="810,33.3333359" LocationFloat="0,20.833334" Padding="2,2,0,0,96" Borders="All">
               <Rows>
-                <Item1 Ref="61" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+                <Item1 Ref="66" ControlType="XRTableRow" Name="tableRow1" Weight="1">
                   <Cells>
-                    <Item1 Ref="62" ControlType="XRTableCell" Name="tableCell1" Weight="1" Multiline="true" Text="Property " TextAlignment="MiddleCenter">
-                      <StylePriority Ref="63" UseTextAlignment="false" />
+                    <Item1 Ref="67" ControlType="XRTableCell" Name="tableCell1" Weight="1" Multiline="true" Text="Property " TextAlignment="MiddleCenter">
+                      <StylePriority Ref="68" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="64" ControlType="XRTableCell" Name="tableCell2" Weight="1" Multiline="true" Text="Type" TextAlignment="MiddleCenter">
-                      <StylePriority Ref="65" UseTextAlignment="false" />
+                    <Item2 Ref="69" ControlType="XRTableCell" Name="tableCell2" Weight="1" Multiline="true" Text="Type" TextAlignment="MiddleCenter">
+                      <StylePriority Ref="70" UseTextAlignment="false" />
                     </Item2>
-                    <Item3 Ref="66" ControlType="XRTableCell" Name="tableCell3" Weight="1" Multiline="true" Text="Date" TextAlignment="MiddleCenter">
-                      <StylePriority Ref="67" UseTextAlignment="false" />
+                    <Item3 Ref="71" ControlType="XRTableCell" Name="tableCell3" Weight="1" Multiline="true" Text="Date" TextAlignment="MiddleCenter">
+                      <StylePriority Ref="72" UseTextAlignment="false" />
                     </Item3>
-                    <Item4 Ref="68" ControlType="XRTableCell" Name="tableCell15" Weight="1" Multiline="true" Text="Comment" TextAlignment="MiddleCenter">
-                      <StylePriority Ref="69" UseTextAlignment="false" />
+                    <Item4 Ref="73" ControlType="XRTableCell" Name="tableCell15" Weight="1" Multiline="true" Text="Comment" TextAlignment="MiddleCenter">
+                      <StylePriority Ref="74" UseTextAlignment="false" />
                     </Item4>
                   </Cells>
                 </Item1>
               </Rows>
-              <StylePriority Ref="70" UseBorders="false" />
+              <StylePriority Ref="75" UseBorders="false" />
             </Item1>
           </Controls>
-          <StylePriority Ref="71" UseBorderWidth="false" />
+          <StylePriority Ref="76" UseBorderWidth="false" />
         </Item3>
-        <Item4 Ref="72" ControlType="ReportHeaderBand" Name="ReportHeader2" HeightF="82.29167">
+        <Item4 Ref="77" ControlType="ReportHeaderBand" Name="ReportHeader2" HeightF="47.9166679">
           <Controls>
-            <Item1 Ref="73" ControlType="XRTable" Name="table5" SizeF="810,34.375" LocationFloat="0,47.9166679" Padding="2,2,0,0,96">
-              <Rows>
-                <Item1 Ref="74" ControlType="XRTableRow" Name="tableRow5" Weight="1">
-                  <Cells>
-                    <Item1 Ref="75" ControlType="XRTableCell" Name="tableCell12" Weight="3" TextFormatString="{0}" Multiline="true" Text="Agency_Name (Municipality)" TextAlignment="MiddleCenter" Font="Arial, 9.75pt, style=Bold, Underline" ForeColor="Black" BackColor="Transparent">
-                      <ExpressionBindings>
-                        <Item1 Ref="76" EventName="BeforePrint" PropertyName="Text" Expression="[AgencyName]" />
-                      </ExpressionBindings>
-                      <StylePriority Ref="77" UseFont="false" UseForeColor="false" UseBackColor="false" UseTextAlignment="false" />
-                    </Item1>
-                  </Cells>
-                </Item1>
-              </Rows>
-            </Item1>
-            <Item2 Ref="78" ControlType="XRTable" Name="table7" SizeF="810,34.375" LocationFloat="0,13.541667" Padding="2,2,0,0,96">
+            <Item1 Ref="78" ControlType="XRTable" Name="table7" SizeF="810,34.375" LocationFloat="0,13.541667" Padding="2,2,0,0,96">
               <Rows>
                 <Item1 Ref="79" ControlType="XRTableRow" Name="tableRow7" Weight="1">
                   <Cells>
-                    <Item1 Ref="80" ControlType="XRTableCell" Name="tableCell14" Weight="3" TextFormatString="{0}" Multiline="true" Text="Properties" TextAlignment="MiddleCenter" Font="Arial, 9.75pt, style=Bold, Underline" ForeColor="Black" BackColor="Transparent">
+                    <Item1 Ref="80" ControlType="XRTableCell" Name="tableCell14" Weight="3" TextFormatString="{0}" Multiline="true" Text="Properties" TextAlignment="MiddleCenter" Font="Arial, 9.75pt, style=Bold" ForeColor="Black" BackColor="Yellow">
                       <StylePriority Ref="81" UseFont="false" UseForeColor="false" UseBackColor="false" UseTextAlignment="false" />
                     </Item1>
                   </Cells>
                 </Item1>
               </Rows>
-            </Item2>
+            </Item1>
           </Controls>
         </Item4>
       </Bands>
@@ -207,7 +207,7 @@
             </Item1>
           </Controls>
         </Item1>
-        <Item2 Ref="99" ControlType="GroupHeaderBand" Name="GroupHeader2" HeightF="77.70834">
+        <Item2 Ref="99" ControlType="GroupHeaderBand" Name="GroupHeader2" HeightF="85.25">
           <GroupFields>
             <Item1 Ref="100" FieldName="Title" />
           </GroupFields>
@@ -216,7 +216,7 @@
               <Rows>
                 <Item1 Ref="102" ControlType="XRTableRow" Name="tableRow9" Weight="1">
                   <Cells>
-                    <Item1 Ref="103" ControlType="XRTableCell" Name="tableCell21" Weight="2.88934281327106" Multiline="true" Text="Project Area Title " TextAlignment="MiddleCenter" Font="Arial, 9.75pt, style=Bold, Underline" ForeColor="Black" BackColor="Transparent" BorderColor="White" Borders="Right">
+                    <Item1 Ref="103" ControlType="XRTableCell" Name="tableCell21" Weight="2.88934281327106" Multiline="true" Text="Project Area Title " TextAlignment="MiddleCenter" Font="Arial, 9.75pt, style=Bold" ForeColor="Black" BackColor="255,215,228,242" BorderColor="White" Borders="Right">
                       <ExpressionBindings>
                         <Item1 Ref="104" EventName="BeforePrint" PropertyName="Text" Expression="[Title]" />
                       </ExpressionBindings>
@@ -227,7 +227,7 @@
               </Rows>
               <StylePriority Ref="106" UseBackColor="false" />
             </Item1>
-            <Item2 Ref="107" ControlType="XRTable" Name="table3" SizeF="810,33.3333359" LocationFloat="0,44.3750038" Padding="2,2,0,0,96" Borders="All">
+            <Item2 Ref="107" ControlType="XRTable" Name="table3" SizeF="810,33.3333359" LocationFloat="0,51.91666" Padding="2,2,0,0,96" Borders="All">
               <Rows>
                 <Item1 Ref="108" ControlType="XRTableRow" Name="tableRow3" Weight="1">
                   <Cells>
@@ -256,7 +256,7 @@
               <Rows>
                 <Item1 Ref="120" ControlType="XRTableRow" Name="tableRow8" Weight="1">
                   <Cells>
-                    <Item1 Ref="121" ControlType="XRTableCell" Name="tableCell20" Weight="3" TextFormatString="{0}" Multiline="true" Text="Project Area" TextAlignment="MiddleCenter" Font="Arial, 9.75pt, style=Bold, Underline" ForeColor="Black" BackColor="Transparent">
+                    <Item1 Ref="121" ControlType="XRTableCell" Name="tableCell20" Weight="3" TextFormatString="{0}" Multiline="true" Text="Project Area" TextAlignment="MiddleCenter" Font="Arial, 9.75pt, style=Bold" ForeColor="Black" BackColor="Yellow">
                       <StylePriority Ref="122" UseFont="false" UseForeColor="false" UseBackColor="false" UseTextAlignment="false" />
                     </Item1>
                   </Cells>

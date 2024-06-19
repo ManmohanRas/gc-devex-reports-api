@@ -63,7 +63,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.Comma = reportInitializer.GetCalculatedField("Comma");
             this.TypeCondition = reportInitializer.GetCalculatedField("TypeCondition");
             this.ValueEstimateCalc = reportInitializer.GetCalculatedField("ValueEstimateCalc");
-            this.Funds = reportInitializer.GetCalculatedField("Funds");
             this.SoftEstimateCalc = reportInitializer.GetCalculatedField("SoftEstimateCalc");
             this.FundsEncumberedCalc = reportInitializer.GetCalculatedField("FundsEncumberedCalc");
             this.MunicipalMatchCalc = reportInitializer.GetCalculatedField("MunicipalMatchCalc");
@@ -108,10 +107,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.CalculatedField Comma;
         private DevExpress.XtraReports.UI.CalculatedField TypeCondition;
         private DevExpress.XtraReports.UI.CalculatedField ValueEstimateCalc;
-        private DevExpress.XtraReports.UI.CalculatedField Funds;
         private DevExpress.XtraReports.UI.CalculatedField SoftEstimateCalc;
         private DevExpress.XtraReports.UI.CalculatedField FundsEncumberedCalc;
-        private DevExpress.XtraReports.Parameters.Parameter applicationid;
         private DevExpress.XtraReports.UI.CalculatedField MunicipalMatchCalc;
+        private DevExpress.XtraReports.Parameters.Parameter applicationid;
     }
 }
