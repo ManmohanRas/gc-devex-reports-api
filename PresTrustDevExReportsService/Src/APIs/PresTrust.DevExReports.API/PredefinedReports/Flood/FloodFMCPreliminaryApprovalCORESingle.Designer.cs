@@ -111,7 +111,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.CalculatedField SoftEstimateCalc;
         private DevExpress.XtraReports.UI.CalculatedField FundsEncumberedCalc;
         private DevExpress.XtraReports.UI.CalculatedField MunicipalMatchCalC;
-        private DevExpress.XtraReports.Parameters.Parameter applicationid;
         private DevExpress.XtraReports.UI.CalculatedField FundsRequestedCalc;
+        private DevExpress.XtraReports.Parameters.Parameter applicationid;
     }
 }

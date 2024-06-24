@@ -200,11 +200,11 @@
                       </ExpressionBindings>
                       <StylePriority Ref="93" UseTextAlignment="false" />
                     </Item8>
-                    <Item9 Ref="94" ControlType="XRTableCell" Name="tableCell40" Weight="0.563656633263236" Multiline="true" TextAlignment="MiddleCenter" EvenStyleName="Style2" OddStyleName="Style1">
+                    <Item9 Ref="94" ControlType="XRTableCell" Name="tableCell40" Weight="0.563656633263236" Multiline="true" TextAlignment="MiddleCenter" EvenStyleName="Style2" OddStyleName="Style1" Font="Arial, 9.75pt, style=Underline">
                       <ExpressionBindings>
                         <Item1 Ref="95" EventName="BeforePrint" PropertyName="Text" Expression="[][[Title]=[^.Title] and [ClosingYear]=[CurrentYear]].Sum([Closings])" />
                       </ExpressionBindings>
-                      <StylePriority Ref="96" UseTextAlignment="false" />
+                      <StylePriority Ref="96" UseFont="false" UseTextAlignment="false" />
                     </Item9>
                     <Item10 Ref="97" ControlType="XRTableCell" Name="tableCell41" Weight="0.45260349015522539" Multiline="true" TextAlignment="MiddleCenter" EvenStyleName="Style2" OddStyleName="Style1">
                       <ExpressionBindings>
