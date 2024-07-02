@@ -4,7 +4,7 @@
     <Item1 Ref="2" Key="VSReportExtInfo" Value=".repx" />
   </Extensions>
   <CalculatedFields>
-    <Item1 Ref="3" Name="Date" FieldType="DateTime" Expression="Today()" DataMember="Flood_FloodApplication_1" />
+    <Item1 Ref="3" Name="Date" FieldType="DateTime" Expression="LocalDateTimeNow()" DataMember="Flood_FloodApplication_1" />
     <Item2 Ref="4" Name="TotalFundsAvailable" Expression="Sum([RemainingEncumberanc])-Sum([FinalCost])-Sum([CountyAppraisal])" DataMember="Flood_FloodApplication_1" />
     <Item3 Ref="5" Name="ProgramExpenses" Expression="[Sum_ExpenseAmount]" DataMember="Flood_FloodApplication_1" />
   </CalculatedFields>
