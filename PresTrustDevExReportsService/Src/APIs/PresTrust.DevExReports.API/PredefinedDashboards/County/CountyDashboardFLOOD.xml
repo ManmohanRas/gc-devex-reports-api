@@ -133,8 +133,8 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
         <Dimension DataMember="FundingYear" IsDiscreteScale="true" TopNMeasure="DataItem2" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
         </Dimension>
-        <Measure DataMember="TotalAllocated" DefaultId="DataItem2" />
-        <Measure DataMember="FundsSpent" DefaultId="DataItem3" />
+        <Measure DataMember="TotalAllocated" SummaryType="Max" DefaultId="DataItem2" />
+        <Measure DataMember="FundsSpent" SummaryType="Max" DefaultId="DataItem3" />
       </DataItems>
       <Arguments>
         <Argument DefaultId="DataItem0" />
@@ -152,6 +152,7 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
           </Series>
         </Pane>
       </Panes>
+      <AxisX LimitVisiblePoints="true" VisiblePointsCount="5" />
     </Chart>
     <Grid ComponentName="gridDashboardItem2" Name="" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_flood_annual_summary_report">
       <DataItems>

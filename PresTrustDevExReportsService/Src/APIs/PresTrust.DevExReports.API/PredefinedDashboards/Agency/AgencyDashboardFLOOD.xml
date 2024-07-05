@@ -130,11 +130,11 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
     <Chart ComponentName="chartDashboardItem1" Name="Total Allocated Vs Total Funds Spent " DataSource="sqlDataSource1" DataMember="rept_usp_get_flood_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
       <InteractivityOptions IsDrillDownEnabled="true" />
       <DataItems>
-        <Dimension DataMember="FundingYear" IsDiscreteScale="true" TopNEnabled="true" TopNCount="10" TopNMeasure="DataItem2" DefaultId="DataItem0">
+        <Dimension DataMember="FundingYear" IsDiscreteScale="true" TopNEnabled="true" TopNCount="10" TopNMeasure="DataItem3" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
         </Dimension>
-        <Measure DataMember="TotalAllocated" DefaultId="DataItem2" />
-        <Measure DataMember="FundsSpent" DefaultId="DataItem3" />
+        <Measure DataMember="TotalAllocated" SummaryType="Max" DefaultId="DataItem3" />
+        <Measure DataMember="FundsSpent" SummaryType="Max" DefaultId="DataItem1" />
       </DataItems>
       <Arguments>
         <Argument DefaultId="DataItem0" />
@@ -143,15 +143,16 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
         <Pane Name="Pane 1">
           <AxisY TitleVisible="false" AlwaysShowZeroLevel="false" />
           <Series>
-            <Simple Name="Total Funds Spent" SeriesType="Line">
-              <Value DefaultId="DataItem2" />
-            </Simple>
             <Simple Name="Total Funds Allocated" SeriesType="Line">
               <Value DefaultId="DataItem3" />
+            </Simple>
+            <Simple Name="Total Funds Spent" SeriesType="Line">
+              <Value DefaultId="DataItem1" />
             </Simple>
           </Series>
         </Pane>
       </Panes>
+      <AxisX Reverse="true" LimitVisiblePoints="true" VisiblePointsCount="5" />
     </Chart>
     <Grid ComponentName="gridDashboardItem2" Name="" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_flood_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
       <DataItems>
