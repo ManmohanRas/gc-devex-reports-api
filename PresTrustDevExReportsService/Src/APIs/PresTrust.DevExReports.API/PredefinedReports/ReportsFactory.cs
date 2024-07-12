@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraReports.UI;
+using PresTrust.DevExReports.API.PredefinedReports.Farm;
 using PresTrust.DevExReports.API.PredefinedReports.Flood;
 using PresTrust.DevExReports.API.PredefinedReports.Historic;
 using PresTrust.DevExReports.API.PredefinedReports.Openspace;
@@ -74,7 +75,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodReleaseOfFundsSCSingle"] = () => new FloodReleaseOfFundsSCSingle(),
             ["FloodReleaseOfFundsSCMultiple"] = () => new FloodReleaseOfFundsSCMultiple(),
             ["FloodCoreApplicationReportGeneral"] = () => new FloodCoreApplicationReportGeneral(),
-            ["FloodCoreReviewReportPreview"] = () => new FloodCoreReviewReportPreview()
+            ["FloodCoreReviewReportPreview"] = () => new FloodCoreReviewReportPreview(),
+            // Farm Term Reports
+            ["TermProgramBookIndexReport"] = () => new FarmTermProgramBookIndexReport(),
+            ["TermProgramReport"] = () => new FarmTermProgramReport()
         };
     }
 }
