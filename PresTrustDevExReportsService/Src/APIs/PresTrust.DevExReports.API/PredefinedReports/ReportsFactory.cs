@@ -77,8 +77,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodCoreApplicationReportGeneral"] = () => new FloodCoreApplicationReportGeneral(),
             ["FloodCoreReviewReportPreview"] = () => new FloodCoreReviewReportPreview(),
             // Farm Term Reports
-            ["TermProgramBookIndexReport"] = () => new FarmTermProgramBookIndexReport(),
-            ["TermProgramReport"] = () => new FarmTermProgramReport()
+            ["FarmTermProgramBookIndexReport"] = () => new FarmTermProgramBookIndexReport(),
+            ["FarmTermProgramReport"] = () => new FarmTermProgramReport()
         };
     }
 }
