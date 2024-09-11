@@ -116,6 +116,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.label48 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label48");
             this.label47 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label47");
             this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
+            this.DetailReport = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport");
+            this.Detail1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail1");
 
             // Parameters
             this.Status = reportInitializer.GetParameter("Status");
@@ -124,6 +126,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
+
+            // Calculated Fields
+            this.Additional_blocks = reportInitializer.GetCalculatedField("Additional_blocks");
+            this.Additional_Lots = reportInitializer.GetCalculatedField("Additional_Lots");
         }
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
@@ -227,8 +233,12 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRLabel label47;
         private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
+        private DevExpress.XtraReports.UI.CalculatedField Additional_blocks;
+        private DevExpress.XtraReports.UI.CalculatedField Additional_Lots;
         private DevExpress.XtraReports.Parameters.Parameter Status;
         private DevExpress.XtraReports.Parameters.Parameter Municipality;
         private DevExpress.XtraReports.Parameters.Parameter Application;
+        private DevExpress.XtraReports.UI.DetailReportBand DetailReport;
+        private DevExpress.XtraReports.UI.DetailBand Detail1;
     }
 }
