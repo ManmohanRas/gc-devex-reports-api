@@ -9,71 +9,71 @@
   </Parameters>
   <Bands>
     <Item1 Ref="7" ControlType="TopMarginBand" Name="TopMargin" HeightF="47" />
-    <Item2 Ref="8" ControlType="DetailBand" Name="Detail" HeightF="233.041763" BorderWidth="2">
+    <Item2 Ref="8" ControlType="DetailBand" Name="Detail" HeightF="251.999985" BorderWidth="2">
       <Controls>
-        <Item1 Ref="9" ControlType="XRTable" Name="table6" SizeF="727.9999,25.291626" LocationFloat="1.00008643,179.708359" Padding="2,2,0,0,96">
+        <Item1 Ref="9" ControlType="XRTable" Name="table2" SizeF="729,22.291687" LocationFloat="1.00008643,178.666656" Padding="2,2,0,0,96">
           <Rows>
-            <Item1 Ref="10" ControlType="XRTableRow" Name="tableRow6" Weight="1">
+            <Item1 Ref="10" ControlType="XRTableRow" Name="tableRow2" Weight="1">
               <Cells>
-                <Item1 Ref="11" ControlType="XRTableCell" Name="tableCell13" Weight="1.0977637331471228" Multiline="true" Text="Additional Block" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="LightGray" Borders="All" BorderWidth="1">
+                <Item1 Ref="11" ControlType="XRTableCell" Name="tableCell5" Weight="1.0868523861313737" Multiline="true" Text="Comments" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="LightGray" Borders="Left, Bottom" BorderWidth="1">
                   <StylePriority Ref="12" UseFont="false" UseBackColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="13" ControlType="XRTableCell" Name="tableCell14" Weight="1.1284485403217663" Multiline="true" Text="tableCell2" TextAlignment="MiddleCenter" Borders="Top, Bottom" BorderWidth="1">
+                <Item2 Ref="13" ControlType="XRTableCell" Name="tableCell6" Weight="2.8843016091146727" Multiline="true" Text="tableCell22" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt" BackColor="Transparent" Borders="Left, Right, Bottom" BorderWidth="1">
                   <ExpressionBindings>
-                    <Item1 Ref="14" EventName="BeforePrint" PropertyName="Text" Expression="[additional_blocks]" />
+                    <Item1 Ref="14" EventName="BeforePrint" PropertyName="Text" Expression="[Comment]" />
                   </ExpressionBindings>
-                  <StylePriority Ref="15" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+                  <StylePriority Ref="15" UseFont="false" UseBackColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
                 </Item2>
-                <Item3 Ref="16" ControlType="XRTableCell" Name="tableCell15" Weight="1.0962608048455544" Multiline="true" Text="Additional Lot" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="LightGray" Borders="All" BorderWidth="1">
-                  <StylePriority Ref="17" UseFont="false" UseBackColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
-                </Item3>
-                <Item4 Ref="18" ControlType="XRTableCell" Name="tableCell16" Weight="0.68854856403805409" Multiline="true" Text="tableCell4" TextAlignment="MiddleCenter" Borders="Top, Right, Bottom" BorderWidth="1">
-                  <ExpressionBindings>
-                    <Item1 Ref="19" EventName="BeforePrint" PropertyName="NavigateUrl" Expression="concat([NOTLot],[RDLot])" />
-                    <Item2 Ref="20" EventName="BeforePrint" PropertyName="Text" Expression="[additional_lots]" />
-                  </ExpressionBindings>
-                  <StylePriority Ref="21" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
-                </Item4>
               </Cells>
             </Item1>
           </Rows>
         </Item1>
-        <Item2 Ref="22" ControlType="XRPanel" Name="panel1" SizeF="728.999939,179.708359" LocationFloat="0,0">
-          <Controls>
-            <Item1 Ref="23" ControlType="XRTable" Name="table2" SizeF="727.9999,25" LocationFloat="1.00008643,153.666672" Padding="2,2,0,0,96">
-              <Rows>
-                <Item1 Ref="24" ControlType="XRTableRow" Name="tableRow2" Weight="1">
-                  <Cells>
-                    <Item1 Ref="25" ControlType="XRTableCell" Name="tableCell5" Weight="1.0868523861313737" Multiline="true" Text="Comments" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="LightGray" Borders="All" BorderWidth="1">
-                      <StylePriority Ref="26" UseFont="false" UseBackColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
-                    </Item1>
-                    <Item2 Ref="27" ControlType="XRTableCell" Name="tableCell6" Weight="2.8843016091146727" Multiline="true" Text="tableCell22" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt" BackColor="Transparent" Borders="Top, Right, Bottom" BorderWidth="1">
-                      <ExpressionBindings>
-                        <Item1 Ref="28" EventName="BeforePrint" PropertyName="Text" Expression="[Comment]" />
-                      </ExpressionBindings>
-                      <StylePriority Ref="29" UseFont="false" UseBackColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
-                    </Item2>
-                  </Cells>
+        <Item2 Ref="16" ControlType="XRTable" Name="table6" SizeF="727.9999,25.291626" LocationFloat="1.00008643,153.708359" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="17" ControlType="XRTableRow" Name="tableRow6" Weight="1">
+              <Cells>
+                <Item1 Ref="18" ControlType="XRTableCell" Name="tableCell13" Weight="1.0977637331471228" Multiline="true" Text="Additional Block" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="LightGray" Borders="All" BorderWidth="1">
+                  <StylePriority Ref="19" UseFont="false" UseBackColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
                 </Item1>
-              </Rows>
+                <Item2 Ref="20" ControlType="XRTableCell" Name="tableCell14" Weight="1.1284485403217663" Multiline="true" Text="tableCell2" TextAlignment="MiddleCenter" Borders="Bottom" BorderWidth="1">
+                  <ExpressionBindings>
+                    <Item1 Ref="21" EventName="BeforePrint" PropertyName="Text" Expression="[additional_blocks]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="22" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="23" ControlType="XRTableCell" Name="tableCell15" Weight="1.0962608048455544" Multiline="true" Text="Additional Lot" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="LightGray" Borders="Left, Right, Bottom" BorderWidth="1">
+                  <StylePriority Ref="24" UseFont="false" UseBackColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="25" ControlType="XRTableCell" Name="tableCell16" Weight="0.68854856403805409" Multiline="true" Text="tableCell4" TextAlignment="MiddleCenter" Borders="Right, Bottom" BorderWidth="1">
+                  <ExpressionBindings>
+                    <Item1 Ref="26" EventName="BeforePrint" PropertyName="NavigateUrl" Expression="concat([NOTLot],[RDLot])" />
+                    <Item2 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="[additional_lots]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="28" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item4>
+              </Cells>
             </Item1>
-            <Item2 Ref="30" ControlType="XRTable" Name="table3" SizeF="727,25" LocationFloat="1.00008643,126.666672" Padding="2,2,0,0,96">
+          </Rows>
+        </Item2>
+        <Item3 Ref="29" ControlType="XRPanel" Name="panel1" SizeF="728.999939,200.958313" LocationFloat="0,0">
+          <Controls>
+            <Item1 Ref="30" ControlType="XRTable" Name="table3" SizeF="727,29.0833435" LocationFloat="1.00008643,126.666672" Padding="2,2,0,0,96">
               <Rows>
                 <Item1 Ref="31" ControlType="XRTableRow" Name="tableRow3" Weight="1">
                   <Cells>
                     <Item1 Ref="32" ControlType="XRTableCell" Name="tableCell7" Weight="1.0977637331471228" Multiline="true" Text="Renewal Book" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="LightGray" Borders="Left, Right, Bottom" BorderWidth="1">
                       <StylePriority Ref="33" UseFont="false" UseBackColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="34" ControlType="XRTableCell" Name="tableCell8" Weight="1.1284485403217663" Multiline="true" Text="tableCell2" TextAlignment="MiddleCenter" Borders="None" BorderWidth="1">
+                    <Item2 Ref="34" ControlType="XRTableCell" Name="tableCell8" Weight="1.1284485403217663" Multiline="true" Text="tableCell2" TextAlignment="MiddleCenter" Borders="Bottom" BorderWidth="1">
                       <ExpressionBindings>
                         <Item1 Ref="35" EventName="BeforePrint" PropertyName="Text" Expression="[RDBook]" />
                       </ExpressionBindings>
                       <StylePriority Ref="36" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
                     </Item2>
-                    <Item3 Ref="37" ControlType="XRTableCell" Name="tableCell9" Weight="1.1054008872715191" Multiline="true" Text="Renewal Page" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="LightGray" Borders="Left, Right" BorderWidth="1">
+                    <Item3 Ref="37" ControlType="XRTableCell" Name="tableCell9" Weight="1.1054008872715191" Multiline="true" Text="Renewal Page" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="LightGray" Borders="Left, Right, Bottom" BorderWidth="1">
                       <StylePriority Ref="38" UseFont="false" UseBackColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
                     </Item3>
-                    <Item4 Ref="39" ControlType="XRTableCell" Name="tableCell10" Weight="0.68491711695537727" Multiline="true" Text="tableCell4" TextAlignment="MiddleCenter" Borders="Right" BorderWidth="1">
+                    <Item4 Ref="39" ControlType="XRTableCell" Name="tableCell10" Weight="0.68491711695537727" Multiline="true" Text="tableCell4" TextAlignment="MiddleCenter" Borders="Right, Bottom" BorderWidth="1">
                       <ExpressionBindings>
                         <Item1 Ref="40" EventName="BeforePrint" PropertyName="Text" Expression="[RDPage]" />
                       </ExpressionBindings>
@@ -82,8 +82,8 @@
                   </Cells>
                 </Item1>
               </Rows>
-            </Item2>
-            <Item3 Ref="42" ControlType="XRTable" Name="table4" SizeF="728.0001,25" LocationFloat="0,76.66667" Padding="2,2,0,0,96">
+            </Item1>
+            <Item2 Ref="42" ControlType="XRTable" Name="table4" SizeF="728.0001,25" LocationFloat="0,76.66667" Padding="2,2,0,0,96">
               <Rows>
                 <Item1 Ref="43" ControlType="XRTableRow" Name="tableRow4" Weight="1">
                   <Cells>
@@ -108,8 +108,8 @@
                   </Cells>
                 </Item1>
               </Rows>
-            </Item3>
-            <Item4 Ref="54" ControlType="XRTable" Name="table5" SizeF="727.999939,25" LocationFloat="1.58945713E-05,51.66667" Padding="2,2,0,0,96">
+            </Item2>
+            <Item3 Ref="54" ControlType="XRTable" Name="table5" SizeF="727.999939,25" LocationFloat="1.58945713E-05,51.66667" Padding="2,2,0,0,96">
               <Rows>
                 <Item1 Ref="55" ControlType="XRTableRow" Name="tableRow5" Weight="1">
                   <Cells>
@@ -134,8 +134,8 @@
                   </Cells>
                 </Item1>
               </Rows>
-            </Item4>
-            <Item5 Ref="66" ControlType="XRTable" Name="table7" SizeF="727.9999,25" LocationFloat="1.00008643,101.666672" Padding="2,2,0,0,96">
+            </Item3>
+            <Item4 Ref="66" ControlType="XRTable" Name="table7" SizeF="727.9999,25" LocationFloat="1.00008643,101.666672" Padding="2,2,0,0,96">
               <Rows>
                 <Item1 Ref="67" ControlType="XRTableRow" Name="tableRow7" Weight="1">
                   <Cells>
@@ -160,8 +160,8 @@
                   </Cells>
                 </Item1>
               </Rows>
-            </Item5>
-            <Item6 Ref="78" ControlType="XRTable" Name="table8" SizeF="728.0001,25" LocationFloat="0,0" Padding="2,2,0,0,96">
+            </Item4>
+            <Item5 Ref="78" ControlType="XRTable" Name="table8" SizeF="728.0001,25" LocationFloat="0,0" Padding="2,2,0,0,96">
               <Rows>
                 <Item1 Ref="79" ControlType="XRTableRow" Name="tableRow8" Weight="1">
                   <Cells>
@@ -178,8 +178,8 @@
                   </Cells>
                 </Item1>
               </Rows>
-            </Item6>
-            <Item7 Ref="86" ControlType="XRTable" Name="table9" SizeF="728,26.6666737" LocationFloat="8.821487E-06,25" Padding="2,2,0,0,96">
+            </Item5>
+            <Item6 Ref="86" ControlType="XRTable" Name="table9" SizeF="728,26.6666737" LocationFloat="8.821487E-06,25" Padding="2,2,0,0,96">
               <Rows>
                 <Item1 Ref="87" ControlType="XRTableRow" Name="tableRow9" Weight="1">
                   <Cells>
@@ -204,9 +204,9 @@
                   </Cells>
                 </Item1>
               </Rows>
-            </Item7>
+            </Item6>
           </Controls>
-        </Item2>
+        </Item3>
       </Controls>
       <StylePriority Ref="98" UseBorderWidth="false" />
     </Item2>

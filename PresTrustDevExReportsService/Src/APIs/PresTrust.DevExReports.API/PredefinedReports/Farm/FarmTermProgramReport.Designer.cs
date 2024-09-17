@@ -119,6 +119,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
 
             // Parameters
             this.Status = reportInitializer.GetParameter("Status");
+            this.Application = reportInitializer.GetParameter("Application");
             this.FarmOwner = reportInitializer.GetParameter("FarmOwner");
 
             // Data Sources
@@ -227,6 +228,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.Parameters.Parameter Status;
+        private DevExpress.XtraReports.Parameters.Parameter Application;
         private DevExpress.XtraReports.Parameters.Parameter FarmOwner;
     }
 }
