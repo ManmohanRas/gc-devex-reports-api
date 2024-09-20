@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="FarmTermProgramReport" Margins="54, 64, 19, 100" PageWidth="850" PageHeight="1100" Version="22.1" FilterString="[Name] In (?Status)" DataMember="Farm_FarmApplication_1" DataSource="#Ref-0" Font="Arial, 9.75pt">
+<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="FarmTermProgramReport" Margins="54, 64, 19, 100" PageWidth="850" PageHeight="1100" Version="22.1" FilterString="[OriginalLandowner] In (?FarmOwner) And [Name] In (?Status)" DataMember="Farm_FarmApplication_1" DataSource="#Ref-0" Font="Arial, 9.75pt">
   <Extensions>
     <Item1 Ref="2" Key="VSReportExtInfo" Value=".repx" />
   </Extensions>
