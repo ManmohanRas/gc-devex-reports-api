@@ -78,7 +78,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FloodCoreReviewReportPreview"] = () => new FloodCoreReviewReportPreview(),
             // Farm Term Reports
             ["FarmTermProgramBookIndexReport"] = () => new FarmTermProgramBookIndexReport(),
-            ["FarmTermProgramReport"] = () => new FarmTermProgramReport()
+            ["FarmTermProgramReport"] = () => new FarmTermProgramReport(),
+            ["FarmEsmtPermanentlyPreservedFarmsReport"]= () => new FarmEsmtPermanentlyPreservedFarmsReport()
         };
     }
 }
