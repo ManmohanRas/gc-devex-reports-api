@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramReport.repx" />
@@ -77,6 +78,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramReport.repx" />
@@ -158,6 +160,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.cs">
+      <DependentUpon>FarmEasementPurchaseBreakdown.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.Designer.cs">
+      <DependentUpon>FarmEasementPurchaseBreakdown.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.cs">
       <DependentUpon>FarmEsmtPermanentlyPreservedFarmsReport.repx</DependentUpon>
     </Compile>

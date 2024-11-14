@@ -79,7 +79,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             // Farm Term Reports
             ["FarmTermProgramBookIndexReport"] = () => new FarmTermProgramBookIndexReport(),
             ["FarmTermProgramReport"] = () => new FarmTermProgramReport(),
-            ["FarmEsmtPermanentlyPreservedFarmsReport"]= () => new FarmEsmtPermanentlyPreservedFarmsReport()
+            ["FarmEsmtPermanentlyPreservedFarmsReport"]= () => new FarmEsmtPermanentlyPreservedFarmsReport(),
+            // Farm Esmt Reports
+            ["FarmEasementPurchaseBreakdownReport"] = () => new FarmEasementPurchaseBreakdown(),
         };
     }
 }
