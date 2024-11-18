@@ -142,21 +142,21 @@
                     <Item1 Ref="71" ControlType="XRTableCell" Name="tableCell15" Weight="0.85734150977110746" Multiline="true" Text="tableCell15" Font="Times New Roman, 12pt" Borders="Top, Bottom">
                       <Summary Ref="72" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="73" EventName="BeforePrint" PropertyName="Text" Expression="sumDSum([Acres])" />
+                        <Item1 Ref="73" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Acres])" />
                       </ExpressionBindings>
                       <StylePriority Ref="74" UseFont="false" UseBorders="false" />
                     </Item1>
                     <Item2 Ref="75" ControlType="XRTableCell" Name="tableCell16" Weight="0.72873894348585688" TextFormatString="{0:$#,0}" Multiline="true" Text="tableCell16" Font="Times New Roman, 12pt" Borders="Left, Top, Bottom">
                       <Summary Ref="76" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="77" EventName="BeforePrint" PropertyName="Text" Expression="sumDSum([TotalCost])" />
+                        <Item1 Ref="77" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([TotalCost])" />
                       </ExpressionBindings>
                       <StylePriority Ref="78" UseFont="false" UseBorders="false" />
                     </Item2>
                     <Item3 Ref="79" ControlType="XRTableCell" Name="tableCell17" Weight="0.88229082558006444" TextFormatString="{0:$#,0}" Multiline="true" Text="tableCell17" Font="Times New Roman, 12pt" Borders="Left, Top, Bottom">
                       <Summary Ref="80" Running="Group" />
                       <ExpressionBindings>
-                        <Item1 Ref="81" EventName="BeforePrint" PropertyName="Text" Expression="sumDSum([MCCostShareTotal])" />
+                        <Item1 Ref="81" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([MCCostShareTotal])" />
                       </ExpressionBindings>
                       <StylePriority Ref="82" UseFont="false" UseBorders="false" />
                     </Item3>
