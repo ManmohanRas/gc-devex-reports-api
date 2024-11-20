@@ -167,6 +167,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.Date = reportInitializer.GetCalculatedField("Date");
             this.TotalFundsAvailable = reportInitializer.GetCalculatedField("TotalFundsAvailable");
             this.ProgramExpenses = reportInitializer.GetCalculatedField("ProgramExpenses");
+            this.RemainingEncumbrabce = reportInitializer.GetCalculatedField("RemainingEncumbrabce");
         }
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
@@ -315,5 +316,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.CalculatedField Date;
         private DevExpress.XtraReports.UI.CalculatedField TotalFundsAvailable;
         private DevExpress.XtraReports.UI.CalculatedField ProgramExpenses;
+        private DevExpress.XtraReports.UI.CalculatedField RemainingEncumbrabce;
     }
 }

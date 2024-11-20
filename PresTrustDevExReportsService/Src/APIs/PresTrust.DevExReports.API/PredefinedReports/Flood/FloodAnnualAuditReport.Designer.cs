@@ -134,6 +134,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.CurrentYear = reportInitializer.GetCalculatedField("CurrentYear");
             this.PreviousYear = reportInitializer.GetCalculatedField("PreviousYear");
             this.FundsRealesedCalc = reportInitializer.GetCalculatedField("FundsRealesedCalc");
+            this.CurrentYear1 = reportInitializer.GetCalculatedField("CurrentYear1");
+            this.PreviousYear1 = reportInitializer.GetCalculatedField("PreviousYear1");
+            this.FundsReleasedCalc1 = reportInitializer.GetCalculatedField("FundsReleasedCalc1");
 
             // Styles
             this.Style1 = reportInitializer.GetStyle("Style1");
@@ -253,6 +256,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.CalculatedField CurrentYear;
         private DevExpress.XtraReports.UI.CalculatedField PreviousYear;
         private DevExpress.XtraReports.UI.CalculatedField FundsRealesedCalc;
+        private DevExpress.XtraReports.UI.CalculatedField CurrentYear1;
+        private DevExpress.XtraReports.UI.CalculatedField PreviousYear1;
+        private DevExpress.XtraReports.UI.CalculatedField FundsReleasedCalc1;
         private DevExpress.XtraReports.Parameters.Parameter Year;
     }
 }
