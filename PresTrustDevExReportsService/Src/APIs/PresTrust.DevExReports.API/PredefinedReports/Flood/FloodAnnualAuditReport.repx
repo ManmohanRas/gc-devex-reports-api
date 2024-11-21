@@ -454,7 +454,7 @@
                     </Item2>
                     <Item3 Ref="211" ControlType="XRTableCell" Name="tableCell60" Weight="1.5902117919921874" TextFormatString="{0:$#,#}" Multiline="true" BackColor="255,1,254,255">
                       <ExpressionBindings>
-                        <Item1 Ref="212" EventName="BeforePrint" PropertyName="Text" Expression="[][[ClosingYear] &lt;= [CurrentYear]].Sum([FundsEncumbered])" />
+                        <Item1 Ref="212" EventName="BeforePrint" PropertyName="Text" Expression="[][[ClosingYear] &lt;= [CurrentYear1]].Sum([FundsEncumbered])" />
                       </ExpressionBindings>
                       <StylePriority Ref="213" UseBackColor="false" />
                     </Item3>
