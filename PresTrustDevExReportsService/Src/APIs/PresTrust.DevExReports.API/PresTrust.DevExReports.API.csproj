@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <None Remove="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtCADBPurchaseProgramSADCAppraisedReport.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtCADBPurchPrgmSADCAppraisedReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramReport.repx" />
@@ -79,6 +81,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtCADBPurchPrgmSADCAppraisedReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramReport.repx" />
@@ -165,6 +168,18 @@
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.Designer.cs">
       <DependentUpon>FarmEasementPurchaseBreakdown.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtCADBPurchaseProgramSADCAppraisedReport.cs">
+      <DependentUpon>FarmEsmtCADBPurchaseProgramSADCAppraisedReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtCADBPurchaseProgramSADCAppraisedReport.Designer.cs">
+      <DependentUpon>FarmEsmtCADBPurchaseProgramSADCAppraisedReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtCADBPurchPrgmSADCAppraisedReport.cs">
+      <DependentUpon>FarmEsmtCADBPurchPrgmSADCAppraisedReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtCADBPurchPrgmSADCAppraisedReport.Designer.cs">
+      <DependentUpon>FarmEsmtCADBPurchPrgmSADCAppraisedReport.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.cs">
       <DependentUpon>FarmEsmtPermanentlyPreservedFarmsReport.repx</DependentUpon>
