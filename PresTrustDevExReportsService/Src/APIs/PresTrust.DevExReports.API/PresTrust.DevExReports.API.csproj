@@ -9,6 +9,7 @@
     <None Remove="PredefinedReports\Farm\FarmEsmtCADBPurchaseProgramSADCAppraisedReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtCADBPurchPrgmSADCAppraisedReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramReport.repx" />
     <None Remove="PredefinedReports\Flood\.repx" />
@@ -83,6 +84,7 @@
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtCADBPurchPrgmSADCAppraisedReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FASTTRACKFinalApprovalNOCAF.repx" />
@@ -186,6 +188,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.Designer.cs">
       <DependentUpon>FarmEsmtPermanentlyPreservedFarmsReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.cs">
+      <DependentUpon>FarmEsmtPreservedFarmsInMorrisCounty.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.Designer.cs">
+      <DependentUpon>FarmEsmtPreservedFarmsInMorrisCounty.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmTermProgramBookIndexReport.cs">
       <DependentUpon>FarmTermProgramBookIndexReport.repx</DependentUpon>
