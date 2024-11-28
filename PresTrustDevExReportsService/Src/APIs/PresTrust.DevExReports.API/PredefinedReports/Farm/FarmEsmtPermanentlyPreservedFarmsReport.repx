@@ -97,7 +97,7 @@
             <Item1 Ref="47" FieldName="ClosingYear" />
           </GroupFields>
         </Item2>
-        <Item3 Ref="48" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="25">
+        <Item3 Ref="48" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="34.7499847">
           <Controls>
             <Item1 Ref="49" ControlType="XRTable" Name="table3" SizeF="367.287781,25" LocationFloat="381.712219,0" Padding="2,2,0,0,96">
               <Rows>
