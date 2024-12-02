@@ -86,6 +86,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FarmEsmtPreservedFarmsInMorrisCounty"] = () => new FarmEsmtPreservedFarmsInMorrisCounty(),
             ["FarmEsmtPresFarmsExceptionAreaReport"] = () => new FarmEsmtPreservedFarmsExceptionAreasReport(),
             ["FarmPremPresFarmsWithServableExceptionsReport"] = () => new FarmPermanentlyPreservedFarmsWithServableExceptionsReport()
+            ["FarmEsmtRdsoPresFarmsReport"] = () => new FarmEsmtRdsoPreservedFarmsReport(),
         };
     }
 }
