@@ -84,6 +84,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FarmEasementPurchaseBreakdownReport"] = () => new FarmEasementPurchaseBreakdown(),
             ["FarmEsmtCADBPurchPrgmSADCAppraisedReport"] = () => new FarmEsmtCADBPurchPrgmSADCAppraisedReport(),
             ["FarmEsmtPreservedFarmsInMorrisCounty"] = () => new FarmEsmtPreservedFarmsInMorrisCounty(),
+            ["FarmEsmtPermPresFarmsWithResiOnPresGround"] = () => new FarmEsmtPermanenltyPresFarmsWithResiOnPresGround(),
+            ["FarmEsmtPermPresFarmsTownSummaries"] = () => new FarmEsmtPermanentlyPresFarmsTownSummaries(),
+            ["FarmEsmtPermPresFarmsWithFarmName"] = () => new FarmEsmtPermPresFarmsWithFarmName(),
         };
     }
 }
