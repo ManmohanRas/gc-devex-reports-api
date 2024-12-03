@@ -15,6 +15,7 @@
     <None Remove="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramReport.repx" />
+    <None Remove="PredefinedReports\Farm\TFReport.repx" />
     <None Remove="PredefinedReports\Flood\.repx" />
     <None Remove="PredefinedReports\Flood\FASTTRACKFinalApprovalNOCAF.repx" />
     <None Remove="PredefinedReports\Flood\FASTTRACKFinalApprovalWITHCAF.repx" />
@@ -93,6 +94,7 @@
     <EmbeddedResource Include="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\TFReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FASTTRACKFinalApprovalNOCAF.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FASTTRACKFinalApprovalWITHCAF.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodAnnualAuditReport.repx" />
@@ -230,6 +232,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmTermProgramReport.Designer.cs">
       <DependentUpon>FarmTermProgramReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\TFReport.cs">
+      <DependentUpon>TFReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\TFReport.Designer.cs">
+      <DependentUpon>TFReport.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Flood\FASTTRACKFinalApprovalNOCAF.cs">
       <DependentUpon>FASTTRACKFinalApprovalNOCAF.repx</DependentUpon>

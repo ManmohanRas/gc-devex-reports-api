@@ -40,12 +40,12 @@
                   <Cells>
                     <Item1 Ref="24" ControlType="XRTableCell" Name="tableCell8" Weight="1" Multiline="true">
                       <ExpressionBindings>
-                        <Item1 Ref="25" EventName="BeforePrint" PropertyName="Text" Expression="Concat([FarmName],[OriginalLandOwner] )" />
+                        <Item1 Ref="25" EventName="BeforePrint" PropertyName="Text" Expression="Concat([FarmName], ' , ',[OriginalLandOwner] )" />
                       </ExpressionBindings>
                     </Item1>
                     <Item2 Ref="26" ControlType="XRTableCell" Name="tableCell9" Weight="1" Multiline="true" Text="Municipality &#xD;&#xA;Former Owner">
                       <ExpressionBindings>
-                        <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="Concat([Municipality],[OriginalLandOwner])" />
+                        <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="Concat([Municipality],',', [OriginalLandOwner])" />
                       </ExpressionBindings>
                     </Item2>
                     <Item3 Ref="28" ControlType="XRTableCell" Name="tableCell10" Weight="1" Multiline="true">
@@ -95,7 +95,7 @@
                     </Item2>
                     <Item3 Ref="47" ControlType="XRTableCell" Name="tableCell3" Weight="1" Multiline="true" Text="Net Acres" />
                     <Item4 Ref="48" ControlType="XRTableCell" Name="tableCell4" Weight="1" Multiline="true" Text="Year Preserved " />
-                    <Item5 Ref="49" ControlType="XRTableCell" Name="tableCell5" Weight="1" Multiline="true" Text="No.of RDSO’s" />
+                    <Item5 Ref="49" ControlType="XRTableCell" Name="tableCell5" Weight="1" Multiline="true" Text="No.of  RDSO’s" />
                     <Item6 Ref="50" ControlType="XRTableCell" Name="tableCell6" Weight="1" Multiline="true" Text="Has RDSO been exercised?" />
                     <Item7 Ref="51" ControlType="XRTableCell" Name="tableCell7" Weight="3.0999999999999996" Multiline="true" Text="Current Residential Improvements" />
                   </Cells>
