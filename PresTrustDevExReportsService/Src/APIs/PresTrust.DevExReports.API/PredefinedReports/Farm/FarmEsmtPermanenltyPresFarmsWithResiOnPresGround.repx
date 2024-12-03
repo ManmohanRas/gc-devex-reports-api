@@ -73,10 +73,10 @@
                     <Item4 Ref="38" ControlType="XRTableCell" Name="tableCell22" Weight="1.0729165649414063" Multiline="true" Borders="Right, Bottom">
                       <StylePriority Ref="39" UseBorders="false" />
                     </Item4>
-                    <Item5 Ref="40" ControlType="XRTableCell" Name="tableCell23" Weight="0.53125" Multiline="true" Borders="Right, Bottom">
+                    <Item5 Ref="40" ControlType="XRTableCell" Name="tableCell23" Weight="0.6666665649414063" Multiline="true" Borders="Right, Bottom">
                       <StylePriority Ref="41" UseBorders="false" />
                     </Item5>
-                    <Item6 Ref="42" ControlType="XRTableCell" Name="tableCell24" Weight="2.65625" Multiline="true" Borders="Right, Bottom">
+                    <Item6 Ref="42" ControlType="XRTableCell" Name="tableCell24" Weight="2.5208334350585937" Multiline="true" Borders="Right, Bottom">
                       <StylePriority Ref="43" UseBorders="false" />
                     </Item6>
                   </Cells>
@@ -111,13 +111,13 @@
                       </ExpressionBindings>
                       <StylePriority Ref="57" UseBorders="false" UseTextAlignment="false" />
                     </Item4>
-                    <Item5 Ref="58" ControlType="XRTableCell" Name="tableCell17" Weight="0.42499999999999993" Multiline="true" Text="tableCell17" TextAlignment="BottomCenter" Borders="Top, Right">
+                    <Item5 Ref="58" ControlType="XRTableCell" Name="tableCell17" Weight="0.533333251953125" Multiline="true" Text="tableCell17" TextAlignment="BottomCenter" Borders="Top, Right">
                       <ExpressionBindings>
                         <Item1 Ref="59" EventName="BeforePrint" PropertyName="Text" Expression="[Acres]" />
                       </ExpressionBindings>
                       <StylePriority Ref="60" UseBorders="false" UseTextAlignment="false" />
                     </Item5>
-                    <Item6 Ref="61" ControlType="XRTableCell" Name="tableCell18" Weight="2.125" Multiline="true" Text="tableCell18" TextAlignment="BottomCenter" Borders="Top, Right">
+                    <Item6 Ref="61" ControlType="XRTableCell" Name="tableCell18" Weight="2.016666748046875" Multiline="true" Text="tableCell18" TextAlignment="BottomCenter" Borders="Top, Right">
                       <ExpressionBindings>
                         <Item1 Ref="62" EventName="BeforePrint" PropertyName="Text" Expression="[ImprovRes]" />
                       </ExpressionBindings>
@@ -147,10 +147,10 @@
                     <Item4 Ref="73" ControlType="XRTableCell" Name="tableCell10" Weight="0.85833325195312482" Multiline="true" Borders="Right">
                       <StylePriority Ref="74" UseBorders="false" />
                     </Item4>
-                    <Item5 Ref="75" ControlType="XRTableCell" Name="tableCell11" Weight="0.42500000000000004" Multiline="true" Borders="Right">
+                    <Item5 Ref="75" ControlType="XRTableCell" Name="tableCell11" Weight="0.53333325195312509" Multiline="true" Borders="Right">
                       <StylePriority Ref="76" UseBorders="false" />
                     </Item5>
-                    <Item6 Ref="77" ControlType="XRTableCell" Name="tableCell12" Weight="2.125" Multiline="true" Borders="Right">
+                    <Item6 Ref="77" ControlType="XRTableCell" Name="tableCell12" Weight="2.016666748046875" Multiline="true" Borders="Right">
                       <StylePriority Ref="78" UseBorders="false" />
                     </Item6>
                   </Cells>
@@ -173,10 +173,10 @@
                     <Item4 Ref="87" ControlType="XRTableCell" Name="tableCell4" Weight="0.85833325195312482" Multiline="true" Text="Farm Location" TextAlignment="BottomCenter" Font="Times New Roman, 12pt, style=Bold" Borders="Top, Right">
                       <StylePriority Ref="88" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item4>
-                    <Item5 Ref="89" ControlType="XRTableCell" Name="tableCell5" Weight="0.42500000000000004" Multiline="true" Text="Acres" TextAlignment="BottomCenter" Font="Times New Roman, 12pt, style=Bold" Borders="Top, Right">
+                    <Item5 Ref="89" ControlType="XRTableCell" Name="tableCell5" Weight="0.53333325195312509" Multiline="true" Text="Acres" TextAlignment="BottomCenter" Font="Times New Roman, 12pt, style=Bold" Borders="Top, Right">
                       <StylePriority Ref="90" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item5>
-                    <Item6 Ref="91" ControlType="XRTableCell" Name="tableCell6" Weight="2.125" Multiline="true" Text="Description of Residential Improvements" TextAlignment="BottomCenter" Font="Times New Roman, 10.7pt, style=Bold" Borders="Top, Right">
+                    <Item6 Ref="91" ControlType="XRTableCell" Name="tableCell6" Weight="2.016666748046875" Multiline="true" Text="Description of Residential Improvements" TextAlignment="BottomCenter" Font="Times New Roman, 10.7pt, style=Bold" Borders="Top, Right">
                       <StylePriority Ref="92" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item6>
                   </Cells>

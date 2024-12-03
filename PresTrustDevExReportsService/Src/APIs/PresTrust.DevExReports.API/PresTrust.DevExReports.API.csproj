@@ -12,6 +12,7 @@
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPresFarmsTownSummaries.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithFarmName.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithTFInfo.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramReport.repx" />
@@ -90,6 +91,7 @@
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPresFarmsTownSummaries.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithFarmName.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithTFInfo.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramReport.repx" />
@@ -212,6 +214,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithFarmName.Designer.cs">
       <DependentUpon>FarmEsmtPermPresFarmsWithFarmName.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithTFInfo.cs">
+      <DependentUpon>FarmEsmtPermPresFarmsWithTFInfo.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithTFInfo.Designer.cs">
+      <DependentUpon>FarmEsmtPermPresFarmsWithTFInfo.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.cs">
       <DependentUpon>FarmEsmtPreservedFarmsInMorrisCounty.repx</DependentUpon>
