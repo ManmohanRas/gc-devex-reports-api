@@ -8,7 +8,11 @@
     <None Remove="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtCADBPurchaseProgramSADCAppraisedReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtCADBPurchPrgmSADCAppraisedReport.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPresFarmsTownSummaries.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithFarmName.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithTFInfo.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPreservedFarmsExceptionAreasReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtRdsoPreservedFarmsReport.repx" />
@@ -87,7 +91,11 @@
   <ItemGroup>
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtCADBPurchPrgmSADCAppraisedReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPresFarmsTownSummaries.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithFarmName.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithTFInfo.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPreservedFarmsExceptionAreasReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtRdsoPreservedFarmsReport.repx" />
@@ -191,12 +199,36 @@
     <Compile Update="PredefinedReports\Farm\FarmEsmtCADBPurchPrgmSADCAppraisedReport.Designer.cs">
       <DependentUpon>FarmEsmtCADBPurchPrgmSADCAppraisedReport.repx</DependentUpon>
     </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.cs">
+      <DependentUpon>FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.Designer.cs">
+      <DependentUpon>FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.cs">
       <DependentUpon>FarmEsmtPermanentlyPreservedFarmsReport.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.Designer.cs">
       <DependentUpon>FarmEsmtPermanentlyPreservedFarmsReport.repx</DependentUpon>
     </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPresFarmsTownSummaries.cs">
+      <DependentUpon>FarmEsmtPermanentlyPresFarmsTownSummaries.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPresFarmsTownSummaries.Designer.cs">
+      <DependentUpon>FarmEsmtPermanentlyPresFarmsTownSummaries.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithFarmName.cs">
+      <DependentUpon>FarmEsmtPermPresFarmsWithFarmName.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithFarmName.Designer.cs">
+      <DependentUpon>FarmEsmtPermPresFarmsWithFarmName.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithTFInfo.cs">
+      <DependentUpon>FarmEsmtPermPresFarmsWithTFInfo.repx</DependentUpon>
+    </Compile>
+	  <Compile Update="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithTFInfo.Designer.cs">
+		  <DependentUpon>FarmEsmtPermPresFarmsWithTFInfo.repx</DependentUpon>
+	  </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPreservedFarmsExceptionAreasReport.cs">
       <DependentUpon>FarmEsmtPreservedFarmsExceptionAreasReport.repx</DependentUpon>
     </Compile>
