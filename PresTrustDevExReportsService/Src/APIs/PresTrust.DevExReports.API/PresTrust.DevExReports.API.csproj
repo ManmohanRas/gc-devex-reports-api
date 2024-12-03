@@ -102,7 +102,6 @@
     <EmbeddedResource Include="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramReport.repx" />
-    <EmbeddedResource Include="PredefinedReports\Farm\TFReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FASTTRACKFinalApprovalNOCAF.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FASTTRACKFinalApprovalWITHCAF.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FloodAnnualAuditReport.repx" />
