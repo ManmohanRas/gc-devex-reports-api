@@ -87,6 +87,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FarmEsmtPermPresFarmsWithResiOnPresGround"] = () => new FarmEsmtPermanenltyPresFarmsWithResiOnPresGround(),
             ["FarmEsmtPermPresFarmsTownSummaries"] = () => new FarmEsmtPermanentlyPresFarmsTownSummaries(),
             ["FarmEsmtPermPresFarmsWithFarmName"] = () => new FarmEsmtPermPresFarmsWithFarmName(),
+            ["FarmEsmtPresFarmsExceptionAreaReport"] = () => new FarmEsmtPreservedFarmsExceptionAreasReport(),
+            ["FarmPremPresFarmsWithServableExceptionsReport"] = () => new FarmPermanentlyPreservedFarmsWithServableExceptionsReport(),
+            ["FarmEsmtRdsoPresFarmsReport"] = () => new FarmEsmtRdsoPreservedFarmsReport(),
+
         };
     }
 }
