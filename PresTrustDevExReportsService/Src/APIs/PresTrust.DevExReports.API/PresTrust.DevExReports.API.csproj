@@ -224,8 +224,9 @@
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithTFInfo.cs">
       <DependentUpon>FarmEsmtPermPresFarmsWithTFInfo.repx</DependentUpon>
     </Compile>
-    <Compile Update="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithTFInfo.Designer.cs">
-      <DependentUpon>FarmEsmtPermPresFarmsWithTFInfo.repx</DependentUpon>
+	  <Compile Update="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithTFInfo.Designer.cs">
+		  <DependentUpon>FarmEsmtPermPresFarmsWithTFInfo.repx</DependentUpon>
+	  </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPreservedFarmsExceptionAreasReport.cs">
       <DependentUpon>FarmEsmtPreservedFarmsExceptionAreasReport.repx</DependentUpon>
     </Compile>
