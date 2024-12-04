@@ -152,7 +152,7 @@
               <Rows>
                 <Item1 Ref="79" ControlType="XRTableRow" Name="tableRow3" Weight="1">
                   <Cells>
-                    <Item1 Ref="80" ControlType="XRTableCell" Name="tableCell21" Weight="1" TextFormatString="{0:MMMM dd, yyyy}" Multiline="true">
+                    <Item1 Ref="80" ControlType="XRTableCell" Name="tableCell21" Weight="1" TextFormatString="{0:dddd, MMMM d, yyyy}" Multiline="true">
                       <ExpressionBindings>
                         <Item1 Ref="81" EventName="BeforePrint" PropertyName="Text" Expression="GetDate(Today())" />
                       </ExpressionBindings>
