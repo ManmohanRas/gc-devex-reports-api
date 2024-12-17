@@ -51,7 +51,7 @@
                   <Cells>
                     <Item1 Ref="30" ControlType="XRTableCell" Name="tableCell22" Weight="1.2550114229468139" Multiline="true">
                       <ExpressionBindings>
-                        <Item1 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="[StreetAddress]" />
+                        <Item1 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="Concat([StreetAddress],[StreetNo])" />
                       </ExpressionBindings>
                     </Item1>
                     <Item2 Ref="32" ControlType="XRTableCell" Name="tableCell23" Weight="1.2550115426340185" Multiline="true">
