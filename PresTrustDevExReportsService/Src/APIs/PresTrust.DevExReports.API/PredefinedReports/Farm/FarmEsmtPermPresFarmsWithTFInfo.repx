@@ -148,92 +148,93 @@
                       <StylePriority Ref="75" UseFont="false" UseTextAlignment="false" />
                     </Item1>
                     <Item2 Ref="76" ControlType="XRTableCell" Name="tableCell16" Weight="0.59113314924568972" Multiline="true" Text="tableCell16" TextAlignment="MiddleCenter">
+                      <Summary Ref="77" Running="Report" />
                       <ExpressionBindings>
-                        <Item1 Ref="77" EventName="BeforePrint" PropertyName="Text" Expression="[Acres]" />
+                        <Item1 Ref="78" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Acres])" />
                       </ExpressionBindings>
-                      <StylePriority Ref="78" UseTextAlignment="false" />
+                      <StylePriority Ref="79" UseTextAlignment="false" />
                     </Item2>
                   </Cells>
                 </Item1>
               </Rows>
             </Item2>
-            <Item3 Ref="79" ControlType="XRLabel" Name="label3" Multiline="true" Text="label3" TextAlignment="MiddleCenter" SizeF="119.791664,23" LocationFloat="0,0" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,100">
-              <Summary Ref="80" Running="Report" />
+            <Item3 Ref="80" ControlType="XRLabel" Name="label3" Multiline="true" Text="label3" TextAlignment="MiddleCenter" SizeF="119.791664,23" LocationFloat="0,0" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,100">
+              <Summary Ref="81" Running="Report" />
               <ExpressionBindings>
-                <Item1 Ref="81" EventName="BeforePrint" PropertyName="Text" Expression="Concat(sumCount(),' ','Farm(s)' )" />
+                <Item1 Ref="82" EventName="BeforePrint" PropertyName="Text" Expression="Concat(sumCount(),' ','Farm(s)' )" />
               </ExpressionBindings>
-              <StylePriority Ref="82" UseFont="false" UseTextAlignment="false" />
+              <StylePriority Ref="83" UseFont="false" UseTextAlignment="false" />
             </Item3>
           </Controls>
         </Item3>
       </Bands>
     </Item5>
-    <Item6 Ref="83" ControlType="DetailReportBand" Name="DetailReport1" Level="1" DataMember="Query" DataSource="#Ref-19">
+    <Item6 Ref="84" ControlType="DetailReportBand" Name="DetailReport1" Level="1" DataMember="Query" DataSource="#Ref-19">
       <Bands>
-        <Item1 Ref="84" ControlType="DetailBand" Name="Detail2" HeightF="25">
+        <Item1 Ref="85" ControlType="DetailBand" Name="Detail2" HeightF="25">
           <Controls>
-            <Item1 Ref="85" ControlType="XRTable" Name="table5" SizeF="385.416626,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
+            <Item1 Ref="86" ControlType="XRTable" Name="table5" SizeF="385.416626,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
               <Rows>
-                <Item1 Ref="86" ControlType="XRTableRow" Name="tableRow5" Weight="1">
+                <Item1 Ref="87" ControlType="XRTableRow" Name="tableRow5" Weight="1">
                   <Cells>
-                    <Item1 Ref="87" ControlType="XRTableCell" Name="tableCell19" Weight="1" Multiline="true" Text="tableCell19" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt" Borders="Left, Top, Bottom">
+                    <Item1 Ref="88" ControlType="XRTableCell" Name="tableCell19" Weight="1" Multiline="true" Text="tableCell19" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt" Borders="Left, Top, Bottom">
                       <ExpressionBindings>
-                        <Item1 Ref="88" EventName="BeforePrint" PropertyName="Text" Expression="[Municipality]" />
+                        <Item1 Ref="89" EventName="BeforePrint" PropertyName="Text" Expression="[Municipality]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="89" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                      <StylePriority Ref="90" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="90" ControlType="XRTableCell" Name="tableCell20" Weight="0.66795300540342084" Multiline="true" Text="tableCell20" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt" Borders="Top, Bottom">
+                    <Item2 Ref="91" ControlType="XRTableCell" Name="tableCell20" Weight="0.66795300540342084" Multiline="true" Text="tableCell20" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt" Borders="Top, Bottom">
                       <ExpressionBindings>
-                        <Item1 Ref="91" EventName="BeforePrint" PropertyName="Text" Expression="[Acres]" />
+                        <Item1 Ref="92" EventName="BeforePrint" PropertyName="Text" Expression="[Acres]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="92" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                      <StylePriority Ref="93" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item2>
-                    <Item3 Ref="93" ControlType="XRTableCell" Name="tableCell22" Weight="0.6401557234282399" Multiline="true" Text="Ac. on" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt" Borders="Top, Bottom">
-                      <StylePriority Ref="94" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    <Item3 Ref="94" ControlType="XRTableCell" Name="tableCell22" Weight="0.6401557234282399" Multiline="true" Text="Ac. on" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt" Borders="Top, Bottom">
+                      <StylePriority Ref="95" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item3>
-                    <Item4 Ref="95" ControlType="XRTableCell" Name="tableCell21" Weight="0.19382163442553343" Multiline="true" Text="tableCell21" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt" Borders="Top, Bottom">
+                    <Item4 Ref="96" ControlType="XRTableCell" Name="tableCell21" Weight="0.19382163442553343" Multiline="true" Text="tableCell21" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt" Borders="Top, Bottom">
                       <ExpressionBindings>
-                        <Item1 Ref="96" EventName="BeforePrint" PropertyName="Text" Expression="[FarmCount]" />
+                        <Item1 Ref="97" EventName="BeforePrint" PropertyName="Text" Expression="[FarmCount]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="97" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                      <StylePriority Ref="98" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item4>
-                    <Item5 Ref="98" ControlType="XRTableCell" Name="tableCell23" Weight="0.49806944670901387" Multiline="true" Text="Farm(s)" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt" Borders="Top, Right, Bottom">
-                      <StylePriority Ref="99" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    <Item5 Ref="99" ControlType="XRTableCell" Name="tableCell23" Weight="0.49806944670901387" Multiline="true" Text="Farm(s)" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt" Borders="Top, Right, Bottom">
+                      <StylePriority Ref="100" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item5>
                   </Cells>
                 </Item1>
               </Rows>
-              <StylePriority Ref="100" UseBorders="false" />
+              <StylePriority Ref="101" UseBorders="false" />
             </Item1>
           </Controls>
         </Item1>
-        <Item2 Ref="101" ControlType="ReportHeaderBand" Name="ReportHeader2" HeightF="23">
+        <Item2 Ref="102" ControlType="ReportHeaderBand" Name="ReportHeader2" HeightF="23">
           <Controls>
-            <Item1 Ref="102" ControlType="XRLabel" Name="label4" Multiline="true" Text="Preserved Farms" TextAlignment="MiddleCenter" SizeF="385.4167,23" LocationFloat="0,0" Font="Times New Roman, 14pt" BackColor="255,84,141,212" Padding="2,2,0,0,100" Borders="All">
-              <StylePriority Ref="103" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            <Item1 Ref="103" ControlType="XRLabel" Name="label4" Multiline="true" Text="Preserved Farms" TextAlignment="MiddleCenter" SizeF="385.4167,23" LocationFloat="0,0" Font="Times New Roman, 14pt" BackColor="255,84,141,212" Padding="2,2,0,0,100" Borders="All">
+              <StylePriority Ref="104" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
             </Item1>
           </Controls>
         </Item2>
-        <Item3 Ref="104" ControlType="ReportFooterBand" Name="ReportFooter1" HeightF="34.37498">
+        <Item3 Ref="105" ControlType="ReportFooterBand" Name="ReportFooter1" HeightF="34.37498">
           <Controls>
-            <Item1 Ref="105" ControlType="XRLabel" Name="label6" Multiline="true" Text="Ac." TextAlignment="MiddleCenter" SizeF="66.66667,23" LocationFloat="214.285538,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
-              <StylePriority Ref="106" UseFont="false" UseTextAlignment="false" />
+            <Item1 Ref="106" ControlType="XRLabel" Name="label6" Multiline="true" Text="Ac." TextAlignment="MiddleCenter" SizeF="66.66667,23" LocationFloat="214.285538,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
+              <StylePriority Ref="107" UseFont="false" UseTextAlignment="false" />
             </Item1>
-            <Item2 Ref="107" ControlType="XRLabel" Name="label5" TextFormatString="{0:#.000}" Multiline="true" Text="label5" TextAlignment="MiddleCenter" SizeF="85.81352,23" LocationFloat="128.47226,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
-              <Summary Ref="108" Running="Report" />
+            <Item2 Ref="108" ControlType="XRLabel" Name="label5" TextFormatString="{0:#.000}" Multiline="true" Text="label5" TextAlignment="MiddleCenter" SizeF="85.81352,23" LocationFloat="128.47226,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
+              <Summary Ref="109" Running="Report" />
               <ExpressionBindings>
-                <Item1 Ref="109" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Acres])" />
+                <Item1 Ref="110" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Acres])" />
               </ExpressionBindings>
-              <StylePriority Ref="110" UseFont="false" UseTextAlignment="false" />
+              <StylePriority Ref="111" UseFont="false" UseTextAlignment="false" />
             </Item2>
           </Controls>
         </Item3>
       </Bands>
     </Item6>
-    <Item7 Ref="111" ControlType="PageFooterBand" Name="PageFooter" HeightF="56.25">
+    <Item7 Ref="112" ControlType="PageFooterBand" Name="PageFooter" HeightF="56.25">
       <Controls>
-        <Item1 Ref="112" ControlType="XRLabel" Name="label2" Multiline="true" Text="For Further information contact Katherine Coyle at 973-829-8120 or via email at kcoyle@co.morris.nj.us " SizeF="642.8571,23" LocationFloat="0,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
-          <StylePriority Ref="113" UseFont="false" />
+        <Item1 Ref="113" ControlType="XRLabel" Name="label2" Multiline="true" Text="For Further information contact Katherine Coyle at 973-829-8120 or via email at kcoyle@co.morris.nj.us " SizeF="642.8571,23" LocationFloat="0,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="114" UseFont="false" />
         </Item1>
       </Controls>
     </Item7>
