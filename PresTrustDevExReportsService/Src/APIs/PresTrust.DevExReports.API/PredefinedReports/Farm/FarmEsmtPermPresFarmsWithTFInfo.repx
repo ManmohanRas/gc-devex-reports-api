@@ -32,7 +32,7 @@
     </Item4>
     <Item5 Ref="20" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="Farm_FarmApplication_1" DataSource="#Ref-19">
       <Bands>
-        <Item1 Ref="21" ControlType="DetailBand" Name="Detail1" HeightF="28.125">
+        <Item1 Ref="21" ControlType="DetailBand" Name="Detail1" HeightF="25">
           <Controls>
             <Item1 Ref="22" ControlType="XRTable" Name="table2" SizeF="750,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
               <Rows>
