@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="AnnualAudit" Margins="8, 20, 33, 34" PaperKind="A2" PageWidth="1654" PageHeight="2339" Version="22.1" Font="Arial, 9.75pt">
-  <Extensions>
-    <Item1 Ref="1" Key="VSReportExtInfo" Value=".repx" />
-  </Extensions>
+<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="AnnualAudit" Margins="8, 20, 33, 34" PaperKind="A2" PageWidth="1654" PageHeight="2339" Version="22.1" DataSource="#Ref-0" Font="Arial, 9.75pt">
   <Parameters>
     <Item1 Ref="4" Description="Year" ValueSourceSettings="#Ref-2" ValueInfo="0" Name="Year" Type="#Ref-3" />
   </Parameters>

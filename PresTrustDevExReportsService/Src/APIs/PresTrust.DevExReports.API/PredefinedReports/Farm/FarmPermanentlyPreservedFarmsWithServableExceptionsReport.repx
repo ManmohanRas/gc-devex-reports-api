@@ -173,7 +173,7 @@
                     </Item5>
                     <Item6 Ref="88" ControlType="XRTableCell" Name="tableCell10" Weight="0.45833312988281261" Multiline="true" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt">
                       <ExpressionBindings>
-                        <Item1 Ref="89" EventName="BeforePrint" PropertyName="Text" Expression="Iif([X1IsSubdividable] = true,'Yes'  , 'No')" />
+                        <Item1 Ref="89" EventName="BeforePrint" PropertyName="Text" Expression="Iif([X1Severable] = true,'Yes'  , 'No')" />
                       </ExpressionBindings>
                       <StylePriority Ref="90" UseFont="false" UseTextAlignment="false" />
                     </Item6>
