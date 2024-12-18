@@ -131,116 +131,115 @@
                       <StylePriority Ref="68" UseFont="false" UseTextAlignment="false" />
                     </Item1>
                     <Item2 Ref="69" ControlType="XRTableCell" Name="tableCell18" Weight="1" TextFormatString="{0:$0.00}" Multiline="true" Text="tableCell18" TextAlignment="MiddleCenter">
-                      <Summary Ref="70" Running="Report" />
                       <ExpressionBindings>
-                        <Item1 Ref="71" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([TotalCost])" />
+                        <Item1 Ref="70" EventName="BeforePrint" PropertyName="Text" Expression="[TotalCost].[TotalCost]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="72" UseTextAlignment="false" />
+                      <StylePriority Ref="71" UseTextAlignment="false" />
                     </Item2>
                   </Cells>
                 </Item1>
               </Rows>
             </Item1>
-            <Item2 Ref="73" ControlType="XRTable" Name="table3" SizeF="362.5,25" LocationFloat="387.5,0" Padding="2,2,0,0,96">
+            <Item2 Ref="72" ControlType="XRTable" Name="table3" SizeF="362.5,25" LocationFloat="387.5,0" Padding="2,2,0,0,96">
               <Rows>
-                <Item1 Ref="74" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+                <Item1 Ref="73" ControlType="XRTableRow" Name="tableRow3" Weight="1">
                   <Cells>
-                    <Item1 Ref="75" ControlType="XRTableCell" Name="tableCell15" Weight="1.4088668507543103" Multiline="true" Text="Total Acres Preserved:" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold">
-                      <StylePriority Ref="76" UseFont="false" UseTextAlignment="false" />
+                    <Item1 Ref="74" ControlType="XRTableCell" Name="tableCell15" Weight="1.4088668507543103" Multiline="true" Text="Total Acres Preserved:" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold">
+                      <StylePriority Ref="75" UseFont="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="77" ControlType="XRTableCell" Name="tableCell16" Weight="0.59113314924568972" Multiline="true" Text="tableCell16" TextAlignment="MiddleCenter">
-                      <Summary Ref="78" Running="Report" />
+                    <Item2 Ref="76" ControlType="XRTableCell" Name="tableCell16" Weight="0.59113314924568972" Multiline="true" Text="tableCell16" TextAlignment="MiddleCenter">
+                      <Summary Ref="77" Running="Report" />
                       <ExpressionBindings>
-                        <Item1 Ref="79" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([AcresToBeAcquired])" />
+                        <Item1 Ref="78" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([AcresToBeAcquired])" />
                       </ExpressionBindings>
-                      <StylePriority Ref="80" UseTextAlignment="false" />
+                      <StylePriority Ref="79" UseTextAlignment="false" />
                     </Item2>
                   </Cells>
                 </Item1>
               </Rows>
             </Item2>
-            <Item3 Ref="81" ControlType="XRLabel" Name="label3" Multiline="true" Text="label3" TextAlignment="MiddleCenter" SizeF="119.791664,23" LocationFloat="0,0" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,100">
-              <Summary Ref="82" Running="Report" />
+            <Item3 Ref="80" ControlType="XRLabel" Name="label3" Multiline="true" Text="label3" TextAlignment="MiddleCenter" SizeF="119.791664,23" LocationFloat="0,0" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,100">
+              <Summary Ref="81" Running="Report" />
               <ExpressionBindings>
-                <Item1 Ref="83" EventName="BeforePrint" PropertyName="Text" Expression="Concat(sumCount(),' ','Farm(s)' )" />
+                <Item1 Ref="82" EventName="BeforePrint" PropertyName="Text" Expression="Concat(sumCount(),' ','Farm(s)' )" />
               </ExpressionBindings>
-              <StylePriority Ref="84" UseFont="false" UseTextAlignment="false" />
+              <StylePriority Ref="83" UseFont="false" UseTextAlignment="false" />
             </Item3>
           </Controls>
         </Item3>
       </Bands>
     </Item5>
-    <Item6 Ref="85" ControlType="DetailReportBand" Name="DetailReport1" Level="1" DataMember="Query" DataSource="#Ref-19">
+    <Item6 Ref="84" ControlType="DetailReportBand" Name="DetailReport1" Level="1" DataMember="Query" DataSource="#Ref-19">
       <Bands>
-        <Item1 Ref="86" ControlType="DetailBand" Name="Detail2" HeightF="25">
+        <Item1 Ref="85" ControlType="DetailBand" Name="Detail2" HeightF="25">
           <Controls>
-            <Item1 Ref="87" ControlType="XRTable" Name="table5" SizeF="385.416626,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
+            <Item1 Ref="86" ControlType="XRTable" Name="table5" SizeF="385.416626,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
               <Rows>
-                <Item1 Ref="88" ControlType="XRTableRow" Name="tableRow5" Weight="1">
+                <Item1 Ref="87" ControlType="XRTableRow" Name="tableRow5" Weight="1">
                   <Cells>
-                    <Item1 Ref="89" ControlType="XRTableCell" Name="tableCell19" Weight="1" Multiline="true" Text="tableCell19" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt" Borders="Left, Top, Bottom">
+                    <Item1 Ref="88" ControlType="XRTableCell" Name="tableCell19" Weight="1" Multiline="true" Text="tableCell19" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt" Borders="Left, Top, Bottom">
                       <ExpressionBindings>
-                        <Item1 Ref="90" EventName="BeforePrint" PropertyName="Text" Expression="[Municipality]" />
+                        <Item1 Ref="89" EventName="BeforePrint" PropertyName="Text" Expression="[Municipality]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="91" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                      <StylePriority Ref="90" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="92" ControlType="XRTableCell" Name="tableCell20" Weight="0.66795300540342084" Multiline="true" Text="tableCell20" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt" Borders="Top, Bottom">
+                    <Item2 Ref="91" ControlType="XRTableCell" Name="tableCell20" Weight="0.66795300540342084" Multiline="true" Text="tableCell20" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt" Borders="Top, Bottom">
                       <ExpressionBindings>
-                        <Item1 Ref="93" EventName="BeforePrint" PropertyName="Text" Expression="[Acres]" />
+                        <Item1 Ref="92" EventName="BeforePrint" PropertyName="Text" Expression="[Acres]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="94" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                      <StylePriority Ref="93" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item2>
-                    <Item3 Ref="95" ControlType="XRTableCell" Name="tableCell22" Weight="0.6401557234282399" Multiline="true" Text="Ac. on" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt" Borders="Top, Bottom">
-                      <StylePriority Ref="96" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    <Item3 Ref="94" ControlType="XRTableCell" Name="tableCell22" Weight="0.6401557234282399" Multiline="true" Text="Ac. on" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt" Borders="Top, Bottom">
+                      <StylePriority Ref="95" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item3>
-                    <Item4 Ref="97" ControlType="XRTableCell" Name="tableCell21" Weight="0.19382163442553343" Multiline="true" Text="tableCell21" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt" Borders="Top, Bottom">
+                    <Item4 Ref="96" ControlType="XRTableCell" Name="tableCell21" Weight="0.19382163442553343" Multiline="true" Text="tableCell21" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt" Borders="Top, Bottom">
                       <ExpressionBindings>
-                        <Item1 Ref="98" EventName="BeforePrint" PropertyName="Text" Expression="[FarmCount]" />
+                        <Item1 Ref="97" EventName="BeforePrint" PropertyName="Text" Expression="[FarmCount]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="99" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                      <StylePriority Ref="98" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item4>
-                    <Item5 Ref="100" ControlType="XRTableCell" Name="tableCell23" Weight="0.49806944670901387" Multiline="true" Text="Farm(s)" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt" Borders="Top, Right, Bottom">
-                      <StylePriority Ref="101" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    <Item5 Ref="99" ControlType="XRTableCell" Name="tableCell23" Weight="0.49806944670901387" Multiline="true" Text="Farm(s)" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt" Borders="Top, Right, Bottom">
+                      <StylePriority Ref="100" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item5>
                   </Cells>
                 </Item1>
               </Rows>
-              <StylePriority Ref="102" UseBorders="false" />
+              <StylePriority Ref="101" UseBorders="false" />
             </Item1>
           </Controls>
         </Item1>
-        <Item2 Ref="103" ControlType="ReportHeaderBand" Name="ReportHeader2" HeightF="23">
+        <Item2 Ref="102" ControlType="ReportHeaderBand" Name="ReportHeader2" HeightF="23">
           <Controls>
-            <Item1 Ref="104" ControlType="XRLabel" Name="label4" Multiline="true" Text="Preserved Farms" TextAlignment="MiddleCenter" SizeF="385.4167,23" LocationFloat="0,0" Font="Times New Roman, 14pt" BackColor="255,84,141,212" Padding="2,2,0,0,100" Borders="All">
-              <StylePriority Ref="105" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            <Item1 Ref="103" ControlType="XRLabel" Name="label4" Multiline="true" Text="Preserved Farms" TextAlignment="MiddleCenter" SizeF="385.4167,23" LocationFloat="0,0" Font="Times New Roman, 14pt" BackColor="255,84,141,212" Padding="2,2,0,0,100" Borders="All">
+              <StylePriority Ref="104" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
             </Item1>
           </Controls>
         </Item2>
-        <Item3 Ref="106" ControlType="ReportFooterBand" Name="ReportFooter1" HeightF="34.37498">
+        <Item3 Ref="105" ControlType="ReportFooterBand" Name="ReportFooter1" HeightF="34.37498">
           <Controls>
-            <Item1 Ref="107" ControlType="XRLabel" Name="label6" Multiline="true" Text="Ac." TextAlignment="MiddleCenter" SizeF="66.66667,23" LocationFloat="214.285538,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
-              <StylePriority Ref="108" UseFont="false" UseTextAlignment="false" />
+            <Item1 Ref="106" ControlType="XRLabel" Name="label6" Multiline="true" Text="Ac." TextAlignment="MiddleCenter" SizeF="66.66667,23" LocationFloat="214.285538,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
+              <StylePriority Ref="107" UseFont="false" UseTextAlignment="false" />
             </Item1>
-            <Item2 Ref="109" ControlType="XRLabel" Name="label5" TextFormatString="{0:#.000}" Multiline="true" Text="label5" TextAlignment="MiddleCenter" SizeF="85.81352,23" LocationFloat="128.47226,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
-              <Summary Ref="110" Running="Report" />
+            <Item2 Ref="108" ControlType="XRLabel" Name="label5" TextFormatString="{0:#.000}" Multiline="true" Text="label5" TextAlignment="MiddleCenter" SizeF="85.81352,23" LocationFloat="128.47226,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
+              <Summary Ref="109" Running="Report" />
               <ExpressionBindings>
-                <Item1 Ref="111" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Acres])" />
+                <Item1 Ref="110" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Acres])" />
               </ExpressionBindings>
-              <StylePriority Ref="112" UseFont="false" UseTextAlignment="false" />
+              <StylePriority Ref="111" UseFont="false" UseTextAlignment="false" />
             </Item2>
           </Controls>
         </Item3>
       </Bands>
     </Item6>
-    <Item7 Ref="113" ControlType="PageFooterBand" Name="PageFooter" HeightF="56.25">
+    <Item7 Ref="112" ControlType="PageFooterBand" Name="PageFooter" HeightF="56.25">
       <Controls>
-        <Item1 Ref="114" ControlType="XRLabel" Name="label2" Multiline="true" Text="For Further information contact Katherine Coyle at 973-829-8120 or via email at kcoyle@co.morris.nj.us " SizeF="642.8571,23" LocationFloat="0,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
-          <StylePriority Ref="115" UseFont="false" />
+        <Item1 Ref="113" ControlType="XRLabel" Name="label2" Multiline="true" Text="For Further information contact Katherine Coyle at 973-829-8120 or via email at kcoyle@co.morris.nj.us " SizeF="642.8571,23" LocationFloat="0,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="114" UseFont="false" />
         </Item1>
       </Controls>
     </Item7>
   </Bands>
   <ComponentStorage>
-    <Item1 Ref="19" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IkN1c3RvbVNxbFF1ZXJ5IiBOYW1lPSJGYXJtX0Zhcm1BcHBsaWNhdGlvbl8xIj48U3FsPnNlbGVjdCAiRmFybS5GYXJtQXBwbGljYXRpb24iLiJJZCIsDQogICAgICAgIkZhcm0uRmFybUFwcGxpY2F0aW9uIi4iU3RhdHVzSWQiLA0KICAgICAgICJGYXJtLkZhcm1BcHBsaWNhdGlvbiIuIkZhcm1MaXN0SWQiLA0KICAgICAgICJGYXJtLkZhcm1BcHBsaWNhdGlvbiIuIkFwcGxpY2F0aW9uVHlwZUlkIiwNCiAgICAgICAiRmFybS5GYXJtVGVybUFwcExvY2F0aW9uIi4iQXBwbGljYXRpb25JZCIsDQogICAgICAgIkZhcm0uRmFybVRlcm1BcHBMb2NhdGlvbiIuIklzQ2hlY2tlZCIsDQogICAgICAgIkZhcm0uRmFybVRlcm1BcHBMb2NhdGlvbiIuIlBhcmNlbElkIiwNCiAgICAgICAiRmFybS5GYXJtTGlzdCIuIkZhcm1OdW1iZXIiLA0KICAgICAgICJGYXJtLkZhcm1MaXN0Ii4iT3JpZ2luYWxMYW5kb3duZXIiLA0KICAgICAgICJGYXJtLkZhcm1MaXN0Ii4iRmFybU5hbWUiLA0KICAgICAgICJGYXJtLkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCIuIkJsb2NrIiwNCiAgICAgICAiRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwiLiJMb3QiLA0KICAgICAiRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwiLiJBY3Jlc1RvQmVBY3F1aXJlZCIsDQogICAgICAgIkZhcm0uRmFybU11bmljaXBhbGl0eUJsb2NrTG90UGFyY2VsIi4iTXVuaWNpcGFsaXR5SWQiLA0KICAgICAgICJDb3JlLk11bmljaXBhbGl0eSIuIk11bmljaXBhbGl0eSIsDQogICAgICAgIkZhcm0uRmFybVRlcm1BcHBPd25lckRldGFpbHMiLiJNYWlsaW5nQWRkcmVzczEiLA0KICAgICAgICJGYXJtLkZhcm1UZXJtQXBwT3duZXJEZXRhaWxzIi4iTWFpbGluZ0FkZHJlc3MyIiwNCiAgICAgICAiRmFybS5GYXJtRXNtdEFwcEFkbWluQ2xvc2luZ0RvY1N0YXR1cyIuIkNsb3NpbmdEYXRlIiwNCiAgICAgICAiRmFybS5GYXJtRXNtdEFwcEFkbWluQ29zdERldGFpbHMiLiJDb3VudHlGdW5kcyIsDQogICAgICAoSVNOVUxMKCJGYXJtLkZhcm1Fc210QXBwQWRtaW5Db3N0RGV0YWlscyIuVG90YWxDb3N0LDApKSBhcyBUb3RhbENvc3QNCiAgZnJvbSAoKCgoKCgoIkZhcm0iLiJGYXJtQXBwbGljYXRpb24iDQogICAgICAgIkZhcm0uRmFybUFwcGxpY2F0aW9uIg0KICBsZWZ0IGpvaW4gIkZhcm0iLiJGYXJtVGVybUFwcExvY2F0aW9uIg0KICAgICAgICJGYXJtLkZhcm1UZXJtQXBwTG9jYXRpb24iDQogICAgICAgb24gKCJGYXJtLkZhcm1UZXJtQXBwTG9jYXRpb24iLiJBcHBsaWNhdGlvbklkIiA9ICJGYXJtLkZhcm1BcHBsaWNhdGlvbiIuIklkIikpDQogIGxlZnQgam9pbiAiRmFybSIuIkZhcm1MaXN0IiAiRmFybS5GYXJtTGlzdCINCiAgICAgICBvbiAoIkZhcm0uRmFybUxpc3QiLiJGYXJtTGlzdElEIiA9ICJGYXJtLkZhcm1UZXJtQXBwTG9jYXRpb24iLiJGYXJtTGlzdElEIikpDQogIGxlZnQgam9pbiAiRmFybSIuIkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCINCiAgICAgICAiRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwiDQogICAgICAgb24gKCJGYXJtLkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCIuIklkIiA9ICJGYXJtLkZhcm1UZXJtQXBwTG9jYXRpb24iLiJQYXJjZWxJZCIpKQ0KICBsZWZ0IGpvaW4gIkNvcmUiLiJNdW5pY2lwYWxpdHkiDQogICAgICAgIkNvcmUuTXVuaWNpcGFsaXR5Ig0KICAgICAgIG9uICgiQ29yZS5NdW5pY2lwYWxpdHkiLiJNdW5pY2lwYWxJZCIgPSAiRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwiLiJNdW5pY2lwYWxpdHlJZCIpKQ0KICBsZWZ0IGpvaW4gIkZhcm0iLiJGYXJtVGVybUFwcE93bmVyRGV0YWlscyINCiAgICAgICAiRmFybS5GYXJtVGVybUFwcE93bmVyRGV0YWlscyINCiAgICAgICBvbiAoIkZhcm0uRmFybVRlcm1BcHBPd25lckRldGFpbHMiLiJBcHBsaWNhdGlvbklkIiA9ICJGYXJtLkZhcm1BcHBsaWNhdGlvbiIuIklkIikpDQogIGxlZnQgam9pbiAiRmFybSIuIkZhcm1Fc210QXBwQWRtaW5DbG9zaW5nRG9jU3RhdHVzIg0KICAgICAgICJGYXJtLkZhcm1Fc210QXBwQWRtaW5DbG9zaW5nRG9jU3RhdHVzIg0KICAgICAgIG9uICgiRmFybS5GYXJtRXNtdEFwcEFkbWluQ2xvc2luZ0RvY1N0YXR1cyIuIkFwcGxpY2F0aW9uSWQiID0gIkZhcm0uRmFybUFwcGxpY2F0aW9uIi4iSWQiKSkNCiAgbGVmdCBqb2luICJGYXJtIi4iRmFybUVzbXRBcHBBZG1pbkNvc3REZXRhaWxzIg0KICAgICAgICJGYXJtLkZhcm1Fc210QXBwQWRtaW5Db3N0RGV0YWlscyINCiAgICAgICBvbiAoIkZhcm0uRmFybUVzbXRBcHBBZG1pbkNvc3REZXRhaWxzIi4iQXBwbGljYXRpb25JZCIgPSAiRmFybS5GYXJtQXBwbGljYXRpb24iLiJJZCIpKQ0KIHdoZXJlDQogICAgICAgKCJGYXJtLkZhcm1Fc210QXBwQWRtaW5Db3N0RGV0YWlscyIuIkNvdW50eUZ1bmRzIiA9IE4nVEYnKQ0KCSAgIGFuZCANCgkgICAiRmFybS5GYXJtQXBwbGljYXRpb24iLiJTdGF0dXNJZCIgPSAyMDYNCg0KCSAgIGdyb3VwIGJ5ICAiRmFybS5GYXJtQXBwbGljYXRpb24iLiJJZCIsDQogICAgICAgIkZhcm0uRmFybUFwcGxpY2F0aW9uIi4iU3RhdHVzSWQiLA0KICAgICAgICJGYXJtLkZhcm1BcHBsaWNhdGlvbiIuIkZhcm1MaXN0SWQiLA0KICAgICAgICJGYXJtLkZhcm1BcHBsaWNhdGlvbiIuIkFwcGxpY2F0aW9uVHlwZUlkIiwNCiAgICAgICAiRmFybS5GYXJtVGVybUFwcExvY2F0aW9uIi4iQXBwbGljYXRpb25JZCIsDQogICAgICAgIkZhcm0uRmFybVRlcm1BcHBMb2NhdGlvbiIuIklzQ2hlY2tlZCIsDQogICAgICAgIkZhcm0uRmFybVRlcm1BcHBMb2NhdGlvbiIuIlBhcmNlbElkIiwNCiAgICAgICAiRmFybS5GYXJtTGlzdCIuIkZhcm1OdW1iZXIiLA0KICAgICAgICJGYXJtLkZhcm1MaXN0Ii4iT3JpZ2luYWxMYW5kb3duZXIiLA0KICAgICAgICJGYXJtLkZhcm1MaXN0Ii4iRmFybU5hbWUiLA0KICAgICAgICJGYXJtLkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCIuIkJsb2NrIiwNCiAgICAgICAiRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwiLiJMb3QiLA0KICAgICAgICJGYXJtLkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCIuIkFjcmVzVG9CZUFjcXVpcmVkIiwNCiAgICAgICAiRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwiLiJNdW5pY2lwYWxpdHlJZCIsDQogICAgICAgIkNvcmUuTXVuaWNpcGFsaXR5Ii4iTXVuaWNpcGFsaXR5IiwNCiAgICAgICAiRmFybS5GYXJtVGVybUFwcE93bmVyRGV0YWlscyIuIk1haWxpbmdBZGRyZXNzMSIsDQogICAgICAgIkZhcm0uRmFybVRlcm1BcHBPd25lckRldGFpbHMiLiJNYWlsaW5nQWRkcmVzczIiLA0KICAgICAgICJGYXJtLkZhcm1Fc210QXBwQWRtaW5DbG9zaW5nRG9jU3RhdHVzIi4iQ2xvc2luZ0RhdGUiLA0KICAgICAgICJGYXJtLkZhcm1Fc210QXBwQWRtaW5Db3N0RGV0YWlscyIuIkNvdW50eUZ1bmRzIiwNCgkgICAiRmFybS5GYXJtRXNtdEFwcEFkbWluQ29zdERldGFpbHMiLlRvdGFsQ29zdDwvU3FsPjwvUXVlcnk+PFF1ZXJ5IFR5cGU9IkN1c3RvbVNxbFF1ZXJ5IiBOYW1lPSJRdWVyeSI+PFNxbD5TRUxFQ1QgDQogICAgQ09VTlQoRkwuRmFybUxpc3RJZCkgQVMgRmFybUNvdW50LCAgLS0gQ291bnQgb2YgYWxsIHJvd3Mgd2l0aCBhIEZhcm1MaXN0SWQNCiAgICBDTS5NdW5pY2lwYWxpdHksDQogICAgSVNOVUxMKFNVTShNQkwuQWNyZXNUb0JlQWNxdWlyZWQpLCAwKSBBUyBBY3Jlcw0KRlJPTSANCiAgICBDb3JlLk11bmljaXBhbGl0eSBDTQ0KTEVGVCBKT0lOIA0KICAgIEZhcm0uRmFybU11bmljaXBhbGl0eUJsb2NrTG90UGFyY2VsIE1CTCANCiAgICAgICAgT04gQ00uTXVuaWNpcGFsSWQgPSBNQkwuTXVuaWNpcGFsaXR5SWQNCkxFRlQgSk9JTiANCiAgICBGYXJtLkZhcm1UZXJtQXBwTG9jYXRpb24gVEwgDQogICAgICAgIE9OIE1CTC5JZCA9IFRMLlBhcmNlbElkDQpMRUZUIEpPSU4gDQogICAgRmFybS5GYXJtQXBwbGljYXRpb24gRkEgDQogICAgICAgIE9OIFRMLkFwcGxpY2F0aW9uSWQgPSBGQS5JZCBBTkQgRkEuU3RhdHVzSWQgPSAyMDYNCkxFRlQgSk9JTiANCiAgICBGYXJtLkZhcm1MaXN0IEZMIA0KICAgICAgICBPTiBGTC5GYXJtTGlzdElEID0gRkEuRmFybUxpc3RJZA0KTEVGVCBKT0lOIA0KICAgIEZhcm0uRmFybUVzbXRBcHBBZG1pbkNvc3REZXRhaWxzIENEIA0KICAgICAgICBPTiBGQS5JZCA9IENELkFwcGxpY2F0aW9uSWQNCldIRVJFIA0KCUZBLkZhcm1MaXN0SWQgSVMgTk9UIE5VTEwgDQogICAgQU5EIENELkNvdW50eUZ1bmRzID0gJ1RGJw0KR1JPVVAgQlkgDQogICAgQ00uTXVuaWNpcGFsaXR5PC9TcWw+PC9RdWVyeT48UmVzdWx0U2NoZW1hPjxEYXRhU2V0IE5hbWU9InNxbERhdGFTb3VyY2UxIj48VmlldyBOYW1lPSJGYXJtX0Zhcm1BcHBsaWNhdGlvbl8xIj48RmllbGQgTmFtZT0iSWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJTdGF0dXNJZCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9IkZhcm1MaXN0SWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJBcHBsaWNhdGlvblR5cGVJZCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9IkFwcGxpY2F0aW9uSWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJJc0NoZWNrZWQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IlBhcmNlbElkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRmFybU51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPcmlnaW5hbExhbmRvd25lciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGYXJtTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCbG9jayIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJMb3QiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWNyZXNUb0JlQWNxdWlyZWQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik11bmljaXBhbGl0eUlkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik11bmljaXBhbGl0eSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJNYWlsaW5nQWRkcmVzczEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTWFpbGluZ0FkZHJlc3MyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNsb3NpbmdEYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iQ291bnR5RnVuZHMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVG90YWxDb3N0IiBUeXBlPSJEZWNpbWFsIiAvPjwvVmlldz48VmlldyBOYW1lPSJRdWVyeSI+PEZpZWxkIE5hbWU9IkZhcm1Db3VudCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ik11bmljaXBhbGl0eSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBY3JlcyIgVHlwZT0iRGVjaW1hbCIgLz48L1ZpZXc+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjxDb25uZWN0aW9uT3B0aW9ucyBDbG9zZUNvbm5lY3Rpb249InRydWUiIC8+PC9TcWxEYXRhU291cmNlPg==" />
+    <Item1 Ref="19" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IkN1c3RvbVNxbFF1ZXJ5IiBOYW1lPSJGYXJtX0Zhcm1BcHBsaWNhdGlvbl8xIj48U3FsPnNlbGVjdCAiRmFybS5GYXJtQXBwbGljYXRpb24iLiJJZCIsDQogICAgICAgIkZhcm0uRmFybUFwcGxpY2F0aW9uIi4iU3RhdHVzSWQiLA0KICAgICAgICJGYXJtLkZhcm1BcHBsaWNhdGlvbiIuIkZhcm1MaXN0SWQiLA0KICAgICAgICJGYXJtLkZhcm1BcHBsaWNhdGlvbiIuIkFwcGxpY2F0aW9uVHlwZUlkIiwNCiAgICAgICAiRmFybS5GYXJtVGVybUFwcExvY2F0aW9uIi4iQXBwbGljYXRpb25JZCIsDQogICAgICAgIkZhcm0uRmFybVRlcm1BcHBMb2NhdGlvbiIuIklzQ2hlY2tlZCIsDQogICAgICAgIkZhcm0uRmFybVRlcm1BcHBMb2NhdGlvbiIuIlBhcmNlbElkIiwNCiAgICAgICAiRmFybS5GYXJtTGlzdCIuIkZhcm1OdW1iZXIiLA0KICAgICAgICJGYXJtLkZhcm1MaXN0Ii4iT3JpZ2luYWxMYW5kb3duZXIiLA0KICAgICAgICJGYXJtLkZhcm1MaXN0Ii4iRmFybU5hbWUiLA0KICAgICAgICJGYXJtLkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCIuIkJsb2NrIiwNCiAgICAgICAiRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwiLiJMb3QiLA0KICAgICAiRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwiLiJBY3Jlc1RvQmVBY3F1aXJlZCIsDQogICAgICAgIkZhcm0uRmFybU11bmljaXBhbGl0eUJsb2NrTG90UGFyY2VsIi4iTXVuaWNpcGFsaXR5SWQiLA0KICAgICAgICJDb3JlLk11bmljaXBhbGl0eSIuIk11bmljaXBhbGl0eSIsDQogICAgICAgIkZhcm0uRmFybVRlcm1BcHBPd25lckRldGFpbHMiLiJNYWlsaW5nQWRkcmVzczEiLA0KICAgICAgICJGYXJtLkZhcm1UZXJtQXBwT3duZXJEZXRhaWxzIi4iTWFpbGluZ0FkZHJlc3MyIiwNCiAgICAgICAiRmFybS5GYXJtRXNtdEFwcEFkbWluQ2xvc2luZ0RvY1N0YXR1cyIuIkNsb3NpbmdEYXRlIiwNCiAgICAgICAiRmFybS5GYXJtRXNtdEFwcEFkbWluQ29zdERldGFpbHMiLiJDb3VudHlGdW5kcyIsDQogICAgICAoSVNOVUxMKCJGYXJtLkZhcm1Fc210QXBwQWRtaW5Db3N0RGV0YWlscyIuVG90YWxDb3N0LDApKSBhcyBUb3RhbENvc3QNCiAgZnJvbSAoKCgoKCgoIkZhcm0iLiJGYXJtQXBwbGljYXRpb24iDQogICAgICAgIkZhcm0uRmFybUFwcGxpY2F0aW9uIg0KICBsZWZ0IGpvaW4gIkZhcm0iLiJGYXJtVGVybUFwcExvY2F0aW9uIg0KICAgICAgICJGYXJtLkZhcm1UZXJtQXBwTG9jYXRpb24iDQogICAgICAgb24gKCJGYXJtLkZhcm1UZXJtQXBwTG9jYXRpb24iLiJBcHBsaWNhdGlvbklkIiA9ICJGYXJtLkZhcm1BcHBsaWNhdGlvbiIuIklkIikpDQogIGxlZnQgam9pbiAiRmFybSIuIkZhcm1MaXN0IiAiRmFybS5GYXJtTGlzdCINCiAgICAgICBvbiAoIkZhcm0uRmFybUxpc3QiLiJGYXJtTGlzdElEIiA9ICJGYXJtLkZhcm1UZXJtQXBwTG9jYXRpb24iLiJGYXJtTGlzdElEIikpDQogIGxlZnQgam9pbiAiRmFybSIuIkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCINCiAgICAgICAiRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwiDQogICAgICAgb24gKCJGYXJtLkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCIuIklkIiA9ICJGYXJtLkZhcm1UZXJtQXBwTG9jYXRpb24iLiJQYXJjZWxJZCIpKQ0KICBsZWZ0IGpvaW4gIkNvcmUiLiJNdW5pY2lwYWxpdHkiDQogICAgICAgIkNvcmUuTXVuaWNpcGFsaXR5Ig0KICAgICAgIG9uICgiQ29yZS5NdW5pY2lwYWxpdHkiLiJNdW5pY2lwYWxJZCIgPSAiRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwiLiJNdW5pY2lwYWxpdHlJZCIpKQ0KICBsZWZ0IGpvaW4gIkZhcm0iLiJGYXJtVGVybUFwcE93bmVyRGV0YWlscyINCiAgICAgICAiRmFybS5GYXJtVGVybUFwcE93bmVyRGV0YWlscyINCiAgICAgICBvbiAoIkZhcm0uRmFybVRlcm1BcHBPd25lckRldGFpbHMiLiJBcHBsaWNhdGlvbklkIiA9ICJGYXJtLkZhcm1BcHBsaWNhdGlvbiIuIklkIikpDQogIGxlZnQgam9pbiAiRmFybSIuIkZhcm1Fc210QXBwQWRtaW5DbG9zaW5nRG9jU3RhdHVzIg0KICAgICAgICJGYXJtLkZhcm1Fc210QXBwQWRtaW5DbG9zaW5nRG9jU3RhdHVzIg0KICAgICAgIG9uICgiRmFybS5GYXJtRXNtdEFwcEFkbWluQ2xvc2luZ0RvY1N0YXR1cyIuIkFwcGxpY2F0aW9uSWQiID0gIkZhcm0uRmFybUFwcGxpY2F0aW9uIi4iSWQiKSkNCiAgbGVmdCBqb2luICJGYXJtIi4iRmFybUVzbXRBcHBBZG1pbkNvc3REZXRhaWxzIg0KICAgICAgICJGYXJtLkZhcm1Fc210QXBwQWRtaW5Db3N0RGV0YWlscyINCiAgICAgICBvbiAoIkZhcm0uRmFybUVzbXRBcHBBZG1pbkNvc3REZXRhaWxzIi4iQXBwbGljYXRpb25JZCIgPSAiRmFybS5GYXJtQXBwbGljYXRpb24iLiJJZCIpKQ0KIHdoZXJlDQogICAgICAgKCJGYXJtLkZhcm1Fc210QXBwQWRtaW5Db3N0RGV0YWlscyIuIkNvdW50eUZ1bmRzIiA9IE4nVEYnKQ0KCSAgIGFuZCANCgkgICAiRmFybS5GYXJtQXBwbGljYXRpb24iLiJTdGF0dXNJZCIgPSAyMDYNCg0KCSAgIGdyb3VwIGJ5ICAiRmFybS5GYXJtQXBwbGljYXRpb24iLiJJZCIsDQogICAgICAgIkZhcm0uRmFybUFwcGxpY2F0aW9uIi4iU3RhdHVzSWQiLA0KICAgICAgICJGYXJtLkZhcm1BcHBsaWNhdGlvbiIuIkZhcm1MaXN0SWQiLA0KICAgICAgICJGYXJtLkZhcm1BcHBsaWNhdGlvbiIuIkFwcGxpY2F0aW9uVHlwZUlkIiwNCiAgICAgICAiRmFybS5GYXJtVGVybUFwcExvY2F0aW9uIi4iQXBwbGljYXRpb25JZCIsDQogICAgICAgIkZhcm0uRmFybVRlcm1BcHBMb2NhdGlvbiIuIklzQ2hlY2tlZCIsDQogICAgICAgIkZhcm0uRmFybVRlcm1BcHBMb2NhdGlvbiIuIlBhcmNlbElkIiwNCiAgICAgICAiRmFybS5GYXJtTGlzdCIuIkZhcm1OdW1iZXIiLA0KICAgICAgICJGYXJtLkZhcm1MaXN0Ii4iT3JpZ2luYWxMYW5kb3duZXIiLA0KICAgICAgICJGYXJtLkZhcm1MaXN0Ii4iRmFybU5hbWUiLA0KICAgICAgICJGYXJtLkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCIuIkJsb2NrIiwNCiAgICAgICAiRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwiLiJMb3QiLA0KICAgICAgICJGYXJtLkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCIuIkFjcmVzVG9CZUFjcXVpcmVkIiwNCiAgICAgICAiRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwiLiJNdW5pY2lwYWxpdHlJZCIsDQogICAgICAgIkNvcmUuTXVuaWNpcGFsaXR5Ii4iTXVuaWNpcGFsaXR5IiwNCiAgICAgICAiRmFybS5GYXJtVGVybUFwcE93bmVyRGV0YWlscyIuIk1haWxpbmdBZGRyZXNzMSIsDQogICAgICAgIkZhcm0uRmFybVRlcm1BcHBPd25lckRldGFpbHMiLiJNYWlsaW5nQWRkcmVzczIiLA0KICAgICAgICJGYXJtLkZhcm1Fc210QXBwQWRtaW5DbG9zaW5nRG9jU3RhdHVzIi4iQ2xvc2luZ0RhdGUiLA0KICAgICAgICJGYXJtLkZhcm1Fc210QXBwQWRtaW5Db3N0RGV0YWlscyIuIkNvdW50eUZ1bmRzIiwNCgkgICAiRmFybS5GYXJtRXNtdEFwcEFkbWluQ29zdERldGFpbHMiLlRvdGFsQ29zdDwvU3FsPjwvUXVlcnk+PFF1ZXJ5IFR5cGU9IkN1c3RvbVNxbFF1ZXJ5IiBOYW1lPSJRdWVyeSI+PFNxbD5TRUxFQ1QgDQogICAgQ09VTlQoRkwuRmFybUxpc3RJZCkgQVMgRmFybUNvdW50LCAgLS0gQ291bnQgb2YgYWxsIHJvd3Mgd2l0aCBhIEZhcm1MaXN0SWQNCiAgICBDTS5NdW5pY2lwYWxpdHksDQogICAgSVNOVUxMKFNVTShNQkwuQWNyZXNUb0JlQWNxdWlyZWQpLCAwKSBBUyBBY3Jlcw0KRlJPTSANCiAgICBDb3JlLk11bmljaXBhbGl0eSBDTQ0KTEVGVCBKT0lOIA0KICAgIEZhcm0uRmFybU11bmljaXBhbGl0eUJsb2NrTG90UGFyY2VsIE1CTCANCiAgICAgICAgT04gQ00uTXVuaWNpcGFsSWQgPSBNQkwuTXVuaWNpcGFsaXR5SWQNCkxFRlQgSk9JTiANCiAgICBGYXJtLkZhcm1UZXJtQXBwTG9jYXRpb24gVEwgDQogICAgICAgIE9OIE1CTC5JZCA9IFRMLlBhcmNlbElkDQpMRUZUIEpPSU4gDQogICAgRmFybS5GYXJtQXBwbGljYXRpb24gRkEgDQogICAgICAgIE9OIFRMLkFwcGxpY2F0aW9uSWQgPSBGQS5JZCBBTkQgRkEuU3RhdHVzSWQgPSAyMDYNCkxFRlQgSk9JTiANCiAgICBGYXJtLkZhcm1MaXN0IEZMIA0KICAgICAgICBPTiBGTC5GYXJtTGlzdElEID0gRkEuRmFybUxpc3RJZA0KTEVGVCBKT0lOIA0KICAgIEZhcm0uRmFybUVzbXRBcHBBZG1pbkNvc3REZXRhaWxzIENEIA0KICAgICAgICBPTiBGQS5JZCA9IENELkFwcGxpY2F0aW9uSWQNCldIRVJFIA0KCUZBLkZhcm1MaXN0SWQgSVMgTk9UIE5VTEwgDQogICAgQU5EIENELkNvdW50eUZ1bmRzID0gJ1RGJw0KR1JPVVAgQlkgDQogICAgQ00uTXVuaWNpcGFsaXR5PC9TcWw+PC9RdWVyeT48UXVlcnkgVHlwZT0iQ3VzdG9tU3FsUXVlcnkiIE5hbWU9IlRvdGFsQ29zdCI+PFNxbD5zZWxlY3Qgc3VtKFRvdGFsQ29zdCkgYXMgVG90YWxDb3N0IGZyb20gRmFybS5GYXJtRXNtdEFwcEFkbWluQ29zdERldGFpbHMgQ0QNCmxlZnQgam9pbiBGYXJtLkZhcm1BcHBsaWNhdGlvbiBGQSBvbiBGQS5JZCA9IENELkFwcGxpY2F0aW9uSWQgV0hFUkUgRkEuU3RhdHVzSWQ9MjA2IA0KYW5kIENELiJDb3VudHlGdW5kcyIgPSBOJ1RGJzwvU3FsPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMSI+PFZpZXcgTmFtZT0iRmFybV9GYXJtQXBwbGljYXRpb25fMSI+PEZpZWxkIE5hbWU9IklkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iU3RhdHVzSWQiIFR5cGU9IkludDE2IiAvPjxGaWVsZCBOYW1lPSJGYXJtTGlzdElkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iQXBwbGljYXRpb25UeXBlSWQiIFR5cGU9IkludDE2IiAvPjxGaWVsZCBOYW1lPSJBcHBsaWNhdGlvbklkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iSXNDaGVja2VkIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJQYXJjZWxJZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkZhcm1OdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT3JpZ2luYWxMYW5kb3duZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRmFybU5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQmxvY2siIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTG90IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFjcmVzVG9CZUFjcXVpcmVkIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJNdW5pY2lwYWxpdHlJZCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJNdW5pY2lwYWxpdHkiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTWFpbGluZ0FkZHJlc3MxIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik1haWxpbmdBZGRyZXNzMiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDbG9zaW5nRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkNvdW50eUZ1bmRzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRvdGFsQ29zdCIgVHlwZT0iRGVjaW1hbCIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iUXVlcnkiPjxGaWVsZCBOYW1lPSJGYXJtQ291bnQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJNdW5pY2lwYWxpdHkiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWNyZXMiIFR5cGU9IkRlY2ltYWwiIC8+PC9WaWV3PjxWaWV3IE5hbWU9IlRvdGFsQ29zdCI+PEZpZWxkIE5hbWU9IlRvdGFsQ29zdCIgVHlwZT0iRGVjaW1hbCIgLz48L1ZpZXc+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjxDb25uZWN0aW9uT3B0aW9ucyBDbG9zZUNvbm5lY3Rpb249InRydWUiIC8+PC9TcWxEYXRhU291cmNlPg==" />
   </ComponentStorage>
 </XtraReportsLayoutSerializer>
