@@ -28,9 +28,9 @@
                         <Item1 Ref="16" EventName="BeforePrint" PropertyName="Text" Expression="[CAFNumber]" />
                       </ExpressionBindings>
                     </Item1>
-                    <Item2 Ref="17" ControlType="XRTableCell" Name="tableCell37" Weight="1.00076904296875" TextFormatString="{0:#,#}" Multiline="true">
+                    <Item2 Ref="17" ControlType="XRTableCell" Name="tableCell37" Weight="1.00076904296875" TextFormatString="{0:0%}" Multiline="true">
                       <ExpressionBindings>
-                        <Item1 Ref="18" EventName="BeforePrint" PropertyName="Text" Expression="[MatchPercent]" />
+                        <Item1 Ref="18" EventName="BeforePrint" PropertyName="Text" Expression="[MatchPercent]/100" />
                       </ExpressionBindings>
                     </Item2>
                   </Cells>
@@ -112,7 +112,7 @@
             </Item2>
           </Controls>
         </Item2>
-        <Item3 Ref="51" ControlType="ReportFooterBand" Name="ReportFooter" HeightF="30.3333282">
+        <Item3 Ref="51" ControlType="ReportFooterBand" Name="ReportFooter" HeightF="34.4999962">
           <Controls>
             <Item1 Ref="52" ControlType="XRTable" Name="table9" TextAlignment="MiddleLeft" SizeF="521.919739,25" LocationFloat="0,0" Font="Segoe UI Semilight, 12pt, style=Bold" Padding="2,2,0,0,96" Borders="All">
               <Rows>
@@ -217,9 +217,9 @@
                       </ExpressionBindings>
                       <StylePriority Ref="100" UseTextAlignment="false" />
                     </Item11>
-                    <Item12 Ref="101" ControlType="XRTableCell" Name="tableCell43" Weight="0.51720574117812679" Multiline="true" TextAlignment="MiddleCenter">
+                    <Item12 Ref="101" ControlType="XRTableCell" Name="tableCell43" Weight="0.51720574117812679" TextFormatString="{0:0%}" Multiline="true" TextAlignment="MiddleCenter">
                       <ExpressionBindings>
-                        <Item1 Ref="102" EventName="BeforePrint" PropertyName="Text" Expression="[MatchPercent]" />
+                        <Item1 Ref="102" EventName="BeforePrint" PropertyName="Text" Expression="[MatchPercent]/100" />
                       </ExpressionBindings>
                       <StylePriority Ref="103" UseTextAlignment="false" />
                     </Item12>
