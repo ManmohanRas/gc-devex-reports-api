@@ -91,7 +91,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FarmPremPresFarmsWithServableExceptionsReport"] = () => new FarmPermanentlyPreservedFarmsWithServableExceptionsReport(),
             ["FarmEsmtRdsoPresFarmsReport"] = () => new FarmEsmtRdsoPreservedFarmsReport(),
             ["FarmEsmtPermPresFarmsWithTFInfo"] = () => new FarmEsmtPermPresFarmsWithTFInfo(),
-            ["FarmEsmtMonitoringInspectionReport"] = () => new FarmEsmtMonitoringInspectionReport()
+            ["FarmEsmtMonitoringInspectionReport"] = () => new FarmEsmtMonitoringInspectionReport(),
+            ["FarmEsmtAllPendingFarmPreservationProject"] = () => new FarmEsmtAllPendingFarmPreservationProject(),
+            ["FarmEsmtSummPermntlyPresFarmsInSelling"] = () => new FarmEsmtSummPermntlyPresFarmsInSelling()
         };
     }
 }
