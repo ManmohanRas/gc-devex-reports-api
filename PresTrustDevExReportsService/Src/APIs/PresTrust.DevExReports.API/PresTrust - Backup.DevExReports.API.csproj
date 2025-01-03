@@ -6,11 +6,8 @@
 
   <ItemGroup>
     <None Remove="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.repx" />
-    <None Remove="PredefinedReports\Farm\FarmEsmtAllPendingFarmPreservationProject.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtCADBPurchaseProgramSADCAppraisedReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtCADBPurchPrgmSADCAppraisedReport.repx" />
-    <None Remove="PredefinedReports\Farm\FarmEsmtExhibitAPropertySurveysReport.repx" />
-    <None Remove="PredefinedReports\Farm\FarmEsmtMonitoringInspectionReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPresFarmsTownSummaries.repx" />
@@ -19,8 +16,6 @@
     <None Remove="PredefinedReports\Farm\FarmEsmtPreservedFarmsExceptionAreasReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtRdsoPreservedFarmsReport.repx" />
-    <None Remove="PredefinedReports\Farm\FarmEsmtTargetedFarmEligibilityReport.repx" />
-    <None Remove="PredefinedReports\Farm\FarmEsmtSummPermntlyPresFarmsInSelling.repx" />
     <None Remove="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramReport.repx" />
@@ -95,10 +90,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.repx" />
-    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtAllPendingFarmPreservationProject.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtCADBPurchPrgmSADCAppraisedReport.repx" />
-    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtExhibitAPropertySurveysReport.repx" />
-    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtMonitoringInspectionReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPresFarmsTownSummaries.repx" />
@@ -107,8 +99,6 @@
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPreservedFarmsExceptionAreasReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtRdsoPreservedFarmsReport.repx" />
-    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtTargetedFarmEligibilityReport.repx" />
-    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtSummPermntlyPresFarmsInSelling.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramReport.repx" />
@@ -196,12 +186,6 @@
     <Compile Update="PredefinedReports\Farm\FarmEasementPurchaseBreakdown.Designer.cs">
       <DependentUpon>FarmEasementPurchaseBreakdown.repx</DependentUpon>
     </Compile>
-    <Compile Update="PredefinedReports\Farm\FarmEsmtAllPendingFarmPreservationProject.cs">
-      <DependentUpon>FarmEsmtAllPendingFarmPreservationProject.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Farm\FarmEsmtAllPendingFarmPreservationProject.Designer.cs">
-      <DependentUpon>FarmEsmtAllPendingFarmPreservationProject.repx</DependentUpon>
-    </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtCADBPurchaseProgramSADCAppraisedReport.cs">
       <DependentUpon>FarmEsmtCADBPurchaseProgramSADCAppraisedReport.repx</DependentUpon>
     </Compile>
@@ -213,18 +197,6 @@
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtCADBPurchPrgmSADCAppraisedReport.Designer.cs">
       <DependentUpon>FarmEsmtCADBPurchPrgmSADCAppraisedReport.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Farm\FarmEsmtExhibitAPropertySurveysReport.cs">
-      <DependentUpon>FarmEsmtExhibitAPropertySurveysReport.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Farm\FarmEsmtExhibitAPropertySurveysReport.Designer.cs">
-      <DependentUpon>FarmEsmtExhibitAPropertySurveysReport.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Farm\FarmEsmtMonitoringInspectionReport.cs">
-      <DependentUpon>FarmEsmtMonitoringInspectionReport.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Farm\FarmEsmtMonitoringInspectionReport.Designer.cs">
-      <DependentUpon>FarmEsmtMonitoringInspectionReport.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.cs">
       <DependentUpon>FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx</DependentUpon>
@@ -273,18 +245,6 @@
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtRdsoPreservedFarmsReport.Designer.cs">
       <DependentUpon>FarmEsmtRdsoPreservedFarmsReport.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Farm\FarmEsmtTargetedFarmEligibilityReport.cs">
-      <DependentUpon>FarmEsmtTargetedFarmEligibilityReport.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Farm\FarmEsmtTargetedFarmEligibilityReport.Designer.cs">
-      <DependentUpon>FarmEsmtTargetedFarmEligibilityReport.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Farm\FarmEsmtSummPermntlyPresFarmsInSelling.cs">
-      <DependentUpon>FarmEsmtSummPermntlyPresFarmsInSelling.repx</DependentUpon>
-    </Compile>
-    <Compile Update="PredefinedReports\Farm\FarmEsmtSummPermntlyPresFarmsInSelling.Designer.cs">
-      <DependentUpon>FarmEsmtSummPermntlyPresFarmsInSelling.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.cs">
       <DependentUpon>FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx</DependentUpon>
