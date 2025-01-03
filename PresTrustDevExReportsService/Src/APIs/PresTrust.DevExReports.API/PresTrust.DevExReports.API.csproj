@@ -113,7 +113,6 @@
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtSummPermntlyPresFarmsInSelling.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmPreservedFarmswithSignsInstalled.repx" />
-    <EmbeddedResource Include="PredefinedReports\Farm\FarmPreservedFarmswithSignsInstalled1.Designer.cs.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FASTTRACKFinalApprovalNOCAF.repx" />
