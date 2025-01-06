@@ -21,6 +21,7 @@
     <None Remove="PredefinedReports\Farm\FarmEsmtRdsoPreservedFarmsReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtTargetedFarmEligibilityReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtSummPermntlyPresFarmsInSelling.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtSumOfFarmLandPreservationPendingProject.repx" />
     <None Remove="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmPreservedFarmswithSignsInstalled.repx" />
     <None Remove="PredefinedReports\Farm\FarmPreservedFarmswithSignsInstalled1.Designer.cs.repx" />
@@ -111,6 +112,7 @@
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtRdsoPreservedFarmsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtTargetedFarmEligibilityReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtSummPermntlyPresFarmsInSelling.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtSumOfFarmLandPreservationPendingProject.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmPreservedFarmswithSignsInstalled.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
@@ -288,6 +290,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtSummPermntlyPresFarmsInSelling.Designer.cs">
       <DependentUpon>FarmEsmtSummPermntlyPresFarmsInSelling.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtSumOfFarmLandPreservationPendingProject.cs">
+      <DependentUpon>FarmEsmtSumOfFarmLandPreservationPendingProject.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtSumOfFarmLandPreservationPendingProject.Designer.cs">
+      <DependentUpon>FarmEsmtSumOfFarmLandPreservationPendingProject.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.cs">
       <DependentUpon>FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx</DependentUpon>
