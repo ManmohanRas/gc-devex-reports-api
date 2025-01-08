@@ -41,7 +41,7 @@
     </Item5>
     <Item6 Ref="23" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="Farm_FarmApplication_1" DataSource="#Ref-22">
       <Bands>
-        <Item1 Ref="24" ControlType="DetailBand" Name="Detail1" HeightF="323.6664">
+        <Item1 Ref="24" ControlType="DetailBand" Name="Detail1" HeightF="337.457977">
           <Controls>
             <Item1 Ref="25" ControlType="XRTable" Name="table15" SizeF="742.9999,25" LocationFloat="0,248.000031" Padding="2,2,0,0,96" Borders="Top, Right">
               <Rows>
@@ -358,32 +358,35 @@
           </Controls>
         </Item1>
         <Item2 Ref="175" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="60.66672" BackColor="255,79,129,189">
+          <GroupFields>
+            <Item1 Ref="176" FieldName="ApplicationId" />
+          </GroupFields>
           <Controls>
-            <Item1 Ref="176" ControlType="XRTable" Name="table10" SizeF="742.999939,25" LocationFloat="0,35.66672" Padding="2,2,0,0,96">
+            <Item1 Ref="177" ControlType="XRTable" Name="table10" SizeF="742.999939,25" LocationFloat="0,35.66672" Padding="2,2,0,0,96">
               <Rows>
-                <Item1 Ref="177" ControlType="XRTableRow" Name="tableRow10" Weight="1">
+                <Item1 Ref="178" ControlType="XRTableRow" Name="tableRow10" Weight="1">
                   <Cells>
-                    <Item1 Ref="178" ControlType="XRTableCell" Name="tableCell32" Weight="1" Multiline="true" Text="tableCell32" TextAlignment="TopCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="255,84,141,212" Borders="Left, Bottom">
+                    <Item1 Ref="179" ControlType="XRTableCell" Name="tableCell32" Weight="1" Multiline="true" Text="tableCell32" TextAlignment="TopCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="255,84,141,212" Borders="Left, Bottom">
                       <ExpressionBindings>
-                        <Item1 Ref="179" EventName="BeforePrint" PropertyName="Text" Expression="[OriginalLandowner]" />
+                        <Item1 Ref="180" EventName="BeforePrint" PropertyName="Text" Expression="[OriginalLandowner]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="180" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                      <StylePriority Ref="181" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="181" ControlType="XRTableCell" Name="tableCell36" Weight="1" Multiline="true" Text="tableCell36" TextAlignment="TopCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="255,84,141,212" Borders="Right, Bottom">
+                    <Item2 Ref="182" ControlType="XRTableCell" Name="tableCell36" Weight="1" Multiline="true" Text="tableCell36" TextAlignment="TopCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="255,84,141,212" Borders="Right, Bottom">
                       <ExpressionBindings>
-                        <Item1 Ref="182" EventName="BeforePrint" PropertyName="Text" Expression="[Municipality]" />
+                        <Item1 Ref="183" EventName="BeforePrint" PropertyName="Text" Expression="[Municipality]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="183" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                      <StylePriority Ref="184" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
                     </Item2>
                   </Cells>
                 </Item1>
               </Rows>
             </Item1>
-            <Item2 Ref="184" ControlType="XRLabel" Name="label1" Multiline="true" Text="Summary of Farmland Preservation Pending Project&#xD;&#xA;" TextAlignment="MiddleCenter" SizeF="742.999939,35.666687" LocationFloat="0,0" Font="Times New Roman, 14pt, style=Bold" BackColor="255,84,141,212" Padding="2,2,0,0,100" Borders="Left, Top, Right">
-              <StylePriority Ref="185" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            <Item2 Ref="185" ControlType="XRLabel" Name="label1" Multiline="true" Text="Summary of Farmland Preservation Pending Project&#xD;&#xA;" TextAlignment="MiddleCenter" SizeF="742.999939,35.666687" LocationFloat="0,0" Font="Times New Roman, 14pt, style=Bold" BackColor="255,84,141,212" Padding="2,2,0,0,100" Borders="Left, Top, Right">
+              <StylePriority Ref="186" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
             </Item2>
           </Controls>
-          <StylePriority Ref="186" UseBackColor="false" />
+          <StylePriority Ref="187" UseBackColor="false" />
         </Item2>
       </Bands>
     </Item6>

@@ -12,6 +12,7 @@
     <None Remove="PredefinedReports\Farm\FarmEsmtExhibitAPropertySurveysReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtMonitoringInspectionReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPresFarmsTownSummaries.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithFarmName.repx" />
@@ -103,6 +104,7 @@
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtExhibitAPropertySurveysReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtMonitoringInspectionReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPresFarmsTownSummaries.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithFarmName.repx" />
@@ -236,6 +238,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.Designer.cs">
       <DependentUpon>FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.cs">
+      <DependentUpon>FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.Designer.cs">
+      <DependentUpon>FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.cs">
       <DependentUpon>FarmEsmtPermanentlyPreservedFarmsReport.repx</DependentUpon>
