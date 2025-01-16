@@ -98,8 +98,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FarmEsmtAllPendingFarmPreservationProject"] = () => new FarmEsmtAllPendingFarmPreservationProject(),
             ["FarmEsmtSummPermntlyPresFarmsInSelling"] = () => new FarmEsmtSummPermntlyPresFarmsInSelling(),
             ["FarmEsmtSumOfFarmLandPreservationPendingProject"] = () => new FarmEsmtSumOfFarmLandPreservationPendingProject(),
-            ["FarmEsmtPermanentlyPreservedFarmsInMorrisCounty"] = () => new FarmEsmtPermanentlyPreservedFarmsInMorrisCounty()
-
+            ["FarmEsmtPermanentlyPreservedFarmsInMorrisCounty"] = () => new FarmEsmtPermanentlyPreservedFarmsInMorrisCounty(),
+            ["FarmEsmtSummaryOfPreservedFarms"] = ()=>new FarmEsmtSummaryOfPreservedFarms()
+            
         };
     }
 }
