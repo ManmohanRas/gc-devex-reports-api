@@ -73,6 +73,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.tableCell56 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell56");
             this.tableCell57 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell57");
             this.tableCell58 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell58");
+            this.tableCell38 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell38");
             this.tableRow14 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow14");
             this.tableCell49 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell49");
             this.tableCell50 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell50");
@@ -101,6 +102,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.tableCell29 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell29");
             this.tableCell30 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell30");
             this.tableCell31 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell31");
+            this.tableCell37 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell37");
             this.tableRow7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow7");
             this.tableCell25 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell25");
             this.tableCell26 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell26");
@@ -138,8 +140,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.tableCell4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell4");
             this.label7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label7");
             this.label6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label6");
-            this.tableCell37 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell37");
-            this.tableCell38 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell38");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
@@ -201,6 +201,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRTableCell tableCell56;
         private DevExpress.XtraReports.UI.XRTableCell tableCell57;
         private DevExpress.XtraReports.UI.XRTableCell tableCell58;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell38;
         private DevExpress.XtraReports.UI.XRTableRow tableRow14;
         private DevExpress.XtraReports.UI.XRTableCell tableCell49;
         private DevExpress.XtraReports.UI.XRTableCell tableCell50;
@@ -229,6 +230,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRTableCell tableCell29;
         private DevExpress.XtraReports.UI.XRTableCell tableCell30;
         private DevExpress.XtraReports.UI.XRTableCell tableCell31;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell37;
         private DevExpress.XtraReports.UI.XRTableRow tableRow7;
         private DevExpress.XtraReports.UI.XRTableCell tableCell25;
         private DevExpress.XtraReports.UI.XRTableCell tableCell26;
@@ -267,7 +269,5 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.XRLabel label7;
         private DevExpress.XtraReports.UI.XRLabel label6;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell37;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell38;
     }
 }
