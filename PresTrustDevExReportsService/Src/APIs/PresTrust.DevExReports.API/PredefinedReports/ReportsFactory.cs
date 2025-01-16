@@ -98,7 +98,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FarmEsmtAllPendingFarmPreservationProject"] = () => new FarmEsmtAllPendingFarmPreservationProject(),
             ["FarmEsmtSummPermntlyPresFarmsInSelling"] = () => new FarmEsmtSummPermntlyPresFarmsInSelling(),
             ["FarmEsmtReSaleInfoOfPreservedFarmsReport"] = () => new FarmEsmtReSaleInfoOfPreservedFarmsReport(),
-            ["FarmEsmtMCMuniLandAreaandFarmlandAcreageReport"] = () => new FarmEsmtMCMuniLandAreaandFarmlandAcreageReport()
+            ["FarmEsmtMCMuniLandAreaandFarmlandAcreageReport"] = () => new FarmEsmtMCMuniLandAreaandFarmlandAcreageReport(),
             ["FarmEsmtSumOfFarmLandPreservationPendingProject"] = () => new FarmEsmtSumOfFarmLandPreservationPendingProject(),
             ["FarmEsmtPermanentlyPreservedFarmsInMorrisCounty"] = () => new FarmEsmtPermanentlyPreservedFarmsInMorrisCounty(),
             ["FarmEsmtSummaryOfPreservedFarms"] = ()=>new FarmEsmtSummaryOfPreservedFarms()

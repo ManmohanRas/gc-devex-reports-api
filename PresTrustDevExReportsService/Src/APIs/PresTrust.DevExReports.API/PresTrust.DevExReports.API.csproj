@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -302,8 +302,9 @@
     <Compile Update="PredefinedReports\Farm\FarmEsmtReSaleInfoOfPreservedFarmsReport.cs">
       <DependentUpon>FarmEsmtReSaleInfoOfPreservedFarmsReport.repx</DependentUpon>
     </Compile>
-    <Compile Update="PredefinedReports\Farm\FarmEsmtReSaleInfoOfPreservedFarmsReport.Designer.cs">
-      <DependentUpon>FarmEsmtReSaleInfoOfPreservedFarmsReport.repx</DependentUpon>
+	<Compile Update="PredefinedReports\Farm\FarmEsmtReSaleInfoOfPreservedFarmsReport.Designer.cs">
+	  <DependentUpon>FarmEsmtReSaleInfoOfPreservedFarmsReport.repx</DependentUpon>
+	</Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtSummaryOfPreservedFarms.cs">
       <DependentUpon>FarmEsmtSummaryOfPreservedFarms.repx</DependentUpon>
     </Compile>
