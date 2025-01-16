@@ -92,12 +92,17 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FarmEsmtRdsoPresFarmsReport"] = () => new FarmEsmtRdsoPreservedFarmsReport(),
             ["FarmEsmtPermPresFarmsWithTFInfo"] = () => new FarmEsmtPermPresFarmsWithTFInfo(),
             ["FarmEsmtMonitoringInspectionReport"] = () => new FarmEsmtMonitoringInspectionReport(),
+            ["FarmPreservedFarmswithSignsInstalled"] = () => new FarmPreservedFarmswithSignsInstalled(),
             ["FarmEsmtTargetedFarmEligibilityReport"] = () => new FarmEsmtTargetedFarmEligibilityReport(),
             ["FarmEsmtExhibitAPropertySurveysReport"]= () => new FarmEsmtExhibitAPropertySurveysReport(),
             ["FarmEsmtAllPendingFarmPreservationProject"] = () => new FarmEsmtAllPendingFarmPreservationProject(),
             ["FarmEsmtSummPermntlyPresFarmsInSelling"] = () => new FarmEsmtSummPermntlyPresFarmsInSelling(),
             ["FarmEsmtReSaleInfoOfPreservedFarmsReport"] = () => new FarmEsmtReSaleInfoOfPreservedFarmsReport(),
             ["FarmEsmtMCMuniLandAreaandFarmlandAcreageReport"] = () => new FarmEsmtMCMuniLandAreaandFarmlandAcreageReport()
+            ["FarmEsmtSumOfFarmLandPreservationPendingProject"] = () => new FarmEsmtSumOfFarmLandPreservationPendingProject(),
+            ["FarmEsmtPermanentlyPreservedFarmsInMorrisCounty"] = () => new FarmEsmtPermanentlyPreservedFarmsInMorrisCounty(),
+            ["FarmEsmtSummaryOfPreservedFarms"] = ()=>new FarmEsmtSummaryOfPreservedFarms()
+            
         };
     }
 }

@@ -13,6 +13,7 @@
     <None Remove="PredefinedReports\Farm\FarmEsmtMCMuniLandAreaandFarmlandAcreageReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtMonitoringInspectionReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPresFarmsTownSummaries.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithFarmName.repx" />
@@ -21,9 +22,13 @@
     <None Remove="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtRdsoPreservedFarmsReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtReSaleInfoOfPreservedFarmsReport.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtSummaryOfPreservedFarms.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtTargetedFarmEligibilityReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtSummPermntlyPresFarmsInSelling.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtSumOfFarmLandPreservationPendingProject.repx" />
     <None Remove="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx" />
+    <None Remove="PredefinedReports\Farm\FarmPreservedFarmswithSignsInstalled.repx" />
+    <None Remove="PredefinedReports\Farm\FarmPreservedFarmswithSignsInstalled1.Designer.cs.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmTermProgramReport.repx" />
     <None Remove="PredefinedReports\Farm\TFReport.repx" />
@@ -103,6 +108,7 @@
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtMCMuniLandAreaandFarmlandAcreageReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtMonitoringInspectionReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPresFarmsTownSummaries.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermPresFarmsWithFarmName.repx" />
@@ -111,9 +117,12 @@
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPreservedFarmsInMorrisCounty.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtRdsoPreservedFarmsReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtReSaleInfoOfPreservedFarmsReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtSummaryOfPreservedFarms.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtTargetedFarmEligibilityReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtSummPermntlyPresFarmsInSelling.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtSumOfFarmLandPreservationPendingProject.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmPreservedFarmswithSignsInstalled.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramBookIndexReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmTermProgramReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Flood\FASTTRACKFinalApprovalNOCAF.repx" />
@@ -242,6 +251,12 @@
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.Designer.cs">
       <DependentUpon>FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx</DependentUpon>
     </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.cs">
+      <DependentUpon>FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.Designer.cs">
+      <DependentUpon>FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.cs">
       <DependentUpon>FarmEsmtPermanentlyPreservedFarmsReport.repx</DependentUpon>
     </Compile>
@@ -289,6 +304,11 @@
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtReSaleInfoOfPreservedFarmsReport.Designer.cs">
       <DependentUpon>FarmEsmtReSaleInfoOfPreservedFarmsReport.repx</DependentUpon>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtSummaryOfPreservedFarms.cs">
+      <DependentUpon>FarmEsmtSummaryOfPreservedFarms.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtSummaryOfPreservedFarms.Designer.cs">
+      <DependentUpon>FarmEsmtSummaryOfPreservedFarms.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtTargetedFarmEligibilityReport.cs">
       <DependentUpon>FarmEsmtTargetedFarmEligibilityReport.repx</DependentUpon>
@@ -302,11 +322,29 @@
     <Compile Update="PredefinedReports\Farm\FarmEsmtSummPermntlyPresFarmsInSelling.Designer.cs">
       <DependentUpon>FarmEsmtSummPermntlyPresFarmsInSelling.repx</DependentUpon>
     </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtSumOfFarmLandPreservationPendingProject.cs">
+      <DependentUpon>FarmEsmtSumOfFarmLandPreservationPendingProject.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtSumOfFarmLandPreservationPendingProject.Designer.cs">
+      <DependentUpon>FarmEsmtSumOfFarmLandPreservationPendingProject.repx</DependentUpon>
+    </Compile>
     <Compile Update="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.cs">
       <DependentUpon>FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmPermanentlyPreservedFarmsWithServableExceptionsReport.Designer.cs">
       <DependentUpon>FarmPermanentlyPreservedFarmsWithServableExceptionsReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmPreservedFarmswithSignsInstalled.cs">
+      <DependentUpon>FarmPreservedFarmswithSignsInstalled.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmPreservedFarmswithSignsInstalled.Designer.cs">
+      <DependentUpon>FarmPreservedFarmswithSignsInstalled.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmPreservedFarmswithSignsInstalled1.Designer.cs.cs">
+      <DependentUpon>FarmPreservedFarmswithSignsInstalled1.Designer.cs.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmPreservedFarmswithSignsInstalled1.Designer.cs.Designer.cs">
+      <DependentUpon>FarmPreservedFarmswithSignsInstalled1.Designer.cs.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmTermProgramBookIndexReport.cs">
       <DependentUpon>FarmTermProgramBookIndexReport.repx</DependentUpon>
