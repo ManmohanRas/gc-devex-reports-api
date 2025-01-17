@@ -55,7 +55,7 @@
                         </Item3>
                         <Item4 Ref="30" ControlType="XRTableCell" Name="tableCell62" Weight="0.99281946246638386" Multiline="true" TextAlignment="MiddleLeft" Font="Times New Roman, 12pt" Borders="Left, Top, Right">
                           <ExpressionBindings>
-                            <Item1 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="[Primary_crops]" />
+                            <Item1 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="[PrimaryCrops]" />
                           </ExpressionBindings>
                           <StylePriority Ref="32" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                         </Item4>
@@ -133,7 +133,7 @@
                         </Item3>
                         <Item4 Ref="68" ControlType="XRTableCell" Name="tableCell74" Weight="0.99281914308215635" Multiline="true" TextAlignment="MiddleLeft" Font="Times New Roman, 10pt">
                           <ExpressionBindings>
-                            <Item1 Ref="69" EventName="BeforePrint" PropertyName="Text" Expression="[Secondary_crops]" />
+                            <Item1 Ref="69" EventName="BeforePrint" PropertyName="Text" Expression="[SecondaryCrops]" />
                           </ExpressionBindings>
                           <StylePriority Ref="70" UseFont="false" UseTextAlignment="false" />
                         </Item4>
