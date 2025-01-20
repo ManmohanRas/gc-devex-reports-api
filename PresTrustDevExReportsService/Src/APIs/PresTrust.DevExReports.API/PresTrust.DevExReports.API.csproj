@@ -12,6 +12,7 @@
     <None Remove="PredefinedReports\Farm\FarmEsmtExhibitAPropertySurveysReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtMCMuniLandAreaandFarmlandAcreageReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtMonitoringInspectionReport.repx" />
+    <None Remove="PredefinedReports\Farm\FarmEsmtPendingEXHIBITAReport.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.repx" />
     <None Remove="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
@@ -107,6 +108,7 @@
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtExhibitAPropertySurveysReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtMCMuniLandAreaandFarmlandAcreageReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtMonitoringInspectionReport.repx" />
+    <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPendingEXHIBITAReport.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsInMorrisCounty.repx" />
     <EmbeddedResource Include="PredefinedReports\Farm\FarmEsmtPermanentlyPreservedFarmsReport.repx" />
@@ -244,6 +246,12 @@
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtMonitoringInspectionReport.Designer.cs">
       <DependentUpon>FarmEsmtMonitoringInspectionReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPendingEXHIBITAReport.cs">
+      <DependentUpon>FarmEsmtPendingEXHIBITAReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="PredefinedReports\Farm\FarmEsmtPendingEXHIBITAReport.Designer.cs">
+      <DependentUpon>FarmEsmtPendingEXHIBITAReport.repx</DependentUpon>
     </Compile>
     <Compile Update="PredefinedReports\Farm\FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.cs">
       <DependentUpon>FarmEsmtPermanenltyPresFarmsWithResiOnPresGround.repx</DependentUpon>
