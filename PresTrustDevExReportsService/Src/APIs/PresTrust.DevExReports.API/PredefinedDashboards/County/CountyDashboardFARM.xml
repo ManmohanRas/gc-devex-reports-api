@@ -1,9 +1,100 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard CurrencyCulture="chr-Cher-US">
   <Title Text="" Alignment="Left" />
+  <DataSources>
+    <SqlDataSource Name="rept_usp_get_flood_annual_summary_report" ComponentName="sqlDataSource1">
+      <Connection Name="PresTrustDbConnectionStrings" FromAppConfig="true" />
+      <Query Type="StoredProcQuery" Name="usp_get_level2_farm_annual_summary_report">
+        <ProcName>rept.usp_get_level2_farm_annual_summary_report</ProcName>
+      </Query>
+      <Query Type="StoredProcQuery" Name="rept_usp_get_level3_farm_annual_summary_report">
+        <ProcName>rept.usp_get_level3_farm_annual_summary_report</ProcName>
+      </Query>
+      <Query Type="SelectQuery" Name="Farm_FarmList">
+        <Tables>
+          <Table Name="Farm.FarmList" />
+          <Table Name="Core.View_AgencyEntities_FARM" />
+          <Relation Type="LeftOuter" Parent="Core.View_AgencyEntities_FARM" Nested="Farm.FarmList">
+            <KeyColumn Parent="AgencyId" Nested="AgencyID" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="Farm.FarmList" Name="OriginalLandowner" />
+          <Column Table="Core.View_AgencyEntities_FARM" Name="AgencyId" />
+          <Column Table="Farm.FarmList" Name="AgencyID" />
+          <Column Table="Core.View_AgencyEntities_FARM" Name="AgencyName" />
+        </Columns>
+      </Query>
+      <Query Type="SelectQuery" Name="Core_Municipality">
+        <Tables>
+          <Table Name="Core.Municipality" />
+        </Tables>
+        <Columns>
+          <Column Table="Core.Municipality" Name="Municipality" />
+          <Column Table="Core.Municipality" Name="MunicipalId" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+    <FederationDataSource Name="Federated Data Source 1" ComponentName="federationDataSource1">
+      <Sources>
+        <Source Name="rept_usp_get_flood_annual_summary_report_rept_usp_get_flood_annual_summary_report">
+          <DataSource>sqlDataSource1</DataSource>
+          <DataMember>rept_usp_get_flood_annual_summary_report</DataMember>
+        </Source>
+        <Source Name="rept_usp_get_flood_annual_summary_report_Core_View_AgencyEntities_FLOOD">
+          <DataSource>sqlDataSource1</DataSource>
+          <DataMember>Core_View_AgencyEntities_FLOOD</DataMember>
+        </Source>
+      </Sources>
+      <Queries>
+        <Query Alias="rept_usp_get_flood_annual_summary_report" QueryType="SelectNode">
+          <Root Alias="rept_usp_get_flood_annual_summary_report" QueryType="SourceNode" SourceName="rept_usp_get_flood_annual_summary_report_rept_usp_get_flood_annual_summary_report" />
+          <SubNodes>
+            <JoinElement Condition="[Core_View_AgencyEntities_FLOOD.AgencyId] = [rept_usp_get_flood_annual_summary_report.AgencyId]">
+              <Query Alias="Core_View_AgencyEntities_FLOOD" QueryType="SourceNode" SourceName="rept_usp_get_flood_annual_summary_report_Core_View_AgencyEntities_FLOOD" />
+            </JoinElement>
+          </SubNodes>
+          <Expressions>
+            <Expression ExpressionType="SelectAllNodeColumnsExpression" NodeAlias="Core_View_AgencyEntities_FLOOD" />
+            <Expression ExpressionType="SelectColumnExpression" Name="AgencyId" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="CountyExpenses" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="ExpiringWithInAYear" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="FundingYear" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="FundsEncumbered" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="FundsReimbursed" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="FundsSpent" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="HardCosts" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_OfHomes" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_Pending" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_Preserved" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_PropertyExpired" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_PropertyGrantExpired" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_Rejected" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="P_Withdrawn" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="PA_Active" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="PA_Closed" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="PA_Rejected" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="PA_Submitted" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="PA_Withdrawn" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="SoftCosts" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="TotalAllocated" NodeAlias="rept_usp_get_flood_annual_summary_report" />
+            <Expression ExpressionType="SelectColumnExpression" Name="AgencyId" Alias="Core_View_AgencyEntities_FLOOD_AgencyId" NodeAlias="Core_View_AgencyEntities_FLOOD" />
+            <Expression ExpressionType="SelectColumnExpression" Name="AgencyName" NodeAlias="Core_View_AgencyEntities_FLOOD" />
+          </Expressions>
+        </Query>
+      </Queries>
+    </FederationDataSource>
+  </DataSources>
   <Items>
-    <TextBox ComponentName="textBoxDashboardItem4" Name="FarmLand">
-      <Text>{\rtf1\deff0 \stshfdbch3\stshfloch2\stshfhich2\stshfbi1{\fonttbl{\f0 Calibri;}{\fbiminor\f1 Times New Roman;}{\fhiminor\f2 Calibri;}{\fdbminor\f3 Times New Roman;}}{\colortbl ;\red0\green0\blue255 ;}{\*\defchp \fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\cgrid1\fs24}{\stylesheet {\ql\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24 Normal;}{\*\cs1\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24 Default Paragraph Font;}{\*\cs2\sbasedon1\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24 Line Number;}{\*\cs3\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24\ul\cf1 Hyperlink;}{\*\ts4\tsrowd\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24\ql\tscellpaddfl3\tscellpaddl108\tscellpaddfb3\tscellpaddfr3\tscellpaddr108\tscellpaddft3\tsvertalt\cltxlrtb Normal Table;}{\*\ts5\tsrowd\sbasedon4\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24\ql\trbrdrt\brdrs\brdrw10\trbrdrl\brdrs\brdrw10\trbrdrb\brdrs\brdrw10\trbrdrr\brdrs\brdrw10\trbrdrh\brdrs\brdrw10\trbrdrv\brdrs\brdrw10\tscellpaddfl3\tscellpaddl108\tscellpaddfr3\tscellpaddr108\tsvertalt\cltxlrtb Table Simple 1;}}{\*\listoverridetable}\nouicompat\htmautsp\splytwnine\alntblind\expshrtn\spltpgpar\nogrowautofit\utinl\nobrkwrptbl\ftnlytwnine\notcvasp\dntblnsbdb\newtblstyruls\viewbksp1{\*\background{\shp{\*\shpinst{\sp{\sn fillColor}{\sv 6867385}}}}}\formshade\sectd\pard\plain\qc\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs44\lang16393\langfe16393\langnp16393\langfenp16393\b\par\pard\plain\qc\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs44\lang16393\langfe16393\langnp16393\langfenp16393\b\par\pard\plain\qc\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs44\lang16393\langfe16393\langnp16393\langfenp16393\b\par\pard\plain\qc\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs44\lang16393\langfe16393\langnp16393\langfenp16393\b\par\pard\plain\qc\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs44\lang16393\langfe16393\langnp16393\langfenp16393\b\par\pard\plain\qc{\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs44\lang16393\langfe16393\langnp16393\langfenp16393\b\cf0 FARM LAND UNDER DEVELOPME}{\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs44\lang16393\langfe16393\langnp16393\langfenp16393\b\cf0 NT}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs44\b\par{\*\themedata 
+    <TextBox ComponentName="textBoxDashboardItem1" Name="" DataSource="sqlDataSource1" DataMember="usp_get_level2_farm_annual_summary_report">
+      <DataItems>
+        <Measure DataMember="TotalFarms" SummaryType="Count" DefaultId="DataItem1" />
+        <Measure DataMember="ActiveApplications" DefaultId="DataItem2" />
+        <Measure DataMember="PreservationApplications" DefaultId="DataItem0" />
+        <Measure DataMember="TotalApplications" DefaultId="DataItem4" />
+        <Measure DataMember="TermApplications" DefaultId="DataItem5" />
+      </DataItems>
+      <Text>{\rtf1\deff0 \stshfdbch3\stshfloch2\stshfhich2\stshfbi1{\fonttbl{\f0 Calibri;}{\fbiminor\f1 Times New Roman;}{\fhiminor\f2 Calibri;}{\fdbminor\f3 Times New Roman;}}{\colortbl ;\red0\green0\blue255 ;}{\*\defchp \fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\cgrid1\fs24}{\*\defpap \widctlpar}{\stylesheet {\ql\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24 Normal;}{\*\cs1\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24 Default Paragraph Font;}{\*\cs2\sbasedon1\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24 Line Number;}{\*\cs3\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24\ul\cf1 Hyperlink;}{\*\ts4\tsrowd\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24\ql\tscellpaddfl3\tscellpaddl108\tscellpaddfb3\tscellpaddfr3\tscellpaddr108\tscellpaddft3\tsvertalt\cltxlrtb Normal Table;}{\*\ts5\tsrowd\sbasedon4\fcs1\f1\fcs1\f1\hich\af2\loch\af2\dbch\af3\fs24\ql\trbrdrt\brdrs\brdrw10\trbrdrl\brdrs\brdrw10\trbrdrb\brdrs\brdrw10\trbrdrr\brdrs\brdrw10\trbrdrh\brdrs\brdrw10\trbrdrv\brdrs\brdrw10\tscellpaddfl3\tscellpaddl108\tscellpaddfr3\tscellpaddr108\tsvertalt\cltxlrtb Table Simple 1;}}{\*\listoverridetable}\nouicompat\htmautsp\splytwnine\alntblind\expshrtn\spltpgpar\nogrowautofit\utinl\nobrkwrptbl\ftnlytwnine\notcvasp\dntblnsbdb\newtblstyruls\formshade\sectd\trowd\irow0\irowband-1\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh480\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\ql\intbl\widctlpar\yts5{\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\lang16393\langfe16393\langnp16393\langfenp16393\b\cf0 Total Farms}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cell\trowd\irow0\irowband-1\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh480\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\trowd\irow1\irowband0\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\ql\intbl\widctlpar\yts5{\field{\*\fldinst{\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cf0 DOCVARIABLE DataItem1}}{\fldrslt{\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cf0 TotalFarms}}}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cell\trowd\irow1\irowband0\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\trowd\irow2\irowband1\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh480\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\qj\intbl\widctlpar\yts5{\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\lang16393\langfe16393\langnp16393\langfenp16393\b\cf0 Total Applications}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cell\trowd\irow2\irowband1\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh480\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\trowd\irow3\irowband2\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\ql\intbl\widctlpar\yts5{\field{\*\fldinst{\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cf0 DOCVARIABLE DataItem1}}{\fldrslt{\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cf0 TotalFarms}}}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cell\trowd\irow3\irowband2\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\trowd\irow4\irowband3\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\ql\intbl\widctlpar\yts5{\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\lang16393\langfe16393\langnp16393\langfenp16393\b\cf0 Active Applications}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cell\trowd\irow4\irowband3\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\trowd\irow5\irowband4\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\ql\intbl\widctlpar\yts5{\field{\*\fldinst{\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cf0 DOCVARIABLE DataItem2}}{\fldrslt{\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cf0 ActiveApplications}}}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cell\trowd\irow5\irowband4\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\trowd\irow6\irowband5\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\ql\intbl\widctlpar\yts5{\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\lang16393\langfe16393\langnp16393\langfenp16393\b\cf0 Term Program Applications}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cell\trowd\irow6\irowband5\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\trowd\irow7\irowband6\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\ql\intbl\widctlpar\yts5{\field{\*\fldinst{\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cf0 DOCVARIABLE DataItem5}}{\fldrslt{\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cf0 TermApplications}}}\fcs1\af0\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\b\cell\trowd\irow7\irowband6\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\trowd\irow8\irowband7\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\ql\intbl\widctlpar\yts5{\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\lang16393\langfe16393\langnp16393\langfenp16393\b\cf0 Preservations Applications}\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\lang16393\langfe16393\langnp16393\langfenp16393\b\cell\trowd\irow8\irowband7\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\trowd\irow9\irowband8\lastrow\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\pard\plain\ql\intbl\widctlpar\yts5{\field{\*\fldinst{\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\lang16393\langfe16393\langnp16393\langfenp16393\b\cf0 DOCVARIABLE DataItem0}}{\fldrslt{\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\lang16393\langfe16393\langnp16393\langfenp16393\b\cf0 PreservationApplications}}}\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs28\lang16393\langfe16393\langnp16393\langfenp16393\b\cell\trowd\irow9\irowband8\lastrow\ts5\trgaph108\trbrdrt\brdrnone\trbrdrl\brdrnone\trbrdrb\brdrnone\trbrdrr\brdrnone\trbrdrh\brdrnone\trbrdrv\brdrnone\trleft-108\trrh510\trftsWidth1\trautofit1\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tbllkhdrcols\tbllkhdrrows\tbllknocolband\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth6270\clpadfr3\clpadr108\clpadft3\clpadt108\cellx6180\row\pard\plain\ql\widctlpar\fcs1\af0\alang16393\ltrch\fcs0\hich\af0\dbch\af3\loch\f0\fs22\lang16393\langfe16393\langnp16393\langfenp16393\par{\*\themedata 
 504b03041400020008000000210201159325ae000000270100000b0000005f72656c732f2e72656c738d8f310ec2300c45af1279a76e1910424dbbb07460415c204a9d34a24da224457036068ec415c8d82206164b5ffe7efffbfd7cd5ed7d1ad98d4234
 ce72a88a121859e97a63358739a9cd1edaa63ed3285276c4c1f8c8f2898d1c8694fc0131ca8126110be7c9e68d72611229cba0d10b79159a705b963b0c4b06ac99aceb3984aeaf805d1e9efe613ba58ca4a393f34436fd88f87264b2089a12879499848b
 791236b70c454e00864d8dab779b0f504b0304140002000800000021027f624aeb730000007b0000001c0000007468656d652f7468656d652f7468656d654d616e616765722e786d6c0d8cc10d83300c005789fc2f4e7954554460820e61810991888392
@@ -35,8 +126,153 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
 302220656e636f64696e673d227574662d38223f3e3c613a636c724d617020786d6c6e733a613d22687474703a2f2f736368656d61732e6f70656e786d6c666f726d6174732e6f72672f64726177696e676d6c2f323030362f6d61696e22206267313d22
 6c743122207478313d22646b3122206267323d226c743222207478323d22646b322220616363656e74313d22616363656e74312220616363656e74323d22616363656e74322220616363656e74333d22616363656e74332220616363656e74343d226163
 63656e74342220616363656e74353d22616363656e74352220616363656e74363d22616363656e74362220686c696e6b3d22686c696e6b2220666f6c486c696e6b3d22666f6c486c696e6b22202f3e}}</Text>
+      <Values>
+        <Value DefaultId="DataItem1" />
+        <Value DefaultId="DataItem4" />
+        <Value DefaultId="DataItem2" />
+        <Value DefaultId="DataItem5" />
+        <Value DefaultId="DataItem0" />
+      </Values>
     </TextBox>
+    <Chart ComponentName="chartDashboardItem1" Name="" ShowCaption="false" DataSource="sqlDataSource1" DataMember="usp_get_level2_farm_annual_summary_report">
+      <ColoringOptions UseGlobalColors="false" />
+      <InteractivityOptions MasterFilterMode="Single" IsDrillDownEnabled="true" />
+      <DataItems>
+        <Measure DataMember="ExceptionAreaAcreage" DefaultId="DataItem1" />
+        <Measure DataMember="PreservedAcreage" DefaultId="DataItem2">
+          <NumericFormat FormatType="Number" Unit="Ones" />
+        </Measure>
+        <Measure DataMember="UnPreservedAcreage" DefaultId="DataItem3" />
+        <Measure DataMember="TillableAcreage" DefaultId="DataItem4">
+          <NumericFormat FormatType="Number" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <ColorScheme>
+        <Entry DataSource="dashboardExcelDataSource5" Color="-2780010">
+          <MeasureKey>
+            <Definition DataMember="Non-Construction" />
+          </MeasureKey>
+        </Entry>
+      </ColorScheme>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple Name="Preserved Acreage" SeriesType="StackedBar">
+              <Value DefaultId="DataItem2" />
+            </Simple>
+            <Simple Name="Tillable Acreage" SeriesType="FullStackedBar">
+              <Value DefaultId="DataItem4" />
+            </Simple>
+            <Simple Name="Exception Area Acreage">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+            <Simple Name="UnPreserved Acreage">
+              <Value DefaultId="DataItem3" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend OutsidePosition="TopLeftHorizontal" />
+      <AxisX Visible="false" />
+    </Chart>
+    <Grid ComponentName="gridDashboardItem2" Name="" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_level3_farm_annual_summary_report">
+      <DataItems>
+        <Dimension DataMember="Municipality" DefaultId="DataItem0" />
+        <Dimension DataMember="PreservedAcreage" DefaultId="DataItem1" />
+        <Dimension DataMember="FundsAwarded" DefaultId="DataItem2">
+          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" />
+        </Dimension>
+        <Measure DataMember="TotalApplications" DefaultId="DataItem3" />
+        <Measure DataMember="Submitted" DefaultId="DataItem4" />
+        <Measure DataMember="EsmtPendingApplications" DefaultId="DataItem5" />
+        <Measure DataMember="PostClosing" DefaultId="DataItem6" />
+        <Measure DataMember="Preserved" DefaultId="DataItem7" />
+        <Measure DataMember="Petition" DefaultId="DataItem8" />
+        <Measure DataMember="TermPendingApplications" DefaultId="DataItem9" />
+        <Measure DataMember="ActiveApplications" DefaultId="DataItem10" />
+        <Measure DataMember="RejectedApplications" DefaultId="DataItem11" />
+        <Measure DataMember="WithdrawnApplication" DefaultId="DataItem12" />
+        <Measure DataMember="ExpiredTermApplication" DefaultId="DataItem13" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem3" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem4" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem5" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem6" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem7" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem8" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem9" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem10" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem11" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem12" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem13" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" />
+      <ColumnFilterOptions />
+    </Grid>
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="LandOwner" DataSource="sqlDataSource1" DataMember="Farm_FarmList" IsMasterFilterCrossDataSource="true">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="OriginalLandowner" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Dimension DataMember="AgencyID" DefaultId="DataItem1" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension DefaultId="DataItem1" />
+      </HiddenDimensions>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="Funding Year" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_level3_farm_annual_summary_report">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="Municipality" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
   </Items>
+  <Groups>
+    <Group ComponentName="groupDashboardItem1" Name="Group 1" ShowCaption="false">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+    </Group>
+  </Groups>
   <ColorScheme>
     <Entry DataSource="dashboardExcelDataSource1" Color="-2890245">
       <MeasureKey>
@@ -50,11 +286,23 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
     </Entry>
   </ColorScheme>
   <LayoutOptions>
-    <Height Mode="Fixed" Value="1000" />
+    <Height Mode="Fixed" Value="960" />
   </LayoutOptions>
   <LayoutTree>
-    <LayoutGroup Weight="100">
-      <LayoutItem DashboardItem="textBoxDashboardItem4" Weight="49.965108164689461" />
+    <LayoutGroup Orientation="Vertical" Weight="100">
+      <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="11.086956521739129" />
+      <LayoutGroup Weight="188.91304347826087">
+        <LayoutGroup Orientation="Vertical" Weight="100">
+          <LayoutGroup Weight="35.60606060606061">
+            <LayoutItem DashboardItem="textBoxDashboardItem1" Weight="31.01198413784405" />
+            <LayoutItem DashboardItem="chartDashboardItem1" Weight="35.39668694530613" />
+          </LayoutGroup>
+          <LayoutGroup DashboardItem="groupDashboardItem1" Weight="64.39393939393939">
+            <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="11.957305079290796" />
+            <LayoutItem DashboardItem="gridDashboardItem2" Weight="116.830573708588" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </LayoutGroup>
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>
