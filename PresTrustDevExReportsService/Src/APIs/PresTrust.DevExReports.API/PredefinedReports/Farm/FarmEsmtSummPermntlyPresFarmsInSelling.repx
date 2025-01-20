@@ -119,7 +119,7 @@
                     <Item3 Ref="59" ControlType="XRTableCell" Name="tableCell57" Weight="1.0583333041720919" Multiline="true" Text="Morris County Share" />
                     <Item4 Ref="60" ControlType="XRTableCell" Name="tableCell58" Weight="0.44166666802300347" Multiline="true" Text="tableCell4" Borders="Top">
                       <ExpressionBindings>
-                        <Item1 Ref="61" EventName="BeforePrint" PropertyName="Text" Expression="[MCCostShareTotal]" />
+                        <Item1 Ref="61" EventName="BeforePrint" PropertyName="Text" Expression="([MCCostShareTotal])" />
                       </ExpressionBindings>
                       <StylePriority Ref="62" UseBorders="false" />
                     </Item4>
