@@ -10,10 +10,10 @@
 
 namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
     
-    public partial class FarmEsmtReSaleInfoOfPreservedFarmsReport : DevExpress.XtraReports.UI.XtraReport {
+    public partial class FarmEsmtReSaleInfoOfPreservedFarmsReportPreview : DevExpress.XtraReports.UI.XtraReport {
         private void InitializeComponent() {
             DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "PresTrust.DevExReports.API.PredefinedReports.Farm.FarmEsmtReSaleInfoOfPreservedFa" +
-                    "rmsReport.repx");
+                    "rmsReportPreview.repx");
 
             // Controls
             this.TopMargin = reportInitializer.GetControl<DevExpress.XtraReports.UI.TopMarginBand>("TopMargin");
@@ -134,7 +134,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.tableCell8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell8");
 
             // Parameters
-            this.FarmName = reportInitializer.GetParameter("FarmName");
+            this.farmNumber = reportInitializer.GetParameter("farmNumber");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
@@ -256,6 +256,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRTableCell tableCell68;
         private DevExpress.XtraReports.UI.XRTableCell tableCell8;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.XtraReports.Parameters.Parameter FarmName;
+        private DevExpress.XtraReports.Parameters.Parameter farmNumber;
     }
 }
