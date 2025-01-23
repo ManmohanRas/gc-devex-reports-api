@@ -77,10 +77,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.label7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label7");
             this.label6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label6");
 
-            // Parameters
-            this.Id_1 = reportInitializer.GetParameter("Id_1");
-            this.Id = reportInitializer.GetParameter("Id");
-
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
         }
@@ -145,7 +141,5 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRLabel label7;
         private DevExpress.XtraReports.UI.XRLabel label6;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.XtraReports.Parameters.Parameter Id_1;
-        private DevExpress.XtraReports.Parameters.Parameter Id;
     }
 }
