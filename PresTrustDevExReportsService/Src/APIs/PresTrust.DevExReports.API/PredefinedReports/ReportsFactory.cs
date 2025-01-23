@@ -103,6 +103,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports
             ["FarmEsmtSummaryOfPreservedFarms"] = ()=>new FarmEsmtSummaryOfPreservedFarms(),
             ["FarmEsmtEXHIBITA"] = ()=>new FarmEsmtPendingEXHIBITAReport(),
             ["FarmEsmtReSaleInfoOfPreservedFarmsReportPreview"] = () => new FarmEsmtReSaleInfoOfPreservedFarmsReportPreview(),
+            ["FarmSumOfFarmLandPresPendingProject"] = () => new FarmSumOfFarmLandPresPendingProject()
         };
     }
 }
