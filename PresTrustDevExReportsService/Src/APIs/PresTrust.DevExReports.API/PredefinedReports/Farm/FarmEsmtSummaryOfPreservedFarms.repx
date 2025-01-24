@@ -406,9 +406,9 @@
         </Item4>
       </Bands>
     </Item4>
-    <Item5 Ref="197" ControlType="PageFooterBand" Name="PageFooter" HeightF="53.4398">
+    <Item5 Ref="197" ControlType="PageFooterBand" Name="PageFooter" HeightF="22.5796375">
       <Controls>
-        <Item1 Ref="198" ControlType="XRLabel" Name="label6" Multiline="true" Text="For Further information contact Katherine Coyle at 973-829-8120 or via email at kcoyle@co.morris.nj.us " SizeF="544.824768,53.4398" LocationFloat="0,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
+        <Item1 Ref="198" ControlType="XRLabel" Name="label6" Multiline="true" Text="For Further information contact Katherine Coyle at 973-829-8120 or via email at kcoyle@co.morris.nj.us " SizeF="760.999634,22.1898" LocationFloat="0,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
           <StylePriority Ref="199" UseFont="false" />
         </Item1>
       </Controls>
