@@ -204,8 +204,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRTableRow tableRow10;
         private DevExpress.XtraReports.UI.XRTableCell tableCell32;
         private DevExpress.XtraReports.UI.XRTableCell tableCell36;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.XRLabel label6;
         private DevExpress.XtraReports.UI.XRLabel label2;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
     }
 }
