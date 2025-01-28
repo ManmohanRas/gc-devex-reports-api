@@ -250,7 +250,7 @@
                     </Item1>
                     <Item2 Ref="125" ControlType="XRTableCell" Name="tableCell6" Weight="4.9144169572714382" Multiline="true" TextAlignment="MiddleLeft" Font="Times New Roman, 12pt" Borders="All">
                       <ExpressionBindings>
-                        <Item1 Ref="126" EventName="BeforePrint" PropertyName="Text" Expression="[PropertyLocation]" />
+                        <Item1 Ref="126" EventName="BeforePrint" PropertyName="Text" Expression="[City]" />
                       </ExpressionBindings>
                       <StylePriority Ref="127" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item2>
