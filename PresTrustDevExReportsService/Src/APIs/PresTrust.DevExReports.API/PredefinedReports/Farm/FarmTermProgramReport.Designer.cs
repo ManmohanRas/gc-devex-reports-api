@@ -103,6 +103,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.tableCell12 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell12");
             this.tableCell15 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell15");
             this.tableCell16 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell16");
+            this.tableCell41 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell41");
+            this.tableCell42 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell42");
             this.checkBox1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRCheckBox>("checkBox1");
             this.tableCell25 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell25");
             this.tableCell26 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell26");
@@ -216,6 +218,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRTableCell tableCell12;
         private DevExpress.XtraReports.UI.XRTableCell tableCell15;
         private DevExpress.XtraReports.UI.XRTableCell tableCell16;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell41;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell42;
         private DevExpress.XtraReports.UI.XRCheckBox checkBox1;
         private DevExpress.XtraReports.UI.XRTableCell tableCell25;
         private DevExpress.XtraReports.UI.XRTableCell tableCell26;
