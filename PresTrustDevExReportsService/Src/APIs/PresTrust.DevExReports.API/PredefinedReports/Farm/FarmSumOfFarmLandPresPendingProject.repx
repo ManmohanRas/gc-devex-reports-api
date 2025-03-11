@@ -29,373 +29,355 @@
     </Item4>
     <Item5 Ref="18" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="Farm_FarmApplication_1" DataSource="#Ref-17">
       <Bands>
-        <Item1 Ref="19" ControlType="DetailBand" Name="Detail1" HeightF="332.458252">
+        <Item1 Ref="19" ControlType="DetailBand" Name="Detail1" HeightF="354.722015">
           <Controls>
-            <Item1 Ref="20" ControlType="XRPanel" Name="panel1" SizeF="742.9999,327.458" LocationFloat="0,0">
+            <Item1 Ref="20" ControlType="XRPageBreak" Name="pageBreak1" LocationFloat="0,335.722015" />
+            <Item2 Ref="21" ControlType="XRPanel" Name="panel1" SizeF="742.9999,299.305634" LocationFloat="0,0">
               <Controls>
-                <Item1 Ref="21" ControlType="XRTable" Name="table1" SizeF="743,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="Left, Bottom">
+                <Item1 Ref="22" ControlType="XRTable" Name="table1" SizeF="743,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="Left, Bottom">
                   <Rows>
-                    <Item1 Ref="22" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+                    <Item1 Ref="23" ControlType="XRTableRow" Name="tableRow1" Weight="1">
                       <Cells>
-                        <Item1 Ref="23" ControlType="XRTableCell" Name="tableCell1" Weight="1" Multiline="true" Text="Landowner" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="24" UseFont="false" />
+                        <Item1 Ref="24" ControlType="XRTableCell" Name="tableCell1" Weight="1" Multiline="true" Text="Landowner" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="25" UseFont="false" />
                         </Item1>
-                        <Item2 Ref="25" ControlType="XRTableCell" Name="tableCell2" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
+                        <Item2 Ref="26" ControlType="XRTableCell" Name="tableCell2" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
                           <ExpressionBindings>
-                            <Item1 Ref="26" EventName="BeforePrint" PropertyName="Text" Expression="[OriginalLandowner]" />
+                            <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="[OriginalLandowner]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="27" UseFont="false" />
+                          <StylePriority Ref="28" UseFont="false" />
                         </Item2>
-                        <Item3 Ref="28" ControlType="XRTableCell" Name="tableCell3" Weight="1" Multiline="true" Text="Farmed by" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="29" UseFont="false" />
+                        <Item3 Ref="29" ControlType="XRTableCell" Name="tableCell3" Weight="1" Multiline="true" Text="Farmed by" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="30" UseFont="false" />
                         </Item3>
-                        <Item4 Ref="30" ControlType="XRTableCell" Name="tableCell4" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
+                        <Item4 Ref="31" ControlType="XRTableCell" Name="tableCell4" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
                           <ExpressionBindings>
-                            <Item1 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="[FarmerName]" />
+                            <Item1 Ref="32" EventName="BeforePrint" PropertyName="Text" Expression="[FarmerName]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="32" UseFont="false" UseBorders="false" />
+                          <StylePriority Ref="33" UseFont="false" UseBorders="false" />
                         </Item4>
                       </Cells>
                     </Item1>
                   </Rows>
-                  <StylePriority Ref="33" UseBorders="false" />
+                  <StylePriority Ref="34" UseBorders="false" />
                 </Item1>
-                <Item2 Ref="34" ControlType="XRTable" Name="table2" SizeF="743,25" LocationFloat="0,25" Padding="2,2,0,0,96" Borders="Left, Bottom">
+                <Item2 Ref="35" ControlType="XRTable" Name="table2" SizeF="743,25" LocationFloat="0,25" Padding="2,2,0,0,96" Borders="Left, Bottom">
                   <Rows>
-                    <Item1 Ref="35" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+                    <Item1 Ref="36" ControlType="XRTableRow" Name="tableRow2" Weight="1">
                       <Cells>
-                        <Item1 Ref="36" ControlType="XRTableCell" Name="tableCell5" Weight="1" Multiline="true" Text="Farm Name" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="37" UseFont="false" />
+                        <Item1 Ref="37" ControlType="XRTableCell" Name="tableCell5" Weight="1" Multiline="true" Text="Farm Name" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="38" UseFont="false" />
                         </Item1>
-                        <Item2 Ref="38" ControlType="XRTableCell" Name="tableCell6" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
+                        <Item2 Ref="39" ControlType="XRTableCell" Name="tableCell6" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
                           <ExpressionBindings>
-                            <Item1 Ref="39" EventName="BeforePrint" PropertyName="Text" Expression="[FarmName]" />
+                            <Item1 Ref="40" EventName="BeforePrint" PropertyName="Text" Expression="[FarmName]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="40" UseFont="false" />
+                          <StylePriority Ref="41" UseFont="false" />
                         </Item2>
-                        <Item3 Ref="41" ControlType="XRTableCell" Name="tableCell7" Weight="1" Multiline="true" Text="Primary Crop" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="42" UseFont="false" />
+                        <Item3 Ref="42" ControlType="XRTableCell" Name="tableCell7" Weight="1" Multiline="true" Text="Primary Crop" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="43" UseFont="false" />
                         </Item3>
-                        <Item4 Ref="43" ControlType="XRTableCell" Name="tableCell8" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
+                        <Item4 Ref="44" ControlType="XRTableCell" Name="tableCell8" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
                           <ExpressionBindings>
-                            <Item1 Ref="44" EventName="BeforePrint" PropertyName="Text" Expression="[PrimaryCrops]" />
+                            <Item1 Ref="45" EventName="BeforePrint" PropertyName="Text" Expression="[PrimaryCrops]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="45" UseFont="false" UseBorders="false" />
+                          <StylePriority Ref="46" UseFont="false" UseBorders="false" />
                         </Item4>
                       </Cells>
                     </Item1>
                   </Rows>
-                  <StylePriority Ref="46" UseBorders="false" />
+                  <StylePriority Ref="47" UseBorders="false" />
                 </Item2>
-                <Item3 Ref="47" ControlType="XRTable" Name="table3" SizeF="743,25" LocationFloat="0,50" Padding="2,2,0,0,96" Borders="Left, Bottom">
+                <Item3 Ref="48" ControlType="XRTable" Name="table3" SizeF="743,25" LocationFloat="0,50" Padding="2,2,0,0,96" Borders="Left, Bottom">
                   <Rows>
-                    <Item1 Ref="48" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+                    <Item1 Ref="49" ControlType="XRTableRow" Name="tableRow3" Weight="1">
                       <Cells>
-                        <Item1 Ref="49" ControlType="XRTableCell" Name="tableCell9" Weight="1" Multiline="true" Text="Farm Location" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="50" UseFont="false" />
+                        <Item1 Ref="50" ControlType="XRTableCell" Name="tableCell9" Weight="1" Multiline="true" Text="Farm Location" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="51" UseFont="false" />
                         </Item1>
-                        <Item2 Ref="51" ControlType="XRTableCell" Name="tableCell10" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
+                        <Item2 Ref="52" ControlType="XRTableCell" Name="tableCell10" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
                           <ExpressionBindings>
-                            <Item1 Ref="52" EventName="BeforePrint" PropertyName="Text" Expression="Concat([MailingAddress1],' ',[MailingAddress2] )" />
+                            <Item1 Ref="53" EventName="BeforePrint" PropertyName="Text" Expression="Concat([MailingAddress1],' ',[MailingAddress2] )" />
                           </ExpressionBindings>
-                          <StylePriority Ref="53" UseFont="false" />
+                          <StylePriority Ref="54" UseFont="false" />
                         </Item2>
-                        <Item3 Ref="54" ControlType="XRTableCell" Name="tableCell11" Weight="1" Multiline="true" Text="Secondary Crop" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="55" UseFont="false" />
+                        <Item3 Ref="55" ControlType="XRTableCell" Name="tableCell11" Weight="1" Multiline="true" Text="Secondary Crop" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="56" UseFont="false" />
                         </Item3>
-                        <Item4 Ref="56" ControlType="XRTableCell" Name="tableCell12" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
+                        <Item4 Ref="57" ControlType="XRTableCell" Name="tableCell12" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
                           <ExpressionBindings>
-                            <Item1 Ref="57" EventName="BeforePrint" PropertyName="Text" Expression="[SecondaryCrops]" />
+                            <Item1 Ref="58" EventName="BeforePrint" PropertyName="Text" Expression="[SecondaryCrops]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="58" UseFont="false" UseBorders="false" />
+                          <StylePriority Ref="59" UseFont="false" UseBorders="false" />
                         </Item4>
                       </Cells>
                     </Item1>
                   </Rows>
-                  <StylePriority Ref="59" UseBorders="false" />
+                  <StylePriority Ref="60" UseBorders="false" />
                 </Item3>
-                <Item4 Ref="60" ControlType="XRTable" Name="table4" SizeF="743,25" LocationFloat="0,75" Padding="2,2,0,0,96" Borders="Left, Bottom">
+                <Item4 Ref="61" ControlType="XRTable" Name="table4" SizeF="743,25" LocationFloat="0,75" Padding="2,2,0,0,96" Borders="Left, Bottom">
                   <Rows>
-                    <Item1 Ref="61" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+                    <Item1 Ref="62" ControlType="XRTableRow" Name="tableRow4" Weight="1">
                       <Cells>
-                        <Item1 Ref="62" ControlType="XRTableCell" Name="tableCell13" Weight="1" Multiline="true" Text="Municipality" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="63" UseFont="false" />
+                        <Item1 Ref="63" ControlType="XRTableCell" Name="tableCell13" Weight="1" Multiline="true" Text="Municipality" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="64" UseFont="false" />
                         </Item1>
-                        <Item2 Ref="64" ControlType="XRTableCell" Name="tableCell14" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
+                        <Item2 Ref="65" ControlType="XRTableCell" Name="tableCell14" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
                           <ExpressionBindings>
-                            <Item1 Ref="65" EventName="BeforePrint" PropertyName="Text" Expression="[Municipality]" />
+                            <Item1 Ref="66" EventName="BeforePrint" PropertyName="Text" Expression="[Municipality]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="66" UseFont="false" />
+                          <StylePriority Ref="67" UseFont="false" />
                         </Item2>
-                        <Item3 Ref="67" ControlType="XRTableCell" Name="tableCell15" Weight="1" Multiline="true" Text="Existing Agricultural Improvements" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="68" UseFont="false" />
+                        <Item3 Ref="68" ControlType="XRTableCell" Name="tableCell15" Weight="1" Multiline="true" Text="Existing Agricultural Improvements" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="69" UseFont="false" />
                         </Item3>
-                        <Item4 Ref="69" ControlType="XRTableCell" Name="tableCell16" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
+                        <Item4 Ref="70" ControlType="XRTableCell" Name="tableCell16" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
                           <ExpressionBindings>
-                            <Item1 Ref="70" EventName="BeforePrint" PropertyName="Text" Expression="[ImprovAg]" />
+                            <Item1 Ref="71" EventName="BeforePrint" PropertyName="Text" Expression="[ImprovAg]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="71" UseFont="false" UseBorders="false" />
+                          <StylePriority Ref="72" UseFont="false" UseBorders="false" />
                         </Item4>
                       </Cells>
                     </Item1>
                   </Rows>
-                  <StylePriority Ref="72" UseBorders="false" />
+                  <StylePriority Ref="73" UseBorders="false" />
                 </Item4>
-                <Item5 Ref="73" ControlType="XRTable" Name="table5" SizeF="743,25" LocationFloat="0,100" Padding="2,2,0,0,96" Borders="Left, Bottom">
+                <Item5 Ref="74" ControlType="XRTable" Name="table5" SizeF="743,25" LocationFloat="0,100" Padding="2,2,0,0,96" Borders="Left, Bottom">
                   <Rows>
-                    <Item1 Ref="74" ControlType="XRTableRow" Name="tableRow5" Weight="1">
+                    <Item1 Ref="75" ControlType="XRTableRow" Name="tableRow5" Weight="1">
                       <Cells>
-                        <Item1 Ref="75" ControlType="XRTableCell" Name="tableCell17" Weight="1" Multiline="true" Text="Block" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="76" UseFont="false" />
+                        <Item1 Ref="76" ControlType="XRTableCell" Name="tableCell17" Weight="1" Multiline="true" Text="Block" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="77" UseFont="false" />
                         </Item1>
-                        <Item2 Ref="77" ControlType="XRTableCell" Name="tableCell18" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
+                        <Item2 Ref="78" ControlType="XRTableCell" Name="tableCell18" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
                           <ExpressionBindings>
-                            <Item1 Ref="78" EventName="BeforePrint" PropertyName="Text" Expression="[original_block]" />
+                            <Item1 Ref="79" EventName="BeforePrint" PropertyName="Text" Expression="[original_block]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="79" UseFont="false" />
+                          <StylePriority Ref="80" UseFont="false" />
                         </Item2>
-                        <Item3 Ref="80" ControlType="XRTableCell" Name="tableCell19" Weight="1" Multiline="true" Text="Existing Residential Improvements" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="81" UseFont="false" />
+                        <Item3 Ref="81" ControlType="XRTableCell" Name="tableCell19" Weight="1" Multiline="true" Text="Existing Residential Improvements" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="82" UseFont="false" />
                         </Item3>
-                        <Item4 Ref="82" ControlType="XRTableCell" Name="tableCell20" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
+                        <Item4 Ref="83" ControlType="XRTableCell" Name="tableCell20" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
                           <ExpressionBindings>
-                            <Item1 Ref="83" EventName="BeforePrint" PropertyName="Text" Expression="[ImprovRes]" />
+                            <Item1 Ref="84" EventName="BeforePrint" PropertyName="Text" Expression="[ImprovRes]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="84" UseFont="false" UseBorders="false" />
+                          <StylePriority Ref="85" UseFont="false" UseBorders="false" />
                         </Item4>
                       </Cells>
                     </Item1>
                   </Rows>
-                  <StylePriority Ref="85" UseBorders="false" />
+                  <StylePriority Ref="86" UseBorders="false" />
                 </Item5>
-                <Item6 Ref="86" ControlType="XRTable" Name="table6" SizeF="743,25" LocationFloat="0,125" Padding="2,2,0,0,96" Borders="Left, Bottom">
+                <Item6 Ref="87" ControlType="XRTable" Name="table6" SizeF="743,25" LocationFloat="0,125" Padding="2,2,0,0,96" Borders="Left, Bottom">
                   <Rows>
-                    <Item1 Ref="87" ControlType="XRTableRow" Name="tableRow6" Weight="1">
+                    <Item1 Ref="88" ControlType="XRTableRow" Name="tableRow6" Weight="1">
                       <Cells>
-                        <Item1 Ref="88" ControlType="XRTableCell" Name="tableCell21" Weight="1" Multiline="true" Text="Lot(s)" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="89" UseFont="false" />
+                        <Item1 Ref="89" ControlType="XRTableCell" Name="tableCell21" Weight="1" Multiline="true" Text="Lot(s)" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="90" UseFont="false" />
                         </Item1>
-                        <Item2 Ref="90" ControlType="XRTableCell" Name="tableCell22" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
+                        <Item2 Ref="91" ControlType="XRTableCell" Name="tableCell22" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
                           <ExpressionBindings>
-                            <Item1 Ref="91" EventName="BeforePrint" PropertyName="Text" Expression="[original_lot]" />
+                            <Item1 Ref="92" EventName="BeforePrint" PropertyName="Text" Expression="[original_lot]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="92" UseFont="false" />
+                          <StylePriority Ref="93" UseFont="false" />
                         </Item2>
-                        <Item3 Ref="93" ControlType="XRTableCell" Name="tableCell23" Weight="1" Multiline="true" Text="Number of Exception Areas" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="94" UseFont="false" />
+                        <Item3 Ref="94" ControlType="XRTableCell" Name="tableCell23" Weight="1" Multiline="true" Text="Number of Exception Areas" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="95" UseFont="false" />
                         </Item3>
-                        <Item4 Ref="95" ControlType="XRTableCell" Name="tableCell24" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
+                        <Item4 Ref="96" ControlType="XRTableCell" Name="tableCell24" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
                           <ExpressionBindings>
-                            <Item1 Ref="96" EventName="BeforePrint" PropertyName="Text" Expression="[NumberofExceps]" />
+                            <Item1 Ref="97" EventName="BeforePrint" PropertyName="Text" Expression="[NumberofExceps]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="97" UseFont="false" UseBorders="false" />
+                          <StylePriority Ref="98" UseFont="false" UseBorders="false" />
                         </Item4>
                       </Cells>
                     </Item1>
                   </Rows>
-                  <StylePriority Ref="98" UseBorders="false" />
+                  <StylePriority Ref="99" UseBorders="false" />
                 </Item6>
-                <Item7 Ref="99" ControlType="XRTable" Name="table7" SizeF="743,25" LocationFloat="0,150" Padding="2,2,0,0,96" Borders="Left, Bottom">
+                <Item7 Ref="100" ControlType="XRTable" Name="table7" SizeF="743,25" LocationFloat="0,150" Padding="2,2,0,0,96" Borders="Left, Bottom">
                   <Rows>
-                    <Item1 Ref="100" ControlType="XRTableRow" Name="tableRow7" Weight="1">
+                    <Item1 Ref="101" ControlType="XRTableRow" Name="tableRow7" Weight="1">
                       <Cells>
-                        <Item1 Ref="101" ControlType="XRTableCell" Name="tableCell25" Weight="1" Multiline="true" Text="+Block" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="102" UseFont="false" />
+                        <Item1 Ref="102" ControlType="XRTableCell" Name="tableCell25" Weight="1" Multiline="true" Text="+Block" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="103" UseFont="false" />
                         </Item1>
-                        <Item2 Ref="103" ControlType="XRTableCell" Name="tableCell26" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
+                        <Item2 Ref="104" ControlType="XRTableCell" Name="tableCell26" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
                           <ExpressionBindings>
-                            <Item1 Ref="104" EventName="BeforePrint" PropertyName="Text" Expression="[additional_blocks]" />
+                            <Item1 Ref="105" EventName="BeforePrint" PropertyName="Text" Expression="[additional_blocks]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="105" UseFont="false" />
+                          <StylePriority Ref="106" UseFont="false" />
                         </Item2>
-                        <Item3 Ref="106" ControlType="XRTableCell" Name="tableCell27" Weight="1" Multiline="true" Text="Project Status" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="107" UseFont="false" />
+                        <Item3 Ref="107" ControlType="XRTableCell" Name="tableCell27" Weight="1" Multiline="true" Text="Project Status" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="108" UseFont="false" />
                         </Item3>
-                        <Item4 Ref="108" ControlType="XRTableCell" Name="tableCell28" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
+                        <Item4 Ref="109" ControlType="XRTableCell" Name="tableCell28" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Left, Right, Bottom">
                           <ExpressionBindings>
-                            <Item1 Ref="109" EventName="BeforePrint" PropertyName="Text" Expression="[Name]" />
+                            <Item1 Ref="110" EventName="BeforePrint" PropertyName="Text" Expression="[Name]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="110" UseFont="false" UseBorders="false" />
+                          <StylePriority Ref="111" UseFont="false" UseBorders="false" />
                         </Item4>
                       </Cells>
                     </Item1>
                   </Rows>
-                  <StylePriority Ref="111" UseBorders="false" />
+                  <StylePriority Ref="112" UseBorders="false" />
                 </Item7>
-                <Item8 Ref="112" ControlType="XRTable" Name="table8" SizeF="557.25,25" LocationFloat="0,175" Padding="2,2,0,0,96" Borders="Left, Bottom">
+                <Item8 Ref="113" ControlType="XRTable" Name="table8" SizeF="557.25,25" LocationFloat="0,175" Padding="2,2,0,0,96" Borders="Left, Bottom">
                   <Rows>
-                    <Item1 Ref="113" ControlType="XRTableRow" Name="tableRow8" Weight="1">
+                    <Item1 Ref="114" ControlType="XRTableRow" Name="tableRow8" Weight="1">
                       <Cells>
-                        <Item1 Ref="114" ControlType="XRTableCell" Name="tableCell29" Weight="1" Multiline="true" Text="+Lot(s)" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="115" UseFont="false" />
+                        <Item1 Ref="115" ControlType="XRTableCell" Name="tableCell29" Weight="1" Multiline="true" Text="+Lot(s)" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="116" UseFont="false" />
                         </Item1>
-                        <Item2 Ref="116" ControlType="XRTableCell" Name="tableCell30" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
+                        <Item2 Ref="117" ControlType="XRTableCell" Name="tableCell30" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
                           <ExpressionBindings>
-                            <Item1 Ref="117" EventName="BeforePrint" PropertyName="Text" Expression="[additional_lots]" />
+                            <Item1 Ref="118" EventName="BeforePrint" PropertyName="Text" Expression="[additional_lots]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="118" UseFont="false" />
+                          <StylePriority Ref="119" UseFont="false" />
                         </Item2>
-                        <Item3 Ref="119" ControlType="XRTableCell" Name="tableCell31" Weight="1" Multiline="true" Text="About the farm" Font="Times New Roman, 12pt" Borders="Left">
-                          <StylePriority Ref="120" UseFont="false" UseBorders="false" />
+                        <Item3 Ref="120" ControlType="XRTableCell" Name="tableCell31" Weight="1" Multiline="true" Text="About the farm" Font="Times New Roman, 12pt" Borders="Left">
+                          <StylePriority Ref="121" UseFont="false" UseBorders="false" />
                         </Item3>
                       </Cells>
                     </Item1>
                   </Rows>
-                  <StylePriority Ref="121" UseBorders="false" />
+                  <StylePriority Ref="122" UseBorders="false" />
                 </Item8>
-                <Item9 Ref="122" ControlType="XRTable" Name="table9" SizeF="557.25,25" LocationFloat="0,200" Padding="2,2,0,0,96" Borders="Left">
+                <Item9 Ref="123" ControlType="XRTable" Name="table9" SizeF="557.25,25" LocationFloat="0,200" Padding="2,2,0,0,96" Borders="Left">
                   <Rows>
-                    <Item1 Ref="123" ControlType="XRTableRow" Name="tableRow9" Weight="1">
+                    <Item1 Ref="124" ControlType="XRTableRow" Name="tableRow9" Weight="1">
                       <Cells>
-                        <Item1 Ref="124" ControlType="XRTableCell" Name="tableCell33" Weight="1" Multiline="true" Text="Acres to be Preserved" Font="Times New Roman, 12pt" Borders="Left, Bottom">
-                          <StylePriority Ref="125" UseFont="false" UseBorders="false" />
+                        <Item1 Ref="125" ControlType="XRTableCell" Name="tableCell33" Weight="1" Multiline="true" Text="Acres to be Preserved" Font="Times New Roman, 12pt" Borders="Left, Bottom">
+                          <StylePriority Ref="126" UseFont="false" UseBorders="false" />
                         </Item1>
-                        <Item2 Ref="126" ControlType="XRTableCell" Name="tableCell34" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt" Borders="Left, Bottom">
+                        <Item2 Ref="127" ControlType="XRTableCell" Name="tableCell34" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt" Borders="Left, Bottom">
                           <ExpressionBindings>
-                            <Item1 Ref="127" EventName="BeforePrint" PropertyName="Text" Expression="[AcresToBeAcquired]" />
+                            <Item1 Ref="128" EventName="BeforePrint" PropertyName="Text" Expression="[AcresToBeAcquired]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="128" UseFont="false" UseBorders="false" />
+                          <StylePriority Ref="129" UseFont="false" UseBorders="false" />
                         </Item2>
-                        <Item3 Ref="129" ControlType="XRTableCell" Name="tableCell35" Weight="1" Multiline="true" Borders="Left, Bottom">
-                          <StylePriority Ref="130" UseBorders="false" />
+                        <Item3 Ref="130" ControlType="XRTableCell" Name="tableCell35" Weight="1" Multiline="true" Borders="Left, Bottom">
+                          <StylePriority Ref="131" UseBorders="false" />
                         </Item3>
                       </Cells>
                     </Item1>
                   </Rows>
-                  <StylePriority Ref="131" UseBorders="false" />
+                  <StylePriority Ref="132" UseBorders="false" />
                 </Item9>
-                <Item10 Ref="132" ControlType="XRLabel" Name="label3" Multiline="true" Text="label3" SizeF="185.75,50" LocationFloat="557.249939,175" Font="Times New Roman, 11pt" Padding="2,2,0,0,100" Borders="Left, Right, Bottom">
+                <Item10 Ref="133" ControlType="XRLabel" Name="label3" Multiline="true" Text="label3" SizeF="185.75,50" LocationFloat="557.249939,175" Font="Times New Roman, 11pt" Padding="2,2,0,0,100" Borders="Left, Right, Bottom">
                   <ExpressionBindings>
-                    <Item1 Ref="133" EventName="BeforePrint" PropertyName="Text" Expression="[FarmFeatures]" />
+                    <Item1 Ref="134" EventName="BeforePrint" PropertyName="Text" Expression="[FarmFeatures]" />
                   </ExpressionBindings>
-                  <StylePriority Ref="134" UseFont="false" UseBorders="false" />
+                  <StylePriority Ref="135" UseFont="false" UseBorders="false" />
                 </Item10>
-                <Item11 Ref="135" ControlType="XRLabel" Name="label5" Multiline="true" Text=" Easement Purchase Details" TextAlignment="MiddleCenter" SizeF="742.9999,23.00003" LocationFloat="0,225" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,100" Borders="Left, Right">
-                  <StylePriority Ref="136" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                <Item11 Ref="136" ControlType="XRLabel" Name="label5" Multiline="true" Text=" Easement Purchase Details" TextAlignment="MiddleCenter" SizeF="742.9999,23.00003" LocationFloat="0,225" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,100" Borders="Left, Right">
+                  <StylePriority Ref="137" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                 </Item11>
-                <Item12 Ref="137" ControlType="XRTable" Name="table17" SizeF="371.4999,25" LocationFloat="0,298.000031" Padding="2,2,0,0,96" Borders="Top, Right">
+                <Item12 Ref="138" ControlType="XRTable" Name="table16" SizeF="742.9999,25" LocationFloat="0,273.000031" Padding="2,2,0,0,96" Borders="Top, Right">
                   <Rows>
-                    <Item1 Ref="138" ControlType="XRTableRow" Name="tableRow17" Weight="1">
+                    <Item1 Ref="139" ControlType="XRTableRow" Name="tableRow16" Weight="1">
                       <Cells>
-                        <Item1 Ref="139" ControlType="XRTableCell" Name="tableCell63" Weight="1" Multiline="true" Text="Closing Date" Font="Times New Roman, 12pt" Borders="All">
-                          <StylePriority Ref="140" UseFont="false" UseBorders="false" />
+                        <Item1 Ref="140" ControlType="XRTableCell" Name="tableCell59" Weight="1" Multiline="true" Text="SADC Cost Share" Font="Times New Roman, 12pt" Borders="All">
+                          <StylePriority Ref="141" UseFont="false" UseBorders="false" />
                         </Item1>
-                        <Item2 Ref="141" ControlType="XRTableCell" Name="tableCell64" Weight="1" TextFormatString="{0:MM/dd/yyyy}" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt" Borders="Top, Right, Bottom">
+                        <Item2 Ref="142" ControlType="XRTableCell" Name="tableCell60" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt" Borders="Top, Right, Bottom">
                           <ExpressionBindings>
-                            <Item1 Ref="142" EventName="BeforePrint" PropertyName="Text" Expression="[ClosingDate]" />
+                            <Item1 Ref="143" EventName="BeforePrint" PropertyName="Text" Expression="Concat('$',[SADCCostShareTotal],' , ',[SADCCostShareofOfferPct],'%')" />
                           </ExpressionBindings>
-                          <StylePriority Ref="143" UseFont="false" UseBorders="false" />
+                          <StylePriority Ref="144" UseFont="false" UseBorders="false" />
                         </Item2>
+                        <Item3 Ref="145" ControlType="XRTableCell" Name="tableCell61" Weight="1" Multiline="true" Text="Total Per Acre" Font="Times New Roman, 12pt" Borders="Top, Right, Bottom">
+                          <StylePriority Ref="146" UseFont="false" UseBorders="false" />
+                        </Item3>
+                        <Item4 Ref="147" ControlType="XRTableCell" Name="tableCell62" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Top, Right, Bottom">
+                          <ExpressionBindings>
+                            <Item1 Ref="148" EventName="BeforePrint" PropertyName="Text" Expression="[TotalCostPerAcre]" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="149" UseFont="false" UseBorders="false" />
+                        </Item4>
                       </Cells>
                     </Item1>
                   </Rows>
-                  <StylePriority Ref="144" UseBorders="false" />
+                  <StylePriority Ref="150" UseBorders="false" />
                 </Item12>
-                <Item13 Ref="145" ControlType="XRTable" Name="table16" SizeF="742.9999,25" LocationFloat="0,273.000031" Padding="2,2,0,0,96" Borders="Top, Right">
+                <Item13 Ref="151" ControlType="XRTable" Name="table15" SizeF="742.9999,25" LocationFloat="0,248.000031" Padding="2,2,0,0,96" Borders="Top, Right">
                   <Rows>
-                    <Item1 Ref="146" ControlType="XRTableRow" Name="tableRow16" Weight="1">
+                    <Item1 Ref="152" ControlType="XRTableRow" Name="tableRow15" Weight="1">
                       <Cells>
-                        <Item1 Ref="147" ControlType="XRTableCell" Name="tableCell59" Weight="1" Multiline="true" Text="SADC Cost Share" Font="Times New Roman, 12pt" Borders="Left, Top, Right">
-                          <StylePriority Ref="148" UseFont="false" UseBorders="false" />
+                        <Item1 Ref="153" ControlType="XRTableCell" Name="tableCell55" Weight="1" Multiline="true" Text="Total Cost" Font="Times New Roman, 12pt" Borders="Left, Top, Right">
+                          <StylePriority Ref="154" UseFont="false" UseBorders="false" />
                         </Item1>
-                        <Item2 Ref="149" ControlType="XRTableCell" Name="tableCell60" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
+                        <Item2 Ref="155" ControlType="XRTableCell" Name="tableCell56" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
                           <ExpressionBindings>
-                            <Item1 Ref="150" EventName="BeforePrint" PropertyName="Text" Expression="[SADCCostShareTotal]" />
+                            <Item1 Ref="156" EventName="BeforePrint" PropertyName="Text" Expression="[TotalCost]" />
                           </ExpressionBindings>
-                          <StylePriority Ref="151" UseFont="false" />
+                          <StylePriority Ref="157" UseFont="false" />
                         </Item2>
-                        <Item3 Ref="152" ControlType="XRTableCell" Name="tableCell61" Weight="1" Multiline="true" Text="Total Per Acre" Font="Times New Roman, 12pt" Borders="Top, Right, Bottom">
-                          <StylePriority Ref="153" UseFont="false" UseBorders="false" />
+                        <Item3 Ref="158" ControlType="XRTableCell" Name="tableCell57" Weight="1" Multiline="true" Text="Morris County Share" Font="Times New Roman, 12pt">
+                          <StylePriority Ref="159" UseFont="false" />
                         </Item3>
-                        <Item4 Ref="154" ControlType="XRTableCell" Name="tableCell62" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt" Borders="Top, Right, Bottom">
+                        <Item4 Ref="160" ControlType="XRTableCell" Name="tableCell58" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt">
                           <ExpressionBindings>
-                            <Item1 Ref="155" EventName="BeforePrint" PropertyName="Text" Expression="[TotalCostPerAcre]" />
+                            <Item1 Ref="161" EventName="BeforePrint" PropertyName="Text" Expression="Concat('$',[MCCostShareTotal],' , ' ,[MCCostSharePct],'%')" />
                           </ExpressionBindings>
-                          <StylePriority Ref="156" UseFont="false" UseBorders="false" />
+                          <StylePriority Ref="162" UseFont="false" />
                         </Item4>
                       </Cells>
                     </Item1>
                   </Rows>
-                  <StylePriority Ref="157" UseBorders="false" />
+                  <StylePriority Ref="163" UseBorders="false" />
                 </Item13>
-                <Item14 Ref="158" ControlType="XRTable" Name="table15" SizeF="742.9999,25" LocationFloat="0,248.000031" Padding="2,2,0,0,96" Borders="Top, Right">
-                  <Rows>
-                    <Item1 Ref="159" ControlType="XRTableRow" Name="tableRow15" Weight="1">
-                      <Cells>
-                        <Item1 Ref="160" ControlType="XRTableCell" Name="tableCell55" Weight="1" Multiline="true" Text="Total Cost" Font="Times New Roman, 12pt" Borders="Left, Top, Right">
-                          <StylePriority Ref="161" UseFont="false" UseBorders="false" />
-                        </Item1>
-                        <Item2 Ref="162" ControlType="XRTableCell" Name="tableCell56" Weight="1" Multiline="true" Text="tableCell2" Font="Times New Roman, 11pt">
-                          <ExpressionBindings>
-                            <Item1 Ref="163" EventName="BeforePrint" PropertyName="Text" Expression="[TotalCost]" />
-                          </ExpressionBindings>
-                          <StylePriority Ref="164" UseFont="false" />
-                        </Item2>
-                        <Item3 Ref="165" ControlType="XRTableCell" Name="tableCell57" Weight="1" Multiline="true" Text="Morris County Share" Font="Times New Roman, 12pt">
-                          <StylePriority Ref="166" UseFont="false" />
-                        </Item3>
-                        <Item4 Ref="167" ControlType="XRTableCell" Name="tableCell58" Weight="1" Multiline="true" Text="tableCell4" Font="Times New Roman, 11pt">
-                          <ExpressionBindings>
-                            <Item1 Ref="168" EventName="BeforePrint" PropertyName="Text" Expression="[MCCostShareTotal]" />
-                          </ExpressionBindings>
-                          <StylePriority Ref="169" UseFont="false" />
-                        </Item4>
-                      </Cells>
-                    </Item1>
-                  </Rows>
-                  <StylePriority Ref="170" UseBorders="false" />
-                </Item14>
               </Controls>
-            </Item1>
-            <Item2 Ref="171" ControlType="XRPageBreak" Name="pageBreak1" LocationFloat="0,330.458252" />
+            </Item2>
           </Controls>
         </Item1>
-        <Item2 Ref="172" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="60.6667">
+        <Item2 Ref="164" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="60.6667">
           <GroupFields>
-            <Item1 Ref="173" FieldName="ApplicationId" />
+            <Item1 Ref="165" FieldName="ApplicationId" />
           </GroupFields>
           <Controls>
-            <Item1 Ref="174" ControlType="XRTable" Name="table10" SizeF="740,25" LocationFloat="0,35.6667" Padding="2,2,0,0,96">
+            <Item1 Ref="166" ControlType="XRTable" Name="table10" SizeF="740,25" LocationFloat="0,35.6667" Padding="2,2,0,0,96">
               <Rows>
-                <Item1 Ref="175" ControlType="XRTableRow" Name="tableRow10" Weight="1">
+                <Item1 Ref="167" ControlType="XRTableRow" Name="tableRow10" Weight="1">
                   <Cells>
-                    <Item1 Ref="176" ControlType="XRTableCell" Name="tableCell32" Weight="1" Multiline="true" Text="tableCell32" TextAlignment="TopCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="255,84,141,212" Borders="Left, Bottom">
+                    <Item1 Ref="168" ControlType="XRTableCell" Name="tableCell32" Weight="1" Multiline="true" Text="tableCell32" TextAlignment="TopCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="255,84,141,212" Borders="Left, Bottom">
                       <ExpressionBindings>
-                        <Item1 Ref="177" EventName="BeforePrint" PropertyName="Text" Expression="[OriginalLandowner]" />
+                        <Item1 Ref="169" EventName="BeforePrint" PropertyName="Text" Expression="[OriginalLandowner]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="178" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                      <StylePriority Ref="170" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="179" ControlType="XRTableCell" Name="tableCell36" Weight="1" Multiline="true" Text="tableCell36" TextAlignment="TopCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="255,84,141,212" Borders="Right, Bottom">
+                    <Item2 Ref="171" ControlType="XRTableCell" Name="tableCell36" Weight="1" Multiline="true" Text="tableCell36" TextAlignment="TopCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="255,84,141,212" Borders="Right, Bottom">
                       <ExpressionBindings>
-                        <Item1 Ref="180" EventName="BeforePrint" PropertyName="Text" Expression="[Municipality]" />
+                        <Item1 Ref="172" EventName="BeforePrint" PropertyName="Text" Expression="[Municipality]" />
                       </ExpressionBindings>
-                      <StylePriority Ref="181" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                      <StylePriority Ref="173" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
                     </Item2>
                   </Cells>
                 </Item1>
               </Rows>
             </Item1>
-            <Item2 Ref="182" ControlType="XRLabel" Name="label1" Multiline="true" Text="Summary of Farmland Preservation Pending Project&#xD;&#xA;" TextAlignment="MiddleCenter" SizeF="740,35.666687" LocationFloat="0,0" Font="Times New Roman, 14pt, style=Bold" BackColor="255,84,141,212" Padding="2,2,0,0,100" Borders="Left, Top, Right">
-              <StylePriority Ref="183" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            <Item2 Ref="174" ControlType="XRLabel" Name="label1" Multiline="true" Text="Summary of Farmland Preservation Pending Project&#xD;&#xA;" TextAlignment="MiddleCenter" SizeF="740,35.666687" LocationFloat="0,0" Font="Times New Roman, 14pt, style=Bold" BackColor="255,84,141,212" Padding="2,2,0,0,100" Borders="Left, Top, Right">
+              <StylePriority Ref="175" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
             </Item2>
           </Controls>
         </Item2>
       </Bands>
     </Item5>
-    <Item6 Ref="184" ControlType="PageFooterBand" Name="PageFooter" HeightF="44.5000534">
+    <Item6 Ref="176" ControlType="PageFooterBand" Name="PageFooter" HeightF="44.5000534">
       <Controls>
-        <Item1 Ref="185" ControlType="XRLabel" Name="label6" Multiline="true" Text="For Further information contact Katherine Coyle at 973-829-8120 or via email at kcoyle@co.morris.nj.us " SizeF="525.1488,30.2916527" LocationFloat="0,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
-          <StylePriority Ref="186" UseFont="false" />
+        <Item1 Ref="177" ControlType="XRLabel" Name="label6" Multiline="true" Text="For Further information contact Katherine Coyle at 973-829-8120 or via email at kcoyle@co.morris.nj.us " SizeF="525.1488,30.2916527" LocationFloat="0,0" Font="Times New Roman, 10pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="178" UseFont="false" />
         </Item1>
-        <Item2 Ref="187" ControlType="XRLabel" Name="label2" TextFormatString="{0:dddd, MMMM d, yyyy}" Multiline="true" Text="label2" SizeF="137.5,23" LocationFloat="605.5,0" Padding="2,2,0,0,100">
+        <Item2 Ref="179" ControlType="XRLabel" Name="label2" TextFormatString="{0:dddd, MMMM d, yyyy}" Multiline="true" Text="label2" SizeF="137.5,23" LocationFloat="605.5,0" Padding="2,2,0,0,100">
           <ExpressionBindings>
-            <Item1 Ref="188" EventName="BeforePrint" PropertyName="Text" Expression="LocalDateTimeNow()" />
+            <Item1 Ref="180" EventName="BeforePrint" PropertyName="Text" Expression="LocalDateTimeNow()" />
           </ExpressionBindings>
         </Item2>
       </Controls>
     </Item6>
   </Bands>
   <ComponentStorage>
-    <Item1 Ref="17" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IkN1c3RvbVNxbFF1ZXJ5IiBOYW1lPSJGYXJtX0Zhcm1BcHBsaWNhdGlvbl8xIj48U3FsPlNFTEVDVCBEaXN0aW5jdA0KICAgIHRsLkFwcGxpY2F0aW9uSWQsDQoJZmEuQXBwbGljYXRpb25UeXBlSWQsDQogICAgZmwuRmFybU51bWJlciwNCiAgICBmbC5GYXJtTmFtZSwNCglGTC5PcmlnaW5hbExhbmRvd25lciwNCglGTC5BZGRyZXNzMSwNCgltLk11bmljaXBhbGl0eSwNCglvZC5NYWlsaW5nQWRkcmVzczEsDQoJb2QuTWFpbGluZ0FkZHJlc3MyLA0KICAgIHZhLkFnZW5jeU5hbWUsDQogICAgQi5BY3JlcyBBUyBBY3Jlc1RvQmVBY3F1aXJlZCwNCgl4Lm9yaWdpbmFsX2Jsb2NrLA0KICAgIHgub3JpZ2luYWxfbG90LA0KICAgIHguYWRkaXRpb25hbF9ibG9ja3MsDQogICAgWC5hZGRpdGlvbmFsX2xvdHMsDQogICBBRC5GYXJtZXJOYW1lLA0KICAgRVMuSW1wcm92QWcsDQogICBFUy5JbXByb3ZSZXMsDQogICBFUi5OdW1iZXJvZkV4Y2VwcywNCiAgIEFELkZhcm1GZWF0dXJlcywNCiAgIEFDLlRvdGFsQ29zdCwNCiAgIEFDLk1DQ29zdFNoYXJlVG90YWwsDQogICBBQy5Ub3RhbENvc3RQZXJBY3JlLA0KICAgQUMuU0FEQ0Nvc3RTaGFyZVRvdGFsLA0KICAgY2QuQ2xvc2luZ0RhdGUsDQogICBsb3dlcihZLlByaW1hcnlDcm9wcykgYXMgUHJpbWFyeUNyb3BzLA0KICAgbG93ZXIoWS5TZWNvbmRhcnlDcm9wcykgYXMgU2Vjb25kYXJ5Q3JvcHMsDQogICBGU0wuTmFtZQ0KRlJPTSBGYXJtLkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCBhDQpMRUZUIEpPSU4gRmFybS5GYXJtQXBwTG9jYXRpb25EZXRhaWxzIHRsIE9OIGEuSWQgPSB0bC5QYXJjZWxJZA0KTEVGVCBKT0lOIEZhcm0uRmFybUFwcGxpY2F0aW9uIGZhIE9OIGZhLmlkID0gdGwuQXBwbGljYXRpb25JZA0KTEVGVCBKT0lOIEZhcm0uRmFybUxpc3QgZmwgT04gZmwuRmFybUxpc3RJRCA9IGZhLkZhcm1MaXN0SWQNCkxFRlQgSk9JTiBDb3JlLlZpZXdfQWdlbmN5RW50aXRpZXNfRkFSTSB2YSBPTiB2YS5BZ2VuY3lJZCA9IGZhLkFnZW5jeUlkDQpMRUZUIEpPSU4gRmFybS5GYXJtRXNtdEFwcEFkbWluQ2xvc2luZ0RvY1N0YXR1cyBjZCBPTiBjZC5BcHBsaWNhdGlvbklkID0gZmEuSWQNCkxFRlQgSk9JTiBGYXJtLkZhcm1Fc210QXBwQWRtaW5Db3N0RGV0YWlscyBBQyBPTiBBYy5BcHBsaWNhdGlvbklkID0gZmEuSWQNCkxFRlQgSk9JTiBDb3JlLk11bmljaXBhbGl0eSBtIE9OIG0uTXVuaWNpcGFsSWQgPSBmbC5NdW5pY2lwYWxJZA0KTEVGVCBKT0lOIFtGYXJtXS5bRmFybUFncmljdWx0dXJhbEVudGVycHJpc2VDaGVja2xpc3RdIGExIG9uIGExLkFwcGxpY2F0aW9uSWQgPSBGYS5JZA0KTEVGVCBKT0lOIEZhcm0uRmFybUVzbXRBcHBBZG1pbkRldGFpbHMgQUQgb24gQUQuQXBwbGljYXRpb25JZCA9IGZhLklkDQpMRUZUIEpPSU4gRmFybS5GYXJtRXNtdEFwcEFkbWluU3RydWN0Tm9uQWdyaVdldGxhbmRzIEVTIG9uIEVTLkFwcGxpY2F0aW9uSWQgPSBmYS5JZA0KTEVGVCBKT0lOIEZhcm0uRmFybUVzbXRBcHBBZG1pbkV4Y2VwdGlvblJEU08gRVIgb24gRVIuQXBwbGljYXRpb25JZCA9IGZhLklkDQpMRUZUIEpPSU4gRmFybS5GYXJtQXBwbGljYXRpb25TdGF0dXMgRlNMIG9uIEZTTC5JZCA9IGZhLlN0YXR1c0lkDQpMRUZUIEpPSU4gDQooDQpTRUxFQ1QgTC5BcHBsaWNhdGlvbklkLCBTVU0oTUJMLkFjcmVzVG9CZUFjcXVpcmVkKSBBUyBBY3Jlcw0KCQlGUk9NIFtGYXJtXS5bRmFybU11bmljaXBhbGl0eUJsb2NrTG90UGFyY2VsXSAgQVMgTUJMDQoJCUxFRlQgSk9JTiBbRmFybV0uW0Zhcm1BcHBMb2NhdGlvbkRldGFpbHNdIEFTIEwgT04gKE1CTC5JZCA9IEwuUGFyY2VsSWQgQU5EIEwuSXNjaGVja2VkID0gMSkNCgkJR1JPVVAgQlkgTC5BcHBsaWNhdGlvbklkDQogIClCIG9uIEIuQXBwbGljYXRpb25JZCA9ICBmYS4iSWQiDQpMRUZUIEpPSU4gDQooDQpTRUxFQ1QgDQogICAgby5BcHBsaWNhdGlvbklkLA0KCW8uUHJpbWFyeUNyb3BzLA0KCWEuU2Vjb25kYXJ5Q3JvcHMNCkZST00NCiAgICAoDQogICAgICAgU0VMRUNUIA0KICAgIEFwcGxpY2F0aW9uSWQsDQogICAgU1RSSU5HX0FHRyhUaXRsZSwgJywgJykgQVMgUHJpbWFyeUNyb3BzDQoJRlJPTSANCgkgRmFybS5GYXJtQWdyaWN1bHR1cmFsRW50ZXJwcmlzZUNoZWNrbGlzdA0KCQlXSEVSRSBJc1ByaW1hcnkgPSAxDQpHUk9VUCBCWSANCiAgICBBcHBsaWNhdGlvbklkDQogICAgKSBBUyBvDQpJTk5FUiBKT0lODQogICAgKCBTRUxFQ1QgDQogICAgQXBwbGljYXRpb25JZCwNCiAgICBTVFJJTkdfQUdHKFRpdGxlLCAnLCAnKSBBUyBTZWNvbmRhcnlDcm9wcw0KCUZST00gDQoJIEZhcm0uRmFybUFncmljdWx0dXJhbEVudGVycHJpc2VDaGVja2xpc3QNCgkJV0hFUkUgSXNTZWNvbmRhcnkgPSAxDQoJR1JPVVAgQlkgDQogICAgQXBwbGljYXRpb25JZA0KICAgICkgQVMgYQ0KT04gby5BcHBsaWNhdGlvbklkID0gYS5BcHBsaWNhdGlvbklkDQpHUk9VUCBCWQ0KICAgIG8uQXBwbGljYXRpb25JZCAsby5QcmltYXJ5Q3JvcHMsYS5TZWNvbmRhcnlDcm9wcw0KKSBhcyBZIG9uIFkuQXBwbGljYXRpb25JZCA9IGZhLklkIA0KTGVmdCBKb2luIA0KKA0KU0VMRUNUDQogICAgby5BcHBsaWNhdGlvbklkLA0KICAgIG8uYmxvY2sgQVMgb3JpZ2luYWxfYmxvY2ssDQogICAgby5sb3QgQVMgb3JpZ2luYWxfbG90LA0KICAgIFNUUklOR19BR0coYS5ibG9jaywgJywgJykgQVMgYWRkaXRpb25hbF9ibG9ja3MsDQogICAgU1RSSU5HX0FHRyhhLmxvdCwgJywgJykgQVMgYWRkaXRpb25hbF9sb3RzDQpGUk9NDQogICAgKA0KICAgICAgICBTRUxFQ1QNCiAgICAgICAgICAgIEFwcGxpY2F0aW9uSWQsDQogICAgICAgICAgICBibG9jaywNCiAgICAgICAgICAgIGxvdA0KICAgICAgICBGUk9NICgNCiAgICAgICAgICAgIFNFTEVDVA0KICAgICAgICAgICAgICAgIFRMLkFwcGxpY2F0aW9uSWQsDQogICAgICAgICAgICAgICBicGwuIGJsb2NrLA0KICAgICAgICAgICAgICAgIGJwbC5sb3QsDQogICAgICAgICAgICAgICAgUk9XX05VTUJFUigpIE9WRVIgKFBBUlRJVElPTiBCWSBUTC5BcHBsaWNhdGlvbklkIE9SREVSIEJZIElkKSBBUyBybg0KICAgICAgICAgICAgRlJPTSBGYXJtLkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCBicGwNCgkJCWxlZnQgam9pbiBGYXJtLkZhcm1BcHBMb2NhdGlvbkRldGFpbHMgVEwgb24gYnBsLklkPSBUTC5QYXJjZWxJZA0KICAgICAgICApIEFTIHN1YnF1ZXJ5DQogICAgICAgIFdIRVJFIHJuID0gMQ0KICAgICkgQVMgbw0KTEVGVCBKT0lODQogICAgKA0KICAgICAgICBTRUxFQ1QNCiAgICAgICAgICAgIEFwcGxpY2F0aW9uSWQsDQogICAgICAgICAgICBibG9jaywNCiAgICAgICAgICAgIGxvdA0KICAgICAgICBGUk9NICgNCiAgICAgICAgICAgIFNFTEVDVA0KICAgICAgICAgICAgICAgIHRsLkFwcGxpY2F0aW9uSWQsDQogICAgICAgICAgICAgICAgYnBsLmJsb2NrLA0KICAgICAgICAgICAgICAgIGJwbC5sb3QsDQogICAgICAgICAgICAgICAgUk9XX05VTUJFUigpIE9WRVIgKFBBUlRJVElPTiBCWSB0bC5BcHBsaWNhdGlvbklkIE9SREVSIEJZIElkKSBBUyBybg0KICAgICAgICAgICAgRlJPTSBGYXJtLkZhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbCAgYnBsDQoJCQlsZWZ0IGpvaW4gRmFybS5GYXJtQXBwTG9jYXRpb25EZXRhaWxzIFRMIG9uIGJwbC5JZD0gVEwuUGFyY2VsSWQNCiAgICAgICAgKSBBUyBzdWJxdWVyeQ0KICAgICAgICBXSEVSRSBybiAmZ3Q7IDENCiAgICApIEFTIGENCk9OIG8uQXBwbGljYXRpb25JZCA9IGEuQXBwbGljYXRpb25JZA0KICAgIEFORCBhLmJsb2NrICZsdDsmZ3Q7IG8uYmxvY2sNCiAgICBBTkQgYS5sb3QgJmx0OyZndDsgby5sb3QNCkdST1VQIEJZDQogICAgby5BcHBsaWNhdGlvbklkLCBvLmJsb2NrLCBvLmxvdA0KKSBYIG9uIFguQXBwbGljYXRpb25JZCA9IGZhLklkDQpMRUZUIEpPSU4gKA0KU0VMRUNUDQogICAgIEFwcGxpY2F0aW9uSWQsDQogICAgIE1haWxpbmdBZGRyZXNzMSwNCiAgICAgTWFpbGluZ0FkZHJlc3MyDQpGUk9NIA0KICAgICAoDQogICAgICAgICBTRUxFQ1QgDQogICAgICAgICAgICAgQXBwbGljYXRpb25JZCwNCiAgICAgICAgICAgICBNYWlsaW5nQWRkcmVzczEsDQogICAgICAgICAgICAgTWFpbGluZ0FkZHJlc3MyLA0KICAgICAgICAgICAgIFJPV19OVU1CRVIoKSBPVkVSIChQQVJUSVRJT04gQlkgQXBwbGljYXRpb25JZCBPUkRFUiBCWSBJZCkgQVMgcm4NCiAgICAgICAgIEZST00gDQogICAgICAgICAgICAgRmFybS5GYXJtQXBwT3duZXJEZXRhaWxMaXN0DQogICAgICkgQVMgc3VicXVlcnkgIA0KV0hFUkUgcm4gPSAxDQopQVMgT0Qgb24gT0QuQXBwbGljYXRpb25JZCA9IGZhLklkDQp3aGVyZSBmYS5BcHBsaWNhdGlvblR5cGVJZCA9IDIgYW5kIGZhLnN0YXR1c0lkID0gMjA0DQogDQpvcmRlciBieSBUTC5BcHBsaWNhdGlvbklkPC9TcWw+PC9RdWVyeT48UmVzdWx0U2NoZW1hPjxEYXRhU2V0IE5hbWU9InNxbERhdGFTb3VyY2UxIj48VmlldyBOYW1lPSJGYXJtX0Zhcm1BcHBsaWNhdGlvbl8xIj48RmllbGQgTmFtZT0iQXBwbGljYXRpb25JZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkFwcGxpY2F0aW9uVHlwZUlkIiBUeXBlPSJJbnQxNiIgLz48RmllbGQgTmFtZT0iRmFybU51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGYXJtTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPcmlnaW5hbExhbmRvd25lciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBZGRyZXNzMSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJNdW5pY2lwYWxpdHkiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTWFpbGluZ0FkZHJlc3MxIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik1haWxpbmdBZGRyZXNzMiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBZ2VuY3lOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFjcmVzVG9CZUFjcXVpcmVkIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJvcmlnaW5hbF9ibG9jayIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJvcmlnaW5hbF9sb3QiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iYWRkaXRpb25hbF9ibG9ja3MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iYWRkaXRpb25hbF9sb3RzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZhcm1lck5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSW1wcm92QWciIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSW1wcm92UmVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik51bWJlcm9mRXhjZXBzIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRmFybUZlYXR1cmVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRvdGFsQ29zdCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iTUNDb3N0U2hhcmVUb3RhbCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iVG90YWxDb3N0UGVyQWNyZSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iU0FEQ0Nvc3RTaGFyZVRvdGFsIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJDbG9zaW5nRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IlByaW1hcnlDcm9wcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTZWNvbmRhcnlDcm9wcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJOYW1lIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
+    <Item1 Ref="17" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v22.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlByZXNUcnVzdERiQ29ubmVjdGlvblN0cmluZ3MiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IkN1c3RvbVNxbFF1ZXJ5IiBOYW1lPSJGYXJtX0Zhcm1BcHBsaWNhdGlvbl8xIj48U3FsPlNFTEVDVCBEaXN0aW5jdA0KICAgIHRsLkFwcGxpY2F0aW9uSWQsDQoJZmEuQXBwbGljYXRpb25UeXBlSWQsDQoJZmEuc3RhdHVzSWQsDQogICAgZmwuRmFybU51bWJlciwNCiAgICBmbC5GYXJtTmFtZSwNCglGTC5PcmlnaW5hbExhbmRvd25lciwNCglGTC5BZGRyZXNzMSwNCgltLk11bmljaXBhbGl0eSwNCglvZC5NYWlsaW5nQWRkcmVzczEsDQoJb2QuTWFpbGluZ0FkZHJlc3MyLA0KICAgIHZhLkFnZW5jeU5hbWUsDQogICAgQi5BY3JlcyBBUyBBY3Jlc1RvQmVBY3F1aXJlZCwNCgl4Lm9yaWdpbmFsX2Jsb2NrLA0KICAgIHgub3JpZ2luYWxfbG90LA0KICAgIHguYWRkaXRpb25hbF9ibG9ja3MsDQogICAgWC5hZGRpdGlvbmFsX2xvdHMsDQogICBBRC5GYXJtZXJOYW1lLA0KICAgRVMuSW1wcm92QWcsDQogICBFUy5JbXByb3ZSZXMsDQogICBFUi5OdW1iZXJvZkV4Y2VwcywNCiAgIEFELkZhcm1GZWF0dXJlcywNCiAgIEFDLlRvdGFsQ29zdCwNCiAgIEFDLk1DQ29zdFNoYXJlVG90YWwsDQogICBBQy5NQ0Nvc3RTaGFyZVBjdCwNCiAgIEFDLlRvdGFsQ29zdFBlckFjcmUsDQogICBBQy5TQURDQ29zdFNoYXJlVG90YWwsDQogICBBQy5TQURDQ29zdFNoYXJlb2ZPZmZlclBjdCwNCiAgIGNkLkNsb3NpbmdEYXRlLA0KICAgbG93ZXIoWS5QcmltYXJ5Q3JvcHMpIGFzIFByaW1hcnlDcm9wcywNCiAgIGxvd2VyKFkuU2Vjb25kYXJ5Q3JvcHMpIGFzIFNlY29uZGFyeUNyb3BzLA0KICAgRlNMLk5hbWUNCkZST00gRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwgYQ0KTEVGVCBKT0lOIEZhcm0uRmFybUFwcExvY2F0aW9uRGV0YWlscyB0bCBPTiBhLklkID0gdGwuUGFyY2VsSWQNCkxFRlQgSk9JTiBGYXJtLkZhcm1BcHBsaWNhdGlvbiBmYSBPTiBmYS5pZCA9IHRsLkFwcGxpY2F0aW9uSWQNCkxFRlQgSk9JTiBGYXJtLkZhcm1MaXN0IGZsIE9OIGZsLkZhcm1MaXN0SUQgPSBmYS5GYXJtTGlzdElkDQpMRUZUIEpPSU4gQ29yZS5WaWV3X0FnZW5jeUVudGl0aWVzX0ZBUk0gdmEgT04gdmEuQWdlbmN5SWQgPSBmYS5BZ2VuY3lJZA0KTEVGVCBKT0lOIEZhcm0uRmFybUVzbXRBcHBBZG1pbkNsb3NpbmdEb2NTdGF0dXMgY2QgT04gY2QuQXBwbGljYXRpb25JZCA9IGZhLklkDQpMRUZUIEpPSU4gRmFybS5GYXJtRXNtdEFwcEFkbWluQ29zdERldGFpbHMgQUMgT04gQWMuQXBwbGljYXRpb25JZCA9IGZhLklkDQpMRUZUIEpPSU4gQ29yZS5NdW5pY2lwYWxpdHkgbSBPTiBtLk11bmljaXBhbElkID0gZmwuTXVuaWNpcGFsSWQNCkxFRlQgSk9JTiBbRmFybV0uW0Zhcm1BZ3JpY3VsdHVyYWxFbnRlcnByaXNlQ2hlY2tsaXN0XSBhMSBvbiBhMS5BcHBsaWNhdGlvbklkID0gRmEuSWQNCkxFRlQgSk9JTiBGYXJtLkZhcm1Fc210QXBwQWRtaW5EZXRhaWxzIEFEIG9uIEFELkFwcGxpY2F0aW9uSWQgPSBmYS5JZA0KTEVGVCBKT0lOIEZhcm0uRmFybUVzbXRBcHBBZG1pblN0cnVjdE5vbkFncmlXZXRsYW5kcyBFUyBvbiBFUy5BcHBsaWNhdGlvbklkID0gZmEuSWQNCkxFRlQgSk9JTiBGYXJtLkZhcm1Fc210QXBwQWRtaW5FeGNlcHRpb25SRFNPIEVSIG9uIEVSLkFwcGxpY2F0aW9uSWQgPSBmYS5JZA0KTEVGVCBKT0lOIEZhcm0uRmFybUFwcGxpY2F0aW9uU3RhdHVzIEZTTCBvbiBGU0wuSWQgPSBmYS5TdGF0dXNJZA0KTEVGVCBKT0lOIA0KKA0KU0VMRUNUIEwuQXBwbGljYXRpb25JZCwgU1VNKE1CTC5BY3Jlc1RvQmVBY3F1aXJlZCkgQVMgQWNyZXMNCgkJRlJPTSBbRmFybV0uW0Zhcm1NdW5pY2lwYWxpdHlCbG9ja0xvdFBhcmNlbF0gIEFTIE1CTA0KCQlMRUZUIEpPSU4gW0Zhcm1dLltGYXJtQXBwTG9jYXRpb25EZXRhaWxzXSBBUyBMIE9OIChNQkwuSWQgPSBMLlBhcmNlbElkIEFORCBMLklzY2hlY2tlZCA9IDEpDQoJCUdST1VQIEJZIEwuQXBwbGljYXRpb25JZA0KICApQiBvbiBCLkFwcGxpY2F0aW9uSWQgPSAgZmEuIklkIg0KTEVGVCBKT0lOIA0KKA0KU0VMRUNUIA0KICAgIG8uQXBwbGljYXRpb25JZCwNCglvLlByaW1hcnlDcm9wcywNCglhLlNlY29uZGFyeUNyb3BzDQpGUk9NDQogICAgKA0KICAgICAgIFNFTEVDVCANCiAgICBBcHBsaWNhdGlvbklkLA0KICAgIFNUUklOR19BR0coVGl0bGUsICcsICcpIEFTIFByaW1hcnlDcm9wcw0KCUZST00gDQoJIEZhcm0uRmFybUFncmljdWx0dXJhbEVudGVycHJpc2VDaGVja2xpc3QNCgkJV0hFUkUgSXNQcmltYXJ5ID0gMQ0KR1JPVVAgQlkgDQogICAgQXBwbGljYXRpb25JZA0KICAgICkgQVMgbw0KSU5ORVIgSk9JTg0KICAgICggU0VMRUNUIA0KICAgIEFwcGxpY2F0aW9uSWQsDQogICAgU1RSSU5HX0FHRyhUaXRsZSwgJywgJykgQVMgU2Vjb25kYXJ5Q3JvcHMNCglGUk9NIA0KCSBGYXJtLkZhcm1BZ3JpY3VsdHVyYWxFbnRlcnByaXNlQ2hlY2tsaXN0DQoJCVdIRVJFIElzU2Vjb25kYXJ5ID0gMQ0KCUdST1VQIEJZIA0KICAgIEFwcGxpY2F0aW9uSWQNCiAgICApIEFTIGENCk9OIG8uQXBwbGljYXRpb25JZCA9IGEuQXBwbGljYXRpb25JZA0KR1JPVVAgQlkNCiAgICBvLkFwcGxpY2F0aW9uSWQgLG8uUHJpbWFyeUNyb3BzLGEuU2Vjb25kYXJ5Q3JvcHMNCikgYXMgWSBvbiBZLkFwcGxpY2F0aW9uSWQgPSBmYS5JZCANCkxlZnQgSm9pbiANCigNClNFTEVDVA0KICAgIG8uQXBwbGljYXRpb25JZCwNCiAgICBvLmJsb2NrIEFTIG9yaWdpbmFsX2Jsb2NrLA0KICAgIG8ubG90IEFTIG9yaWdpbmFsX2xvdCwNCiAgICBTVFJJTkdfQUdHKGEuYmxvY2ssICcsICcpIEFTIGFkZGl0aW9uYWxfYmxvY2tzLA0KICAgIFNUUklOR19BR0coYS5sb3QsICcsICcpIEFTIGFkZGl0aW9uYWxfbG90cw0KRlJPTQ0KICAgICgNCiAgICAgICAgU0VMRUNUDQogICAgICAgICAgICBBcHBsaWNhdGlvbklkLA0KICAgICAgICAgICAgYmxvY2ssDQogICAgICAgICAgICBsb3QNCiAgICAgICAgRlJPTSAoDQogICAgICAgICAgICBTRUxFQ1QNCiAgICAgICAgICAgICAgICBUTC5BcHBsaWNhdGlvbklkLA0KICAgICAgICAgICAgICAgYnBsLiBibG9jaywNCiAgICAgICAgICAgICAgICBicGwubG90LA0KICAgICAgICAgICAgICAgIFJPV19OVU1CRVIoKSBPVkVSIChQQVJUSVRJT04gQlkgVEwuQXBwbGljYXRpb25JZCBPUkRFUiBCWSBJZCkgQVMgcm4NCiAgICAgICAgICAgIEZST00gRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwgYnBsDQoJCQlsZWZ0IGpvaW4gRmFybS5GYXJtQXBwTG9jYXRpb25EZXRhaWxzIFRMIG9uIGJwbC5JZD0gVEwuUGFyY2VsSWQNCiAgICAgICAgKSBBUyBzdWJxdWVyeQ0KICAgICAgICBXSEVSRSBybiA9IDENCiAgICApIEFTIG8NCkxFRlQgSk9JTg0KICAgICgNCiAgICAgICAgU0VMRUNUDQogICAgICAgICAgICBBcHBsaWNhdGlvbklkLA0KICAgICAgICAgICAgYmxvY2ssDQogICAgICAgICAgICBsb3QNCiAgICAgICAgRlJPTSAoDQogICAgICAgICAgICBTRUxFQ1QNCiAgICAgICAgICAgICAgICB0bC5BcHBsaWNhdGlvbklkLA0KICAgICAgICAgICAgICAgIGJwbC5ibG9jaywNCiAgICAgICAgICAgICAgICBicGwubG90LA0KICAgICAgICAgICAgICAgIFJPV19OVU1CRVIoKSBPVkVSIChQQVJUSVRJT04gQlkgdGwuQXBwbGljYXRpb25JZCBPUkRFUiBCWSBJZCkgQVMgcm4NCiAgICAgICAgICAgIEZST00gRmFybS5GYXJtTXVuaWNpcGFsaXR5QmxvY2tMb3RQYXJjZWwgIGJwbA0KCQkJbGVmdCBqb2luIEZhcm0uRmFybUFwcExvY2F0aW9uRGV0YWlscyBUTCBvbiBicGwuSWQ9IFRMLlBhcmNlbElkDQogICAgICAgICkgQVMgc3VicXVlcnkNCiAgICAgICAgV0hFUkUgcm4gJmd0OyAxDQogICAgKSBBUyBhDQpPTiBvLkFwcGxpY2F0aW9uSWQgPSBhLkFwcGxpY2F0aW9uSWQNCiAgICBBTkQgYS5ibG9jayAmbHQ7Jmd0OyBvLmJsb2NrDQogICAgQU5EIGEubG90ICZsdDsmZ3Q7IG8ubG90DQpHUk9VUCBCWQ0KICAgIG8uQXBwbGljYXRpb25JZCwgby5ibG9jaywgby5sb3QNCikgWCBvbiBYLkFwcGxpY2F0aW9uSWQgPSBmYS5JZA0KTEVGVCBKT0lOICgNClNFTEVDVA0KICAgICBBcHBsaWNhdGlvbklkLA0KICAgICBNYWlsaW5nQWRkcmVzczEsDQogICAgIE1haWxpbmdBZGRyZXNzMg0KRlJPTSANCiAgICAgKA0KICAgICAgICAgU0VMRUNUIA0KICAgICAgICAgICAgIEFwcGxpY2F0aW9uSWQsDQogICAgICAgICAgICAgTWFpbGluZ0FkZHJlc3MxLA0KICAgICAgICAgICAgIE1haWxpbmdBZGRyZXNzMiwNCiAgICAgICAgICAgICBST1dfTlVNQkVSKCkgT1ZFUiAoUEFSVElUSU9OIEJZIEFwcGxpY2F0aW9uSWQgT1JERVIgQlkgSWQpIEFTIHJuDQogICAgICAgICBGUk9NIA0KICAgICAgICAgICAgIEZhcm0uRmFybUFwcE93bmVyRGV0YWlsTGlzdA0KICAgICApIEFTIHN1YnF1ZXJ5ICANCldIRVJFIHJuID0gMQ0KKUFTIE9EIG9uIE9ELkFwcGxpY2F0aW9uSWQgPSBmYS5JZA0Kd2hlcmUgZmEuQXBwbGljYXRpb25UeXBlSWQgPSAyIGFuZCBmYS5zdGF0dXNJZCA9IDIwNA0KIA0Kb3JkZXIgYnkgVEwuQXBwbGljYXRpb25JZDwvU3FsPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMSI+PFZpZXcgTmFtZT0iRmFybV9GYXJtQXBwbGljYXRpb25fMSI+PEZpZWxkIE5hbWU9IkFwcGxpY2F0aW9uSWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJBcHBsaWNhdGlvblR5cGVJZCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9InN0YXR1c0lkIiBUeXBlPSJJbnQxNiIgLz48RmllbGQgTmFtZT0iRmFybU51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGYXJtTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPcmlnaW5hbExhbmRvd25lciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBZGRyZXNzMSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJNdW5pY2lwYWxpdHkiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTWFpbGluZ0FkZHJlc3MxIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik1haWxpbmdBZGRyZXNzMiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBZ2VuY3lOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFjcmVzVG9CZUFjcXVpcmVkIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJvcmlnaW5hbF9ibG9jayIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJvcmlnaW5hbF9sb3QiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iYWRkaXRpb25hbF9ibG9ja3MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iYWRkaXRpb25hbF9sb3RzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZhcm1lck5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSW1wcm92QWciIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSW1wcm92UmVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik51bWJlcm9mRXhjZXBzIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRmFybUZlYXR1cmVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRvdGFsQ29zdCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iTUNDb3N0U2hhcmVUb3RhbCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iTUNDb3N0U2hhcmVQY3QiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlRvdGFsQ29zdFBlckFjcmUiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlNBRENDb3N0U2hhcmVUb3RhbCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iU0FEQ0Nvc3RTaGFyZW9mT2ZmZXJQY3QiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkNsb3NpbmdEYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iUHJpbWFyeUNyb3BzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNlY29uZGFyeUNyb3BzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik5hbWUiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjxDb25uZWN0aW9uT3B0aW9ucyBDbG9zZUNvbm5lY3Rpb249InRydWUiIC8+PC9TcWxEYXRhU291cmNlPg==" />
   </ComponentStorage>
 </XtraReportsLayoutSerializer>

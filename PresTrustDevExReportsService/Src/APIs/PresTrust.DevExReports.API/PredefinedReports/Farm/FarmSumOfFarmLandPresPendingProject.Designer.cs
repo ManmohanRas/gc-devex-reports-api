@@ -30,8 +30,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
             this.Detail1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail1");
             this.GroupHeader1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupHeaderBand>("GroupHeader1");
-            this.panel1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPanel>("panel1");
             this.pageBreak1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageBreak>("pageBreak1");
+            this.panel1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPanel>("panel1");
             this.table1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table1");
             this.table2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table2");
             this.table3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table3");
@@ -43,7 +43,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.table9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table9");
             this.label3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label3");
             this.label5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label5");
-            this.table17 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table17");
             this.table16 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table16");
             this.table15 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table15");
             this.tableRow1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow1");
@@ -89,9 +88,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.tableCell33 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell33");
             this.tableCell34 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell34");
             this.tableCell35 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell35");
-            this.tableRow17 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow17");
-            this.tableCell63 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell63");
-            this.tableCell64 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell64");
             this.tableRow16 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow16");
             this.tableCell59 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell59");
             this.tableCell60 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell60");
@@ -127,8 +123,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
         private DevExpress.XtraReports.UI.DetailBand Detail1;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
-        private DevExpress.XtraReports.UI.XRPanel panel1;
         private DevExpress.XtraReports.UI.XRPageBreak pageBreak1;
+        private DevExpress.XtraReports.UI.XRPanel panel1;
         private DevExpress.XtraReports.UI.XRTable table1;
         private DevExpress.XtraReports.UI.XRTable table2;
         private DevExpress.XtraReports.UI.XRTable table3;
@@ -140,7 +136,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRTable table9;
         private DevExpress.XtraReports.UI.XRLabel label3;
         private DevExpress.XtraReports.UI.XRLabel label5;
-        private DevExpress.XtraReports.UI.XRTable table17;
         private DevExpress.XtraReports.UI.XRTable table16;
         private DevExpress.XtraReports.UI.XRTable table15;
         private DevExpress.XtraReports.UI.XRTableRow tableRow1;
@@ -186,9 +181,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRTableCell tableCell33;
         private DevExpress.XtraReports.UI.XRTableCell tableCell34;
         private DevExpress.XtraReports.UI.XRTableCell tableCell35;
-        private DevExpress.XtraReports.UI.XRTableRow tableRow17;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell63;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell64;
         private DevExpress.XtraReports.UI.XRTableRow tableRow16;
         private DevExpress.XtraReports.UI.XRTableCell tableCell59;
         private DevExpress.XtraReports.UI.XRTableCell tableCell60;
