@@ -21,6 +21,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.BottomMargin = reportInitializer.GetControl<DevExpress.XtraReports.UI.BottomMarginBand>("BottomMargin");
             this.ReportHeader = reportInitializer.GetControl<DevExpress.XtraReports.UI.ReportHeaderBand>("ReportHeader");
             this.DetailReport = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport");
+            this.ReportFooter = reportInitializer.GetControl<DevExpress.XtraReports.UI.ReportFooterBand>("ReportFooter");
             this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
             this.label47 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label47");
             this.label48 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label48");
@@ -28,6 +29,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.label50 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label50");
             this.label51 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label51");
             this.Detail1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail1");
+            this.pageBreak1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageBreak>("pageBreak1");
             this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
             this.panel1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPanel>("panel1");
             this.table2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table2");
@@ -185,6 +187,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.tableCell97 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell97");
             this.tableCell98 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell98");
 
+            // Parameters
+            this.Year = reportInitializer.GetParameter("Year");
+
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
         }
@@ -193,6 +198,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport;
+        private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
         private DevExpress.XtraReports.UI.XRLabel label47;
         private DevExpress.XtraReports.UI.XRLabel label48;
@@ -200,6 +206,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRLabel label50;
         private DevExpress.XtraReports.UI.XRLabel label51;
         private DevExpress.XtraReports.UI.DetailBand Detail1;
+        private DevExpress.XtraReports.UI.XRPageBreak pageBreak1;
         private DevExpress.XtraReports.UI.XRLabel label1;
         private DevExpress.XtraReports.UI.XRPanel panel1;
         private DevExpress.XtraReports.UI.XRTable table2;
@@ -357,5 +364,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.XRTableCell tableCell97;
         private DevExpress.XtraReports.UI.XRTableCell tableCell98;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
+        private DevExpress.XtraReports.Parameters.Parameter Year;
     }
 }

@@ -4,7 +4,7 @@
     <Item1 Ref="1" Key="VSReportExtInfo" Value=".repx" />
   </Extensions>
   <Parameters>
-    <Item1 Ref="4" Description="FarmName" ValueSourceSettings="#Ref-2" Name="FarmName" />
+    <Item1 Ref="4" Description="FarmName" ValueSourceSettings="#Ref-2" MultiValue="true" SelectAllValues="true" Name="FarmName" />
   </Parameters>
   <Bands>
     <Item1 Ref="5" ControlType="TopMarginBand" Name="TopMargin" HeightF="50" />

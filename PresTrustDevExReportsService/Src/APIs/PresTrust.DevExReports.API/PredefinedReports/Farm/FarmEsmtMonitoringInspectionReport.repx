@@ -468,7 +468,7 @@
                 </Item23>
                 <Item24 Ref="216" ControlType="XRTableRow" Name="tableRow24" Weight="1">
                   <Cells>
-                    <Item1 Ref="217" ControlType="XRTableCell" Name="tableCell47" Weight="1.7395832824707032" Multiline="true" Text="Closing Dates" />
+                    <Item1 Ref="217" ControlType="XRTableCell" Name="tableCell47" Weight="1.7395832824707032" Multiline="true" Text="Closing Date" />
                     <Item2 Ref="218" ControlType="XRTableCell" Name="tableCell48" Weight="1.8437501525878905" Multiline="true" Font="Times New Roman, 11pt">
                       <ExpressionBindings>
                         <Item1 Ref="219" EventName="BeforePrint" PropertyName="Text" Expression="[ClosingDate]" />

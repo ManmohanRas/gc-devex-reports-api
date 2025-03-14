@@ -181,7 +181,7 @@
                     <Item3 Ref="95" ControlType="XRTableCell" Name="tableCell9" Weight="1" Multiline="true" Text="Morris County Share and %" TextAlignment="MiddleCenter" Font="Times New Roman, 13pt, style=Bold" Borders="All">
                       <StylePriority Ref="96" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item3>
-                    <Item4 Ref="97" ControlType="XRTableCell" Name="tableCell10" Weight="1" Multiline="true" Text="State" TextAlignment="MiddleCenter" Font="Times New Roman, 13pt, style=Bold" Borders="All">
+                    <Item4 Ref="97" ControlType="XRTableCell" Name="tableCell10" Weight="1" Multiline="true" Text="State Share and %" TextAlignment="MiddleCenter" Font="Times New Roman, 13pt, style=Bold" Borders="All">
                       <StylePriority Ref="98" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item4>
                     <Item5 Ref="99" ControlType="XRTableCell" Name="tableCell11" Weight="1" Multiline="true" Text="Total" TextAlignment="MiddleCenter" Font="Times New Roman, 13pt, style=Bold" Borders="All">
@@ -207,7 +207,7 @@
                     <Item4 Ref="109" ControlType="XRTableCell" Name="tableCell4" Weight="1" Multiline="true" Text="Lot(s)" TextAlignment="MiddleCenter" Font="Times New Roman, 13pt, style=Bold" Borders="All">
                       <StylePriority Ref="110" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item4>
-                    <Item5 Ref="111" ControlType="XRTableCell" Name="tableCell5" Weight="1" Multiline="true" Text="Closing Dates" TextAlignment="MiddleCenter" Font="Times New Roman, 13pt, style=Bold" Borders="All">
+                    <Item5 Ref="111" ControlType="XRTableCell" Name="tableCell5" Weight="1" Multiline="true" Text="Closing Date" TextAlignment="MiddleCenter" Font="Times New Roman, 13pt, style=Bold" Borders="All">
                       <StylePriority Ref="112" UseFont="false" UseBorders="false" UseTextAlignment="false" />
                     </Item5>
                     <Item6 Ref="113" ControlType="XRTableCell" Name="tableCell6" Weight="1" Multiline="true" Text="Deed &#xD;&#xA;Book/Page" TextAlignment="MiddleCenter" Font="Times New Roman, 13pt, style=Bold" Borders="Top, Bottom">

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" Margins="50, 50, 50, 50" PageWidth="850" PageHeight="1100" Version="22.1" Font="Arial, 9.75pt">
+<XtraReportsLayoutSerializer SerializerVersion="22.1.6.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.1, Version=22.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" Margins="50, 50, 50, 50" PaperKind="Legal" PageWidth="850" PageHeight="1400" Version="22.1" Font="Arial, 9.75pt">
   <Extensions>
     <Item1 Ref="1" Key="VSReportExtInfo" Value=".repx" />
   </Extensions>
@@ -213,7 +213,7 @@
         <Item3 Ref="94" ControlType="XRLabel" Name="label8" Multiline="true" Text="MORRIS COUNTY " TextAlignment="MiddleLeft" SizeF="606.208069,26.9999828" LocationFloat="121.79187,0" Font="Times New Roman, 12pt, style=Bold" ForeColor="Black" Padding="2,2,0,0,100" Borders="None">
           <StylePriority Ref="95" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
         </Item3>
-        <Item4 Ref="96" ControlType="XRLabel" Name="label1" Multiline="true" Text="AGRICULTURE DEVELOPMENT BOARD" TextAlignment="MiddleLeft" SizeF="609.208252,26.9999828" LocationFloat="119.7917,26.9999828" Font="Times New Roman, 12pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" Borders="None">
+        <Item4 Ref="96" ControlType="XRLabel" Name="label1" Multiline="true" Text="Website: County Agriculture Development  Board" TextAlignment="MiddleLeft" SizeF="609.208252,26.9999828" LocationFloat="119.7917,26.9999828" Font="Times New Roman, 12pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" Borders="None">
           <StylePriority Ref="97" UseFont="false" UseForeColor="false" UseBackColor="false" UseTextAlignment="false" />
         </Item4>
         <Item5 Ref="98" ControlType="XRLabel" Name="label2" Multiline="true" Text="P.O. Box 900, Morristown, NJ 07963-0900" TextAlignment="MiddleLeft" SizeF="608.208435,22.8333168" LocationFloat="119.7917,53.9999657" Font="Times New Roman, 10pt, style=Bold" ForeColor="Black" Padding="2,2,0,0,100" Borders="None">
