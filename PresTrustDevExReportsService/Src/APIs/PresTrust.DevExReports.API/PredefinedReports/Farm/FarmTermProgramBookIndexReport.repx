@@ -43,7 +43,7 @@
                     <Item1 Ref="21" ControlType="XRTableCell" Name="tableCell5" Weight="1.0918924986094625" Multiline="true" Text="Comments" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold" BackColor="LightGray" Borders="All" BorderWidth="1">
                       <StylePriority Ref="22" UseFont="false" UseBackColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="23" ControlType="XRTableCell" Name="tableCell6" Weight="2.8792694904046234" Multiline="true" Text="tableCell22" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt" BackColor="Transparent" Borders="Top, Bottom" BorderWidth="1">
+                    <Item2 Ref="23" ControlType="XRTableCell" Name="tableCell6" Weight="2.8792694904046234" Multiline="true" Text="tableCell22" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt" BackColor="Transparent" Borders="Top, Right, Bottom" BorderWidth="1">
                       <ExpressionBindings>
                         <Item1 Ref="24" EventName="BeforePrint" PropertyName="Text" Expression="[Comment]" />
                       </ExpressionBindings>
