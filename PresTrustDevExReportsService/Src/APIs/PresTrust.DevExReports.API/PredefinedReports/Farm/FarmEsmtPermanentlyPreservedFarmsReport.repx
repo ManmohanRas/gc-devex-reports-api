@@ -210,13 +210,13 @@
                     <Item1 Ref="101" ControlType="XRTableCell" Name="tableCell1" Weight="0.99197666486961178" Multiline="true" Text="Closing Date" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold">
                       <StylePriority Ref="102" UseFont="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="103" ControlType="XRTableCell" Name="tableCell2" Weight="1.0833333587646485" Multiline="true" Text="FarmName" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold">
+                    <Item2 Ref="103" ControlType="XRTableCell" Name="tableCell2" Weight="1.0833333587646485" Multiline="true" Text="Farm Name" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold">
                       <StylePriority Ref="104" UseFont="false" UseTextAlignment="false" />
                     </Item2>
                     <Item3 Ref="105" ControlType="XRTableCell" Name="tableCell24" Weight="1.1746900526596853" Multiline="true" Text="Municipality" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold">
                       <StylePriority Ref="106" UseFont="false" UseTextAlignment="false" />
                     </Item3>
-                    <Item4 Ref="107" ControlType="XRTableCell" Name="tableCell3" Weight="1.0624998474121095" Multiline="true" Text="OwnerLast" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold">
+                    <Item4 Ref="107" ControlType="XRTableCell" Name="tableCell3" Weight="1.0624998474121095" Multiline="true" Text="Owner" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold">
                       <StylePriority Ref="108" UseFont="false" UseTextAlignment="false" />
                     </Item4>
                     <Item5 Ref="109" ControlType="XRTableCell" Name="tableCell4" Weight="1.0416668701171876" Multiline="true" Text="Net Acres" TextAlignment="MiddleCenter" Font="Times New Roman, 12pt, style=Bold">
