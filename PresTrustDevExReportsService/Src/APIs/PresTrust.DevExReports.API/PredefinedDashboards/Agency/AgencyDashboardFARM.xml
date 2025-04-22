@@ -3,9 +3,6 @@
   <DataSources>
     <SqlDataSource Name="rept_usp_get_flood_annual_summary_report" ComponentName="sqlDataSource1">
       <Connection Name="PresTrustDbConnectionStrings" FromAppConfig="true" />
-      <Query Type="StoredProcQuery" Name="usp_get_level2_farm_annual_summary_report">
-        <ProcName>rept.usp_get_level2_farm_annual_summary_report</ProcName>
-      </Query>
       <Query Type="StoredProcQuery" Name="rept_usp_get_level3_farm_annual_summary_report">
         <ProcName>rept.usp_get_level3_farm_annual_summary_report</ProcName>
       </Query>
@@ -32,6 +29,9 @@
           <Column Table="Core.Municipality" Name="Municipality" />
           <Column Table="Core.Municipality" Name="MunicipalId" />
         </Columns>
+      </Query>
+      <Query Type="StoredProcQuery" Name="usp_get_level2_farmannualsummaryreport">
+        <ProcName>rept.usp_get_level2_farm_annual_summary_report</ProcName>
       </Query>
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
@@ -86,7 +86,8 @@
     </FederationDataSource>
   </DataSources>
   <Items>
-    <TextBox ComponentName="textBoxDashboardItem1" Name="" DataSource="sqlDataSource1" DataMember="usp_get_level2_farm_annual_summary_report">
+    <TextBox ComponentName="textBoxDashboardItem1" Name="" DataSource="sqlDataSource1" DataMember="usp_get_level2_farmannualsummaryreport" FilterString="[AgencyId] In(?User_AgencyIds)">
+      <InteractivityOptions IgnoreMasterFilters="true" />
       <DataItems>
         <Measure DataMember="TotalFarms" SummaryType="Count" DefaultId="DataItem1" />
         <Measure DataMember="ActiveApplications" DefaultId="DataItem2" />
@@ -134,7 +135,7 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
         <Value DefaultId="DataItem0" />
       </Values>
     </TextBox>
-    <Chart ComponentName="chartDashboardItem1" Name="" ShowCaption="false" DataSource="sqlDataSource1" DataMember="usp_get_level2_farm_annual_summary_report">
+    <Chart ComponentName="chartDashboardItem1" Name="" ShowCaption="false" DataSource="sqlDataSource1" DataMember="usp_get_level2_farmannualsummaryreport" FilterString="[AgencyId] In(?User_AgencyIds)">
       <ColoringOptions UseGlobalColors="false" />
       <InteractivityOptions MasterFilterMode="Single" IsDrillDownEnabled="true" />
       <DataItems>
@@ -168,12 +169,9 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
       <ChartLegend OutsidePosition="TopLeftHorizontal" />
       <AxisX Visible="false" />
     </Chart>
-    <Grid ComponentName="gridDashboardItem2" Name="" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_level3_farm_annual_summary_report">
+    <Grid ComponentName="gridDashboardItem2" Name="" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_level3_farm_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
       <DataItems>
         <Dimension DataMember="Municipality" DefaultId="DataItem0" />
-        <Dimension DataMember="FundsAwarded" DefaultId="DataItem2">
-          <NumericFormat FormatType="General" Unit="Ones" IncludeGroupSeparator="true" />
-        </Dimension>
         <Measure DataMember="TotalApplications" DefaultId="DataItem3" />
         <Measure DataMember="Submitted" DefaultId="DataItem4" />
         <Measure DataMember="EsmtPendingApplications" DefaultId="DataItem5" />
@@ -188,6 +186,9 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
         <Measure DataMember="PreservedAcres" DefaultId="DataItem1">
           <NumericFormat FormatType="Number" Unit="Ones" />
         </Measure>
+        <Measure DataMember="FundsAwarded" DefaultId="DataItem2">
+          <NumericFormat FormatType="Currency" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
       </DataItems>
       <GridColumns>
         <GridDimensionColumn>
@@ -196,44 +197,80 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
         <GridMeasureColumn Name="Preserved Acres ">
           <Measure DefaultId="DataItem1" />
           <Totals>
-            <Total Type="Sum" />
+            <Total Type="Auto" />
           </Totals>
         </GridMeasureColumn>
-        <GridDimensionColumn>
-          <Dimension DefaultId="DataItem2" />
-        </GridDimensionColumn>
+        <GridMeasureColumn Name="FundsAwarded">
+          <Measure DefaultId="DataItem2" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
         <GridMeasureColumn Name="Total Applications">
           <Measure DefaultId="DataItem3" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Esmt Submitted Applications">
           <Measure DefaultId="DataItem4" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Esmt Pending Applications">
           <Measure DefaultId="DataItem5" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Esmt Post Closing">
           <Measure DefaultId="DataItem6" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Esmt Preserved Applications">
           <Measure DefaultId="DataItem7" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Term Petition">
           <Measure DefaultId="DataItem8" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Term Pending Applications">
           <Measure DefaultId="DataItem9" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Term Active Applications">
           <Measure DefaultId="DataItem10" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Term Expired Applications">
           <Measure DefaultId="DataItem13" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Rejected Applications">
           <Measure DefaultId="DataItem11" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
         <GridMeasureColumn Name="Withdrawn Applications">
           <Measure DefaultId="DataItem12" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
         </GridMeasureColumn>
       </GridColumns>
       <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ColumnWidthMode="AutoFitToContents" />
@@ -254,7 +291,7 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
         <Dimension DefaultId="DataItem0" />
       </FilterDimensions>
     </ComboBox>
-    <ListBox ComponentName="listBoxDashboardItem1" Name="Funding Year" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_level3_farm_annual_summary_report">
+    <ListBox ComponentName="listBoxDashboardItem1" Name="Funding Year" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="rept_usp_get_level3_farm_annual_summary_report" FilterString="[AgencyId] In(?User_AgencyIds)">
       <InteractivityOptions IgnoreMasterFilters="false" />
       <DataItems>
         <Dimension DataMember="Municipality" DefaultId="DataItem0">
@@ -265,7 +302,7 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
         <Dimension DefaultId="DataItem0" />
       </FilterDimensions>
     </ListBox>
-    <Chart ComponentName="chartDashboardItem2" Name="" DataSource="sqlDataSource1" DataMember="usp_get_level2_farm_annual_summary_report">
+    <Chart ComponentName="chartDashboardItem2" Name="" DataSource="sqlDataSource1" DataMember="usp_get_level2_farmannualsummaryreport" FilterString="[AgencyId] In(?User_AgencyIds)">
       <DataItems>
         <Measure DataMember="PreservedAcreage" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Unit="Ones" />
@@ -292,7 +329,7 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
   </Items>
   <Groups>
     <Group ComponentName="groupDashboardItem1" Name="Group 1" ShowCaption="false">
-      <InteractivityOptions IgnoreMasterFilters="false" />
+      <InteractivityOptions IgnoreMasterFilters="false" IsMasterFilter="true" />
     </Group>
   </Groups>
   <ColorScheme>
