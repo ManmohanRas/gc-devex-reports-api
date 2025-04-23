@@ -23,6 +23,13 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.PageFooter = reportInitializer.GetControl<DevExpress.XtraReports.UI.PageFooterBand>("PageFooter");
             this.DetailReport = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport");
             this.DetailReport1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport1");
+            this.label51 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label51");
+            this.label50 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label50");
+            this.label49 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label49");
+            this.label48 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label48");
+            this.label47 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label47");
+            this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
+            this.label3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label3");
             this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
             this.label2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label2");
             this.Detail1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail1");
