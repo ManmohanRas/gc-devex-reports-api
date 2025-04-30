@@ -88,7 +88,7 @@
   <Items>
     <TextBox ComponentName="textBoxDashboardItem1" Name="" DataSource="sqlDataSource1" DataMember="usp_get_level2_farm_annual_summary_report">
       <DataItems>
-        <Measure DataMember="TotalFarms" SummaryType="Count" DefaultId="DataItem1" />
+        <Measure DataMember="TotalFarms" DefaultId="DataItem1" />
         <Measure DataMember="ActiveApplications" DefaultId="DataItem2" />
         <Measure DataMember="TermApplications" DefaultId="DataItem5" />
         <Measure DataMember="EsmtApplications" DefaultId="DataItem0" />
