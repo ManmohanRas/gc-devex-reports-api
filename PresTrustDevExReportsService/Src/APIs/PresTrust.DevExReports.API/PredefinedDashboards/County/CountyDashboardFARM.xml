@@ -301,30 +301,6 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
         <Dimension DefaultId="DataItem0" />
       </FilterDimensions>
     </ListBox>
-    <Chart ComponentName="chartDashboardItem2" Name="" DataSource="sqlDataSource1" DataMember="usp_get_level2_farm_annual_summary_report">
-      <DataItems>
-        <Measure DataMember="TillableAcreage" DefaultId="DataItem1">
-          <NumericFormat FormatType="Number" Unit="Ones" />
-        </Measure>
-        <Measure DataMember="PreservedAcreage" DefaultId="DataItem0">
-          <NumericFormat FormatType="Number" Unit="Ones" />
-        </Measure>
-      </DataItems>
-      <Panes>
-        <Pane Name="Pane 1">
-          <AxisY TitleVisible="false" />
-          <Series>
-            <Simple Name="Preserved Acreage" SeriesType="StackedBar">
-              <Value DefaultId="DataItem0" />
-            </Simple>
-            <Simple Name="Tillable Acreage">
-              <Value DefaultId="DataItem1" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-      <AxisX Visible="false" />
-    </Chart>
   </Items>
   <Groups>
     <Group ComponentName="groupDashboardItem1" Name="Group 1" ShowCaption="false">
@@ -354,7 +330,6 @@ d70000007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b010214001400
           <LayoutGroup Weight="35.60606060606061">
             <LayoutItem DashboardItem="textBoxDashboardItem1" Weight="31.01198413784405" />
             <LayoutItem DashboardItem="chartDashboardItem1" Weight="48.869586788443655" />
-            <LayoutItem DashboardItem="chartDashboardItem2" Weight="50.921039550801865" />
           </LayoutGroup>
           <LayoutGroup DashboardItem="groupDashboardItem1" Weight="64.39393939393939">
             <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="11.957305079290796" />
