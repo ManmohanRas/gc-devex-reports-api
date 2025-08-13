@@ -30,7 +30,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.label2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label2");
             this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
             this.label60 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label60");
-            this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
             this.pageInfo1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageInfo>("pageInfo1");
             this.line2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line2");
             this.label8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label8");
@@ -104,6 +103,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.tableCell77 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell77");
             this.tableRow12 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow12");
             this.tableCell52 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell52");
+            this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
@@ -130,7 +130,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRLabel label2;
         private DevExpress.XtraReports.UI.XRLabel label1;
         private DevExpress.XtraReports.UI.XRLabel label60;
-        private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo1;
         private DevExpress.XtraReports.UI.XRLine line2;
         private DevExpress.XtraReports.UI.XRLabel label8;
@@ -210,5 +209,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.CalculatedField AwardedAmount;
         private DevExpress.XtraReports.UI.CalculatedField ConstructionAmount;
         private DevExpress.XtraReports.UI.CalculatedField NConstructionAmount;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
     }
 }

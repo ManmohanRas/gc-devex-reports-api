@@ -22,12 +22,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.PageFooter = reportInitializer.GetControl<DevExpress.XtraReports.UI.PageFooterBand>("PageFooter");
             this.DetailReport = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport");
             this.DetailReport1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport1");
-            this.label11 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label11");
-            this.label10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label10");
-            this.label9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label9");
-            this.pictureBox1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox1");
-            this.label98 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label98");
-            this.label8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label8");
             this.label7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label7");
             this.line1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line1");
             this.label6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label6");
@@ -79,6 +73,12 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
             this.table8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table8");
             this.tableRow8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow8");
             this.tableCell20 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell20");
+            this.label11 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label11");
+            this.label10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label10");
+            this.label9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label9");
+            this.label98 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label98");
+            this.label8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label8");
+            this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
 
             // Parameters
             this.Date = reportInitializer.GetParameter("Date");
@@ -100,12 +100,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport1;
-        private DevExpress.XtraReports.UI.XRLabel label11;
-        private DevExpress.XtraReports.UI.XRLabel label10;
-        private DevExpress.XtraReports.UI.XRLabel label9;
-        private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
-        private DevExpress.XtraReports.UI.XRLabel label98;
-        private DevExpress.XtraReports.UI.XRLabel label8;
         private DevExpress.XtraReports.UI.XRLabel label7;
         private DevExpress.XtraReports.UI.XRLine line1;
         private DevExpress.XtraReports.UI.XRLabel label6;
@@ -164,5 +158,11 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Flood {
         private DevExpress.XtraReports.Parameters.RangeStartParameter StartDate;
         private DevExpress.XtraReports.Parameters.RangeEndParameter EndDate;
         private DevExpress.XtraReports.Parameters.Parameter Municipality;
+        private DevExpress.XtraReports.UI.XRLabel label11;
+        private DevExpress.XtraReports.UI.XRLabel label10;
+        private DevExpress.XtraReports.UI.XRLabel label9;
+        private DevExpress.XtraReports.UI.XRLabel label98;
+        private DevExpress.XtraReports.UI.XRLabel label8;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
     }
 }

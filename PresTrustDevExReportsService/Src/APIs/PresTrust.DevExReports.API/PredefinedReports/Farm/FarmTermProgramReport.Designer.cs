@@ -23,13 +23,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.DetailReport1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport1");
             this.label46 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label46");
             this.label45 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label45");
-            this.label51 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label51");
-            this.label50 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label50");
-            this.label49 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label49");
-            this.label48 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label48");
-            this.label47 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label47");
-            this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
-            this.label3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label3");
             this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
             this.Detail2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail2");
             this.GroupHeader1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.GroupHeaderBand>("GroupHeader1");
@@ -121,6 +114,13 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
             this.tableRow47 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow47");
             this.tableCell101 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell101");
             this.pageBreak1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageBreak>("pageBreak1");
+            this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
+            this.label47 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label47");
+            this.label48 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label48");
+            this.label49 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label49");
+            this.label50 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label50");
+            this.label51 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label51");
+            this.label3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label3");
 
             // Parameters
             this.Status = reportInitializer.GetParameter("Status");
@@ -138,13 +138,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport1;
         private DevExpress.XtraReports.UI.XRLabel label46;
         private DevExpress.XtraReports.UI.XRLabel label45;
-        private DevExpress.XtraReports.UI.XRLabel label51;
-        private DevExpress.XtraReports.UI.XRLabel label50;
-        private DevExpress.XtraReports.UI.XRLabel label49;
-        private DevExpress.XtraReports.UI.XRLabel label48;
-        private DevExpress.XtraReports.UI.XRLabel label47;
-        private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
-        private DevExpress.XtraReports.UI.XRLabel label3;
         private DevExpress.XtraReports.UI.XRLabel label1;
         private DevExpress.XtraReports.UI.DetailBand Detail2;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
@@ -240,5 +233,12 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Farm {
         private DevExpress.XtraReports.Parameters.Parameter Status;
         private DevExpress.XtraReports.Parameters.Parameter FarmOwner;
         private DevExpress.XtraReports.Parameters.Parameter Application;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
+        private DevExpress.XtraReports.UI.XRLabel label47;
+        private DevExpress.XtraReports.UI.XRLabel label48;
+        private DevExpress.XtraReports.UI.XRLabel label49;
+        private DevExpress.XtraReports.UI.XRLabel label50;
+        private DevExpress.XtraReports.UI.XRLabel label51;
+        private DevExpress.XtraReports.UI.XRLabel label3;
     }
 }

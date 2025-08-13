@@ -272,10 +272,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.label24 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label24");
             this.label25 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label25");
             this.label60 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label60");
-            this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
             this.pageInfo2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageInfo>("pageInfo2");
             this.label97 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label97");
             this.line2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line2");
+            this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
 
             // Parameters
             this.Year = reportInitializer.GetParameter("Year");
@@ -554,7 +554,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRLabel label24;
         private DevExpress.XtraReports.UI.XRLabel label25;
         private DevExpress.XtraReports.UI.XRLabel label60;
-        private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo2;
         private DevExpress.XtraReports.UI.XRLabel label97;
         private DevExpress.XtraReports.UI.XRLine line2;
@@ -568,5 +567,6 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.Parameters.Parameter Year;
         private DevExpress.XtraReports.Parameters.Parameter Application;
         private DevExpress.XtraReports.Parameters.Parameter parambloburl;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
     }
 }

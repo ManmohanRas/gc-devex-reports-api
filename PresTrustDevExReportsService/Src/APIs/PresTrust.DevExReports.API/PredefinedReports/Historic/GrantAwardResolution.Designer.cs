@@ -43,8 +43,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.label10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label10");
             this.line2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line2");
             this.pageInfo1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageInfo>("pageInfo1");
-            this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
             this.label60 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label60");
+            this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
 
             // Parameters
             this.FundingYear = reportInitializer.GetParameter("FundingYear");
@@ -83,10 +83,10 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRLabel label10;
         private DevExpress.XtraReports.UI.XRLine line2;
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo1;
-        private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
         private DevExpress.XtraReports.UI.XRLabel label60;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.CalculatedField TotalApplications;
         private DevExpress.XtraReports.Parameters.Parameter FundingYear;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
     }
 }

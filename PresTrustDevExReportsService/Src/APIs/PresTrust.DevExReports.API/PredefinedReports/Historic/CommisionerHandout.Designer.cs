@@ -22,11 +22,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.DetailReport = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport");
             this.DetailReport1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport1");
             this.DetailReport2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailReportBand>("DetailReport2");
-            this.label6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label6");
-            this.label7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label7");
+            this.pictureBox3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox3");
             this.label97 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label97");
             this.pageInfo2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageInfo>("pageInfo2");
-            this.pictureBox3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox3");
             this.label60 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label60");
             this.line2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line2");
             this.Detail1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("Detail1");
@@ -118,6 +116,8 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.tableRow23 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableRow>("tableRow23");
             this.tableCell36 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell36");
             this.tableCell37 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell37");
+            this.label5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label5");
+            this.label6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label6");
 
             // Parameters
             this.FundingYear = reportInitializer.GetParameter("FundingYear");
@@ -141,11 +141,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport1;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport2;
-        private DevExpress.XtraReports.UI.XRLabel label6;
-        private DevExpress.XtraReports.UI.XRLabel label7;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox3;
         private DevExpress.XtraReports.UI.XRLabel label97;
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo2;
-        private DevExpress.XtraReports.UI.XRPictureBox pictureBox3;
         private DevExpress.XtraReports.UI.XRLabel label60;
         private DevExpress.XtraReports.UI.XRLine line2;
         private DevExpress.XtraReports.UI.DetailBand Detail1;
@@ -246,5 +244,7 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.Parameters.Parameter PresentName;
         private DevExpress.XtraReports.Parameters.Parameter parambloburl;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
+        private DevExpress.XtraReports.UI.XRLabel label5;
+        private DevExpress.XtraReports.UI.XRLabel label6;
     }
 }

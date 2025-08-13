@@ -109,9 +109,9 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
             this.tableCell42 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell42");
             this.label97 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label97");
             this.pageInfo2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageInfo>("pageInfo2");
-            this.pictureBox2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox2");
             this.label60 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label60");
             this.line2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line2");
+            this.pictureBox1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox1");
 
             // Parameters
             this.Status = reportInitializer.GetParameter("Status");
@@ -215,12 +215,12 @@ namespace PresTrust.DevExReports.API.PredefinedReports.Historic {
         private DevExpress.XtraReports.UI.XRTableCell tableCell42;
         private DevExpress.XtraReports.UI.XRLabel label97;
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo2;
-        private DevExpress.XtraReports.UI.XRPictureBox pictureBox2;
         private DevExpress.XtraReports.UI.XRLabel label60;
         private DevExpress.XtraReports.UI.XRLine line2;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.Parameters.Parameter Status;
         private DevExpress.XtraReports.Parameters.Parameter FundingYear;
         private DevExpress.XtraReports.Parameters.Parameter ProjectName;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
     }
 }

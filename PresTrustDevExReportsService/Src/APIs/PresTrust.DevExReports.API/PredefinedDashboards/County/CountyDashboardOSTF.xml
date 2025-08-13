@@ -2,7 +2,7 @@
   <Title Text="" Alignment="Left" />
   <DataSources>
     <SqlDataSource Name="rept_usp_get_ostf_annual_summary_report" ComponentName="sqlDataSource1">
-      <Connection Name="PresTrustDbConnectionStrings" FromAppConfig="true" />
+      <Connection Name="GreenCountyDbConnectionString" FromAppConfig="true" />
       <Query Type="CustomSqlQuery" Name="Core_View_AgencyEntities_OSTF">
         <Sql>select "Core.View_AgencyEntities_OSTF"."AgencyId","Core.View_AgencyEntities_OSTF"."AgencyName" from "Core"."View_AgencyEntities_OSTF" "Core.View_AgencyEntities_OSTF"</Sql>
       </Query>
@@ -23,15 +23,34 @@
         <CalculatedField Name="$/Acre" Expression="Iif(Sum([Acreage]) = 0 , 0 , (Sum([FundsAwardedAcquisition])/Sum([Acreage])))" DataType="Auto" DataMember="rept_usp_get_level3_ostf_annual_summary_report" />
       </CalculatedFields>
     </SqlDataSource>
+    <SqlDataSource Name="rept_get_ostf_annual_summary_report" ComponentName="sqlDataSource2">
+      <Connection Name="GreenCountyDbConnectionString" FromAppConfig="true" />
+      <Query Type="StoredProcQuery" Name="rept_usp_get_level2_ostf_annual_summary_report">
+        <ProcName>rept.usp_get_level2_ostf_annual_summary_report</ProcName>
+      </Query>
+      <Query Type="StoredProcQuery" Name="rept_usp_get_level3_ostf_annual_summary_report">
+        <ProcName>rept.usp_get_level3_ostf_annual_summary_report</ProcName>
+      </Query>
+      <Query Type="SelectQuery" Name="Core_Agencies">
+        <Tables>
+          <Table Name="Core.Agencies" />
+        </Tables>
+        <Columns>
+          <Column Table="Core.Agencies" Name="AgencyId" />
+          <Column Table="Core.Agencies" Name="AgencyName" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
   </DataSources>
   <Items>
     <Chart ComponentName="chartDashboardItem2" Name="Applications vs Approved Applications" DataSource="sqlDataSource1" DataMember="rept_usp_get_level2_ostf_annual_summary_report">
       <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
       <InteractivityOptions IsDrillDownEnabled="true" />
       <DataItems>
-        <Measure DataMember="Applications" DefaultId="DataItem0" />
-        <Measure DataMember="ApprovedAppL2" DefaultId="DataItem1" />
         <Dimension DataMember="FundingYear" DefaultId="DataItem2" />
+        <Measure DataMember="Applications" DefaultId="DataItem0" />
+        <Measure DataMember="ApprovedApplications" DefaultId="DataItem1" />
       </DataItems>
       <Arguments>
         <Argument DefaultId="DataItem2" />
@@ -40,10 +59,10 @@
         <Pane Name="Pane 1">
           <AxisY TitleVisible="false" LogarithmicBase="Base2" />
           <Series>
-            <Simple Name="Applications">
+            <Simple>
               <Value DefaultId="DataItem0" />
             </Simple>
-            <Simple Name="Approved">
+            <Simple>
               <Value DefaultId="DataItem1" />
             </Simple>
           </Series>
