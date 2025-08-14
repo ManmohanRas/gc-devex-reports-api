@@ -20,7 +20,7 @@ jobs:
         with:
           dotnet-version: '5.0.x'
 
-      # Setup NuGet config for DevExpress private feed
+      # Setup clean NuGet config for DevExpress private feed (no local sources)
       - name: Setup NuGet config for DevExpress
         run: |
           echo '<?xml version="1.0" encoding="utf-8"?>
@@ -31,9 +31,13 @@ jobs:
             </packageSources>
           </configuration>' > nuget.config
 
+      # Show NuGet config to verify no local paths
+      - name: Show NuGet config content
+        run: cat nuget.config
+
       # Restore NuGet packages using the custom nuget.config
       - name: Restore dependencies
-        run: dotnet restore ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj --configfile nuget.config
+        run: dotnet restore ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj --configfile nuget.config --no-cache
 
       # Build the project
       - name: Build
