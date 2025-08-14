@@ -20,11 +20,11 @@ jobs:
         with:
           dotnet-version: '5.0.x'
 
-      # 3. Add DevExpress private NuGet feed with your secret key
-      - name: Add DevExpress NuGet source
-        run: dotnet nuget add source "https://nuget.devexpress.com/${{ secrets.DEVEXPRESS_NUGET_KEY }}/api" --name DevExpress --store-password-in-clear-text
+      # 3. Clear NuGet cache to prevent stale cache issues
+      - name: Clear NuGet cache
+        run: dotnet nuget locals all --clear
 
-      # 4. Restore dependencies from your .csproj file
+      # 4. Restore dependencies from the .csproj file
       - name: Restore dependencies
         run: dotnet restore ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj
 
@@ -32,11 +32,11 @@ jobs:
       - name: Build
         run: dotnet build ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj --configuration Release --no-restore
 
-      # 6. Publish the project to a folder called ./publish
+      # 6. Publish the project to the output directory
       - name: Publish
         run: dotnet publish ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj --configuration Release --output ./publish --no-restore
 
-      # 7. Deploy published output to Azure Web App
+      # 7. Deploy to Azure Web App
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v1
         with:
