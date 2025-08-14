@@ -55,11 +55,17 @@ jobs:
       - name: Publish
         run: dotnet publish ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj --configuration Release --output ./publish --self-contained --runtime win-x64
 
+      # Archive the published files
+      - name: Archive published files
+        run: Compress-Archive -Path ./publish/* -DestinationPath publish.zip
+
       # Deploy to Azure Web App
       - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v1
+        uses: azure/webapps-deploy@v2
+        env:
+          AZURE_WEBAPP_DEBUG: true
         with:
           app-name: 'api-greencounty-reports'
           slot-name: 'production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_26D57BB4319940FDBF54323B6AD649CF }}
-          package: ./publish
+          package: publish.zip
