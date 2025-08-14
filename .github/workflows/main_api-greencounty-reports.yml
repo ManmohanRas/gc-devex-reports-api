@@ -20,6 +20,18 @@ jobs:
         with:
           dotnet-version: '5.0.x'
 
+      # List all NuGet sources for debugging
+      - name: List all NuGet sources
+        run: dotnet nuget list source --format detailed || echo "List failed"
+
+      # Remove global and local NuGet config files to avoid conflicts
+      - name: Remove global and local NuGet configs
+        shell: powershell
+        run: |
+          Remove-Item -Path "$env:APPDATA\NuGet\NuGet.Config" -Force -ErrorAction SilentlyContinue
+          Remove-Item -Path "$env:ProgramData\NuGet\Config" -Force -ErrorAction SilentlyContinue
+          Remove-Item -Path "$PWD\NuGet.Config" -Force -ErrorAction SilentlyContinue
+
       # Setup NuGet config for DevExpress private feed
       - name: Setup NuGet config for DevExpress
         run: |
@@ -31,18 +43,7 @@ jobs:
             </packageSources>
           </configuration>' > nuget.config
 
-      # Disable existing global/user NuGet configs to avoid local sources error
-      - name: Disable existing global/user NuGet configs
-        run: |
-          if (Test-Path "$env:APPDATA\NuGet\NuGet.Config") {
-            Move-Item "$env:APPDATA\NuGet\NuGet.Config" "$env:APPDATA\NuGet\NuGet.Config.bak"
-          }
-          if (Test-Path "$env:ProgramData\NuGet\Config") {
-            Move-Item "$env:ProgramData\NuGet\Config" "$env:ProgramData\NuGet\Config.bak"
-          }
-        shell: powershell
-
-      # Restore NuGet packages using the custom nuget.config
+      # Restore NuGet packages using only the custom nuget.config
       - name: Restore dependencies
         run: dotnet restore ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj --configfile nuget.config --no-cache
 
