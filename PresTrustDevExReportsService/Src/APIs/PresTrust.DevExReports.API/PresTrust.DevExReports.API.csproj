@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-	  <UserSecretsId>a43f9844-5f47-49c1-a912-b40d58d7583e</UserSecretsId>
+	  <NoWarn>$(NoWarn);NETSDK11</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
