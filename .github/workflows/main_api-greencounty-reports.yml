@@ -22,7 +22,7 @@ jobs:
 
       # Restore NuGet packages
       - name: Restore dependencies
-        run: dotnet restore ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj --configfile ./NuGet.Config
+        run: dotnet restore ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj
 
       # Build the project
       - name: Build
@@ -40,6 +40,7 @@ jobs:
           slot-name: 'production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_26D57BB4319940FDBF54323B6AD649CF }}
           package: ./publish
+
 
 
 
