@@ -20,7 +20,7 @@ jobs:
         with:
           dotnet-version: '5.0.x'
 
-      # Setup clean NuGet config for DevExpress private feed (no local sources)
+      # Setup NuGet config for DevExpress private feed
       - name: Setup NuGet config for DevExpress
         run: |
           echo '<?xml version="1.0" encoding="utf-8"?>
@@ -31,9 +31,16 @@ jobs:
             </packageSources>
           </configuration>' > nuget.config
 
-      # Show NuGet config to verify no local paths
-      - name: Show NuGet config content
-        run: cat nuget.config
+      # Disable existing global/user NuGet configs to avoid local sources error
+      - name: Disable existing global/user NuGet configs
+        run: |
+          if (Test-Path "$env:APPDATA\NuGet\NuGet.Config") {
+            Move-Item "$env:APPDATA\NuGet\NuGet.Config" "$env:APPDATA\NuGet\NuGet.Config.bak"
+          }
+          if (Test-Path "$env:ProgramData\NuGet\Config") {
+            Move-Item "$env:ProgramData\NuGet\Config" "$env:ProgramData\NuGet\Config.bak"
+          }
+        shell: powershell
 
       # Restore NuGet packages using the custom nuget.config
       - name: Restore dependencies
