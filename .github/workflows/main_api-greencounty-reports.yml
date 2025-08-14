@@ -10,26 +10,33 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      # 1. Checkout source code
       - name: Checkout
         uses: actions/checkout@v2
 
+      # 2. Setup .NET 5 SDK
       - name: Setup .NET 5 SDK
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '5.0.x'
 
-      - name: Setup NuGet credentials for DevExpress
-        run: dotnet nuget add source https://nuget.devexpress.com/${{ secrets.DEVEXPRESS_NUGET_KEY }}/api --name DevExpress --store-password-in-clear-text
+      # 3. Add DevExpress private NuGet feed with your secret key
+      - name: Add DevExpress NuGet source
+        run: dotnet nuget add source "https://nuget.devexpress.com/${{ secrets.DEVEXPRESS_NUGET_KEY }}/api" --name DevExpress --store-password-in-clear-text
 
+      # 4. Restore dependencies from your .csproj file
       - name: Restore dependencies
         run: dotnet restore ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj
 
+      # 5. Build the project
       - name: Build
         run: dotnet build ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj --configuration Release --no-restore
 
+      # 6. Publish the project to a folder called ./publish
       - name: Publish
         run: dotnet publish ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj --configuration Release --output ./publish --no-restore
 
+      # 7. Deploy published output to Azure Web App
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v1
         with:
@@ -37,4 +44,3 @@ jobs:
           slot-name: 'production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_26D57BB4319940FDBF54323B6AD649CF }}
           package: ./publish
-
