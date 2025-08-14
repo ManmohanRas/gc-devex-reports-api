@@ -23,17 +23,17 @@ jobs:
       # Setup NuGet config for DevExpress private feed
       - name: Setup NuGet config for DevExpress
         run: |
-          echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+          echo '<?xml version="1.0" encoding="utf-8"?>
           <configuration>
             <packageSources>
-              <add key=\"DevExpress\" value=\"${{ secrets.DEVEXPRESS_NUGET_FEED }}\" />
-              <add key=\"nuget.org\" value=\"https://api.nuget.org/v3/index.json\" />
+              <add key="DevExpress" value="${{ secrets.DEVEXPRESS_NUGET_FEED }}" />
+              <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
             </packageSources>
-          </configuration>" > nuget.config
+          </configuration>' > nuget.config
 
-      # Restore NuGet packages
+      # Restore NuGet packages using the custom nuget.config
       - name: Restore dependencies
-        run: dotnet restore ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj
+        run: dotnet restore ./PresTrustDevExReportsService/Src/APIs/PresTrust.DevExReports.API/PresTrust.DevExReports.API.csproj --configfile nuget.config
 
       # Build the project
       - name: Build
