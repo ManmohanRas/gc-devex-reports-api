@@ -1,9 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
 	  <NoWarn>$(NoWarn);NETSDK11</NoWarn>
   </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DevExpress.Data" Version="23.1.5" />
+	</ItemGroup>
 
   <ItemGroup>
     <Compile Remove="PredefinedReports\Farm\FarmEsmtSumOfFarmLandPreservationPendingProject.cs" />
