@@ -6,7 +6,7 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="DevExpress.Data" Version="23.1.5" />
+		<PackageReference Include="DevExpress.Data" Version="22.1.6" />
 	</ItemGroup>
 
   <ItemGroup>
